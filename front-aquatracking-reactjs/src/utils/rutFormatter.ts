@@ -1,18 +1,22 @@
 export const formatRut = (rut: string): string => {
-  const cleaned = rut.replace(/[^0-9kK]/g, '')
+  // Limpiar todo excepto números y K
+  const onlyNumbersAndK = rut.replace(/[^0-9kK]/g, '').toUpperCase()
   
-  if (cleaned.length < 2) return cleaned
+  if (onlyNumbersAndK.length < 2) return onlyNumbersAndK
   
-  const body = cleaned.slice(0, -1)
-  const dv = cleaned.slice(-1).toUpperCase()
+  // Separar cuerpo y dígito verificador
+  const body = onlyNumbersAndK.slice(0, -1)
+  const dv = onlyNumbersAndK.slice(-1)
   
+  // Formatear el cuerpo con puntos cada 3 dígitos
   const formattedBody = body.replace(/\B(?=(\d{3})+(?!\d))/g, '.')
   
   return `${formattedBody}-${dv}`
 }
 
 export const cleanRut = (rut: string): string => {
-  return rut.replace(/[^0-9kK]/g, '')
+  // Solo permitir números y K/k (para validar longitud)
+  return rut.replace(/[^0-9kK]/g, '').toUpperCase()
 }
 
 export const validateRut = (rut: string): boolean => {

@@ -6,22 +6,23 @@ import { PiUserPlusDuotone, PiArrowLeftDuotone } from 'react-icons/pi'
 import { apiClient } from '@/api/client'
 import { ENDPOINTS } from '@/api/endpoints'
 import { useSectors } from '@/hooks/useSectors'
+import { useRutFormatter } from '@/hooks/useRutFormatter'
+import { usePhoneFormatter } from '@/hooks/usePhoneFormatter'
 
 const AddUserPage = () => {
   const navigate = useNavigate()
   const { sectors } = useSectors()
   const [loading, setLoading] = useState(false)
-
+  const rutFormatter = useRutFormatter()
+  const phoneFormatter = usePhoneFormatter()
   const [userForm, setUserForm] = useState({
     name: '',
     email: '',
-    rut: '',
-    phone: '',
     password: '',
   })
 
   const handleCreateUser = async () => {
-    if (!userForm.name || !userForm.email || !userForm.rut || !userForm.password) {
+    if (!userForm.name || !userForm.email || !rutFormatter.rawValue || !userForm.password) {
       toast.push(
         <Notification type="warning" title="Advertencia">
           Por favor completa los campos obligatorios
@@ -33,14 +34,13 @@ const AddUserPage = () => {
     try {
       setLoading(true)
       
-      // Crear solo el usuario (el hogar se asigna desde Hogares)
       await apiClient.post(ENDPOINTS.USERS, {
         name: userForm.name,
         email: userForm.email,
-        rut: userForm.rut,
-        phone: userForm.phone,
+        rut: rutFormatter.rawValue,
+        phone: phoneFormatter.rawValue,
         password: userForm.password,
-        role: 'user', // Siempre usuario, no admin
+        role: 'user',
       })
       
       toast.push(
@@ -49,7 +49,6 @@ const AddUserPage = () => {
         </Notification>
       )
 
-      // Redirigir a la lista de usuarios
       setTimeout(() => {
         navigate('/admin/users')
       }, 1000)
@@ -87,7 +86,6 @@ const AddUserPage = () => {
 
       <Card>
         <div className="flex flex-col gap-6">
-          {/* Información Personal */}
           <div>
             <h5 className="mb-4 flex items-center gap-2">
               <PiUserPlusDuotone className="text-2xl" />
@@ -106,8 +104,9 @@ const AddUserPage = () => {
                 <FormItem label="RUT">
                   <Input
                     placeholder="12.345.678-9"
-                    value={userForm.rut}
-                    onChange={(e) => setUserForm(prev => ({ ...prev, rut: e.target.value }))}
+                    value={rutFormatter.displayValue}
+                    maxLength={12} // 11 caracteres + puntos y guión
+                    onChange={(e) => rutFormatter.handleChange(e.target.value)}
                   />
                 </FormItem>
               </div>
@@ -124,9 +123,10 @@ const AddUserPage = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <FormItem label="Teléfono">
                   <Input
-                    placeholder="+56912345678"
-                    value={userForm.phone}
-                    onChange={(e) => setUserForm(prev => ({ ...prev, phone: e.target.value }))}
+                    placeholder="+56 9 1234 5678"
+                    value={phoneFormatter.displayValue}
+                    maxLength={15} // +56 9 1234 5678
+                    onChange={(e) => phoneFormatter.handleChange(e.target.value)}
                   />
                 </FormItem>
 

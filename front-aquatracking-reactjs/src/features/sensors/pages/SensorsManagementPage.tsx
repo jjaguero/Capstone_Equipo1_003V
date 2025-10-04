@@ -109,10 +109,20 @@ const SensorsManagementPage = () => {
     }, [sensors])
 
     return (
-        <div className="space-y-6">
+        <div className="space-y-8">
+            {/* Header */}
+            <div className="animate-fadeIn">
+                <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100">
+                    Gestión de Sensores
+                </h3>
+                <p className="text-gray-600 dark:text-gray-400 mt-1">
+                    Monitoreo y administración de sensores del sistema
+                </p>
+            </div>
+
             {/* Estadísticas */}
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-                <Card className="p-5 bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900/20 dark:to-blue-800/20 border-blue-200 dark:border-blue-700">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-6 animate-slideUp" style={{ animationDelay: '0.1s' }}>
+                <Card className="p-6 bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900/20 dark:to-blue-800/20 border-blue-200 dark:border-blue-700 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
                     <div className="flex items-center justify-between">
                         <div>
                             <p className="text-sm font-medium text-blue-700 dark:text-blue-300">Total</p>
@@ -122,7 +132,7 @@ const SensorsManagementPage = () => {
                     </div>
                 </Card>
 
-                <Card className="p-5 bg-gradient-to-br from-emerald-50 to-emerald-100 dark:from-emerald-900/20 dark:to-emerald-800/20 border-emerald-200 dark:border-emerald-700">
+                <Card className="p-6 bg-gradient-to-br from-emerald-50 to-emerald-100 dark:from-emerald-900/20 dark:to-emerald-800/20 border-emerald-200 dark:border-emerald-700 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
                     <div className="flex items-center justify-between">
                         <div>
                             <p className="text-sm font-medium text-emerald-700 dark:text-emerald-300">Activos</p>
@@ -132,7 +142,7 @@ const SensorsManagementPage = () => {
                     </div>
                 </Card>
 
-                <Card className="p-5 bg-gradient-to-br from-rose-50 to-rose-100 dark:from-rose-900/20 dark:to-rose-800/20 border-rose-200 dark:border-rose-700">
+                <Card className="p-6 bg-gradient-to-br from-rose-50 to-rose-100 dark:from-rose-900/20 dark:to-rose-800/20 border-rose-200 dark:border-rose-700 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
                     <div className="flex items-center justify-between">
                         <div>
                             <p className="text-sm font-medium text-rose-700 dark:text-rose-300">Inactivos</p>
@@ -142,7 +152,7 @@ const SensorsManagementPage = () => {
                     </div>
                 </Card>
 
-                <Card className="p-5 bg-gradient-to-br from-amber-50 to-amber-100 dark:from-amber-900/20 dark:to-amber-800/20 border-amber-200 dark:border-amber-700">
+                <Card className="p-6 bg-gradient-to-br from-amber-50 to-amber-100 dark:from-amber-900/20 dark:to-amber-800/20 border-amber-200 dark:border-amber-700 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
                     <div className="flex items-center justify-between">
                         <div>
                             <p className="text-sm font-medium text-amber-700 dark:text-amber-300">
@@ -158,29 +168,30 @@ const SensorsManagementPage = () => {
             </div>
 
             {/* Tabla de sensores */}
-            <Card>
-                <div className="flex items-center justify-between mb-6">
+            <Card className="bg-white/80 backdrop-blur-sm shadow-lg hover:shadow-xl transition-all duration-300 animate-slideUp" style={{ animationDelay: '0.2s' }}>
+                <div className="flex items-center justify-between mb-8">
                     <div>
                         <h3 className="text-xl font-bold text-gray-900 dark:text-white">
                             Sensores Instalados
                         </h3>
-                        <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">
+                        <p className="text-gray-600 dark:text-gray-400 mt-1">
                             Vista general de todos los sensores del sistema
                         </p>
                     </div>
                 </div>
 
                 {/* Filtros */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
                     <Input
                         placeholder="Buscar por serial, categoría, tipo o ubicación..."
                         value={searchTerm}
                         onChange={(e) => setSearchTerm(e.target.value)}
                         prefix={<PiDropDuotone className="text-lg" />}
+                        className="transition-all duration-200 focus:ring-2 focus:ring-indigo-500"
                     />
 
                     <select
-                        className="w-full px-3 py-2 border rounded-lg dark:bg-gray-700 dark:border-gray-600"
+                        className="w-full px-3 py-2 border rounded-lg dark:bg-gray-700 dark:border-gray-600 transition-all duration-200 focus:ring-2 focus:ring-indigo-500"
                         value={homeFilter}
                         onChange={(e) => setHomeFilter(e.target.value)}
                     >

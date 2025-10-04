@@ -103,9 +103,13 @@ const FormItem = (props: FormItemProps) => {
                         </span>
                     )}
                     {label}
-                    {extra && <span>{extra}</span>}
                     {label && formItemLayout !== 'vertical' && ':'}
                 </label>
+                {extra && (
+                    <div className="text-sm text-gray-500 mb-2 mt-1">
+                        {extra}
+                    </div>
+                )}
                 <div
                     className={
                         formItemLayout === LAYOUT.HORIZONTAL

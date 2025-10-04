@@ -235,14 +235,14 @@ const HomesManagementPage = () => {
     }
 
     return (
-        <div className="space-y-6">
-            <Card>
-                <div className="flex items-center justify-between mb-6">
+        <div className="space-y-8">
+            <Card className="bg-white/80 backdrop-blur-sm shadow-lg hover:shadow-xl transition-all duration-300">
+                <div className="flex items-center justify-between mb-8 animate-fadeIn">
                     <div>
-                        <h3 className="text-xl font-bold text-gray-900 dark:text-white">
+                        <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
                             Gestión de Hogares
                         </h3>
-                        <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">
+                        <p className="text-gray-600 dark:text-gray-400 mt-1">
                             Administra los hogares y su consumo de agua
                         </p>
                     </div>
@@ -250,20 +250,23 @@ const HomesManagementPage = () => {
                         variant="solid"
                         icon={<PiPlusDuotone />}
                         onClick={() => navigate('/admin/homes/add')}
+                        className="bg-indigo-600 hover:bg-indigo-700 text-white transition-all duration-200 shadow-md hover:shadow-lg"
                     >
                         Crear Hogar
                     </Button>
                 </div>
 
-                <div className="mb-4">
+                <div className="mb-6 animate-slideUp" style={{ animationDelay: '0.1s' }}>
                     <Input
                         placeholder="Buscar por nombre o dirección..."
                         value={searchTerm}
                         onChange={(e) => setSearchTerm(e.target.value)}
                         prefix={<PiHouseDuotone className="text-lg" />}
+                        className="transition-all duration-200 focus:ring-2 focus:ring-indigo-500"
                     />
                 </div>
 
+                <div className="animate-slideUp" style={{ animationDelay: '0.2s' }}>
                 <Table>
                     <THead>
                         <Tr>
@@ -350,6 +353,7 @@ const HomesManagementPage = () => {
                         )}
                     </TBody>
                 </Table>
+                </div>
             </Card>
 
             {/* Dialog de edición */}

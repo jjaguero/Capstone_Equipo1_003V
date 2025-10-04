@@ -21,46 +21,54 @@ const AdminDashboard = () => {
   const totalSensors = sensors.length;
 
   return (
-    <div className="flex flex-col gap-4">
-      <div>
-        <h3 className="mb-2">Panel de Administración APR</h3>
-        <p className="text-gray-500">Vista general del sistema AquaTracking</p>
+    <div className="flex flex-col gap-6">
+      <div className="animate-fadeIn">
+        <h3 className="mb-2 text-2xl font-bold text-gray-900 dark:text-gray-100">Panel de Administración APR</h3>
+        <p className="text-gray-600 dark:text-gray-400">Vista general del sistema AquaTracking</p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-        <Card>
-          <div className="flex flex-col">
-            <span className="text-gray-500 text-sm">Total Usuarios</span>
-            <span className="text-2xl font-bold">{totalUsers}</span>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 animate-slideUp" style={{ animationDelay: '0.1s' }}>
+        <Card className="bg-white/80 backdrop-blur-sm shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+          <div className="flex flex-col p-6">
+            <span className="text-gray-500 text-sm font-medium">Total Usuarios</span>
+            <span className="text-2xl font-bold text-indigo-600">{totalUsers}</span>
           </div>
         </Card>
 
-        <Card>
-          <div className="flex flex-col">
-            <span className="text-gray-500 text-sm">Total Hogares</span>
-            <span className="text-2xl font-bold">{totalHomes}</span>
+        <Card className="bg-white/80 backdrop-blur-sm shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+          <div className="flex flex-col p-6">
+            <span className="text-gray-500 text-sm font-medium">Total Hogares</span>
+            <span className="text-2xl font-bold text-emerald-600">{totalHomes}</span>
           </div>
         </Card>
 
-        <Card>
-          <div className="flex flex-col">
-            <span className="text-gray-500 text-sm">Sensores Activos</span>
-            <span className="text-2xl font-bold">{activeSensors}/{totalSensors}</span>
+        <Card className="bg-white/80 backdrop-blur-sm shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+          <div className="flex flex-col p-6">
+            <span className="text-gray-500 text-sm font-medium">Sensores Activos</span>
+            <span className="text-2xl font-bold text-blue-600">{activeSensors}/{totalSensors}</span>
           </div>
         </Card>
 
-        <Card>
-          <div className="flex flex-col">
-            <span className="text-gray-500 text-sm">Sectores</span>
-            <span className="text-2xl font-bold">{sectors.length}</span>
+        <Card className="bg-white/80 backdrop-blur-sm shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+          <div className="flex flex-col p-6">
+            <span className="text-gray-500 text-sm font-medium">Sectores</span>
+            <span className="text-2xl font-bold text-amber-600">{sectors.length}</span>
           </div>
         </Card>
       </div>
 
-      <div className="grid grid-cols-1 gap-4">
-        <Card header={{ content: <h5>Usuarios del Sistema</h5> }}>
+      <div className="grid grid-cols-1 gap-6 animate-slideUp" style={{ animationDelay: '0.2s' }}>
+        <Card 
+          header={{ content: <h5 className="text-lg font-semibold text-gray-900 dark:text-gray-100">Usuarios del Sistema</h5> }}
+          className="bg-white/80 backdrop-blur-sm shadow-lg hover:shadow-xl transition-all duration-300"
+        >
           {usersLoading ? (
-            <p>Cargando usuarios...</p>
+            <div className="flex items-center justify-center h-32">
+              <div className="text-center">
+                <div className="w-8 h-8 mx-auto mb-2 border-2 border-indigo-200 border-t-indigo-600 rounded-full animate-spin"></div>
+                <p className="text-gray-600 dark:text-gray-400 text-sm">Cargando usuarios...</p>
+              </div>
+            </div>
           ) : (
             <Table>
               <THead>

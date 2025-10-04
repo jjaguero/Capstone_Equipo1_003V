@@ -65,6 +65,22 @@ export class DailyConsumptionController {
     return this.dailyConsumptionService.getAverageByHome(homeId);
   }
 
+  @Get('system/trends')
+  getSystemTrends(@Query('days') days?: string) {
+    const daysNum = days ? parseInt(days, 10) : 30;
+    return this.dailyConsumptionService.getSystemTrends(daysNum);
+  }
+
+  @Get('system/distribution')
+  getConsumptionDistribution() {
+    return this.dailyConsumptionService.getConsumptionDistribution();
+  }
+
+  @Get('system/alerts')
+  getHomesWithAlerts() {
+    return this.dailyConsumptionService.getHomesWithAlerts();
+  }
+
   @Get(':id')
   findOne(@Param('id') id: string) {
     return this.dailyConsumptionService.findOne(id);

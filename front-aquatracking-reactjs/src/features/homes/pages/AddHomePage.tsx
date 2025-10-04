@@ -1,18 +1,20 @@
 import { Card, Input, Button, Notification, toast } from '@/components/ui'
 import { FormItem } from '@/components/ui/Form'
 import { useNavigate } from 'react-router'
-import { useState } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import { PiHouseDuotone, PiArrowLeftDuotone } from 'react-icons/pi'
 import { apiClient } from '@/api/client'
 import { ENDPOINTS } from '@/api/endpoints'
 import { useSectors } from '@/hooks/useSectors'
 import { useUsers } from '@/features/users/hooks/useUsers'
+import { useHomes } from '@/features/homes/hooks/useHomes'
 import type { User, Sector } from '@/@types/entities'
 
 const AddHomePage = () => {
   const navigate = useNavigate()
   const { sectors } = useSectors()
   const { users } = useUsers()
+  const { homes } = useHomes()
   const [loading, setLoading] = useState(false)
 
   // Filtrar solo usuarios (no admins)
@@ -25,6 +27,52 @@ const AddHomePage = () => {
     ownerId: '',
     members: 1,
   })
+
+  // Función para generar nombre único basado en propietario
+  const generateUniqueName = useCallback((userName: string): string => {
+    const baseName = `Casa de ${userName}`
+    const existingNames = homes.map(home => home.name.toLowerCase())
+    
+    // Si el nombre base no existe, usarlo
+    if (!existingNames.includes(baseName.toLowerCase())) {
+      return baseName
+    }
+    
+    // Si existe, buscar el siguiente número disponible
+    let counter = 2
+    let uniqueName = `${baseName} ${counter}`
+    
+    while (existingNames.includes(uniqueName.toLowerCase())) {
+      counter++
+      uniqueName = `${baseName} ${counter}`
+    }
+    
+    return uniqueName
+  }, [homes])
+
+  // Efecto para auto-completar nombre cuando cambia el propietario
+  // REMOVIDO - usando handleOwnerChange en su lugar
+
+  // Función para manejar cambio de propietario
+  const handleOwnerChange = useCallback((ownerId: string) => {
+    if (ownerId) {
+      const selectedUser = regularUsers.find(user => user._id === ownerId)
+      if (selectedUser) {
+        const uniqueName = generateUniqueName(selectedUser.name)
+        setHomeForm(prev => ({ 
+          ...prev, 
+          ownerId, 
+          name: uniqueName 
+        }))
+      }
+    } else {
+      setHomeForm(prev => ({ 
+        ...prev, 
+        ownerId: '', 
+        name: '' 
+      }))
+    }
+  }, [regularUsers, generateUniqueName])
 
   const handleCreateHome = async () => {
     if (!homeForm.name || !homeForm.address || !homeForm.sectorId || !homeForm.ownerId) {
@@ -94,7 +142,10 @@ const AddHomePage = () => {
           <h6 className="mb-4 font-semibold">Información del Hogar</h6>
           <div className="flex flex-col gap-4">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <FormItem label="Nombre del Hogar *">
+              <FormItem 
+                label="Nombre del Hogar *"
+                extra={homeForm.ownerId ? "Nombre generado automáticamente. Puedes modificarlo si deseas." : ""}
+              >
                 <Input
                   placeholder="Casa de Juan"
                   value={homeForm.name}
@@ -106,7 +157,7 @@ const AddHomePage = () => {
                 <select
                   className="w-full px-3 py-2 border rounded-lg dark:bg-gray-700 dark:border-gray-600"
                   value={homeForm.ownerId}
-                  onChange={(e) => setHomeForm(prev => ({ ...prev, ownerId: e.target.value }))}
+                  onChange={(e) => handleOwnerChange(e.target.value)}
                 >
                   <option value="">Seleccionar propietario</option>
                   {regularUsers.map((user: User) => (

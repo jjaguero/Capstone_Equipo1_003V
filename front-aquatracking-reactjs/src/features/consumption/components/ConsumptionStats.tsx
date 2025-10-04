@@ -45,24 +45,28 @@ const ConsumptionStats = ({ totalConsumed, averageDaily, totalAlerts, homesCount
     ]
 
     return (
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
             {stats.map((stat, index) => (
-                <Card key={index} className="hover:shadow-lg transition-shadow">
-                    <div className="flex items-center gap-4">
-                        <div className={`${stat.bgColor} ${stat.color} p-3 rounded-lg`}>
-                            {stat.icon}
-                        </div>
-                        <div className="flex-1">
-                            <p className="text-sm text-gray-600 dark:text-gray-400 mb-1">
-                                {stat.label}
-                            </p>
-                            <div className="flex items-baseline gap-1">
-                                <span className="text-2xl font-bold text-gray-900 dark:text-gray-100">
-                                    {stat.value}
-                                </span>
-                                <span className="text-sm text-gray-500 dark:text-gray-400">
-                                    {stat.unit}
-                                </span>
+                <Card key={index} className="hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-0 shadow-lg">
+                    <div className="p-6">
+                        <div className="flex items-center justify-between">
+                            <div className="flex-1">
+                                <p className="text-sm font-medium text-gray-600 dark:text-gray-400 mb-2">
+                                    {stat.label}
+                                </p>
+                                <div className="flex items-baseline space-x-2">
+                                    <span className="text-3xl font-bold text-gray-900 dark:text-gray-100">
+                                        {stat.value}
+                                    </span>
+                                    <span className="text-sm font-medium text-gray-500 dark:text-gray-400">
+                                        {stat.unit}
+                                    </span>
+                                </div>
+                            </div>
+                            <div className={`p-4 rounded-xl ${stat.bgColor} dark:bg-opacity-20`}>
+                                <div className={stat.color}>
+                                    {stat.icon}
+                                </div>
                             </div>
                         </div>
                     </div>

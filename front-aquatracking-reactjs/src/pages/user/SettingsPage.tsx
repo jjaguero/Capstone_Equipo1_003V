@@ -6,6 +6,7 @@ import { PiUserDuotone, PiUploadDuotone, PiLockKeyDuotone, PiBellDuotone, PiPlug
 import { formatRut } from '@/utils/rutFormatter'
 import { useUpdateProfile } from './hooks/useUpdateProfile'
 import { useUploadAvatar } from './hooks/useUploadAvatar'
+import { usePhoneFormatter } from '@/hooks/usePhoneFormatter'
 
 const { TabNav, TabList, TabContent } = Tabs
 
@@ -19,11 +20,13 @@ const SettingsPage = () => {
   const [errorMessage, setErrorMessage] = useState('')
   const [avatarPreview, setAvatarPreview] = useState<string | null>(null)
   const fileInputRef = useRef<HTMLInputElement>(null)
+  
+  // Hook para formatear teléfono
+  const phoneFormatter = usePhoneFormatter(currentUser?.phone || '')
 
   const [formData, setFormData] = useState({
     name: currentUser?.name || '',
     email: currentUser?.email || '',
-    phone: currentUser?.phone || '',
   })
 
   const [passwordData, setPasswordData] = useState({
@@ -50,7 +53,7 @@ const SettingsPage = () => {
       const updatedUser = await updateProfile(currentUser._id, {
         name: formData.name,
         email: formData.email,
-        phone: formData.phone,
+        phone: phoneFormatter.rawValue,
       })
 
       if (updatedUser) {
@@ -122,8 +125,9 @@ const SettingsPage = () => {
     setFormData({
       name: currentUser?.name || '',
       email: currentUser?.email || '',
-      phone: currentUser?.phone || '',
     })
+    // Resetear el formateador de teléfono
+    phoneFormatter.reset()
     setIsEditing(false)
     setSuccessMessage('')
     setErrorMessage('')
@@ -386,14 +390,15 @@ const SettingsPage = () => {
 
                 <FormItem label="Teléfono">
                   <Input
-                    value={formData.phone}
-                    onChange={(e) => handleChange('phone', e.target.value)}
+                    value={phoneFormatter.displayValue}
+                    onChange={(e) => phoneFormatter.handleChange(e.target.value)}
                     disabled={!isEditing}
-                    placeholder="+56911111111"
+                    placeholder="+56 9 1234 5678"
+                    maxLength={15}
                   />
                 </FormItem>
 
-                <div className="border-t pt-4">
+                <div className="pt-6">
                   <h6 className="mb-3">Información de la Cuenta</h6>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div className="flex flex-col">
@@ -412,7 +417,7 @@ const SettingsPage = () => {
                   </div>
                 </div>
 
-                <div className="flex justify-end gap-2 border-t pt-4">
+                <div className="flex justify-end gap-2 border-t pt-4 mt-6">
                   {!isEditing ? (
                     <Button variant="solid" onClick={() => setIsEditing(true)}>
                       Editar Perfil
@@ -452,37 +457,39 @@ const SettingsPage = () => {
                   </Alert>
                 )}
 
-                <FormItem 
-                  label="Contraseña actual" 
-                  extra="Ingresa tu contraseña actual para confirmar los cambios"
-                >
-                  <Input
-                    type="password"
-                    value={passwordData.currentPassword}
-                    onChange={(e) => handlePasswordChange('currentPassword', e.target.value)}
-                    placeholder="••••••••"
-                  />
-                </FormItem>
+                <div className="space-y-6">
+                  <FormItem 
+                    label="Contraseña actual" 
+                    extra="Ingresa tu contraseña actual para confirmar los cambios"
+                  >
+                    <Input
+                      type="password"
+                      value={passwordData.currentPassword}
+                      onChange={(e) => handlePasswordChange('currentPassword', e.target.value)}
+                      placeholder="••••••••"
+                    />
+                  </FormItem>
 
-                <FormItem label="Nueva contraseña" extra="Mínimo 6 caracteres">
-                  <Input
-                    type="password"
-                    value={passwordData.newPassword}
-                    onChange={(e) => handlePasswordChange('newPassword', e.target.value)}
-                    placeholder="••••••••"
-                  />
-                </FormItem>
+                  <FormItem label="Nueva contraseña" extra="Mínimo 6 caracteres">
+                    <Input
+                      type="password"
+                      value={passwordData.newPassword}
+                      onChange={(e) => handlePasswordChange('newPassword', e.target.value)}
+                      placeholder="••••••••"
+                    />
+                  </FormItem>
 
-                <FormItem label="Confirmar nueva contraseña">
-                  <Input
-                    type="password"
-                    value={passwordData.confirmPassword}
-                    onChange={(e) => handlePasswordChange('confirmPassword', e.target.value)}
-                    placeholder="••••••••"
-                  />
-                </FormItem>
+                  <FormItem label="Confirmar nueva contraseña">
+                    <Input
+                      type="password"
+                      value={passwordData.confirmPassword}
+                      onChange={(e) => handlePasswordChange('confirmPassword', e.target.value)}
+                      placeholder="••••••••"
+                    />
+                  </FormItem>
+                </div>
 
-                <div className="flex justify-end border-t pt-4">
+                <div className="flex justify-end border-t pt-8 mt-8">
                   <Button 
                     variant="solid" 
                     onClick={handlePasswordUpdate}

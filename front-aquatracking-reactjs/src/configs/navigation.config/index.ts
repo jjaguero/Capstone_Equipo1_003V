@@ -10,7 +10,7 @@ const navigationConfig: NavigationTree[] = [
     {
         key: 'admin.consumption',
         path: '/admin/consumption',
-        title: 'Monitoreo de Consumo',
+        title: 'Vista de Consumo',
         translateKey: 'nav.admin.consumption',
         icon: 'consumption',
         type: NAV_ITEM_TYPE_ITEM,
