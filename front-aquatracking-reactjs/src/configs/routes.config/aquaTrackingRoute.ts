@@ -5,7 +5,31 @@ const aquaTrackingRoutes: Routes = [
   {
     key: 'aquatracking.userOverview',
     path: '/user/overview',
-    component: lazy(() => import('@/pages/user/DashboardPage')),
+    component: lazy(() => import('@/features/user-dashboard/pages/UserDashboardPage')),
+    authority: [],
+  },
+  {
+    key: 'aquatracking.userSensors',
+    path: '/user/sensors',
+    component: lazy(() => import('@/features/sensors/pages/SensorsPage')),
+    authority: [],
+  },
+  {
+    key: 'aquatracking.userAlerts',
+    path: '/user/alerts',
+    component: lazy(() => import('@/features/user-alerts/pages/UserAlertsPage')),
+    authority: [],
+  },
+  {
+    key: 'aquatracking.userConsumptionHistory',
+    path: '/user/consumption',
+    component: lazy(() => import('@/features/consumption-history/pages/ConsumptionHistoryPage')),
+    authority: [],
+  },
+  {
+    key: 'aquatracking.sensorDetail',
+    path: '/user/sensors/:sensorId',
+    component: lazy(() => import('@/features/sensors/pages/SensorDetailPage')),
     authority: [],
   },
   {
@@ -71,7 +95,7 @@ const aquaTrackingRoutes: Routes = [
   {
     key: 'aquatracking.settings',
     path: '/settings',
-    component: lazy(() => import('@/pages/user/SettingsPage')),
+    component: lazy(() => import('@/features/user-profile/pages/UserProfilePage')),
     authority: [],
   },
 ];

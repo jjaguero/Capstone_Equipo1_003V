@@ -32,6 +32,9 @@ export class User {
   @Prop({ default: 150 })
   limitLitersPerDay: number;
 
+  @Prop({ default: 1 })
+  people: number;
+
   @Prop({ default: Date.now })
   createdAt: Date;
 }

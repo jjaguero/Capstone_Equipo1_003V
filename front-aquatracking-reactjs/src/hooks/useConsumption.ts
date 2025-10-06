@@ -14,10 +14,14 @@ export const useConsumption = (homeId?: string) => {
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
+    console.log('useConsumption - homeId:', homeId)
     if (homeId) {
       fetchConsumptionByHome(homeId);
     } else {
-      fetchAllConsumptions();
+      // Si no hay homeId, no buscar consumos (para usuarios sin hogar asignado)
+      setConsumptions([])
+      setLoading(false)
+      setError(null)
     }
   }, [homeId]);
 

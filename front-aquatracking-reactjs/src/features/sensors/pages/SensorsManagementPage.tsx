@@ -25,7 +25,7 @@ import {
 const { Tr, Td, THead, TBody, Th } = Table
 
 const SensorsManagementPage = () => {
-    const { sensors, loading } = useSensors()
+    const { sensors, loading } = useSensors(undefined, true) // fetchAll = true para vista de admin
     const { homes } = useHomes()
     const { getConsumption, loading: loadingConsumption } = useSensorConsumption()
 

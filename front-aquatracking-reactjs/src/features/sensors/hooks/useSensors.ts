@@ -8,18 +8,26 @@ import type { Sensor } from '@/@types/entities';
  * NO business logic - just HTTP calls to NestJS
  */
 
-export const useSensors = (homeId?: string) => {
+export const useSensors = (homeId?: string, fetchAll = false) => {
   const [sensors, setSensors] = useState<Sensor[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
+    console.log('useSensors - homeId:', homeId, 'fetchAll:', fetchAll)
     if (homeId) {
+      // Buscar sensores de una casa específica (vista de usuario)
       fetchSensorsByHome(homeId);
-    } else {
+    } else if (fetchAll) {
+      // Buscar todos los sensores (vista de admin)
       fetchAllSensors();
+    } else {
+      // Si no hay homeId y no es fetchAll, no buscar sensores
+      setSensors([])
+      setLoading(false)
+      setError(null)
     }
-  }, [homeId]);
+  }, [homeId, fetchAll]);
 
   /**
    * Fetch all sensors from backend

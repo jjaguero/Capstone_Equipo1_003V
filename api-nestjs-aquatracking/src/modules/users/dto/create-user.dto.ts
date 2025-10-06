@@ -32,4 +32,8 @@ export class CreateUserDto {
   @IsOptional()
   @IsNumber()
   limitLitersPerDay?: number;
+
+  @IsOptional()
+  @IsNumber()
+  people?: number;
 }

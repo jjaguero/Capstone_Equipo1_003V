@@ -32,7 +32,7 @@ interface UseAlertsReturn {
     filterByStatus: (resolved: boolean | null) => void
 }
 
-export const useAlerts = (): UseAlertsReturn => {
+export const useAlerts = (homeId?: string, fetchAll = false): UseAlertsReturn => {
     const [alerts, setAlerts] = useState<Alert[]>([])
     const [filteredAlerts, setFilteredAlerts] = useState<Alert[]>([])
     const [stats, setStats] = useState<AlertsStats | null>(null)
@@ -47,8 +47,26 @@ export const useAlerts = (): UseAlertsReturn => {
             setLoading(true)
             setError(null)
 
-            const response = await apiClient.get<Alert[]>(ENDPOINTS.ALERTS)
+            let response;
+            if (homeId && !fetchAll) {
+                // Filtrar alertas por homeId para usuarios
+                console.log('useAlerts - Obteniendo alertas para homeId:', homeId);
+                response = await apiClient.get<Alert[]>(ENDPOINTS.ALERTS_BY_HOME(homeId))
+            } else if (fetchAll) {
+                // Obtener todas las alertas para admin
+                console.log('useAlerts - Obteniendo todas las alertas (admin)');
+                response = await apiClient.get<Alert[]>(ENDPOINTS.ALERTS)
+            } else {
+                // Sin homeId y sin fetchAll, no buscar alertas
+                setAlerts([])
+                setFilteredAlerts([])
+                setStats({ total: 0, pending: 0, resolved: 0, critical: 0, high: 0 })
+                setLoading(false)
+                return
+            }
+
             const data = response.data
+            console.log('useAlerts - Alertas obtenidas:', data);
 
             setAlerts(data)
             setFilteredAlerts(data)
@@ -110,7 +128,7 @@ export const useAlerts = (): UseAlertsReturn => {
 
     useEffect(() => {
         fetchAlerts()
-    }, [])
+    }, [homeId, fetchAll])
 
     useEffect(() => {
         applyFilters()

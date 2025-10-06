@@ -26,24 +26,24 @@ export const ENDPOINTS = {
   // Sensors endpoints
   SENSORS: '/sensors',
   SENSOR_BY_ID: (id: string) => `/sensors/${id}`,
-  SENSORS_BY_HOME: (homeId: string) => `/sensors/home/${homeId}`,
+  SENSORS_BY_HOME: (homeId: string) => `/sensors?homeId=${homeId}`,
 
   // Measurements endpoints
   MEASUREMENTS: '/measurements',
   MEASUREMENT_BY_ID: (id: string) => `/measurements/${id}`,
-  MEASUREMENTS_BY_HOME: (homeId: string) => `/measurements/home/${homeId}`,
-  MEASUREMENTS_BY_SENSOR: (sensorId: string) => `/measurements/sensor/${sensorId}`,
+  MEASUREMENTS_BY_HOME: (homeId: string) => `/measurements?homeId=${homeId}`,
+  MEASUREMENTS_BY_SENSOR: (sensorId: string) => `/measurements?sensorId=${sensorId}`,
 
   // Daily consumption endpoints
   DAILY_CONSUMPTION: '/daily-consumption',
   DAILY_CONSUMPTION_BY_ID: (id: string) => `/daily-consumption/${id}`,
-  DAILY_CONSUMPTION_BY_HOME: (homeId: string) => `/daily-consumption/home/${homeId}`,
+  DAILY_CONSUMPTION_BY_HOME: (homeId: string) => `/daily-consumption?homeId=${homeId}`,
 
   // Alerts endpoints
   ALERTS: '/alerts',
   ALERT_BY_ID: (id: string) => `/alerts/${id}`,
-  ALERTS_BY_HOME: (homeId: string) => `/alerts/home/${homeId}`,
-  UNRESOLVED_ALERTS_BY_HOME: (homeId: string) => `/alerts/home/${homeId}/unresolved`,
+  ALERTS_BY_HOME: (homeId: string) => `/alerts?homeId=${homeId}`,
+  UNRESOLVED_ALERTS_BY_HOME: (homeId: string) => `/alerts?homeId=${homeId}&resolved=false`,
 } as const;
 
 export default ENDPOINTS;

@@ -14,10 +14,14 @@ export const useAlerts = (homeId?: string) => {
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
+    console.log('useAlerts - homeId:', homeId)
     if (homeId) {
       fetchAlertsByHome(homeId);
     } else {
-      fetchAllAlerts();
+      // Si no hay homeId, no buscar alertas (para usuarios sin hogar asignado)
+      setAlerts([])
+      setLoading(false)
+      setError(null)
     }
   }, [homeId]);
 
@@ -45,11 +49,23 @@ export const useAlerts = (homeId?: string) => {
     try {
       setLoading(true);
       setError(null);
+      console.log('useAlerts - Fetching alerts for homeId:', homeId);
+      console.log('useAlerts - API endpoint:', ENDPOINTS.ALERTS_BY_HOME(homeId));
+      
       const response = await apiClient.get<Alert[]>(ENDPOINTS.ALERTS_BY_HOME(homeId));
+      
+      console.log('useAlerts - API Response:', response.data);
+      console.log('useAlerts - Found alerts count:', response.data.length);
+      
       setAlerts(response.data);
     } catch (err) {
+      console.error('useAlerts - Error fetching alerts by home:', err);
+      console.error('useAlerts - Error details:', {
+        homeId,
+        endpoint: ENDPOINTS.ALERTS_BY_HOME(homeId),
+        error: err
+      });
       setError('Error al cargar alertas del hogar');
-      console.error('Error fetching alerts by home:', err);
     } finally {
       setLoading(false);
     }
@@ -106,11 +122,11 @@ export const useAlerts = (homeId?: string) => {
   };
 
   /**
-   * Update alert (typically to mark as resolved)
+   * Update existing alert
    */
-  const updateAlert = async (id: string, alertData: Partial<Alert>): Promise<Alert> => {
+  const updateAlert = async (id: string, updateData: Partial<Alert>): Promise<Alert> => {
     try {
-      const response = await apiClient.patch<Alert>(ENDPOINTS.ALERT_BY_ID(id), alertData);
+      const response = await apiClient.patch<Alert>(ENDPOINTS.ALERT_BY_ID(id), updateData);
       if (homeId) {
         await fetchAlertsByHome(homeId);
       } else {
@@ -124,7 +140,7 @@ export const useAlerts = (homeId?: string) => {
   };
 
   /**
-   * Delete alert
+   * Delete alert by ID
    */
   const deleteAlert = async (id: string): Promise<void> => {
     try {
@@ -140,13 +156,6 @@ export const useAlerts = (homeId?: string) => {
     }
   };
 
-  /**
-   * Mark alert as resolved
-   */
-  const resolveAlert = async (id: string): Promise<Alert> => {
-    return updateAlert(id, { resolved: true });
-  };
-
   return {
     alerts,
     loading,
@@ -158,6 +167,6 @@ export const useAlerts = (homeId?: string) => {
     createAlert,
     updateAlert,
     deleteAlert,
-    resolveAlert,
+    refetch: homeId ? () => fetchAlertsByHome(homeId) : fetchAllAlerts,
   };
 };

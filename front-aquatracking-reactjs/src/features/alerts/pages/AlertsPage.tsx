@@ -22,6 +22,7 @@ interface Home {
 }
 
 const AlertsPage = () => {
+    // Esta página es SOLO para administradores
     const {
         alerts,
         stats,
@@ -31,7 +32,9 @@ const AlertsPage = () => {
         filterByHome,
         filterByType,
         filterByStatus,
-    } = useAlerts()
+    } = useAlerts(undefined, true) // fetchAll = true para admin
+
+    console.log('AlertsPage (ADMIN) - alertas obtenidas:', alerts)
 
     const [homes, setHomes] = useState<Home[]>([])
     const [loadingHomes, setLoadingHomes] = useState(true)
@@ -111,10 +114,10 @@ const AlertsPage = () => {
             <div className="flex items-center justify-between mb-8 animate-fadeIn">
                 <div>
                     <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100">
-                        Gestión de Alertas
+                        Gestión de Alertas del Sistema
                     </h3>
                     <p className="text-gray-600 dark:text-gray-400 mt-1">
-                        Monitoreo de alertas de consumo excesivo de agua
+                        Monitoreo de alertas de consumo excesivo de agua de todo el sistema
                     </p>
                 </div>
                 <Button

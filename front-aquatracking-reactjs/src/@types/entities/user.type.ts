@@ -13,6 +13,7 @@ export interface User {
   homeId?: string;
   avatar?: string;
   limitLitersPerDay?: number;
+  people?: number; // Número de personas en el hogar
   createdAt?: Date;
   updatedAt?: Date;
 }
