@@ -34,8 +34,6 @@ const AlertsPage = () => {
         filterByStatus,
     } = useAlerts(undefined, true) // fetchAll = true para admin
 
-    console.log('AlertsPage (ADMIN) - alertas obtenidas:', alerts)
-
     const [homes, setHomes] = useState<Home[]>([])
     const [loadingHomes, setLoadingHomes] = useState(true)
 

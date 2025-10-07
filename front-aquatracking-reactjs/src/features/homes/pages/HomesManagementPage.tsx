@@ -106,7 +106,7 @@ const HomesManagementPage = () => {
     // Calcular consumo de hoy por hogar (simulado por ahora)
     const getTodayConsumption = (homeId: string) => {
         const homeSensors = sensors.filter((s: any) => s.homeId === homeId)
-        // TODO: Cuando existan mediciones reales, calcular el consumo de hoy
+
         // Por ahora retornamos un valor aleatorio para simular
         return homeSensors.length > 0 ? Math.floor(Math.random() * 500) : 0
     }

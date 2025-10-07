@@ -43,8 +43,6 @@ const SensorsPage = () => {
   const inactiveSensors = sensors.filter(s => s.status === 'inactive')
   const maintenanceSensors = sensors.filter(s => s.status === 'maintenance')
 
-
-
   const getStatusColor = (status: string) => {
     switch (status) {
       case 'active': return 'bg-green-100 text-green-800'

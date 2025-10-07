@@ -15,9 +15,6 @@ const SensorStatusCard: React.FC<SensorStatusCardProps> = ({ sensors, loading, o
   const handleNavigateToSensors = () => {
     window.location.href = '/user/sensors'
   }
-  
-
-  
 
   if (loading) {
     return (

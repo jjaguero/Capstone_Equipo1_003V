@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
-// import { useParams } from 'react-router-dom';
+
 import { Card, Button, Progress, Badge } from '@/components/ui';
 import { useSensors } from '../hooks/useSensors';
 import { normalizeSensorName } from '@/utils/sensor-name.utils';
-// import { useConsumption } from '@/features/daily-consumption/hooks/useConsumption';
+
 import { 
   PiArrowLeftBold,
   PiMapPinDuotone,
@@ -68,10 +68,10 @@ const SensorDetailPage = () => {
     window.location.href = '/user/sensors';
   };
 
-  // Simular datos estadísticos (en producción vendría del backend)
+
   useEffect(() => {
     if (sensor) {
-      // Datos simulados para demostración
+
       const simulatedStats = {
         todayUsage: 45.8,
         weeklyUsage: 287.4,

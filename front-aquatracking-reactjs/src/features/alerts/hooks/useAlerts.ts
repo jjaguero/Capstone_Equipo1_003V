@@ -50,11 +50,11 @@ export const useAlerts = (homeId?: string, fetchAll = false): UseAlertsReturn =>
             let response;
             if (homeId && !fetchAll) {
                 // Filtrar alertas por homeId para usuarios
-                console.log('useAlerts - Obteniendo alertas para homeId:', homeId);
+
                 response = await apiClient.get<Alert[]>(ENDPOINTS.ALERTS_BY_HOME(homeId))
             } else if (fetchAll) {
                 // Obtener todas las alertas para admin
-                console.log('useAlerts - Obteniendo todas las alertas (admin)');
+
                 response = await apiClient.get<Alert[]>(ENDPOINTS.ALERTS)
             } else {
                 // Sin homeId y sin fetchAll, no buscar alertas
@@ -66,7 +66,7 @@ export const useAlerts = (homeId?: string, fetchAll = false): UseAlertsReturn =>
             }
 
             const data = response.data
-            console.log('useAlerts - Alertas obtenidas:', data);
+
 
             setAlerts(data)
             setFilteredAlerts(data)

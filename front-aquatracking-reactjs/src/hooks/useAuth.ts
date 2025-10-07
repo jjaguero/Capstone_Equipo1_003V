@@ -31,7 +31,7 @@ export const useAuth = () => {
       const response = await apiClient.get<User>(ENDPOINTS.USER_BY_EMAIL(email));
       const user = response.data;
 
-      // TODO: Backend should validate password and return JWT token
+
       // For now, basic validation (replace with proper JWT auth)
       if (user && user.password === password) {
         // Usar localStorage para que persista al cerrar el navegador

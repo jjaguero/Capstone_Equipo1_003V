@@ -14,7 +14,7 @@ export const useSensors = (homeId?: string, fetchAll = false) => {
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    console.log('useSensors - homeId:', homeId, 'fetchAll:', fetchAll)
+
     if (homeId) {
       // Buscar sensores de una casa específica (vista de usuario)
       fetchSensorsByHome(homeId);

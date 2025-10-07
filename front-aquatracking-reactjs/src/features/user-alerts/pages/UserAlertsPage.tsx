@@ -23,8 +23,8 @@ const UserAlertsPage = () => {
   }
 
   const handleMarkAsResolved = (alertId: string) => {
-    // TODO: Implementar marcar como resuelto
-    console.log('Marcar como resuelto:', alertId)
+
+
   }
 
   if (!currentUser?.homeId) {

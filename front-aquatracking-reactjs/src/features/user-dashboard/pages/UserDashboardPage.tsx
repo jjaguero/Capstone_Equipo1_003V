@@ -212,8 +212,8 @@ const UserDashboardPage = () => {
                 sensors={sensors} 
                 loading={sensorsLoading}
                 onSensorClick={(sensor) => {
-                  console.log('Ver detalles del sensor:', sensor)
-                  // TODO: Navegar a detalle del sensor
+
+
                 }}
               />
               
@@ -221,12 +221,12 @@ const UserDashboardPage = () => {
                 alerts={alerts} 
                 loading={alertsLoading}
                 onAlertClick={(alert) => {
-                  console.log('Ver detalle de alerta:', alert)
-                  // TODO: Navegar a detalle de alerta
+
+
                 }}
                 onMarkAsRead={(alertId) => {
-                  console.log('Marcar alerta como leída:', alertId)
-                  // TODO: Implementar marcar como leída
+
+
                 }}
               />
             </div>

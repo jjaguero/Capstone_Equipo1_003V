@@ -1,7 +1,3 @@
-/**
- * User entity matching backend MongoDB schema
- * Backend: api-nestjs-aquatracking/src/schemas/user.schema.ts
- */
 export interface User {
   _id: string;
   rut: string;

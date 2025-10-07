@@ -111,14 +111,6 @@ export const useSectors = (): UseSectorsReturn => {
                 const sectorAlerts = alertsData.filter((a: any) => homeIds.includes(String(a.homeId)))
                 const pendingAlerts = sectorAlerts.filter((a: any) => !a.resolved).length
 
-                console.log(`Sector ${sector.name}:`, {
-                    homes: sectorHomes.length,
-                    homeIds,
-                    consumptionRecords: sectorConsumption.length,
-                    totalConsumption,
-                    averageConsumption,
-                })
-
                 return {
                     sectorId: sector._id,
                     sectorName: sector.name,
