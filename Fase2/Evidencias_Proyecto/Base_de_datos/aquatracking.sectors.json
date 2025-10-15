@@ -1,0 +1,18 @@
+[{
+  "_id": {
+    "$oid": "68ddb480dbd7ffab2815388a"
+  },
+  "name": "Trapén",
+  "aprName": "APR Trapén",
+  "region": "Los Lagos",
+  "active": true
+},
+{
+  "_id": {
+    "$oid": "68ddb480dbd7ffab2815388b"
+  },
+  "name": "Panitao",
+  "aprName": "APR Panitao",
+  "region": "Los Lagos",
+  "active": true
+}]

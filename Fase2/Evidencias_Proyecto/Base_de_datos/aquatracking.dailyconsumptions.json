@@ -1,0 +1,9264 @@
+[{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5d8532"
+  },
+  "homeId": "68e191345905d8b7b30e719d",
+  "date": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "totalLiters": 540.13,
+  "bySensor": [
+    {
+      "sensorId": "68e192275905d8b7b30e7265",
+      "liters": 128.69
+    },
+    {
+      "sensorId": "68e192315905d8b7b30e726f",
+      "liters": 87.19
+    },
+    {
+      "sensorId": "68e192365905d8b7b30e7279",
+      "liters": 165.96
+    },
+    {
+      "sensorId": "68e1923f5905d8b7b30e7283",
+      "liters": 57.94
+    },
+    {
+      "sensorId": "68e192465905d8b7b30e728d",
+      "liters": 100.35
+    },
+    {
+      "sensorId": "68e1924b5905d8b7b30e7297",
+      "liters": 0
+    }
+  ],
+  "recommendedLiters": 450,
+  "limitLiters": 1200,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5d8533"
+  },
+  "homeId": "68e1914a5905d8b7b30e71ad",
+  "date": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "totalLiters": 915.47,
+  "bySensor": [
+    {
+      "sensorId": "68e192515905d8b7b30e72a1",
+      "liters": 131.04
+    },
+    {
+      "sensorId": "68e192575905d8b7b30e72ab",
+      "liters": 102.72
+    },
+    {
+      "sensorId": "68e1925e5905d8b7b30e72c3",
+      "liters": 209.86
+    },
+    {
+      "sensorId": "68e192695905d8b7b30e72cd",
+      "liters": 129.02
+    },
+    {
+      "sensorId": "68e1926d5905d8b7b30e72d7",
+      "liters": 180.31
+    },
+    {
+      "sensorId": "68e192755905d8b7b30e72e1",
+      "liters": 37.97
+    },
+    {
+      "sensorId": "68e1927c5905d8b7b30e72eb",
+      "liters": 124.55
+    },
+    {
+      "sensorId": "68e192895905d8b7b30e72f5",
+      "liters": 0
+    }
+  ],
+  "recommendedLiters": 600,
+  "limitLiters": 1600,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5d8534"
+  },
+  "homeId": "68e1916e5905d8b7b30e71bd",
+  "date": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "totalLiters": 326.52,
+  "bySensor": [
+    {
+      "sensorId": "68e192aa5905d8b7b30e7375",
+      "liters": 95.38
+    },
+    {
+      "sensorId": "68e192b05905d8b7b30e737f",
+      "liters": 64.43
+    },
+    {
+      "sensorId": "68e192b65905d8b7b30e7389",
+      "liters": 78.96
+    },
+    {
+      "sensorId": "68e192bb5905d8b7b30e7393",
+      "liters": 87.75
+    }
+  ],
+  "recommendedLiters": 300,
+  "limitLiters": 800,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5d8535"
+  },
+  "homeId": "68e1918a5905d8b7b30e71cd",
+  "date": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "totalLiters": 1568.15,
+  "bySensor": [
+    {
+      "sensorId": "68e192cd5905d8b7b30e739d",
+      "liters": 334.62
+    },
+    {
+      "sensorId": "68e192db5905d8b7b30e73b1",
+      "liters": 122.63
+    },
+    {
+      "sensorId": "68e192e15905d8b7b30e73bb",
+      "liters": 265.7
+    },
+    {
+      "sensorId": "68e192f05905d8b7b30e73c5",
+      "liters": 355.15
+    },
+    {
+      "sensorId": "68e192f85905d8b7b30e73cf",
+      "liters": 118.97
+    },
+    {
+      "sensorId": "68e192fd5905d8b7b30e73d9",
+      "liters": 263.02
+    },
+    {
+      "sensorId": "68e193035905d8b7b30e73e3",
+      "liters": 108.06
+    },
+    {
+      "sensorId": "68e1930a5905d8b7b30e73ed",
+      "liters": 0
+    },
+    {
+      "sensorId": "68e193115905d8b7b30e73f7",
+      "liters": 0
+    },
+    {
+      "sensorId": "68e1931f5905d8b7b30e7401",
+      "liters": 0
+    }
+  ],
+  "recommendedLiters": 750,
+  "limitLiters": 2000,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5d8536"
+  },
+  "homeId": "68e1919a5905d8b7b30e71dd",
+  "date": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "totalLiters": 240.61,
+  "bySensor": [
+    {
+      "sensorId": "68e192d25905d8b7b30e73a7",
+      "liters": 37.88
+    },
+    {
+      "sensorId": "68e1932b5905d8b7b30e740b",
+      "liters": 38.91
+    },
+    {
+      "sensorId": "68e193315905d8b7b30e7415",
+      "liters": 54.5
+    },
+    {
+      "sensorId": "68e193385905d8b7b30e741f",
+      "liters": 109.32
+    }
+  ],
+  "recommendedLiters": 150,
+  "limitLiters": 400,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5d8537"
+  },
+  "homeId": "68e191b95905d8b7b30e71ed",
+  "date": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "totalLiters": 543.95,
+  "bySensor": [
+    {
+      "sensorId": "68e1936d5905d8b7b30e7469",
+      "liters": 138.92
+    },
+    {
+      "sensorId": "68e193725905d8b7b30e7473",
+      "liters": 123.63
+    },
+    {
+      "sensorId": "68e193775905d8b7b30e747d",
+      "liters": 187.69
+    },
+    {
+      "sensorId": "68e1937e5905d8b7b30e7487",
+      "liters": 93.71
+    },
+    {
+      "sensorId": "68e193865905d8b7b30e7491",
+      "liters": 0
+    }
+  ],
+  "recommendedLiters": 600,
+  "limitLiters": 1600,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5d8538"
+  },
+  "homeId": "68e191c85905d8b7b30e71fd",
+  "date": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "totalLiters": 641.52,
+  "bySensor": [
+    {
+      "sensorId": "68e193995905d8b7b30e749b",
+      "liters": 140.75
+    },
+    {
+      "sensorId": "68e1939d5905d8b7b30e74a5",
+      "liters": 79.58
+    },
+    {
+      "sensorId": "68e193a95905d8b7b30e74af",
+      "liters": 131.3
+    },
+    {
+      "sensorId": "68e193b55905d8b7b30e74b9",
+      "liters": 55.97
+    },
+    {
+      "sensorId": "68e193ba5905d8b7b30e74c3",
+      "liters": 0
+    },
+    {
+      "sensorId": "68e193c35905d8b7b30e74cd",
+      "liters": 79.85
+    },
+    {
+      "sensorId": "68e193c85905d8b7b30e74d7",
+      "liters": 154.07
+    }
+  ],
+  "recommendedLiters": 450,
+  "limitLiters": 1200,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5d8539"
+  },
+  "homeId": "68e191dd5905d8b7b30e720d",
+  "date": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "totalLiters": 765.51,
+  "bySensor": [
+    {
+      "sensorId": "68e193d45905d8b7b30e74e1",
+      "liters": 272.65
+    },
+    {
+      "sensorId": "68e193da5905d8b7b30e74eb",
+      "liters": 149.67
+    },
+    {
+      "sensorId": "68e193df5905d8b7b30e74f5",
+      "liters": 233.67
+    },
+    {
+      "sensorId": "68e193e45905d8b7b30e74ff",
+      "liters": 109.52
+    }
+  ],
+  "recommendedLiters": 750,
+  "limitLiters": 2000,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5d853a"
+  },
+  "homeId": "68e191f65905d8b7b30e721d",
+  "date": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "totalLiters": 578.78,
+  "bySensor": [
+    {
+      "sensorId": "68e193f55905d8b7b30e7509",
+      "liters": 222.38
+    },
+    {
+      "sensorId": "68e193fa5905d8b7b30e7513",
+      "liters": 127.48
+    },
+    {
+      "sensorId": "68e193ff5905d8b7b30e751d",
+      "liters": 166.44
+    },
+    {
+      "sensorId": "68e194045905d8b7b30e7527",
+      "liters": 62.48
+    },
+    {
+      "sensorId": "68e194095905d8b7b30e7531",
+      "liters": 0
+    },
+    {
+      "sensorId": "68e1940f5905d8b7b30e753b",
+      "liters": 0
+    }
+  ],
+  "recommendedLiters": 600,
+  "limitLiters": 1600,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5d853b"
+  },
+  "homeId": "68e192125905d8b7b30e722d",
+  "date": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "totalLiters": 473.91,
+  "bySensor": [
+    {
+      "sensorId": "68e194135905d8b7b30e7545",
+      "liters": 150.56
+    },
+    {
+      "sensorId": "68e194185905d8b7b30e754f",
+      "liters": 70.85
+    },
+    {
+      "sensorId": "68e1941c5905d8b7b30e7559",
+      "liters": 150.78
+    },
+    {
+      "sensorId": "68e1942b5905d8b7b30e7563",
+      "liters": 101.72
+    },
+    {
+      "sensorId": "68e194305905d8b7b30e756d",
+      "liters": 0
+    }
+  ],
+  "recommendedLiters": 450,
+  "limitLiters": 1200,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5d8858"
+  },
+  "homeId": "68e191345905d8b7b30e719d",
+  "date": {
+    "$date": "2025-09-15T00:00:00.000Z"
+  },
+  "totalLiters": 382.16,
+  "bySensor": [
+    {
+      "sensorId": "68e192275905d8b7b30e7265",
+      "liters": 147.74
+    },
+    {
+      "sensorId": "68e192315905d8b7b30e726f",
+      "liters": 63.11
+    },
+    {
+      "sensorId": "68e192365905d8b7b30e7279",
+      "liters": 118.6
+    },
+    {
+      "sensorId": "68e1923f5905d8b7b30e7283",
+      "liters": 52.71
+    },
+    {
+      "sensorId": "68e192465905d8b7b30e728d",
+      "liters": 0
+    },
+    {
+      "sensorId": "68e1924b5905d8b7b30e7297",
+      "liters": 0
+    }
+  ],
+  "recommendedLiters": 450,
+  "limitLiters": 1200,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5d8859"
+  },
+  "homeId": "68e1914a5905d8b7b30e71ad",
+  "date": {
+    "$date": "2025-09-15T00:00:00.000Z"
+  },
+  "totalLiters": 756.11,
+  "bySensor": [
+    {
+      "sensorId": "68e192515905d8b7b30e72a1",
+      "liters": 171.79
+    },
+    {
+      "sensorId": "68e192575905d8b7b30e72ab",
+      "liters": 121.7
+    },
+    {
+      "sensorId": "68e1925e5905d8b7b30e72c3",
+      "liters": 174.58
+    },
+    {
+      "sensorId": "68e192695905d8b7b30e72cd",
+      "liters": 84.25
+    },
+    {
+      "sensorId": "68e1926d5905d8b7b30e72d7",
+      "liters": 144.98
+    },
+    {
+      "sensorId": "68e192755905d8b7b30e72e1",
+      "liters": 58.81
+    },
+    {
+      "sensorId": "68e1927c5905d8b7b30e72eb",
+      "liters": 0
+    },
+    {
+      "sensorId": "68e192895905d8b7b30e72f5",
+      "liters": 0
+    }
+  ],
+  "recommendedLiters": 600,
+  "limitLiters": 1600,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5d885a"
+  },
+  "homeId": "68e1916e5905d8b7b30e71bd",
+  "date": {
+    "$date": "2025-09-15T00:00:00.000Z"
+  },
+  "totalLiters": 313.12,
+  "bySensor": [
+    {
+      "sensorId": "68e192aa5905d8b7b30e7375",
+      "liters": 65.02
+    },
+    {
+      "sensorId": "68e192b05905d8b7b30e737f",
+      "liters": 56.71
+    },
+    {
+      "sensorId": "68e192b65905d8b7b30e7389",
+      "liters": 93.84
+    },
+    {
+      "sensorId": "68e192bb5905d8b7b30e7393",
+      "liters": 97.55
+    }
+  ],
+  "recommendedLiters": 300,
+  "limitLiters": 800,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5d885b"
+  },
+  "homeId": "68e1918a5905d8b7b30e71cd",
+  "date": {
+    "$date": "2025-09-15T00:00:00.000Z"
+  },
+  "totalLiters": 1327.54,
+  "bySensor": [
+    {
+      "sensorId": "68e192cd5905d8b7b30e739d",
+      "liters": 268.61
+    },
+    {
+      "sensorId": "68e192db5905d8b7b30e73b1",
+      "liters": 136.08
+    },
+    {
+      "sensorId": "68e192e15905d8b7b30e73bb",
+      "liters": 241.5
+    },
+    {
+      "sensorId": "68e192f05905d8b7b30e73c5",
+      "liters": 244.44
+    },
+    {
+      "sensorId": "68e192f85905d8b7b30e73cf",
+      "liters": 110.64
+    },
+    {
+      "sensorId": "68e192fd5905d8b7b30e73d9",
+      "liters": 183.2
+    },
+    {
+      "sensorId": "68e193035905d8b7b30e73e3",
+      "liters": 48.35
+    },
+    {
+      "sensorId": "68e1930a5905d8b7b30e73ed",
+      "liters": 94.72
+    },
+    {
+      "sensorId": "68e193115905d8b7b30e73f7",
+      "liters": 0
+    },
+    {
+      "sensorId": "68e1931f5905d8b7b30e7401",
+      "liters": 0
+    }
+  ],
+  "recommendedLiters": 750,
+  "limitLiters": 2000,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5d885c"
+  },
+  "homeId": "68e1919a5905d8b7b30e71dd",
+  "date": {
+    "$date": "2025-09-15T00:00:00.000Z"
+  },
+  "totalLiters": 176.41,
+  "bySensor": [
+    {
+      "sensorId": "68e192d25905d8b7b30e73a7",
+      "liters": 20.3
+    },
+    {
+      "sensorId": "68e1932b5905d8b7b30e740b",
+      "liters": 39.84
+    },
+    {
+      "sensorId": "68e193315905d8b7b30e7415",
+      "liters": 43.75
+    },
+    {
+      "sensorId": "68e193385905d8b7b30e741f",
+      "liters": 72.52
+    }
+  ],
+  "recommendedLiters": 150,
+  "limitLiters": 400,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5d885d"
+  },
+  "homeId": "68e191b95905d8b7b30e71ed",
+  "date": {
+    "$date": "2025-09-15T00:00:00.000Z"
+  },
+  "totalLiters": 424.58,
+  "bySensor": [
+    {
+      "sensorId": "68e1936d5905d8b7b30e7469",
+      "liters": 116.69
+    },
+    {
+      "sensorId": "68e193725905d8b7b30e7473",
+      "liters": 115.57
+    },
+    {
+      "sensorId": "68e193775905d8b7b30e747d",
+      "liters": 156.48
+    },
+    {
+      "sensorId": "68e1937e5905d8b7b30e7487",
+      "liters": 35.84
+    },
+    {
+      "sensorId": "68e193865905d8b7b30e7491",
+      "liters": 0
+    }
+  ],
+  "recommendedLiters": 600,
+  "limitLiters": 1600,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5d885e"
+  },
+  "homeId": "68e191c85905d8b7b30e71fd",
+  "date": {
+    "$date": "2025-09-15T00:00:00.000Z"
+  },
+  "totalLiters": 484.31,
+  "bySensor": [
+    {
+      "sensorId": "68e193995905d8b7b30e749b",
+      "liters": 87.63
+    },
+    {
+      "sensorId": "68e1939d5905d8b7b30e74a5",
+      "liters": 69.98
+    },
+    {
+      "sensorId": "68e193a95905d8b7b30e74af",
+      "liters": 109.85
+    },
+    {
+      "sensorId": "68e193b55905d8b7b30e74b9",
+      "liters": 34.72
+    },
+    {
+      "sensorId": "68e193ba5905d8b7b30e74c3",
+      "liters": 0
+    },
+    {
+      "sensorId": "68e193c35905d8b7b30e74cd",
+      "liters": 83.44
+    },
+    {
+      "sensorId": "68e193c85905d8b7b30e74d7",
+      "liters": 98.69
+    }
+  ],
+  "recommendedLiters": 450,
+  "limitLiters": 1200,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5d885f"
+  },
+  "homeId": "68e191dd5905d8b7b30e720d",
+  "date": {
+    "$date": "2025-09-15T00:00:00.000Z"
+  },
+  "totalLiters": 698.35,
+  "bySensor": [
+    {
+      "sensorId": "68e193d45905d8b7b30e74e1",
+      "liters": 272.46
+    },
+    {
+      "sensorId": "68e193da5905d8b7b30e74eb",
+      "liters": 138.69
+    },
+    {
+      "sensorId": "68e193df5905d8b7b30e74f5",
+      "liters": 224.86
+    },
+    {
+      "sensorId": "68e193e45905d8b7b30e74ff",
+      "liters": 62.34
+    }
+  ],
+  "recommendedLiters": 750,
+  "limitLiters": 2000,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5d8860"
+  },
+  "homeId": "68e191f65905d8b7b30e721d",
+  "date": {
+    "$date": "2025-09-15T00:00:00.000Z"
+  },
+  "totalLiters": 558.19,
+  "bySensor": [
+    {
+      "sensorId": "68e193f55905d8b7b30e7509",
+      "liters": 231.28
+    },
+    {
+      "sensorId": "68e193fa5905d8b7b30e7513",
+      "liters": 112.47
+    },
+    {
+      "sensorId": "68e193ff5905d8b7b30e751d",
+      "liters": 163.37
+    },
+    {
+      "sensorId": "68e194045905d8b7b30e7527",
+      "liters": 51.07
+    },
+    {
+      "sensorId": "68e194095905d8b7b30e7531",
+      "liters": 0
+    },
+    {
+      "sensorId": "68e1940f5905d8b7b30e753b",
+      "liters": 0
+    }
+  ],
+  "recommendedLiters": 600,
+  "limitLiters": 1600,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5d8861"
+  },
+  "homeId": "68e192125905d8b7b30e722d",
+  "date": {
+    "$date": "2025-09-15T00:00:00.000Z"
+  },
+  "totalLiters": 311.73,
+  "bySensor": [
+    {
+      "sensorId": "68e194135905d8b7b30e7545",
+      "liters": 81.1
+    },
+    {
+      "sensorId": "68e194185905d8b7b30e754f",
+      "liters": 60.92
+    },
+    {
+      "sensorId": "68e1941c5905d8b7b30e7559",
+      "liters": 99.28
+    },
+    {
+      "sensorId": "68e1942b5905d8b7b30e7563",
+      "liters": 70.43
+    },
+    {
+      "sensorId": "68e194305905d8b7b30e756d",
+      "liters": 0
+    }
+  ],
+  "recommendedLiters": 450,
+  "limitLiters": 1200,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5d8b79"
+  },
+  "homeId": "68e191345905d8b7b30e719d",
+  "date": {
+    "$date": "2025-09-16T00:00:00.000Z"
+  },
+  "totalLiters": 364.47,
+  "bySensor": [
+    {
+      "sensorId": "68e192275905d8b7b30e7265",
+      "liters": 95.94
+    },
+    {
+      "sensorId": "68e192315905d8b7b30e726f",
+      "liters": 64.02
+    },
+    {
+      "sensorId": "68e192365905d8b7b30e7279",
+      "liters": 134.33
+    },
+    {
+      "sensorId": "68e1923f5905d8b7b30e7283",
+      "liters": 70.18
+    },
+    {
+      "sensorId": "68e192465905d8b7b30e728d",
+      "liters": 0
+    },
+    {
+      "sensorId": "68e1924b5905d8b7b30e7297",
+      "liters": 0
+    }
+  ],
+  "recommendedLiters": 450,
+  "limitLiters": 1200,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5d8b7a"
+  },
+  "homeId": "68e1914a5905d8b7b30e71ad",
+  "date": {
+    "$date": "2025-09-16T00:00:00.000Z"
+  },
+  "totalLiters": 724.21,
+  "bySensor": [
+    {
+      "sensorId": "68e192515905d8b7b30e72a1",
+      "liters": 125.68
+    },
+    {
+      "sensorId": "68e192575905d8b7b30e72ab",
+      "liters": 94.36
+    },
+    {
+      "sensorId": "68e1925e5905d8b7b30e72c3",
+      "liters": 182.61
+    },
+    {
+      "sensorId": "68e192695905d8b7b30e72cd",
+      "liters": 96.14
+    },
+    {
+      "sensorId": "68e1926d5905d8b7b30e72d7",
+      "liters": 161.71
+    },
+    {
+      "sensorId": "68e192755905d8b7b30e72e1",
+      "liters": 63.71
+    },
+    {
+      "sensorId": "68e1927c5905d8b7b30e72eb",
+      "liters": 0
+    },
+    {
+      "sensorId": "68e192895905d8b7b30e72f5",
+      "liters": 0
+    }
+  ],
+  "recommendedLiters": 600,
+  "limitLiters": 1600,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5d8b7b"
+  },
+  "homeId": "68e1916e5905d8b7b30e71bd",
+  "date": {
+    "$date": "2025-09-16T00:00:00.000Z"
+  },
+  "totalLiters": 228.29,
+  "bySensor": [
+    {
+      "sensorId": "68e192aa5905d8b7b30e7375",
+      "liters": 45.2
+    },
+    {
+      "sensorId": "68e192b05905d8b7b30e737f",
+      "liters": 58.71
+    },
+    {
+      "sensorId": "68e192b65905d8b7b30e7389",
+      "liters": 91.39
+    },
+    {
+      "sensorId": "68e192bb5905d8b7b30e7393",
+      "liters": 32.99
+    }
+  ],
+  "recommendedLiters": 300,
+  "limitLiters": 800,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5d8b7c"
+  },
+  "homeId": "68e1918a5905d8b7b30e71cd",
+  "date": {
+    "$date": "2025-09-16T00:00:00.000Z"
+  },
+  "totalLiters": 1276.84,
+  "bySensor": [
+    {
+      "sensorId": "68e192cd5905d8b7b30e739d",
+      "liters": 236.99
+    },
+    {
+      "sensorId": "68e192db5905d8b7b30e73b1",
+      "liters": 143.3
+    },
+    {
+      "sensorId": "68e192e15905d8b7b30e73bb",
+      "liters": 188.46
+    },
+    {
+      "sensorId": "68e192f05905d8b7b30e73c5",
+      "liters": 305.97
+    },
+    {
+      "sensorId": "68e192f85905d8b7b30e73cf",
+      "liters": 113.8
+    },
+    {
+      "sensorId": "68e192fd5905d8b7b30e73d9",
+      "liters": 183.86
+    },
+    {
+      "sensorId": "68e193035905d8b7b30e73e3",
+      "liters": 52.73
+    },
+    {
+      "sensorId": "68e1930a5905d8b7b30e73ed",
+      "liters": 0
+    },
+    {
+      "sensorId": "68e193115905d8b7b30e73f7",
+      "liters": 51.73
+    },
+    {
+      "sensorId": "68e1931f5905d8b7b30e7401",
+      "liters": 0
+    }
+  ],
+  "recommendedLiters": 750,
+  "limitLiters": 2000,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5d8b7d"
+  },
+  "homeId": "68e1919a5905d8b7b30e71dd",
+  "date": {
+    "$date": "2025-09-16T00:00:00.000Z"
+  },
+  "totalLiters": 200.72,
+  "bySensor": [
+    {
+      "sensorId": "68e192d25905d8b7b30e73a7",
+      "liters": 19.3
+    },
+    {
+      "sensorId": "68e1932b5905d8b7b30e740b",
+      "liters": 58.52
+    },
+    {
+      "sensorId": "68e193315905d8b7b30e7415",
+      "liters": 43.51
+    },
+    {
+      "sensorId": "68e193385905d8b7b30e741f",
+      "liters": 79.39
+    }
+  ],
+  "recommendedLiters": 150,
+  "limitLiters": 400,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5d8b7e"
+  },
+  "homeId": "68e191b95905d8b7b30e71ed",
+  "date": {
+    "$date": "2025-09-16T00:00:00.000Z"
+  },
+  "totalLiters": 502.57,
+  "bySensor": [
+    {
+      "sensorId": "68e1936d5905d8b7b30e7469",
+      "liters": 211.34
+    },
+    {
+      "sensorId": "68e193725905d8b7b30e7473",
+      "liters": 101
+    },
+    {
+      "sensorId": "68e193775905d8b7b30e747d",
+      "liters": 152.31
+    },
+    {
+      "sensorId": "68e1937e5905d8b7b30e7487",
+      "liters": 37.92
+    },
+    {
+      "sensorId": "68e193865905d8b7b30e7491",
+      "liters": 0
+    }
+  ],
+  "recommendedLiters": 600,
+  "limitLiters": 1600,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5d8b7f"
+  },
+  "homeId": "68e191c85905d8b7b30e71fd",
+  "date": {
+    "$date": "2025-09-16T00:00:00.000Z"
+  },
+  "totalLiters": 538.41,
+  "bySensor": [
+    {
+      "sensorId": "68e193995905d8b7b30e749b",
+      "liters": 90.61
+    },
+    {
+      "sensorId": "68e1939d5905d8b7b30e74a5",
+      "liters": 69.46
+    },
+    {
+      "sensorId": "68e193a95905d8b7b30e74af",
+      "liters": 138.34
+    },
+    {
+      "sensorId": "68e193b55905d8b7b30e74b9",
+      "liters": 51.48
+    },
+    {
+      "sensorId": "68e193ba5905d8b7b30e74c3",
+      "liters": 0
+    },
+    {
+      "sensorId": "68e193c35905d8b7b30e74cd",
+      "liters": 66.04
+    },
+    {
+      "sensorId": "68e193c85905d8b7b30e74d7",
+      "liters": 122.48
+    }
+  ],
+  "recommendedLiters": 450,
+  "limitLiters": 1200,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5d8b80"
+  },
+  "homeId": "68e191dd5905d8b7b30e720d",
+  "date": {
+    "$date": "2025-09-16T00:00:00.000Z"
+  },
+  "totalLiters": 678.55,
+  "bySensor": [
+    {
+      "sensorId": "68e193d45905d8b7b30e74e1",
+      "liters": 321.32
+    },
+    {
+      "sensorId": "68e193da5905d8b7b30e74eb",
+      "liters": 115.04
+    },
+    {
+      "sensorId": "68e193df5905d8b7b30e74f5",
+      "liters": 193.69
+    },
+    {
+      "sensorId": "68e193e45905d8b7b30e74ff",
+      "liters": 48.5
+    }
+  ],
+  "recommendedLiters": 750,
+  "limitLiters": 2000,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5d8b81"
+  },
+  "homeId": "68e191f65905d8b7b30e721d",
+  "date": {
+    "$date": "2025-09-16T00:00:00.000Z"
+  },
+  "totalLiters": 504.28,
+  "bySensor": [
+    {
+      "sensorId": "68e193f55905d8b7b30e7509",
+      "liters": 157.3
+    },
+    {
+      "sensorId": "68e193fa5905d8b7b30e7513",
+      "liters": 102.02
+    },
+    {
+      "sensorId": "68e193ff5905d8b7b30e751d",
+      "liters": 206.13
+    },
+    {
+      "sensorId": "68e194045905d8b7b30e7527",
+      "liters": 38.83
+    },
+    {
+      "sensorId": "68e194095905d8b7b30e7531",
+      "liters": 0
+    },
+    {
+      "sensorId": "68e1940f5905d8b7b30e753b",
+      "liters": 0
+    }
+  ],
+  "recommendedLiters": 600,
+  "limitLiters": 1600,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5d8b82"
+  },
+  "homeId": "68e192125905d8b7b30e722d",
+  "date": {
+    "$date": "2025-09-16T00:00:00.000Z"
+  },
+  "totalLiters": 407.96,
+  "bySensor": [
+    {
+      "sensorId": "68e194135905d8b7b30e7545",
+      "liters": 150.37
+    },
+    {
+      "sensorId": "68e194185905d8b7b30e754f",
+      "liters": 86.28
+    },
+    {
+      "sensorId": "68e1941c5905d8b7b30e7559",
+      "liters": 124.35
+    },
+    {
+      "sensorId": "68e1942b5905d8b7b30e7563",
+      "liters": 46.96
+    },
+    {
+      "sensorId": "68e194305905d8b7b30e756d",
+      "liters": 0
+    }
+  ],
+  "recommendedLiters": 450,
+  "limitLiters": 1200,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5d8e94"
+  },
+  "homeId": "68e191345905d8b7b30e719d",
+  "date": {
+    "$date": "2025-09-17T00:00:00.000Z"
+  },
+  "totalLiters": 472.01,
+  "bySensor": [
+    {
+      "sensorId": "68e192275905d8b7b30e7265",
+      "liters": 130.58
+    },
+    {
+      "sensorId": "68e192315905d8b7b30e726f",
+      "liters": 73.17
+    },
+    {
+      "sensorId": "68e192365905d8b7b30e7279",
+      "liters": 126.08
+    },
+    {
+      "sensorId": "68e1923f5905d8b7b30e7283",
+      "liters": 70.37
+    },
+    {
+      "sensorId": "68e192465905d8b7b30e728d",
+      "liters": 0
+    },
+    {
+      "sensorId": "68e1924b5905d8b7b30e7297",
+      "liters": 71.81
+    }
+  ],
+  "recommendedLiters": 450,
+  "limitLiters": 1200,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5d8e95"
+  },
+  "homeId": "68e1914a5905d8b7b30e71ad",
+  "date": {
+    "$date": "2025-09-17T00:00:00.000Z"
+  },
+  "totalLiters": 746.59,
+  "bySensor": [
+    {
+      "sensorId": "68e192515905d8b7b30e72a1",
+      "liters": 160.62
+    },
+    {
+      "sensorId": "68e192575905d8b7b30e72ab",
+      "liters": 79.91
+    },
+    {
+      "sensorId": "68e1925e5905d8b7b30e72c3",
+      "liters": 184.28
+    },
+    {
+      "sensorId": "68e192695905d8b7b30e72cd",
+      "liters": 97.83
+    },
+    {
+      "sensorId": "68e1926d5905d8b7b30e72d7",
+      "liters": 151.27
+    },
+    {
+      "sensorId": "68e192755905d8b7b30e72e1",
+      "liters": 72.68
+    },
+    {
+      "sensorId": "68e1927c5905d8b7b30e72eb",
+      "liters": 0
+    },
+    {
+      "sensorId": "68e192895905d8b7b30e72f5",
+      "liters": 0
+    }
+  ],
+  "recommendedLiters": 600,
+  "limitLiters": 1600,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5d8e96"
+  },
+  "homeId": "68e1916e5905d8b7b30e71bd",
+  "date": {
+    "$date": "2025-09-17T00:00:00.000Z"
+  },
+  "totalLiters": 320.37,
+  "bySensor": [
+    {
+      "sensorId": "68e192aa5905d8b7b30e7375",
+      "liters": 101.62
+    },
+    {
+      "sensorId": "68e192b05905d8b7b30e737f",
+      "liters": 49.4
+    },
+    {
+      "sensorId": "68e192b65905d8b7b30e7389",
+      "liters": 89.63
+    },
+    {
+      "sensorId": "68e192bb5905d8b7b30e7393",
+      "liters": 79.72
+    }
+  ],
+  "recommendedLiters": 300,
+  "limitLiters": 800,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5d8e97"
+  },
+  "homeId": "68e1918a5905d8b7b30e71cd",
+  "date": {
+    "$date": "2025-09-17T00:00:00.000Z"
+  },
+  "totalLiters": 1284.28,
+  "bySensor": [
+    {
+      "sensorId": "68e192cd5905d8b7b30e739d",
+      "liters": 286.48
+    },
+    {
+      "sensorId": "68e192db5905d8b7b30e73b1",
+      "liters": 158.57
+    },
+    {
+      "sensorId": "68e192e15905d8b7b30e73bb",
+      "liters": 191.45
+    },
+    {
+      "sensorId": "68e192f05905d8b7b30e73c5",
+      "liters": 164.63
+    },
+    {
+      "sensorId": "68e192f85905d8b7b30e73cf",
+      "liters": 133.93
+    },
+    {
+      "sensorId": "68e192fd5905d8b7b30e73d9",
+      "liters": 214.68
+    },
+    {
+      "sensorId": "68e193035905d8b7b30e73e3",
+      "liters": 63.71
+    },
+    {
+      "sensorId": "68e1930a5905d8b7b30e73ed",
+      "liters": 0
+    },
+    {
+      "sensorId": "68e193115905d8b7b30e73f7",
+      "liters": 70.83
+    },
+    {
+      "sensorId": "68e1931f5905d8b7b30e7401",
+      "liters": 0
+    }
+  ],
+  "recommendedLiters": 750,
+  "limitLiters": 2000,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5d8e98"
+  },
+  "homeId": "68e1919a5905d8b7b30e71dd",
+  "date": {
+    "$date": "2025-09-17T00:00:00.000Z"
+  },
+  "totalLiters": 199.39,
+  "bySensor": [
+    {
+      "sensorId": "68e192d25905d8b7b30e73a7",
+      "liters": 23.47
+    },
+    {
+      "sensorId": "68e1932b5905d8b7b30e740b",
+      "liters": 57.93
+    },
+    {
+      "sensorId": "68e193315905d8b7b30e7415",
+      "liters": 32.59
+    },
+    {
+      "sensorId": "68e193385905d8b7b30e741f",
+      "liters": 85.4
+    }
+  ],
+  "recommendedLiters": 150,
+  "limitLiters": 400,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5d8e99"
+  },
+  "homeId": "68e191b95905d8b7b30e71ed",
+  "date": {
+    "$date": "2025-09-17T00:00:00.000Z"
+  },
+  "totalLiters": 420.72,
+  "bySensor": [
+    {
+      "sensorId": "68e1936d5905d8b7b30e7469",
+      "liters": 99.87
+    },
+    {
+      "sensorId": "68e193725905d8b7b30e7473",
+      "liters": 112.03
+    },
+    {
+      "sensorId": "68e193775905d8b7b30e747d",
+      "liters": 170.35
+    },
+    {
+      "sensorId": "68e1937e5905d8b7b30e7487",
+      "liters": 38.47
+    },
+    {
+      "sensorId": "68e193865905d8b7b30e7491",
+      "liters": 0
+    }
+  ],
+  "recommendedLiters": 600,
+  "limitLiters": 1600,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5d8e9a"
+  },
+  "homeId": "68e191c85905d8b7b30e71fd",
+  "date": {
+    "$date": "2025-09-17T00:00:00.000Z"
+  },
+  "totalLiters": 534.89,
+  "bySensor": [
+    {
+      "sensorId": "68e193995905d8b7b30e749b",
+      "liters": 101.7
+    },
+    {
+      "sensorId": "68e1939d5905d8b7b30e74a5",
+      "liters": 63.44
+    },
+    {
+      "sensorId": "68e193a95905d8b7b30e74af",
+      "liters": 129.91
+    },
+    {
+      "sensorId": "68e193b55905d8b7b30e74b9",
+      "liters": 67.3
+    },
+    {
+      "sensorId": "68e193ba5905d8b7b30e74c3",
+      "liters": 0
+    },
+    {
+      "sensorId": "68e193c35905d8b7b30e74cd",
+      "liters": 57.62
+    },
+    {
+      "sensorId": "68e193c85905d8b7b30e74d7",
+      "liters": 114.92
+    }
+  ],
+  "recommendedLiters": 450,
+  "limitLiters": 1200,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5d8e9b"
+  },
+  "homeId": "68e191dd5905d8b7b30e720d",
+  "date": {
+    "$date": "2025-09-17T00:00:00.000Z"
+  },
+  "totalLiters": 624.69,
+  "bySensor": [
+    {
+      "sensorId": "68e193d45905d8b7b30e74e1",
+      "liters": 209.9
+    },
+    {
+      "sensorId": "68e193da5905d8b7b30e74eb",
+      "liters": 148.98
+    },
+    {
+      "sensorId": "68e193df5905d8b7b30e74f5",
+      "liters": 198.36
+    },
+    {
+      "sensorId": "68e193e45905d8b7b30e74ff",
+      "liters": 67.45
+    }
+  ],
+  "recommendedLiters": 750,
+  "limitLiters": 2000,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5d8e9c"
+  },
+  "homeId": "68e191f65905d8b7b30e721d",
+  "date": {
+    "$date": "2025-09-17T00:00:00.000Z"
+  },
+  "totalLiters": 715.53,
+  "bySensor": [
+    {
+      "sensorId": "68e193f55905d8b7b30e7509",
+      "liters": 270.01
+    },
+    {
+      "sensorId": "68e193fa5905d8b7b30e7513",
+      "liters": 86.93
+    },
+    {
+      "sensorId": "68e193ff5905d8b7b30e751d",
+      "liters": 157.4
+    },
+    {
+      "sensorId": "68e194045905d8b7b30e7527",
+      "liters": 80
+    },
+    {
+      "sensorId": "68e194095905d8b7b30e7531",
+      "liters": 121.19
+    },
+    {
+      "sensorId": "68e1940f5905d8b7b30e753b",
+      "liters": 0
+    }
+  ],
+  "recommendedLiters": 600,
+  "limitLiters": 1600,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5d8e9d"
+  },
+  "homeId": "68e192125905d8b7b30e722d",
+  "date": {
+    "$date": "2025-09-17T00:00:00.000Z"
+  },
+  "totalLiters": 362.71,
+  "bySensor": [
+    {
+      "sensorId": "68e194135905d8b7b30e7545",
+      "liters": 86.27
+    },
+    {
+      "sensorId": "68e194185905d8b7b30e754f",
+      "liters": 77.87
+    },
+    {
+      "sensorId": "68e1941c5905d8b7b30e7559",
+      "liters": 140.98
+    },
+    {
+      "sensorId": "68e1942b5905d8b7b30e7563",
+      "liters": 57.59
+    },
+    {
+      "sensorId": "68e194305905d8b7b30e756d",
+      "liters": 0
+    }
+  ],
+  "recommendedLiters": 450,
+  "limitLiters": 1200,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5d919e"
+  },
+  "homeId": "68e191345905d8b7b30e719d",
+  "date": {
+    "$date": "2025-09-18T00:00:00.000Z"
+  },
+  "totalLiters": 414.94,
+  "bySensor": [
+    {
+      "sensorId": "68e192275905d8b7b30e7265",
+      "liters": 133.2
+    },
+    {
+      "sensorId": "68e192315905d8b7b30e726f",
+      "liters": 93.34
+    },
+    {
+      "sensorId": "68e192365905d8b7b30e7279",
+      "liters": 118.63
+    },
+    {
+      "sensorId": "68e1923f5905d8b7b30e7283",
+      "liters": 69.77
+    },
+    {
+      "sensorId": "68e192465905d8b7b30e728d",
+      "liters": 0
+    },
+    {
+      "sensorId": "68e1924b5905d8b7b30e7297",
+      "liters": 0
+    }
+  ],
+  "recommendedLiters": 450,
+  "limitLiters": 1200,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5d919f"
+  },
+  "homeId": "68e1914a5905d8b7b30e71ad",
+  "date": {
+    "$date": "2025-09-18T00:00:00.000Z"
+  },
+  "totalLiters": 764.49,
+  "bySensor": [
+    {
+      "sensorId": "68e192515905d8b7b30e72a1",
+      "liters": 110.24
+    },
+    {
+      "sensorId": "68e192575905d8b7b30e72ab",
+      "liters": 102.81
+    },
+    {
+      "sensorId": "68e1925e5905d8b7b30e72c3",
+      "liters": 167.71
+    },
+    {
+      "sensorId": "68e192695905d8b7b30e72cd",
+      "liters": 96.99
+    },
+    {
+      "sensorId": "68e1926d5905d8b7b30e72d7",
+      "liters": 191.41
+    },
+    {
+      "sensorId": "68e192755905d8b7b30e72e1",
+      "liters": 95.33
+    },
+    {
+      "sensorId": "68e1927c5905d8b7b30e72eb",
+      "liters": 0
+    },
+    {
+      "sensorId": "68e192895905d8b7b30e72f5",
+      "liters": 0
+    }
+  ],
+  "recommendedLiters": 600,
+  "limitLiters": 1600,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5d91a0"
+  },
+  "homeId": "68e1916e5905d8b7b30e71bd",
+  "date": {
+    "$date": "2025-09-18T00:00:00.000Z"
+  },
+  "totalLiters": 265.3,
+  "bySensor": [
+    {
+      "sensorId": "68e192aa5905d8b7b30e7375",
+      "liters": 50.97
+    },
+    {
+      "sensorId": "68e192b05905d8b7b30e737f",
+      "liters": 52.14
+    },
+    {
+      "sensorId": "68e192b65905d8b7b30e7389",
+      "liters": 75.48
+    },
+    {
+      "sensorId": "68e192bb5905d8b7b30e7393",
+      "liters": 86.71
+    }
+  ],
+  "recommendedLiters": 300,
+  "limitLiters": 800,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5d91a1"
+  },
+  "homeId": "68e1918a5905d8b7b30e71cd",
+  "date": {
+    "$date": "2025-09-18T00:00:00.000Z"
+  },
+  "totalLiters": 1257.92,
+  "bySensor": [
+    {
+      "sensorId": "68e192cd5905d8b7b30e739d",
+      "liters": 236.4
+    },
+    {
+      "sensorId": "68e192db5905d8b7b30e73b1",
+      "liters": 109.98
+    },
+    {
+      "sensorId": "68e192e15905d8b7b30e73bb",
+      "liters": 196.65
+    },
+    {
+      "sensorId": "68e192f05905d8b7b30e73c5",
+      "liters": 233.33
+    },
+    {
+      "sensorId": "68e192f85905d8b7b30e73cf",
+      "liters": 122.64
+    },
+    {
+      "sensorId": "68e192fd5905d8b7b30e73d9",
+      "liters": 215.89
+    },
+    {
+      "sensorId": "68e193035905d8b7b30e73e3",
+      "liters": 52.94
+    },
+    {
+      "sensorId": "68e1930a5905d8b7b30e73ed",
+      "liters": 90.09
+    },
+    {
+      "sensorId": "68e193115905d8b7b30e73f7",
+      "liters": 0
+    },
+    {
+      "sensorId": "68e1931f5905d8b7b30e7401",
+      "liters": 0
+    }
+  ],
+  "recommendedLiters": 750,
+  "limitLiters": 2000,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5d91a2"
+  },
+  "homeId": "68e1919a5905d8b7b30e71dd",
+  "date": {
+    "$date": "2025-09-18T00:00:00.000Z"
+  },
+  "totalLiters": 143.49,
+  "bySensor": [
+    {
+      "sensorId": "68e192d25905d8b7b30e73a7",
+      "liters": 21.2
+    },
+    {
+      "sensorId": "68e1932b5905d8b7b30e740b",
+      "liters": 43.93
+    },
+    {
+      "sensorId": "68e193315905d8b7b30e7415",
+      "liters": 34
+    },
+    {
+      "sensorId": "68e193385905d8b7b30e741f",
+      "liters": 44.36
+    }
+  ],
+  "recommendedLiters": 150,
+  "limitLiters": 400,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5d91a3"
+  },
+  "homeId": "68e191b95905d8b7b30e71ed",
+  "date": {
+    "$date": "2025-09-18T00:00:00.000Z"
+  },
+  "totalLiters": 446.45,
+  "bySensor": [
+    {
+      "sensorId": "68e1936d5905d8b7b30e7469",
+      "liters": 169.81
+    },
+    {
+      "sensorId": "68e193725905d8b7b30e7473",
+      "liters": 83.21
+    },
+    {
+      "sensorId": "68e193775905d8b7b30e747d",
+      "liters": 147.72
+    },
+    {
+      "sensorId": "68e1937e5905d8b7b30e7487",
+      "liters": 45.71
+    },
+    {
+      "sensorId": "68e193865905d8b7b30e7491",
+      "liters": 0
+    }
+  ],
+  "recommendedLiters": 600,
+  "limitLiters": 1600,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5d91a4"
+  },
+  "homeId": "68e191c85905d8b7b30e71fd",
+  "date": {
+    "$date": "2025-09-18T00:00:00.000Z"
+  },
+  "totalLiters": 597.77,
+  "bySensor": [
+    {
+      "sensorId": "68e193995905d8b7b30e749b",
+      "liters": 102.71
+    },
+    {
+      "sensorId": "68e1939d5905d8b7b30e74a5",
+      "liters": 71.22
+    },
+    {
+      "sensorId": "68e193a95905d8b7b30e74af",
+      "liters": 140.88
+    },
+    {
+      "sensorId": "68e193b55905d8b7b30e74b9",
+      "liters": 78.84
+    },
+    {
+      "sensorId": "68e193ba5905d8b7b30e74c3",
+      "liters": 0
+    },
+    {
+      "sensorId": "68e193c35905d8b7b30e74cd",
+      "liters": 88.5
+    },
+    {
+      "sensorId": "68e193c85905d8b7b30e74d7",
+      "liters": 115.62
+    }
+  ],
+  "recommendedLiters": 450,
+  "limitLiters": 1200,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5d91a5"
+  },
+  "homeId": "68e191dd5905d8b7b30e720d",
+  "date": {
+    "$date": "2025-09-18T00:00:00.000Z"
+  },
+  "totalLiters": 578.18,
+  "bySensor": [
+    {
+      "sensorId": "68e193d45905d8b7b30e74e1",
+      "liters": 197.55
+    },
+    {
+      "sensorId": "68e193da5905d8b7b30e74eb",
+      "liters": 129.05
+    },
+    {
+      "sensorId": "68e193df5905d8b7b30e74f5",
+      "liters": 197.08
+    },
+    {
+      "sensorId": "68e193e45905d8b7b30e74ff",
+      "liters": 54.5
+    }
+  ],
+  "recommendedLiters": 750,
+  "limitLiters": 2000,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5d91a6"
+  },
+  "homeId": "68e191f65905d8b7b30e721d",
+  "date": {
+    "$date": "2025-09-18T00:00:00.000Z"
+  },
+  "totalLiters": 545.6,
+  "bySensor": [
+    {
+      "sensorId": "68e193f55905d8b7b30e7509",
+      "liters": 225.12
+    },
+    {
+      "sensorId": "68e193fa5905d8b7b30e7513",
+      "liters": 75.08
+    },
+    {
+      "sensorId": "68e193ff5905d8b7b30e751d",
+      "liters": 167.05
+    },
+    {
+      "sensorId": "68e194045905d8b7b30e7527",
+      "liters": 78.35
+    },
+    {
+      "sensorId": "68e194095905d8b7b30e7531",
+      "liters": 0
+    },
+    {
+      "sensorId": "68e1940f5905d8b7b30e753b",
+      "liters": 0
+    }
+  ],
+  "recommendedLiters": 600,
+  "limitLiters": 1600,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5d91a7"
+  },
+  "homeId": "68e192125905d8b7b30e722d",
+  "date": {
+    "$date": "2025-09-18T00:00:00.000Z"
+  },
+  "totalLiters": 404.97,
+  "bySensor": [
+    {
+      "sensorId": "68e194135905d8b7b30e7545",
+      "liters": 136.44
+    },
+    {
+      "sensorId": "68e194185905d8b7b30e754f",
+      "liters": 64.08
+    },
+    {
+      "sensorId": "68e1941c5905d8b7b30e7559",
+      "liters": 112.73
+    },
+    {
+      "sensorId": "68e1942b5905d8b7b30e7563",
+      "liters": 91.72
+    },
+    {
+      "sensorId": "68e194305905d8b7b30e756d",
+      "liters": 0
+    }
+  ],
+  "recommendedLiters": 450,
+  "limitLiters": 1200,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5d94bb"
+  },
+  "homeId": "68e191345905d8b7b30e719d",
+  "date": {
+    "$date": "2025-09-19T00:00:00.000Z"
+  },
+  "totalLiters": 532.09,
+  "bySensor": [
+    {
+      "sensorId": "68e192275905d8b7b30e7265",
+      "liters": 138.73
+    },
+    {
+      "sensorId": "68e192315905d8b7b30e726f",
+      "liters": 71.16
+    },
+    {
+      "sensorId": "68e192365905d8b7b30e7279",
+      "liters": 124.65
+    },
+    {
+      "sensorId": "68e1923f5905d8b7b30e7283",
+      "liters": 86.53
+    },
+    {
+      "sensorId": "68e192465905d8b7b30e728d",
+      "liters": 111.02
+    },
+    {
+      "sensorId": "68e1924b5905d8b7b30e7297",
+      "liters": 0
+    }
+  ],
+  "recommendedLiters": 450,
+  "limitLiters": 1200,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5d94bc"
+  },
+  "homeId": "68e1914a5905d8b7b30e71ad",
+  "date": {
+    "$date": "2025-09-19T00:00:00.000Z"
+  },
+  "totalLiters": 814.37,
+  "bySensor": [
+    {
+      "sensorId": "68e192515905d8b7b30e72a1",
+      "liters": 218.94
+    },
+    {
+      "sensorId": "68e192575905d8b7b30e72ab",
+      "liters": 86.75
+    },
+    {
+      "sensorId": "68e1925e5905d8b7b30e72c3",
+      "liters": 146.83
+    },
+    {
+      "sensorId": "68e192695905d8b7b30e72cd",
+      "liters": 99.13
+    },
+    {
+      "sensorId": "68e1926d5905d8b7b30e72d7",
+      "liters": 161.25
+    },
+    {
+      "sensorId": "68e192755905d8b7b30e72e1",
+      "liters": 101.47
+    },
+    {
+      "sensorId": "68e1927c5905d8b7b30e72eb",
+      "liters": 0
+    },
+    {
+      "sensorId": "68e192895905d8b7b30e72f5",
+      "liters": 0
+    }
+  ],
+  "recommendedLiters": 600,
+  "limitLiters": 1600,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5d94bd"
+  },
+  "homeId": "68e1916e5905d8b7b30e71bd",
+  "date": {
+    "$date": "2025-09-19T00:00:00.000Z"
+  },
+  "totalLiters": 274.98,
+  "bySensor": [
+    {
+      "sensorId": "68e192aa5905d8b7b30e7375",
+      "liters": 108.83
+    },
+    {
+      "sensorId": "68e192b05905d8b7b30e737f",
+      "liters": 38.38
+    },
+    {
+      "sensorId": "68e192b65905d8b7b30e7389",
+      "liters": 83.04
+    },
+    {
+      "sensorId": "68e192bb5905d8b7b30e7393",
+      "liters": 44.73
+    }
+  ],
+  "recommendedLiters": 300,
+  "limitLiters": 800,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5d94be"
+  },
+  "homeId": "68e1918a5905d8b7b30e71cd",
+  "date": {
+    "$date": "2025-09-19T00:00:00.000Z"
+  },
+  "totalLiters": 1354.98,
+  "bySensor": [
+    {
+      "sensorId": "68e192cd5905d8b7b30e739d",
+      "liters": 266.22
+    },
+    {
+      "sensorId": "68e192db5905d8b7b30e73b1",
+      "liters": 138.91
+    },
+    {
+      "sensorId": "68e192e15905d8b7b30e73bb",
+      "liters": 235.29
+    },
+    {
+      "sensorId": "68e192f05905d8b7b30e73c5",
+      "liters": 203.95
+    },
+    {
+      "sensorId": "68e192f85905d8b7b30e73cf",
+      "liters": 105.01
+    },
+    {
+      "sensorId": "68e192fd5905d8b7b30e73d9",
+      "liters": 233.49
+    },
+    {
+      "sensorId": "68e193035905d8b7b30e73e3",
+      "liters": 62.18
+    },
+    {
+      "sensorId": "68e1930a5905d8b7b30e73ed",
+      "liters": 109.93
+    },
+    {
+      "sensorId": "68e193115905d8b7b30e73f7",
+      "liters": 0
+    },
+    {
+      "sensorId": "68e1931f5905d8b7b30e7401",
+      "liters": 0
+    }
+  ],
+  "recommendedLiters": 750,
+  "limitLiters": 2000,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5d94bf"
+  },
+  "homeId": "68e1919a5905d8b7b30e71dd",
+  "date": {
+    "$date": "2025-09-19T00:00:00.000Z"
+  },
+  "totalLiters": 151.66,
+  "bySensor": [
+    {
+      "sensorId": "68e192d25905d8b7b30e73a7",
+      "liters": 22.11
+    },
+    {
+      "sensorId": "68e1932b5905d8b7b30e740b",
+      "liters": 39.81
+    },
+    {
+      "sensorId": "68e193315905d8b7b30e7415",
+      "liters": 33.02
+    },
+    {
+      "sensorId": "68e193385905d8b7b30e741f",
+      "liters": 56.72
+    }
+  ],
+  "recommendedLiters": 150,
+  "limitLiters": 400,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5d94c0"
+  },
+  "homeId": "68e191b95905d8b7b30e71ed",
+  "date": {
+    "$date": "2025-09-19T00:00:00.000Z"
+  },
+  "totalLiters": 452.31,
+  "bySensor": [
+    {
+      "sensorId": "68e1936d5905d8b7b30e7469",
+      "liters": 142.84
+    },
+    {
+      "sensorId": "68e193725905d8b7b30e7473",
+      "liters": 115.41
+    },
+    {
+      "sensorId": "68e193775905d8b7b30e747d",
+      "liters": 135.71
+    },
+    {
+      "sensorId": "68e1937e5905d8b7b30e7487",
+      "liters": 58.35
+    },
+    {
+      "sensorId": "68e193865905d8b7b30e7491",
+      "liters": 0
+    }
+  ],
+  "recommendedLiters": 600,
+  "limitLiters": 1600,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5d94c1"
+  },
+  "homeId": "68e191c85905d8b7b30e71fd",
+  "date": {
+    "$date": "2025-09-19T00:00:00.000Z"
+  },
+  "totalLiters": 838.57,
+  "bySensor": [
+    {
+      "sensorId": "68e193995905d8b7b30e749b",
+      "liters": 210.89
+    },
+    {
+      "sensorId": "68e1939d5905d8b7b30e74a5",
+      "liters": 58.87
+    },
+    {
+      "sensorId": "68e193a95905d8b7b30e74af",
+      "liters": 147.76
+    },
+    {
+      "sensorId": "68e193b55905d8b7b30e74b9",
+      "liters": 97.32
+    },
+    {
+      "sensorId": "68e193ba5905d8b7b30e74c3",
+      "liters": 115.33
+    },
+    {
+      "sensorId": "68e193c35905d8b7b30e74cd",
+      "liters": 73.9
+    },
+    {
+      "sensorId": "68e193c85905d8b7b30e74d7",
+      "liters": 134.5
+    }
+  ],
+  "recommendedLiters": 450,
+  "limitLiters": 1200,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5d94c2"
+  },
+  "homeId": "68e191dd5905d8b7b30e720d",
+  "date": {
+    "$date": "2025-09-19T00:00:00.000Z"
+  },
+  "totalLiters": 562.74,
+  "bySensor": [
+    {
+      "sensorId": "68e193d45905d8b7b30e74e1",
+      "liters": 189.24
+    },
+    {
+      "sensorId": "68e193da5905d8b7b30e74eb",
+      "liters": 108.21
+    },
+    {
+      "sensorId": "68e193df5905d8b7b30e74f5",
+      "liters": 221.91
+    },
+    {
+      "sensorId": "68e193e45905d8b7b30e74ff",
+      "liters": 43.38
+    }
+  ],
+  "recommendedLiters": 750,
+  "limitLiters": 2000,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5d94c3"
+  },
+  "homeId": "68e191f65905d8b7b30e721d",
+  "date": {
+    "$date": "2025-09-19T00:00:00.000Z"
+  },
+  "totalLiters": 610.37,
+  "bySensor": [
+    {
+      "sensorId": "68e193f55905d8b7b30e7509",
+      "liters": 139.61
+    },
+    {
+      "sensorId": "68e193fa5905d8b7b30e7513",
+      "liters": 114.84
+    },
+    {
+      "sensorId": "68e193ff5905d8b7b30e751d",
+      "liters": 175.91
+    },
+    {
+      "sensorId": "68e194045905d8b7b30e7527",
+      "liters": 74.43
+    },
+    {
+      "sensorId": "68e194095905d8b7b30e7531",
+      "liters": 105.58
+    },
+    {
+      "sensorId": "68e1940f5905d8b7b30e753b",
+      "liters": 0
+    }
+  ],
+  "recommendedLiters": 600,
+  "limitLiters": 1600,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5d94c4"
+  },
+  "homeId": "68e192125905d8b7b30e722d",
+  "date": {
+    "$date": "2025-09-19T00:00:00.000Z"
+  },
+  "totalLiters": 414.27,
+  "bySensor": [
+    {
+      "sensorId": "68e194135905d8b7b30e7545",
+      "liters": 111.89
+    },
+    {
+      "sensorId": "68e194185905d8b7b30e754f",
+      "liters": 68.1
+    },
+    {
+      "sensorId": "68e1941c5905d8b7b30e7559",
+      "liters": 124.48
+    },
+    {
+      "sensorId": "68e1942b5905d8b7b30e7563",
+      "liters": 61.05
+    },
+    {
+      "sensorId": "68e194305905d8b7b30e756d",
+      "liters": 48.75
+    }
+  ],
+  "recommendedLiters": 450,
+  "limitLiters": 1200,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5d9830"
+  },
+  "homeId": "68e191345905d8b7b30e719d",
+  "date": {
+    "$date": "2025-09-20T00:00:00.000Z"
+  },
+  "totalLiters": 502.86,
+  "bySensor": [
+    {
+      "sensorId": "68e192275905d8b7b30e7265",
+      "liters": 151.75
+    },
+    {
+      "sensorId": "68e192315905d8b7b30e726f",
+      "liters": 106.81
+    },
+    {
+      "sensorId": "68e192365905d8b7b30e7279",
+      "liters": 155.93
+    },
+    {
+      "sensorId": "68e1923f5905d8b7b30e7283",
+      "liters": 88.37
+    },
+    {
+      "sensorId": "68e192465905d8b7b30e728d",
+      "liters": 0
+    },
+    {
+      "sensorId": "68e1924b5905d8b7b30e7297",
+      "liters": 0
+    }
+  ],
+  "recommendedLiters": 450,
+  "limitLiters": 1200,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5d9831"
+  },
+  "homeId": "68e1914a5905d8b7b30e71ad",
+  "date": {
+    "$date": "2025-09-20T00:00:00.000Z"
+  },
+  "totalLiters": 1037.89,
+  "bySensor": [
+    {
+      "sensorId": "68e192515905d8b7b30e72a1",
+      "liters": 270.89
+    },
+    {
+      "sensorId": "68e192575905d8b7b30e72ab",
+      "liters": 129.13
+    },
+    {
+      "sensorId": "68e1925e5905d8b7b30e72c3",
+      "liters": 215.46
+    },
+    {
+      "sensorId": "68e192695905d8b7b30e72cd",
+      "liters": 104.34
+    },
+    {
+      "sensorId": "68e1926d5905d8b7b30e72d7",
+      "liters": 193.98
+    },
+    {
+      "sensorId": "68e192755905d8b7b30e72e1",
+      "liters": 124.09
+    },
+    {
+      "sensorId": "68e1927c5905d8b7b30e72eb",
+      "liters": 0
+    },
+    {
+      "sensorId": "68e192895905d8b7b30e72f5",
+      "liters": 0
+    }
+  ],
+  "recommendedLiters": 600,
+  "limitLiters": 1600,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5d9832"
+  },
+  "homeId": "68e1916e5905d8b7b30e71bd",
+  "date": {
+    "$date": "2025-09-20T00:00:00.000Z"
+  },
+  "totalLiters": 350.71,
+  "bySensor": [
+    {
+      "sensorId": "68e192aa5905d8b7b30e7375",
+      "liters": 48.7
+    },
+    {
+      "sensorId": "68e192b05905d8b7b30e737f",
+      "liters": 56.24
+    },
+    {
+      "sensorId": "68e192b65905d8b7b30e7389",
+      "liters": 109.29
+    },
+    {
+      "sensorId": "68e192bb5905d8b7b30e7393",
+      "liters": 136.48
+    }
+  ],
+  "recommendedLiters": 300,
+  "limitLiters": 800,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5d9833"
+  },
+  "homeId": "68e1918a5905d8b7b30e71cd",
+  "date": {
+    "$date": "2025-09-20T00:00:00.000Z"
+  },
+  "totalLiters": 1412.14,
+  "bySensor": [
+    {
+      "sensorId": "68e192cd5905d8b7b30e739d",
+      "liters": 243.11
+    },
+    {
+      "sensorId": "68e192db5905d8b7b30e73b1",
+      "liters": 116.18
+    },
+    {
+      "sensorId": "68e192e15905d8b7b30e73bb",
+      "liters": 241.69
+    },
+    {
+      "sensorId": "68e192f05905d8b7b30e73c5",
+      "liters": 395.56
+    },
+    {
+      "sensorId": "68e192f85905d8b7b30e73cf",
+      "liters": 122.24
+    },
+    {
+      "sensorId": "68e192fd5905d8b7b30e73d9",
+      "liters": 237.44
+    },
+    {
+      "sensorId": "68e193035905d8b7b30e73e3",
+      "liters": 55.92
+    },
+    {
+      "sensorId": "68e1930a5905d8b7b30e73ed",
+      "liters": 0
+    },
+    {
+      "sensorId": "68e193115905d8b7b30e73f7",
+      "liters": 0
+    },
+    {
+      "sensorId": "68e1931f5905d8b7b30e7401",
+      "liters": 0
+    }
+  ],
+  "recommendedLiters": 750,
+  "limitLiters": 2000,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5d9834"
+  },
+  "homeId": "68e1919a5905d8b7b30e71dd",
+  "date": {
+    "$date": "2025-09-20T00:00:00.000Z"
+  },
+  "totalLiters": 198.44,
+  "bySensor": [
+    {
+      "sensorId": "68e192d25905d8b7b30e73a7",
+      "liters": 22.18
+    },
+    {
+      "sensorId": "68e1932b5905d8b7b30e740b",
+      "liters": 54.77
+    },
+    {
+      "sensorId": "68e193315905d8b7b30e7415",
+      "liters": 46.28
+    },
+    {
+      "sensorId": "68e193385905d8b7b30e741f",
+      "liters": 75.21
+    }
+  ],
+  "recommendedLiters": 150,
+  "limitLiters": 400,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5d9835"
+  },
+  "homeId": "68e191b95905d8b7b30e71ed",
+  "date": {
+    "$date": "2025-09-20T00:00:00.000Z"
+  },
+  "totalLiters": 740.89,
+  "bySensor": [
+    {
+      "sensorId": "68e1936d5905d8b7b30e7469",
+      "liters": 253.72
+    },
+    {
+      "sensorId": "68e193725905d8b7b30e7473",
+      "liters": 91.53
+    },
+    {
+      "sensorId": "68e193775905d8b7b30e747d",
+      "liters": 192.55
+    },
+    {
+      "sensorId": "68e1937e5905d8b7b30e7487",
+      "liters": 121.35
+    },
+    {
+      "sensorId": "68e193865905d8b7b30e7491",
+      "liters": 81.74
+    }
+  ],
+  "recommendedLiters": 600,
+  "limitLiters": 1600,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5d9836"
+  },
+  "homeId": "68e191c85905d8b7b30e71fd",
+  "date": {
+    "$date": "2025-09-20T00:00:00.000Z"
+  },
+  "totalLiters": 597.17,
+  "bySensor": [
+    {
+      "sensorId": "68e193995905d8b7b30e749b",
+      "liters": 88.13
+    },
+    {
+      "sensorId": "68e1939d5905d8b7b30e74a5",
+      "liters": 89.1
+    },
+    {
+      "sensorId": "68e193a95905d8b7b30e74af",
+      "liters": 137.06
+    },
+    {
+      "sensorId": "68e193b55905d8b7b30e74b9",
+      "liters": 64.97
+    },
+    {
+      "sensorId": "68e193ba5905d8b7b30e74c3",
+      "liters": 0
+    },
+    {
+      "sensorId": "68e193c35905d8b7b30e74cd",
+      "liters": 83.09
+    },
+    {
+      "sensorId": "68e193c85905d8b7b30e74d7",
+      "liters": 134.82
+    }
+  ],
+  "recommendedLiters": 450,
+  "limitLiters": 1200,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5d9837"
+  },
+  "homeId": "68e191dd5905d8b7b30e720d",
+  "date": {
+    "$date": "2025-09-20T00:00:00.000Z"
+  },
+  "totalLiters": 641.4,
+  "bySensor": [
+    {
+      "sensorId": "68e193d45905d8b7b30e74e1",
+      "liters": 216.53
+    },
+    {
+      "sensorId": "68e193da5905d8b7b30e74eb",
+      "liters": 126.63
+    },
+    {
+      "sensorId": "68e193df5905d8b7b30e74f5",
+      "liters": 228.97
+    },
+    {
+      "sensorId": "68e193e45905d8b7b30e74ff",
+      "liters": 69.27
+    }
+  ],
+  "recommendedLiters": 750,
+  "limitLiters": 2000,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5d9838"
+  },
+  "homeId": "68e191f65905d8b7b30e721d",
+  "date": {
+    "$date": "2025-09-20T00:00:00.000Z"
+  },
+  "totalLiters": 574.58,
+  "bySensor": [
+    {
+      "sensorId": "68e193f55905d8b7b30e7509",
+      "liters": 166.6
+    },
+    {
+      "sensorId": "68e193fa5905d8b7b30e7513",
+      "liters": 100.2
+    },
+    {
+      "sensorId": "68e193ff5905d8b7b30e751d",
+      "liters": 199.82
+    },
+    {
+      "sensorId": "68e194045905d8b7b30e7527",
+      "liters": 107.96
+    },
+    {
+      "sensorId": "68e194095905d8b7b30e7531",
+      "liters": 0
+    },
+    {
+      "sensorId": "68e1940f5905d8b7b30e753b",
+      "liters": 0
+    }
+  ],
+  "recommendedLiters": 600,
+  "limitLiters": 1600,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5d9839"
+  },
+  "homeId": "68e192125905d8b7b30e722d",
+  "date": {
+    "$date": "2025-09-20T00:00:00.000Z"
+  },
+  "totalLiters": 386.67,
+  "bySensor": [
+    {
+      "sensorId": "68e194135905d8b7b30e7545",
+      "liters": 117.74
+    },
+    {
+      "sensorId": "68e194185905d8b7b30e754f",
+      "liters": 75.01
+    },
+    {
+      "sensorId": "68e1941c5905d8b7b30e7559",
+      "liters": 118.27
+    },
+    {
+      "sensorId": "68e1942b5905d8b7b30e7563",
+      "liters": 75.65
+    },
+    {
+      "sensorId": "68e194305905d8b7b30e756d",
+      "liters": 0
+    }
+  ],
+  "recommendedLiters": 450,
+  "limitLiters": 1200,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5d9bdb"
+  },
+  "homeId": "68e191345905d8b7b30e719d",
+  "date": {
+    "$date": "2025-09-21T00:00:00.000Z"
+  },
+  "totalLiters": 595.61,
+  "bySensor": [
+    {
+      "sensorId": "68e192275905d8b7b30e7265",
+      "liters": 167.47
+    },
+    {
+      "sensorId": "68e192315905d8b7b30e726f",
+      "liters": 87.41
+    },
+    {
+      "sensorId": "68e192365905d8b7b30e7279",
+      "liters": 130.77
+    },
+    {
+      "sensorId": "68e1923f5905d8b7b30e7283",
+      "liters": 98.25
+    },
+    {
+      "sensorId": "68e192465905d8b7b30e728d",
+      "liters": 111.71
+    },
+    {
+      "sensorId": "68e1924b5905d8b7b30e7297",
+      "liters": 0
+    }
+  ],
+  "recommendedLiters": 450,
+  "limitLiters": 1200,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5d9bdc"
+  },
+  "homeId": "68e1914a5905d8b7b30e71ad",
+  "date": {
+    "$date": "2025-09-21T00:00:00.000Z"
+  },
+  "totalLiters": 846.72,
+  "bySensor": [
+    {
+      "sensorId": "68e192515905d8b7b30e72a1",
+      "liters": 170.45
+    },
+    {
+      "sensorId": "68e192575905d8b7b30e72ab",
+      "liters": 122.25
+    },
+    {
+      "sensorId": "68e1925e5905d8b7b30e72c3",
+      "liters": 161.96
+    },
+    {
+      "sensorId": "68e192695905d8b7b30e72cd",
+      "liters": 131.9
+    },
+    {
+      "sensorId": "68e1926d5905d8b7b30e72d7",
+      "liters": 195.45
+    },
+    {
+      "sensorId": "68e192755905d8b7b30e72e1",
+      "liters": 64.71
+    },
+    {
+      "sensorId": "68e1927c5905d8b7b30e72eb",
+      "liters": 0
+    },
+    {
+      "sensorId": "68e192895905d8b7b30e72f5",
+      "liters": 0
+    }
+  ],
+  "recommendedLiters": 600,
+  "limitLiters": 1600,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5d9bdd"
+  },
+  "homeId": "68e1916e5905d8b7b30e71bd",
+  "date": {
+    "$date": "2025-09-21T00:00:00.000Z"
+  },
+  "totalLiters": 402.94,
+  "bySensor": [
+    {
+      "sensorId": "68e192aa5905d8b7b30e7375",
+      "liters": 118.66
+    },
+    {
+      "sensorId": "68e192b05905d8b7b30e737f",
+      "liters": 55.78
+    },
+    {
+      "sensorId": "68e192b65905d8b7b30e7389",
+      "liters": 109.45
+    },
+    {
+      "sensorId": "68e192bb5905d8b7b30e7393",
+      "liters": 119.05
+    }
+  ],
+  "recommendedLiters": 300,
+  "limitLiters": 800,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5d9bde"
+  },
+  "homeId": "68e1918a5905d8b7b30e71cd",
+  "date": {
+    "$date": "2025-09-21T00:00:00.000Z"
+  },
+  "totalLiters": 1361.9,
+  "bySensor": [
+    {
+      "sensorId": "68e192cd5905d8b7b30e739d",
+      "liters": 211.16
+    },
+    {
+      "sensorId": "68e192db5905d8b7b30e73b1",
+      "liters": 172.3
+    },
+    {
+      "sensorId": "68e192e15905d8b7b30e73bb",
+      "liters": 233.59
+    },
+    {
+      "sensorId": "68e192f05905d8b7b30e73c5",
+      "liters": 241.99
+    },
+    {
+      "sensorId": "68e192f85905d8b7b30e73cf",
+      "liters": 165.29
+    },
+    {
+      "sensorId": "68e192fd5905d8b7b30e73d9",
+      "liters": 255.98
+    },
+    {
+      "sensorId": "68e193035905d8b7b30e73e3",
+      "liters": 81.59
+    },
+    {
+      "sensorId": "68e1930a5905d8b7b30e73ed",
+      "liters": 0
+    },
+    {
+      "sensorId": "68e193115905d8b7b30e73f7",
+      "liters": 0
+    },
+    {
+      "sensorId": "68e1931f5905d8b7b30e7401",
+      "liters": 0
+    }
+  ],
+  "recommendedLiters": 750,
+  "limitLiters": 2000,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5d9bdf"
+  },
+  "homeId": "68e1919a5905d8b7b30e71dd",
+  "date": {
+    "$date": "2025-09-21T00:00:00.000Z"
+  },
+  "totalLiters": 222.09,
+  "bySensor": [
+    {
+      "sensorId": "68e192d25905d8b7b30e73a7",
+      "liters": 31.79
+    },
+    {
+      "sensorId": "68e1932b5905d8b7b30e740b",
+      "liters": 39.79
+    },
+    {
+      "sensorId": "68e193315905d8b7b30e7415",
+      "liters": 40.17
+    },
+    {
+      "sensorId": "68e193385905d8b7b30e741f",
+      "liters": 110.34
+    }
+  ],
+  "recommendedLiters": 150,
+  "limitLiters": 400,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5d9be0"
+  },
+  "homeId": "68e191b95905d8b7b30e71ed",
+  "date": {
+    "$date": "2025-09-21T00:00:00.000Z"
+  },
+  "totalLiters": 574.82,
+  "bySensor": [
+    {
+      "sensorId": "68e1936d5905d8b7b30e7469",
+      "liters": 200.09
+    },
+    {
+      "sensorId": "68e193725905d8b7b30e7473",
+      "liters": 94.17
+    },
+    {
+      "sensorId": "68e193775905d8b7b30e747d",
+      "liters": 179.58
+    },
+    {
+      "sensorId": "68e1937e5905d8b7b30e7487",
+      "liters": 100.98
+    },
+    {
+      "sensorId": "68e193865905d8b7b30e7491",
+      "liters": 0
+    }
+  ],
+  "recommendedLiters": 600,
+  "limitLiters": 1600,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5d9be1"
+  },
+  "homeId": "68e191c85905d8b7b30e71fd",
+  "date": {
+    "$date": "2025-09-21T00:00:00.000Z"
+  },
+  "totalLiters": 794.21,
+  "bySensor": [
+    {
+      "sensorId": "68e193995905d8b7b30e749b",
+      "liters": 159.09
+    },
+    {
+      "sensorId": "68e1939d5905d8b7b30e74a5",
+      "liters": 89.63
+    },
+    {
+      "sensorId": "68e193a95905d8b7b30e74af",
+      "liters": 131.56
+    },
+    {
+      "sensorId": "68e193b55905d8b7b30e74b9",
+      "liters": 81.26
+    },
+    {
+      "sensorId": "68e193ba5905d8b7b30e74c3",
+      "liters": 100.51
+    },
+    {
+      "sensorId": "68e193c35905d8b7b30e74cd",
+      "liters": 105.82
+    },
+    {
+      "sensorId": "68e193c85905d8b7b30e74d7",
+      "liters": 126.34
+    }
+  ],
+  "recommendedLiters": 450,
+  "limitLiters": 1200,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5d9be2"
+  },
+  "homeId": "68e191dd5905d8b7b30e720d",
+  "date": {
+    "$date": "2025-09-21T00:00:00.000Z"
+  },
+  "totalLiters": 711.8,
+  "bySensor": [
+    {
+      "sensorId": "68e193d45905d8b7b30e74e1",
+      "liters": 228.17
+    },
+    {
+      "sensorId": "68e193da5905d8b7b30e74eb",
+      "liters": 161.43
+    },
+    {
+      "sensorId": "68e193df5905d8b7b30e74f5",
+      "liters": 240.64
+    },
+    {
+      "sensorId": "68e193e45905d8b7b30e74ff",
+      "liters": 81.56
+    }
+  ],
+  "recommendedLiters": 750,
+  "limitLiters": 2000,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5d9be3"
+  },
+  "homeId": "68e191f65905d8b7b30e721d",
+  "date": {
+    "$date": "2025-09-21T00:00:00.000Z"
+  },
+  "totalLiters": 581.99,
+  "bySensor": [
+    {
+      "sensorId": "68e193f55905d8b7b30e7509",
+      "liters": 193.8
+    },
+    {
+      "sensorId": "68e193fa5905d8b7b30e7513",
+      "liters": 94.99
+    },
+    {
+      "sensorId": "68e193ff5905d8b7b30e751d",
+      "liters": 215.77
+    },
+    {
+      "sensorId": "68e194045905d8b7b30e7527",
+      "liters": 77.43
+    },
+    {
+      "sensorId": "68e194095905d8b7b30e7531",
+      "liters": 0
+    },
+    {
+      "sensorId": "68e1940f5905d8b7b30e753b",
+      "liters": 0
+    }
+  ],
+  "recommendedLiters": 600,
+  "limitLiters": 1600,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5d9be4"
+  },
+  "homeId": "68e192125905d8b7b30e722d",
+  "date": {
+    "$date": "2025-09-21T00:00:00.000Z"
+  },
+  "totalLiters": 424.01,
+  "bySensor": [
+    {
+      "sensorId": "68e194135905d8b7b30e7545",
+      "liters": 103.03
+    },
+    {
+      "sensorId": "68e194185905d8b7b30e754f",
+      "liters": 81.55
+    },
+    {
+      "sensorId": "68e1941c5905d8b7b30e7559",
+      "liters": 160.01
+    },
+    {
+      "sensorId": "68e1942b5905d8b7b30e7563",
+      "liters": 79.42
+    },
+    {
+      "sensorId": "68e194305905d8b7b30e756d",
+      "liters": 0
+    }
+  ],
+  "recommendedLiters": 450,
+  "limitLiters": 1200,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5d9f05"
+  },
+  "homeId": "68e191345905d8b7b30e719d",
+  "date": {
+    "$date": "2025-09-22T00:00:00.000Z"
+  },
+  "totalLiters": 525.94,
+  "bySensor": [
+    {
+      "sensorId": "68e192275905d8b7b30e7265",
+      "liters": 152.05
+    },
+    {
+      "sensorId": "68e192315905d8b7b30e726f",
+      "liters": 65.53
+    },
+    {
+      "sensorId": "68e192365905d8b7b30e7279",
+      "liters": 124.2
+    },
+    {
+      "sensorId": "68e1923f5905d8b7b30e7283",
+      "liters": 66.17
+    },
+    {
+      "sensorId": "68e192465905d8b7b30e728d",
+      "liters": 117.99
+    },
+    {
+      "sensorId": "68e1924b5905d8b7b30e7297",
+      "liters": 0
+    }
+  ],
+  "recommendedLiters": 450,
+  "limitLiters": 1200,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5d9f06"
+  },
+  "homeId": "68e1914a5905d8b7b30e71ad",
+  "date": {
+    "$date": "2025-09-22T00:00:00.000Z"
+  },
+  "totalLiters": 860.54,
+  "bySensor": [
+    {
+      "sensorId": "68e192515905d8b7b30e72a1",
+      "liters": 241.84
+    },
+    {
+      "sensorId": "68e192575905d8b7b30e72ab",
+      "liters": 95.04
+    },
+    {
+      "sensorId": "68e1925e5905d8b7b30e72c3",
+      "liters": 188.18
+    },
+    {
+      "sensorId": "68e192695905d8b7b30e72cd",
+      "liters": 100.88
+    },
+    {
+      "sensorId": "68e1926d5905d8b7b30e72d7",
+      "liters": 168.18
+    },
+    {
+      "sensorId": "68e192755905d8b7b30e72e1",
+      "liters": 66.42
+    },
+    {
+      "sensorId": "68e1927c5905d8b7b30e72eb",
+      "liters": 0
+    },
+    {
+      "sensorId": "68e192895905d8b7b30e72f5",
+      "liters": 0
+    }
+  ],
+  "recommendedLiters": 600,
+  "limitLiters": 1600,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5d9f07"
+  },
+  "homeId": "68e1916e5905d8b7b30e71bd",
+  "date": {
+    "$date": "2025-09-22T00:00:00.000Z"
+  },
+  "totalLiters": 269.37,
+  "bySensor": [
+    {
+      "sensorId": "68e192aa5905d8b7b30e7375",
+      "liters": 76.02
+    },
+    {
+      "sensorId": "68e192b05905d8b7b30e737f",
+      "liters": 46.29
+    },
+    {
+      "sensorId": "68e192b65905d8b7b30e7389",
+      "liters": 76.71
+    },
+    {
+      "sensorId": "68e192bb5905d8b7b30e7393",
+      "liters": 70.35
+    }
+  ],
+  "recommendedLiters": 300,
+  "limitLiters": 800,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5d9f08"
+  },
+  "homeId": "68e1918a5905d8b7b30e71cd",
+  "date": {
+    "$date": "2025-09-22T00:00:00.000Z"
+  },
+  "totalLiters": 1169.75,
+  "bySensor": [
+    {
+      "sensorId": "68e192cd5905d8b7b30e739d",
+      "liters": 213.99
+    },
+    {
+      "sensorId": "68e192db5905d8b7b30e73b1",
+      "liters": 107.69
+    },
+    {
+      "sensorId": "68e192e15905d8b7b30e73bb",
+      "liters": 230.21
+    },
+    {
+      "sensorId": "68e192f05905d8b7b30e73c5",
+      "liters": 193.83
+    },
+    {
+      "sensorId": "68e192f85905d8b7b30e73cf",
+      "liters": 150.75
+    },
+    {
+      "sensorId": "68e192fd5905d8b7b30e73d9",
+      "liters": 207.03
+    },
+    {
+      "sensorId": "68e193035905d8b7b30e73e3",
+      "liters": 66.25
+    },
+    {
+      "sensorId": "68e1930a5905d8b7b30e73ed",
+      "liters": 0
+    },
+    {
+      "sensorId": "68e193115905d8b7b30e73f7",
+      "liters": 0
+    },
+    {
+      "sensorId": "68e1931f5905d8b7b30e7401",
+      "liters": 0
+    }
+  ],
+  "recommendedLiters": 750,
+  "limitLiters": 2000,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5d9f09"
+  },
+  "homeId": "68e1919a5905d8b7b30e71dd",
+  "date": {
+    "$date": "2025-09-22T00:00:00.000Z"
+  },
+  "totalLiters": 147.07,
+  "bySensor": [
+    {
+      "sensorId": "68e192d25905d8b7b30e73a7",
+      "liters": 30.92
+    },
+    {
+      "sensorId": "68e1932b5905d8b7b30e740b",
+      "liters": 41.45
+    },
+    {
+      "sensorId": "68e193315905d8b7b30e7415",
+      "liters": 33.77
+    },
+    {
+      "sensorId": "68e193385905d8b7b30e741f",
+      "liters": 40.93
+    }
+  ],
+  "recommendedLiters": 150,
+  "limitLiters": 400,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5d9f0a"
+  },
+  "homeId": "68e191b95905d8b7b30e71ed",
+  "date": {
+    "$date": "2025-09-22T00:00:00.000Z"
+  },
+  "totalLiters": 563.21,
+  "bySensor": [
+    {
+      "sensorId": "68e1936d5905d8b7b30e7469",
+      "liters": 129.9
+    },
+    {
+      "sensorId": "68e193725905d8b7b30e7473",
+      "liters": 105.31
+    },
+    {
+      "sensorId": "68e193775905d8b7b30e747d",
+      "liters": 173.95
+    },
+    {
+      "sensorId": "68e1937e5905d8b7b30e7487",
+      "liters": 69.62
+    },
+    {
+      "sensorId": "68e193865905d8b7b30e7491",
+      "liters": 84.43
+    }
+  ],
+  "recommendedLiters": 600,
+  "limitLiters": 1600,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5d9f0b"
+  },
+  "homeId": "68e191c85905d8b7b30e71fd",
+  "date": {
+    "$date": "2025-09-22T00:00:00.000Z"
+  },
+  "totalLiters": 703.05,
+  "bySensor": [
+    {
+      "sensorId": "68e193995905d8b7b30e749b",
+      "liters": 139.34
+    },
+    {
+      "sensorId": "68e1939d5905d8b7b30e74a5",
+      "liters": 91.69
+    },
+    {
+      "sensorId": "68e193a95905d8b7b30e74af",
+      "liters": 108.19
+    },
+    {
+      "sensorId": "68e193b55905d8b7b30e74b9",
+      "liters": 62.98
+    },
+    {
+      "sensorId": "68e193ba5905d8b7b30e74c3",
+      "liters": 119.79
+    },
+    {
+      "sensorId": "68e193c35905d8b7b30e74cd",
+      "liters": 74.72
+    },
+    {
+      "sensorId": "68e193c85905d8b7b30e74d7",
+      "liters": 106.34
+    }
+  ],
+  "recommendedLiters": 450,
+  "limitLiters": 1200,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5d9f0c"
+  },
+  "homeId": "68e191dd5905d8b7b30e720d",
+  "date": {
+    "$date": "2025-09-22T00:00:00.000Z"
+  },
+  "totalLiters": 656.99,
+  "bySensor": [
+    {
+      "sensorId": "68e193d45905d8b7b30e74e1",
+      "liters": 243.74
+    },
+    {
+      "sensorId": "68e193da5905d8b7b30e74eb",
+      "liters": 136.39
+    },
+    {
+      "sensorId": "68e193df5905d8b7b30e74f5",
+      "liters": 182.78
+    },
+    {
+      "sensorId": "68e193e45905d8b7b30e74ff",
+      "liters": 94.08
+    }
+  ],
+  "recommendedLiters": 750,
+  "limitLiters": 2000,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5d9f0d"
+  },
+  "homeId": "68e191f65905d8b7b30e721d",
+  "date": {
+    "$date": "2025-09-22T00:00:00.000Z"
+  },
+  "totalLiters": 451.11,
+  "bySensor": [
+    {
+      "sensorId": "68e193f55905d8b7b30e7509",
+      "liters": 133.66
+    },
+    {
+      "sensorId": "68e193fa5905d8b7b30e7513",
+      "liters": 100.93
+    },
+    {
+      "sensorId": "68e193ff5905d8b7b30e751d",
+      "liters": 178.03
+    },
+    {
+      "sensorId": "68e194045905d8b7b30e7527",
+      "liters": 38.49
+    },
+    {
+      "sensorId": "68e194095905d8b7b30e7531",
+      "liters": 0
+    },
+    {
+      "sensorId": "68e1940f5905d8b7b30e753b",
+      "liters": 0
+    }
+  ],
+  "recommendedLiters": 600,
+  "limitLiters": 1600,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5d9f0e"
+  },
+  "homeId": "68e192125905d8b7b30e722d",
+  "date": {
+    "$date": "2025-09-22T00:00:00.000Z"
+  },
+  "totalLiters": 454.28,
+  "bySensor": [
+    {
+      "sensorId": "68e194135905d8b7b30e7545",
+      "liters": 170.12
+    },
+    {
+      "sensorId": "68e194185905d8b7b30e754f",
+      "liters": 64.32
+    },
+    {
+      "sensorId": "68e1941c5905d8b7b30e7559",
+      "liters": 137.42
+    },
+    {
+      "sensorId": "68e1942b5905d8b7b30e7563",
+      "liters": 82.42
+    },
+    {
+      "sensorId": "68e194305905d8b7b30e756d",
+      "liters": 0
+    }
+  ],
+  "recommendedLiters": 450,
+  "limitLiters": 1200,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5da201"
+  },
+  "homeId": "68e191345905d8b7b30e719d",
+  "date": {
+    "$date": "2025-09-23T00:00:00.000Z"
+  },
+  "totalLiters": 479.57,
+  "bySensor": [
+    {
+      "sensorId": "68e192275905d8b7b30e7265",
+      "liters": 157.91
+    },
+    {
+      "sensorId": "68e192315905d8b7b30e726f",
+      "liters": 61.85
+    },
+    {
+      "sensorId": "68e192365905d8b7b30e7279",
+      "liters": 114.57
+    },
+    {
+      "sensorId": "68e1923f5905d8b7b30e7283",
+      "liters": 53.4
+    },
+    {
+      "sensorId": "68e192465905d8b7b30e728d",
+      "liters": 91.84
+    },
+    {
+      "sensorId": "68e1924b5905d8b7b30e7297",
+      "liters": 0
+    }
+  ],
+  "recommendedLiters": 450,
+  "limitLiters": 1200,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5da202"
+  },
+  "homeId": "68e1914a5905d8b7b30e71ad",
+  "date": {
+    "$date": "2025-09-23T00:00:00.000Z"
+  },
+  "totalLiters": 778.45,
+  "bySensor": [
+    {
+      "sensorId": "68e192515905d8b7b30e72a1",
+      "liters": 197.16
+    },
+    {
+      "sensorId": "68e192575905d8b7b30e72ab",
+      "liters": 83.41
+    },
+    {
+      "sensorId": "68e1925e5905d8b7b30e72c3",
+      "liters": 176.27
+    },
+    {
+      "sensorId": "68e192695905d8b7b30e72cd",
+      "liters": 95.51
+    },
+    {
+      "sensorId": "68e1926d5905d8b7b30e72d7",
+      "liters": 184.29
+    },
+    {
+      "sensorId": "68e192755905d8b7b30e72e1",
+      "liters": 41.81
+    },
+    {
+      "sensorId": "68e1927c5905d8b7b30e72eb",
+      "liters": 0
+    },
+    {
+      "sensorId": "68e192895905d8b7b30e72f5",
+      "liters": 0
+    }
+  ],
+  "recommendedLiters": 600,
+  "limitLiters": 1600,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5da203"
+  },
+  "homeId": "68e1916e5905d8b7b30e71bd",
+  "date": {
+    "$date": "2025-09-23T00:00:00.000Z"
+  },
+  "totalLiters": 240.51,
+  "bySensor": [
+    {
+      "sensorId": "68e192aa5905d8b7b30e7375",
+      "liters": 41.46
+    },
+    {
+      "sensorId": "68e192b05905d8b7b30e737f",
+      "liters": 52.56
+    },
+    {
+      "sensorId": "68e192b65905d8b7b30e7389",
+      "liters": 90.96
+    },
+    {
+      "sensorId": "68e192bb5905d8b7b30e7393",
+      "liters": 55.53
+    }
+  ],
+  "recommendedLiters": 300,
+  "limitLiters": 800,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5da204"
+  },
+  "homeId": "68e1918a5905d8b7b30e71cd",
+  "date": {
+    "$date": "2025-09-23T00:00:00.000Z"
+  },
+  "totalLiters": 1169.22,
+  "bySensor": [
+    {
+      "sensorId": "68e192cd5905d8b7b30e739d",
+      "liters": 238.59
+    },
+    {
+      "sensorId": "68e192db5905d8b7b30e73b1",
+      "liters": 109.23
+    },
+    {
+      "sensorId": "68e192e15905d8b7b30e73bb",
+      "liters": 207.72
+    },
+    {
+      "sensorId": "68e192f05905d8b7b30e73c5",
+      "liters": 160.18
+    },
+    {
+      "sensorId": "68e192f85905d8b7b30e73cf",
+      "liters": 98.57
+    },
+    {
+      "sensorId": "68e192fd5905d8b7b30e73d9",
+      "liters": 196.75
+    },
+    {
+      "sensorId": "68e193035905d8b7b30e73e3",
+      "liters": 48.39
+    },
+    {
+      "sensorId": "68e1930a5905d8b7b30e73ed",
+      "liters": 109.79
+    },
+    {
+      "sensorId": "68e193115905d8b7b30e73f7",
+      "liters": 0
+    },
+    {
+      "sensorId": "68e1931f5905d8b7b30e7401",
+      "liters": 0
+    }
+  ],
+  "recommendedLiters": 750,
+  "limitLiters": 2000,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5da205"
+  },
+  "homeId": "68e1919a5905d8b7b30e71dd",
+  "date": {
+    "$date": "2025-09-23T00:00:00.000Z"
+  },
+  "totalLiters": 174.42,
+  "bySensor": [
+    {
+      "sensorId": "68e192d25905d8b7b30e73a7",
+      "liters": 20.79
+    },
+    {
+      "sensorId": "68e1932b5905d8b7b30e740b",
+      "liters": 44.2
+    },
+    {
+      "sensorId": "68e193315905d8b7b30e7415",
+      "liters": 44.12
+    },
+    {
+      "sensorId": "68e193385905d8b7b30e741f",
+      "liters": 65.31
+    }
+  ],
+  "recommendedLiters": 150,
+  "limitLiters": 400,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5da206"
+  },
+  "homeId": "68e191b95905d8b7b30e71ed",
+  "date": {
+    "$date": "2025-09-23T00:00:00.000Z"
+  },
+  "totalLiters": 605.02,
+  "bySensor": [
+    {
+      "sensorId": "68e1936d5905d8b7b30e7469",
+      "liters": 187.01
+    },
+    {
+      "sensorId": "68e193725905d8b7b30e7473",
+      "liters": 102.22
+    },
+    {
+      "sensorId": "68e193775905d8b7b30e747d",
+      "liters": 141.79
+    },
+    {
+      "sensorId": "68e1937e5905d8b7b30e7487",
+      "liters": 76.91
+    },
+    {
+      "sensorId": "68e193865905d8b7b30e7491",
+      "liters": 97.09
+    }
+  ],
+  "recommendedLiters": 600,
+  "limitLiters": 1600,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5da207"
+  },
+  "homeId": "68e191c85905d8b7b30e71fd",
+  "date": {
+    "$date": "2025-09-23T00:00:00.000Z"
+  },
+  "totalLiters": 494.41,
+  "bySensor": [
+    {
+      "sensorId": "68e193995905d8b7b30e749b",
+      "liters": 83.65
+    },
+    {
+      "sensorId": "68e1939d5905d8b7b30e74a5",
+      "liters": 86.19
+    },
+    {
+      "sensorId": "68e193a95905d8b7b30e74af",
+      "liters": 110.02
+    },
+    {
+      "sensorId": "68e193b55905d8b7b30e74b9",
+      "liters": 42.77
+    },
+    {
+      "sensorId": "68e193ba5905d8b7b30e74c3",
+      "liters": 0
+    },
+    {
+      "sensorId": "68e193c35905d8b7b30e74cd",
+      "liters": 64.54
+    },
+    {
+      "sensorId": "68e193c85905d8b7b30e74d7",
+      "liters": 107.24
+    }
+  ],
+  "recommendedLiters": 450,
+  "limitLiters": 1200,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5da208"
+  },
+  "homeId": "68e191dd5905d8b7b30e720d",
+  "date": {
+    "$date": "2025-09-23T00:00:00.000Z"
+  },
+  "totalLiters": 519.42,
+  "bySensor": [
+    {
+      "sensorId": "68e193d45905d8b7b30e74e1",
+      "liters": 167.93
+    },
+    {
+      "sensorId": "68e193da5905d8b7b30e74eb",
+      "liters": 133.95
+    },
+    {
+      "sensorId": "68e193df5905d8b7b30e74f5",
+      "liters": 167.48
+    },
+    {
+      "sensorId": "68e193e45905d8b7b30e74ff",
+      "liters": 50.06
+    }
+  ],
+  "recommendedLiters": 750,
+  "limitLiters": 2000,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5da209"
+  },
+  "homeId": "68e191f65905d8b7b30e721d",
+  "date": {
+    "$date": "2025-09-23T00:00:00.000Z"
+  },
+  "totalLiters": 500.87,
+  "bySensor": [
+    {
+      "sensorId": "68e193f55905d8b7b30e7509",
+      "liters": 131.27
+    },
+    {
+      "sensorId": "68e193fa5905d8b7b30e7513",
+      "liters": 112.59
+    },
+    {
+      "sensorId": "68e193ff5905d8b7b30e751d",
+      "liters": 142.86
+    },
+    {
+      "sensorId": "68e194045905d8b7b30e7527",
+      "liters": 114.15
+    },
+    {
+      "sensorId": "68e194095905d8b7b30e7531",
+      "liters": 0
+    },
+    {
+      "sensorId": "68e1940f5905d8b7b30e753b",
+      "liters": 0
+    }
+  ],
+  "recommendedLiters": 600,
+  "limitLiters": 1600,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5da20a"
+  },
+  "homeId": "68e192125905d8b7b30e722d",
+  "date": {
+    "$date": "2025-09-23T00:00:00.000Z"
+  },
+  "totalLiters": 355.27,
+  "bySensor": [
+    {
+      "sensorId": "68e194135905d8b7b30e7545",
+      "liters": 84.2
+    },
+    {
+      "sensorId": "68e194185905d8b7b30e754f",
+      "liters": 54.85
+    },
+    {
+      "sensorId": "68e1941c5905d8b7b30e7559",
+      "liters": 118.51
+    },
+    {
+      "sensorId": "68e1942b5905d8b7b30e7563",
+      "liters": 97.71
+    },
+    {
+      "sensorId": "68e194305905d8b7b30e756d",
+      "liters": 0
+    }
+  ],
+  "recommendedLiters": 450,
+  "limitLiters": 1200,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5da508"
+  },
+  "homeId": "68e191345905d8b7b30e719d",
+  "date": {
+    "$date": "2025-09-24T00:00:00.000Z"
+  },
+  "totalLiters": 364.11,
+  "bySensor": [
+    {
+      "sensorId": "68e192275905d8b7b30e7265",
+      "liters": 110.24
+    },
+    {
+      "sensorId": "68e192315905d8b7b30e726f",
+      "liters": 88.27
+    },
+    {
+      "sensorId": "68e192365905d8b7b30e7279",
+      "liters": 114.21
+    },
+    {
+      "sensorId": "68e1923f5905d8b7b30e7283",
+      "liters": 51.39
+    },
+    {
+      "sensorId": "68e192465905d8b7b30e728d",
+      "liters": 0
+    },
+    {
+      "sensorId": "68e1924b5905d8b7b30e7297",
+      "liters": 0
+    }
+  ],
+  "recommendedLiters": 450,
+  "limitLiters": 1200,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5da509"
+  },
+  "homeId": "68e1914a5905d8b7b30e71ad",
+  "date": {
+    "$date": "2025-09-24T00:00:00.000Z"
+  },
+  "totalLiters": 727.84,
+  "bySensor": [
+    {
+      "sensorId": "68e192515905d8b7b30e72a1",
+      "liters": 150.24
+    },
+    {
+      "sensorId": "68e192575905d8b7b30e72ab",
+      "liters": 96.39
+    },
+    {
+      "sensorId": "68e1925e5905d8b7b30e72c3",
+      "liters": 180.03
+    },
+    {
+      "sensorId": "68e192695905d8b7b30e72cd",
+      "liters": 72.66
+    },
+    {
+      "sensorId": "68e1926d5905d8b7b30e72d7",
+      "liters": 190.08
+    },
+    {
+      "sensorId": "68e192755905d8b7b30e72e1",
+      "liters": 38.44
+    },
+    {
+      "sensorId": "68e1927c5905d8b7b30e72eb",
+      "liters": 0
+    },
+    {
+      "sensorId": "68e192895905d8b7b30e72f5",
+      "liters": 0
+    }
+  ],
+  "recommendedLiters": 600,
+  "limitLiters": 1600,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5da50a"
+  },
+  "homeId": "68e1916e5905d8b7b30e71bd",
+  "date": {
+    "$date": "2025-09-24T00:00:00.000Z"
+  },
+  "totalLiters": 225.36,
+  "bySensor": [
+    {
+      "sensorId": "68e192aa5905d8b7b30e7375",
+      "liters": 50.7
+    },
+    {
+      "sensorId": "68e192b05905d8b7b30e737f",
+      "liters": 60.98
+    },
+    {
+      "sensorId": "68e192b65905d8b7b30e7389",
+      "liters": 70.45
+    },
+    {
+      "sensorId": "68e192bb5905d8b7b30e7393",
+      "liters": 43.23
+    }
+  ],
+  "recommendedLiters": 300,
+  "limitLiters": 800,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5da50b"
+  },
+  "homeId": "68e1918a5905d8b7b30e71cd",
+  "date": {
+    "$date": "2025-09-24T00:00:00.000Z"
+  },
+  "totalLiters": 1136.5,
+  "bySensor": [
+    {
+      "sensorId": "68e192cd5905d8b7b30e739d",
+      "liters": 249.04
+    },
+    {
+      "sensorId": "68e192db5905d8b7b30e73b1",
+      "liters": 121.56
+    },
+    {
+      "sensorId": "68e192e15905d8b7b30e73bb",
+      "liters": 194.76
+    },
+    {
+      "sensorId": "68e192f05905d8b7b30e73c5",
+      "liters": 196.47
+    },
+    {
+      "sensorId": "68e192f85905d8b7b30e73cf",
+      "liters": 113.34
+    },
+    {
+      "sensorId": "68e192fd5905d8b7b30e73d9",
+      "liters": 224.26
+    },
+    {
+      "sensorId": "68e193035905d8b7b30e73e3",
+      "liters": 37.07
+    },
+    {
+      "sensorId": "68e1930a5905d8b7b30e73ed",
+      "liters": 0
+    },
+    {
+      "sensorId": "68e193115905d8b7b30e73f7",
+      "liters": 0
+    },
+    {
+      "sensorId": "68e1931f5905d8b7b30e7401",
+      "liters": 0
+    }
+  ],
+  "recommendedLiters": 750,
+  "limitLiters": 2000,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5da50c"
+  },
+  "homeId": "68e1919a5905d8b7b30e71dd",
+  "date": {
+    "$date": "2025-09-24T00:00:00.000Z"
+  },
+  "totalLiters": 197.8,
+  "bySensor": [
+    {
+      "sensorId": "68e192d25905d8b7b30e73a7",
+      "liters": 20.93
+    },
+    {
+      "sensorId": "68e1932b5905d8b7b30e740b",
+      "liters": 76.66
+    },
+    {
+      "sensorId": "68e193315905d8b7b30e7415",
+      "liters": 41.82
+    },
+    {
+      "sensorId": "68e193385905d8b7b30e741f",
+      "liters": 58.39
+    }
+  ],
+  "recommendedLiters": 150,
+  "limitLiters": 400,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5da50d"
+  },
+  "homeId": "68e191b95905d8b7b30e71ed",
+  "date": {
+    "$date": "2025-09-24T00:00:00.000Z"
+  },
+  "totalLiters": 444.65,
+  "bySensor": [
+    {
+      "sensorId": "68e1936d5905d8b7b30e7469",
+      "liters": 162.5
+    },
+    {
+      "sensorId": "68e193725905d8b7b30e7473",
+      "liters": 76.32
+    },
+    {
+      "sensorId": "68e193775905d8b7b30e747d",
+      "liters": 148.69
+    },
+    {
+      "sensorId": "68e1937e5905d8b7b30e7487",
+      "liters": 57.14
+    },
+    {
+      "sensorId": "68e193865905d8b7b30e7491",
+      "liters": 0
+    }
+  ],
+  "recommendedLiters": 600,
+  "limitLiters": 1600,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5da50e"
+  },
+  "homeId": "68e191c85905d8b7b30e71fd",
+  "date": {
+    "$date": "2025-09-24T00:00:00.000Z"
+  },
+  "totalLiters": 709.71,
+  "bySensor": [
+    {
+      "sensorId": "68e193995905d8b7b30e749b",
+      "liters": 152.25
+    },
+    {
+      "sensorId": "68e1939d5905d8b7b30e74a5",
+      "liters": 67.68
+    },
+    {
+      "sensorId": "68e193a95905d8b7b30e74af",
+      "liters": 121.35
+    },
+    {
+      "sensorId": "68e193b55905d8b7b30e74b9",
+      "liters": 42.12
+    },
+    {
+      "sensorId": "68e193ba5905d8b7b30e74c3",
+      "liters": 110.9
+    },
+    {
+      "sensorId": "68e193c35905d8b7b30e74cd",
+      "liters": 67.13
+    },
+    {
+      "sensorId": "68e193c85905d8b7b30e74d7",
+      "liters": 148.28
+    }
+  ],
+  "recommendedLiters": 450,
+  "limitLiters": 1200,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5da50f"
+  },
+  "homeId": "68e191dd5905d8b7b30e720d",
+  "date": {
+    "$date": "2025-09-24T00:00:00.000Z"
+  },
+  "totalLiters": 544.79,
+  "bySensor": [
+    {
+      "sensorId": "68e193d45905d8b7b30e74e1",
+      "liters": 156.15
+    },
+    {
+      "sensorId": "68e193da5905d8b7b30e74eb",
+      "liters": 120.23
+    },
+    {
+      "sensorId": "68e193df5905d8b7b30e74f5",
+      "liters": 211.57
+    },
+    {
+      "sensorId": "68e193e45905d8b7b30e74ff",
+      "liters": 56.84
+    }
+  ],
+  "recommendedLiters": 750,
+  "limitLiters": 2000,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5da510"
+  },
+  "homeId": "68e191f65905d8b7b30e721d",
+  "date": {
+    "$date": "2025-09-24T00:00:00.000Z"
+  },
+  "totalLiters": 634.36,
+  "bySensor": [
+    {
+      "sensorId": "68e193f55905d8b7b30e7509",
+      "liters": 158.35
+    },
+    {
+      "sensorId": "68e193fa5905d8b7b30e7513",
+      "liters": 114.12
+    },
+    {
+      "sensorId": "68e193ff5905d8b7b30e751d",
+      "liters": 178.88
+    },
+    {
+      "sensorId": "68e194045905d8b7b30e7527",
+      "liters": 73.78
+    },
+    {
+      "sensorId": "68e194095905d8b7b30e7531",
+      "liters": 109.23
+    },
+    {
+      "sensorId": "68e1940f5905d8b7b30e753b",
+      "liters": 0
+    }
+  ],
+  "recommendedLiters": 600,
+  "limitLiters": 1600,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5da511"
+  },
+  "homeId": "68e192125905d8b7b30e722d",
+  "date": {
+    "$date": "2025-09-24T00:00:00.000Z"
+  },
+  "totalLiters": 364.6,
+  "bySensor": [
+    {
+      "sensorId": "68e194135905d8b7b30e7545",
+      "liters": 110.12
+    },
+    {
+      "sensorId": "68e194185905d8b7b30e754f",
+      "liters": 73.97
+    },
+    {
+      "sensorId": "68e1941c5905d8b7b30e7559",
+      "liters": 119.06
+    },
+    {
+      "sensorId": "68e1942b5905d8b7b30e7563",
+      "liters": 61.45
+    },
+    {
+      "sensorId": "68e194305905d8b7b30e756d",
+      "liters": 0
+    }
+  ],
+  "recommendedLiters": 450,
+  "limitLiters": 1200,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5da830"
+  },
+  "homeId": "68e191345905d8b7b30e719d",
+  "date": {
+    "$date": "2025-09-25T00:00:00.000Z"
+  },
+  "totalLiters": 482.69,
+  "bySensor": [
+    {
+      "sensorId": "68e192275905d8b7b30e7265",
+      "liters": 87.38
+    },
+    {
+      "sensorId": "68e192315905d8b7b30e726f",
+      "liters": 80.62
+    },
+    {
+      "sensorId": "68e192365905d8b7b30e7279",
+      "liters": 144.63
+    },
+    {
+      "sensorId": "68e1923f5905d8b7b30e7283",
+      "liters": 60.34
+    },
+    {
+      "sensorId": "68e192465905d8b7b30e728d",
+      "liters": 109.72
+    },
+    {
+      "sensorId": "68e1924b5905d8b7b30e7297",
+      "liters": 0
+    }
+  ],
+  "recommendedLiters": 450,
+  "limitLiters": 1200,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5da831"
+  },
+  "homeId": "68e1914a5905d8b7b30e71ad",
+  "date": {
+    "$date": "2025-09-25T00:00:00.000Z"
+  },
+  "totalLiters": 746.31,
+  "bySensor": [
+    {
+      "sensorId": "68e192515905d8b7b30e72a1",
+      "liters": 153.28
+    },
+    {
+      "sensorId": "68e192575905d8b7b30e72ab",
+      "liters": 97.33
+    },
+    {
+      "sensorId": "68e1925e5905d8b7b30e72c3",
+      "liters": 193.97
+    },
+    {
+      "sensorId": "68e192695905d8b7b30e72cd",
+      "liters": 99.25
+    },
+    {
+      "sensorId": "68e1926d5905d8b7b30e72d7",
+      "liters": 164.5
+    },
+    {
+      "sensorId": "68e192755905d8b7b30e72e1",
+      "liters": 37.98
+    },
+    {
+      "sensorId": "68e1927c5905d8b7b30e72eb",
+      "liters": 0
+    },
+    {
+      "sensorId": "68e192895905d8b7b30e72f5",
+      "liters": 0
+    }
+  ],
+  "recommendedLiters": 600,
+  "limitLiters": 1600,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5da832"
+  },
+  "homeId": "68e1916e5905d8b7b30e71bd",
+  "date": {
+    "$date": "2025-09-25T00:00:00.000Z"
+  },
+  "totalLiters": 272.87,
+  "bySensor": [
+    {
+      "sensorId": "68e192aa5905d8b7b30e7375",
+      "liters": 50.11
+    },
+    {
+      "sensorId": "68e192b05905d8b7b30e737f",
+      "liters": 55.55
+    },
+    {
+      "sensorId": "68e192b65905d8b7b30e7389",
+      "liters": 80.75
+    },
+    {
+      "sensorId": "68e192bb5905d8b7b30e7393",
+      "liters": 86.46
+    }
+  ],
+  "recommendedLiters": 300,
+  "limitLiters": 800,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5da833"
+  },
+  "homeId": "68e1918a5905d8b7b30e71cd",
+  "date": {
+    "$date": "2025-09-25T00:00:00.000Z"
+  },
+  "totalLiters": 1087.91,
+  "bySensor": [
+    {
+      "sensorId": "68e192cd5905d8b7b30e739d",
+      "liters": 187.81
+    },
+    {
+      "sensorId": "68e192db5905d8b7b30e73b1",
+      "liters": 158.06
+    },
+    {
+      "sensorId": "68e192e15905d8b7b30e73bb",
+      "liters": 195.35
+    },
+    {
+      "sensorId": "68e192f05905d8b7b30e73c5",
+      "liters": 152.24
+    },
+    {
+      "sensorId": "68e192f85905d8b7b30e73cf",
+      "liters": 122.23
+    },
+    {
+      "sensorId": "68e192fd5905d8b7b30e73d9",
+      "liters": 225.94
+    },
+    {
+      "sensorId": "68e193035905d8b7b30e73e3",
+      "liters": 46.28
+    },
+    {
+      "sensorId": "68e1930a5905d8b7b30e73ed",
+      "liters": 0
+    },
+    {
+      "sensorId": "68e193115905d8b7b30e73f7",
+      "liters": 0
+    },
+    {
+      "sensorId": "68e1931f5905d8b7b30e7401",
+      "liters": 0
+    }
+  ],
+  "recommendedLiters": 750,
+  "limitLiters": 2000,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5da834"
+  },
+  "homeId": "68e1919a5905d8b7b30e71dd",
+  "date": {
+    "$date": "2025-09-25T00:00:00.000Z"
+  },
+  "totalLiters": 152.79,
+  "bySensor": [
+    {
+      "sensorId": "68e192d25905d8b7b30e73a7",
+      "liters": 18.04
+    },
+    {
+      "sensorId": "68e1932b5905d8b7b30e740b",
+      "liters": 46.86
+    },
+    {
+      "sensorId": "68e193315905d8b7b30e7415",
+      "liters": 32.18
+    },
+    {
+      "sensorId": "68e193385905d8b7b30e741f",
+      "liters": 55.71
+    }
+  ],
+  "recommendedLiters": 150,
+  "limitLiters": 400,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5da835"
+  },
+  "homeId": "68e191b95905d8b7b30e71ed",
+  "date": {
+    "$date": "2025-09-25T00:00:00.000Z"
+  },
+  "totalLiters": 533.04,
+  "bySensor": [
+    {
+      "sensorId": "68e1936d5905d8b7b30e7469",
+      "liters": 122.33
+    },
+    {
+      "sensorId": "68e193725905d8b7b30e7473",
+      "liters": 104.23
+    },
+    {
+      "sensorId": "68e193775905d8b7b30e747d",
+      "liters": 144.24
+    },
+    {
+      "sensorId": "68e1937e5905d8b7b30e7487",
+      "liters": 61.41
+    },
+    {
+      "sensorId": "68e193865905d8b7b30e7491",
+      "liters": 100.83
+    }
+  ],
+  "recommendedLiters": 600,
+  "limitLiters": 1600,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5da836"
+  },
+  "homeId": "68e191c85905d8b7b30e71fd",
+  "date": {
+    "$date": "2025-09-25T00:00:00.000Z"
+  },
+  "totalLiters": 717.07,
+  "bySensor": [
+    {
+      "sensorId": "68e193995905d8b7b30e749b",
+      "liters": 182.2
+    },
+    {
+      "sensorId": "68e1939d5905d8b7b30e74a5",
+      "liters": 70.49
+    },
+    {
+      "sensorId": "68e193a95905d8b7b30e74af",
+      "liters": 138.07
+    },
+    {
+      "sensorId": "68e193b55905d8b7b30e74b9",
+      "liters": 38.72
+    },
+    {
+      "sensorId": "68e193ba5905d8b7b30e74c3",
+      "liters": 86.03
+    },
+    {
+      "sensorId": "68e193c35905d8b7b30e74cd",
+      "liters": 71.88
+    },
+    {
+      "sensorId": "68e193c85905d8b7b30e74d7",
+      "liters": 129.68
+    }
+  ],
+  "recommendedLiters": 450,
+  "limitLiters": 1200,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5da837"
+  },
+  "homeId": "68e191dd5905d8b7b30e720d",
+  "date": {
+    "$date": "2025-09-25T00:00:00.000Z"
+  },
+  "totalLiters": 677.22,
+  "bySensor": [
+    {
+      "sensorId": "68e193d45905d8b7b30e74e1",
+      "liters": 271.45
+    },
+    {
+      "sensorId": "68e193da5905d8b7b30e74eb",
+      "liters": 113.36
+    },
+    {
+      "sensorId": "68e193df5905d8b7b30e74f5",
+      "liters": 199.89
+    },
+    {
+      "sensorId": "68e193e45905d8b7b30e74ff",
+      "liters": 92.52
+    }
+  ],
+  "recommendedLiters": 750,
+  "limitLiters": 2000,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5da838"
+  },
+  "homeId": "68e191f65905d8b7b30e721d",
+  "date": {
+    "$date": "2025-09-25T00:00:00.000Z"
+  },
+  "totalLiters": 518.35,
+  "bySensor": [
+    {
+      "sensorId": "68e193f55905d8b7b30e7509",
+      "liters": 93.08
+    },
+    {
+      "sensorId": "68e193fa5905d8b7b30e7513",
+      "liters": 86.18
+    },
+    {
+      "sensorId": "68e193ff5905d8b7b30e751d",
+      "liters": 139.64
+    },
+    {
+      "sensorId": "68e194045905d8b7b30e7527",
+      "liters": 84.5
+    },
+    {
+      "sensorId": "68e194095905d8b7b30e7531",
+      "liters": 114.95
+    },
+    {
+      "sensorId": "68e1940f5905d8b7b30e753b",
+      "liters": 0
+    }
+  ],
+  "recommendedLiters": 600,
+  "limitLiters": 1600,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5da839"
+  },
+  "homeId": "68e192125905d8b7b30e722d",
+  "date": {
+    "$date": "2025-09-25T00:00:00.000Z"
+  },
+  "totalLiters": 442.08,
+  "bySensor": [
+    {
+      "sensorId": "68e194135905d8b7b30e7545",
+      "liters": 176.13
+    },
+    {
+      "sensorId": "68e194185905d8b7b30e754f",
+      "liters": 74.21
+    },
+    {
+      "sensorId": "68e1941c5905d8b7b30e7559",
+      "liters": 134.62
+    },
+    {
+      "sensorId": "68e1942b5905d8b7b30e7563",
+      "liters": 57.12
+    },
+    {
+      "sensorId": "68e194305905d8b7b30e756d",
+      "liters": 0
+    }
+  ],
+  "recommendedLiters": 450,
+  "limitLiters": 1200,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5dab39"
+  },
+  "homeId": "68e191345905d8b7b30e719d",
+  "date": {
+    "$date": "2025-09-26T00:00:00.000Z"
+  },
+  "totalLiters": 492.16,
+  "bySensor": [
+    {
+      "sensorId": "68e192275905d8b7b30e7265",
+      "liters": 142.15
+    },
+    {
+      "sensorId": "68e192315905d8b7b30e726f",
+      "liters": 67.89
+    },
+    {
+      "sensorId": "68e192365905d8b7b30e7279",
+      "liters": 124.05
+    },
+    {
+      "sensorId": "68e1923f5905d8b7b30e7283",
+      "liters": 59.55
+    },
+    {
+      "sensorId": "68e192465905d8b7b30e728d",
+      "liters": 98.52
+    },
+    {
+      "sensorId": "68e1924b5905d8b7b30e7297",
+      "liters": 0
+    }
+  ],
+  "recommendedLiters": 450,
+  "limitLiters": 1200,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5dab3a"
+  },
+  "homeId": "68e1914a5905d8b7b30e71ad",
+  "date": {
+    "$date": "2025-09-26T00:00:00.000Z"
+  },
+  "totalLiters": 772.85,
+  "bySensor": [
+    {
+      "sensorId": "68e192515905d8b7b30e72a1",
+      "liters": 225.88
+    },
+    {
+      "sensorId": "68e192575905d8b7b30e72ab",
+      "liters": 94.38
+    },
+    {
+      "sensorId": "68e1925e5905d8b7b30e72c3",
+      "liters": 152.11
+    },
+    {
+      "sensorId": "68e192695905d8b7b30e72cd",
+      "liters": 89.58
+    },
+    {
+      "sensorId": "68e1926d5905d8b7b30e72d7",
+      "liters": 145.67
+    },
+    {
+      "sensorId": "68e192755905d8b7b30e72e1",
+      "liters": 65.23
+    },
+    {
+      "sensorId": "68e1927c5905d8b7b30e72eb",
+      "liters": 0
+    },
+    {
+      "sensorId": "68e192895905d8b7b30e72f5",
+      "liters": 0
+    }
+  ],
+  "recommendedLiters": 600,
+  "limitLiters": 1600,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5dab3b"
+  },
+  "homeId": "68e1916e5905d8b7b30e71bd",
+  "date": {
+    "$date": "2025-09-26T00:00:00.000Z"
+  },
+  "totalLiters": 352.49,
+  "bySensor": [
+    {
+      "sensorId": "68e192aa5905d8b7b30e7375",
+      "liters": 113.31
+    },
+    {
+      "sensorId": "68e192b05905d8b7b30e737f",
+      "liters": 45.22
+    },
+    {
+      "sensorId": "68e192b65905d8b7b30e7389",
+      "liters": 90.81
+    },
+    {
+      "sensorId": "68e192bb5905d8b7b30e7393",
+      "liters": 103.15
+    }
+  ],
+  "recommendedLiters": 300,
+  "limitLiters": 800,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5dab3c"
+  },
+  "homeId": "68e1918a5905d8b7b30e71cd",
+  "date": {
+    "$date": "2025-09-26T00:00:00.000Z"
+  },
+  "totalLiters": 1343.7,
+  "bySensor": [
+    {
+      "sensorId": "68e192cd5905d8b7b30e739d",
+      "liters": 298.82
+    },
+    {
+      "sensorId": "68e192db5905d8b7b30e73b1",
+      "liters": 138.2
+    },
+    {
+      "sensorId": "68e192e15905d8b7b30e73bb",
+      "liters": 228.66
+    },
+    {
+      "sensorId": "68e192f05905d8b7b30e73c5",
+      "liters": 260.97
+    },
+    {
+      "sensorId": "68e192f85905d8b7b30e73cf",
+      "liters": 102.13
+    },
+    {
+      "sensorId": "68e192fd5905d8b7b30e73d9",
+      "liters": 189.2
+    },
+    {
+      "sensorId": "68e193035905d8b7b30e73e3",
+      "liters": 45.35
+    },
+    {
+      "sensorId": "68e1930a5905d8b7b30e73ed",
+      "liters": 0
+    },
+    {
+      "sensorId": "68e193115905d8b7b30e73f7",
+      "liters": 80.37
+    },
+    {
+      "sensorId": "68e1931f5905d8b7b30e7401",
+      "liters": 0
+    }
+  ],
+  "recommendedLiters": 750,
+  "limitLiters": 2000,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5dab3d"
+  },
+  "homeId": "68e1919a5905d8b7b30e71dd",
+  "date": {
+    "$date": "2025-09-26T00:00:00.000Z"
+  },
+  "totalLiters": 194.77,
+  "bySensor": [
+    {
+      "sensorId": "68e192d25905d8b7b30e73a7",
+      "liters": 28.12
+    },
+    {
+      "sensorId": "68e1932b5905d8b7b30e740b",
+      "liters": 45.86
+    },
+    {
+      "sensorId": "68e193315905d8b7b30e7415",
+      "liters": 32.4
+    },
+    {
+      "sensorId": "68e193385905d8b7b30e741f",
+      "liters": 88.39
+    }
+  ],
+  "recommendedLiters": 150,
+  "limitLiters": 400,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5dab3e"
+  },
+  "homeId": "68e191b95905d8b7b30e71ed",
+  "date": {
+    "$date": "2025-09-26T00:00:00.000Z"
+  },
+  "totalLiters": 507.34,
+  "bySensor": [
+    {
+      "sensorId": "68e1936d5905d8b7b30e7469",
+      "liters": 198.4
+    },
+    {
+      "sensorId": "68e193725905d8b7b30e7473",
+      "liters": 107.76
+    },
+    {
+      "sensorId": "68e193775905d8b7b30e747d",
+      "liters": 157.72
+    },
+    {
+      "sensorId": "68e1937e5905d8b7b30e7487",
+      "liters": 43.46
+    },
+    {
+      "sensorId": "68e193865905d8b7b30e7491",
+      "liters": 0
+    }
+  ],
+  "recommendedLiters": 600,
+  "limitLiters": 1600,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5dab3f"
+  },
+  "homeId": "68e191c85905d8b7b30e71fd",
+  "date": {
+    "$date": "2025-09-26T00:00:00.000Z"
+  },
+  "totalLiters": 604.46,
+  "bySensor": [
+    {
+      "sensorId": "68e193995905d8b7b30e749b",
+      "liters": 169.26
+    },
+    {
+      "sensorId": "68e1939d5905d8b7b30e74a5",
+      "liters": 77.62
+    },
+    {
+      "sensorId": "68e193a95905d8b7b30e74af",
+      "liters": 131.07
+    },
+    {
+      "sensorId": "68e193b55905d8b7b30e74b9",
+      "liters": 37.82
+    },
+    {
+      "sensorId": "68e193ba5905d8b7b30e74c3",
+      "liters": 0
+    },
+    {
+      "sensorId": "68e193c35905d8b7b30e74cd",
+      "liters": 68.94
+    },
+    {
+      "sensorId": "68e193c85905d8b7b30e74d7",
+      "liters": 119.75
+    }
+  ],
+  "recommendedLiters": 450,
+  "limitLiters": 1200,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5dab40"
+  },
+  "homeId": "68e191dd5905d8b7b30e720d",
+  "date": {
+    "$date": "2025-09-26T00:00:00.000Z"
+  },
+  "totalLiters": 480.44,
+  "bySensor": [
+    {
+      "sensorId": "68e193d45905d8b7b30e74e1",
+      "liters": 155.33
+    },
+    {
+      "sensorId": "68e193da5905d8b7b30e74eb",
+      "liters": 112.89
+    },
+    {
+      "sensorId": "68e193df5905d8b7b30e74f5",
+      "liters": 168.12
+    },
+    {
+      "sensorId": "68e193e45905d8b7b30e74ff",
+      "liters": 44.1
+    }
+  ],
+  "recommendedLiters": 750,
+  "limitLiters": 2000,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5dab41"
+  },
+  "homeId": "68e191f65905d8b7b30e721d",
+  "date": {
+    "$date": "2025-09-26T00:00:00.000Z"
+  },
+  "totalLiters": 460.95,
+  "bySensor": [
+    {
+      "sensorId": "68e193f55905d8b7b30e7509",
+      "liters": 151.44
+    },
+    {
+      "sensorId": "68e193fa5905d8b7b30e7513",
+      "liters": 87
+    },
+    {
+      "sensorId": "68e193ff5905d8b7b30e751d",
+      "liters": 163.48
+    },
+    {
+      "sensorId": "68e194045905d8b7b30e7527",
+      "liters": 59.03
+    },
+    {
+      "sensorId": "68e194095905d8b7b30e7531",
+      "liters": 0
+    },
+    {
+      "sensorId": "68e1940f5905d8b7b30e753b",
+      "liters": 0
+    }
+  ],
+  "recommendedLiters": 600,
+  "limitLiters": 1600,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5dab42"
+  },
+  "homeId": "68e192125905d8b7b30e722d",
+  "date": {
+    "$date": "2025-09-26T00:00:00.000Z"
+  },
+  "totalLiters": 518.37,
+  "bySensor": [
+    {
+      "sensorId": "68e194135905d8b7b30e7545",
+      "liters": 130.81
+    },
+    {
+      "sensorId": "68e194185905d8b7b30e754f",
+      "liters": 94.56
+    },
+    {
+      "sensorId": "68e1941c5905d8b7b30e7559",
+      "liters": 131.08
+    },
+    {
+      "sensorId": "68e1942b5905d8b7b30e7563",
+      "liters": 86.05
+    },
+    {
+      "sensorId": "68e194305905d8b7b30e756d",
+      "liters": 75.87
+    }
+  ],
+  "recommendedLiters": 450,
+  "limitLiters": 1200,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5daecd"
+  },
+  "homeId": "68e191345905d8b7b30e719d",
+  "date": {
+    "$date": "2025-09-27T00:00:00.000Z"
+  },
+  "totalLiters": 572.43,
+  "bySensor": [
+    {
+      "sensorId": "68e192275905d8b7b30e7265",
+      "liters": 122.35
+    },
+    {
+      "sensorId": "68e192315905d8b7b30e726f",
+      "liters": 81.2
+    },
+    {
+      "sensorId": "68e192365905d8b7b30e7279",
+      "liters": 161.37
+    },
+    {
+      "sensorId": "68e1923f5905d8b7b30e7283",
+      "liters": 110.74
+    },
+    {
+      "sensorId": "68e192465905d8b7b30e728d",
+      "liters": 96.77
+    },
+    {
+      "sensorId": "68e1924b5905d8b7b30e7297",
+      "liters": 0
+    }
+  ],
+  "recommendedLiters": 450,
+  "limitLiters": 1200,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5daece"
+  },
+  "homeId": "68e1914a5905d8b7b30e71ad",
+  "date": {
+    "$date": "2025-09-27T00:00:00.000Z"
+  },
+  "totalLiters": 1028.66,
+  "bySensor": [
+    {
+      "sensorId": "68e192515905d8b7b30e72a1",
+      "liters": 239.48
+    },
+    {
+      "sensorId": "68e192575905d8b7b30e72ab",
+      "liters": 121.88
+    },
+    {
+      "sensorId": "68e1925e5905d8b7b30e72c3",
+      "liters": 167.23
+    },
+    {
+      "sensorId": "68e192695905d8b7b30e72cd",
+      "liters": 116.41
+    },
+    {
+      "sensorId": "68e1926d5905d8b7b30e72d7",
+      "liters": 194.77
+    },
+    {
+      "sensorId": "68e192755905d8b7b30e72e1",
+      "liters": 103.82
+    },
+    {
+      "sensorId": "68e1927c5905d8b7b30e72eb",
+      "liters": 85.07
+    },
+    {
+      "sensorId": "68e192895905d8b7b30e72f5",
+      "liters": 0
+    }
+  ],
+  "recommendedLiters": 600,
+  "limitLiters": 1600,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5daecf"
+  },
+  "homeId": "68e1916e5905d8b7b30e71bd",
+  "date": {
+    "$date": "2025-09-27T00:00:00.000Z"
+  },
+  "totalLiters": 263.24,
+  "bySensor": [
+    {
+      "sensorId": "68e192aa5905d8b7b30e7375",
+      "liters": 44.59
+    },
+    {
+      "sensorId": "68e192b05905d8b7b30e737f",
+      "liters": 50.42
+    },
+    {
+      "sensorId": "68e192b65905d8b7b30e7389",
+      "liters": 78.3
+    },
+    {
+      "sensorId": "68e192bb5905d8b7b30e7393",
+      "liters": 89.93
+    }
+  ],
+  "recommendedLiters": 300,
+  "limitLiters": 800,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5daed0"
+  },
+  "homeId": "68e1918a5905d8b7b30e71cd",
+  "date": {
+    "$date": "2025-09-27T00:00:00.000Z"
+  },
+  "totalLiters": 1228.72,
+  "bySensor": [
+    {
+      "sensorId": "68e192cd5905d8b7b30e739d",
+      "liters": 164.27
+    },
+    {
+      "sensorId": "68e192db5905d8b7b30e73b1",
+      "liters": 161.03
+    },
+    {
+      "sensorId": "68e192e15905d8b7b30e73bb",
+      "liters": 232.63
+    },
+    {
+      "sensorId": "68e192f05905d8b7b30e73c5",
+      "liters": 275.29
+    },
+    {
+      "sensorId": "68e192f85905d8b7b30e73cf",
+      "liters": 104.6
+    },
+    {
+      "sensorId": "68e192fd5905d8b7b30e73d9",
+      "liters": 186.58
+    },
+    {
+      "sensorId": "68e193035905d8b7b30e73e3",
+      "liters": 104.32
+    },
+    {
+      "sensorId": "68e1930a5905d8b7b30e73ed",
+      "liters": 0
+    },
+    {
+      "sensorId": "68e193115905d8b7b30e73f7",
+      "liters": 0
+    },
+    {
+      "sensorId": "68e1931f5905d8b7b30e7401",
+      "liters": 0
+    }
+  ],
+  "recommendedLiters": 750,
+  "limitLiters": 2000,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5daed1"
+  },
+  "homeId": "68e1919a5905d8b7b30e71dd",
+  "date": {
+    "$date": "2025-09-27T00:00:00.000Z"
+  },
+  "totalLiters": 182.68,
+  "bySensor": [
+    {
+      "sensorId": "68e192d25905d8b7b30e73a7",
+      "liters": 24.83
+    },
+    {
+      "sensorId": "68e1932b5905d8b7b30e740b",
+      "liters": 38.15
+    },
+    {
+      "sensorId": "68e193315905d8b7b30e7415",
+      "liters": 42.48
+    },
+    {
+      "sensorId": "68e193385905d8b7b30e741f",
+      "liters": 77.22
+    }
+  ],
+  "recommendedLiters": 150,
+  "limitLiters": 400,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5daed2"
+  },
+  "homeId": "68e191b95905d8b7b30e71ed",
+  "date": {
+    "$date": "2025-09-27T00:00:00.000Z"
+  },
+  "totalLiters": 652.57,
+  "bySensor": [
+    {
+      "sensorId": "68e1936d5905d8b7b30e7469",
+      "liters": 212.11
+    },
+    {
+      "sensorId": "68e193725905d8b7b30e7473",
+      "liters": 116.55
+    },
+    {
+      "sensorId": "68e193775905d8b7b30e747d",
+      "liters": 216.46
+    },
+    {
+      "sensorId": "68e1937e5905d8b7b30e7487",
+      "liters": 107.45
+    },
+    {
+      "sensorId": "68e193865905d8b7b30e7491",
+      "liters": 0
+    }
+  ],
+  "recommendedLiters": 600,
+  "limitLiters": 1600,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5daed3"
+  },
+  "homeId": "68e191c85905d8b7b30e71fd",
+  "date": {
+    "$date": "2025-09-27T00:00:00.000Z"
+  },
+  "totalLiters": 583.06,
+  "bySensor": [
+    {
+      "sensorId": "68e193995905d8b7b30e749b",
+      "liters": 104.72
+    },
+    {
+      "sensorId": "68e1939d5905d8b7b30e74a5",
+      "liters": 64
+    },
+    {
+      "sensorId": "68e193a95905d8b7b30e74af",
+      "liters": 155.01
+    },
+    {
+      "sensorId": "68e193b55905d8b7b30e74b9",
+      "liters": 54.72
+    },
+    {
+      "sensorId": "68e193ba5905d8b7b30e74c3",
+      "liters": 0
+    },
+    {
+      "sensorId": "68e193c35905d8b7b30e74cd",
+      "liters": 69.63
+    },
+    {
+      "sensorId": "68e193c85905d8b7b30e74d7",
+      "liters": 134.98
+    }
+  ],
+  "recommendedLiters": 450,
+  "limitLiters": 1200,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5daed4"
+  },
+  "homeId": "68e191dd5905d8b7b30e720d",
+  "date": {
+    "$date": "2025-09-27T00:00:00.000Z"
+  },
+  "totalLiters": 743.39,
+  "bySensor": [
+    {
+      "sensorId": "68e193d45905d8b7b30e74e1",
+      "liters": 227.9
+    },
+    {
+      "sensorId": "68e193da5905d8b7b30e74eb",
+      "liters": 161.94
+    },
+    {
+      "sensorId": "68e193df5905d8b7b30e74f5",
+      "liters": 238.34
+    },
+    {
+      "sensorId": "68e193e45905d8b7b30e74ff",
+      "liters": 115.21
+    }
+  ],
+  "recommendedLiters": 750,
+  "limitLiters": 2000,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5daed5"
+  },
+  "homeId": "68e191f65905d8b7b30e721d",
+  "date": {
+    "$date": "2025-09-27T00:00:00.000Z"
+  },
+  "totalLiters": 671.05,
+  "bySensor": [
+    {
+      "sensorId": "68e193f55905d8b7b30e7509",
+      "liters": 217.18
+    },
+    {
+      "sensorId": "68e193fa5905d8b7b30e7513",
+      "liters": 126.69
+    },
+    {
+      "sensorId": "68e193ff5905d8b7b30e751d",
+      "liters": 209.26
+    },
+    {
+      "sensorId": "68e194045905d8b7b30e7527",
+      "liters": 117.92
+    },
+    {
+      "sensorId": "68e194095905d8b7b30e7531",
+      "liters": 0
+    },
+    {
+      "sensorId": "68e1940f5905d8b7b30e753b",
+      "liters": 0
+    }
+  ],
+  "recommendedLiters": 600,
+  "limitLiters": 1600,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5daed6"
+  },
+  "homeId": "68e192125905d8b7b30e722d",
+  "date": {
+    "$date": "2025-09-27T00:00:00.000Z"
+  },
+  "totalLiters": 582.6,
+  "bySensor": [
+    {
+      "sensorId": "68e194135905d8b7b30e7545",
+      "liters": 191.22
+    },
+    {
+      "sensorId": "68e194185905d8b7b30e754f",
+      "liters": 93.92
+    },
+    {
+      "sensorId": "68e1941c5905d8b7b30e7559",
+      "liters": 154.33
+    },
+    {
+      "sensorId": "68e1942b5905d8b7b30e7563",
+      "liters": 143.13
+    },
+    {
+      "sensorId": "68e194305905d8b7b30e756d",
+      "liters": 0
+    }
+  ],
+  "recommendedLiters": 450,
+  "limitLiters": 1200,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5db26d"
+  },
+  "homeId": "68e191345905d8b7b30e719d",
+  "date": {
+    "$date": "2025-09-28T00:00:00.000Z"
+  },
+  "totalLiters": 593.11,
+  "bySensor": [
+    {
+      "sensorId": "68e192275905d8b7b30e7265",
+      "liters": 173.08
+    },
+    {
+      "sensorId": "68e192315905d8b7b30e726f",
+      "liters": 70.91
+    },
+    {
+      "sensorId": "68e192365905d8b7b30e7279",
+      "liters": 145.75
+    },
+    {
+      "sensorId": "68e1923f5905d8b7b30e7283",
+      "liters": 98.21
+    },
+    {
+      "sensorId": "68e192465905d8b7b30e728d",
+      "liters": 105.16
+    },
+    {
+      "sensorId": "68e1924b5905d8b7b30e7297",
+      "liters": 0
+    }
+  ],
+  "recommendedLiters": 450,
+  "limitLiters": 1200,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5db26e"
+  },
+  "homeId": "68e1914a5905d8b7b30e71ad",
+  "date": {
+    "$date": "2025-09-28T00:00:00.000Z"
+  },
+  "totalLiters": 987.63,
+  "bySensor": [
+    {
+      "sensorId": "68e192515905d8b7b30e72a1",
+      "liters": 131
+    },
+    {
+      "sensorId": "68e192575905d8b7b30e72ab",
+      "liters": 145.26
+    },
+    {
+      "sensorId": "68e1925e5905d8b7b30e72c3",
+      "liters": 207.33
+    },
+    {
+      "sensorId": "68e192695905d8b7b30e72cd",
+      "liters": 127.65
+    },
+    {
+      "sensorId": "68e1926d5905d8b7b30e72d7",
+      "liters": 185.53
+    },
+    {
+      "sensorId": "68e192755905d8b7b30e72e1",
+      "liters": 89.86
+    },
+    {
+      "sensorId": "68e1927c5905d8b7b30e72eb",
+      "liters": 101
+    },
+    {
+      "sensorId": "68e192895905d8b7b30e72f5",
+      "liters": 0
+    }
+  ],
+  "recommendedLiters": 600,
+  "limitLiters": 1600,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5db26f"
+  },
+  "homeId": "68e1916e5905d8b7b30e71bd",
+  "date": {
+    "$date": "2025-09-28T00:00:00.000Z"
+  },
+  "totalLiters": 321.43,
+  "bySensor": [
+    {
+      "sensorId": "68e192aa5905d8b7b30e7375",
+      "liters": 125.12
+    },
+    {
+      "sensorId": "68e192b05905d8b7b30e737f",
+      "liters": 55.47
+    },
+    {
+      "sensorId": "68e192b65905d8b7b30e7389",
+      "liters": 80.48
+    },
+    {
+      "sensorId": "68e192bb5905d8b7b30e7393",
+      "liters": 60.36
+    }
+  ],
+  "recommendedLiters": 300,
+  "limitLiters": 800,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5db270"
+  },
+  "homeId": "68e1918a5905d8b7b30e71cd",
+  "date": {
+    "$date": "2025-09-28T00:00:00.000Z"
+  },
+  "totalLiters": 1502.53,
+  "bySensor": [
+    {
+      "sensorId": "68e192cd5905d8b7b30e739d",
+      "liters": 232.26
+    },
+    {
+      "sensorId": "68e192db5905d8b7b30e73b1",
+      "liters": 158.49
+    },
+    {
+      "sensorId": "68e192e15905d8b7b30e73bb",
+      "liters": 234.41
+    },
+    {
+      "sensorId": "68e192f05905d8b7b30e73c5",
+      "liters": 232.47
+    },
+    {
+      "sensorId": "68e192f85905d8b7b30e73cf",
+      "liters": 136.17
+    },
+    {
+      "sensorId": "68e192fd5905d8b7b30e73d9",
+      "liters": 261.27
+    },
+    {
+      "sensorId": "68e193035905d8b7b30e73e3",
+      "liters": 87.26
+    },
+    {
+      "sensorId": "68e1930a5905d8b7b30e73ed",
+      "liters": 103.98
+    },
+    {
+      "sensorId": "68e193115905d8b7b30e73f7",
+      "liters": 56.22
+    },
+    {
+      "sensorId": "68e1931f5905d8b7b30e7401",
+      "liters": 0
+    }
+  ],
+  "recommendedLiters": 750,
+  "limitLiters": 2000,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5db271"
+  },
+  "homeId": "68e1919a5905d8b7b30e71dd",
+  "date": {
+    "$date": "2025-09-28T00:00:00.000Z"
+  },
+  "totalLiters": 186.52,
+  "bySensor": [
+    {
+      "sensorId": "68e192d25905d8b7b30e73a7",
+      "liters": 23.76
+    },
+    {
+      "sensorId": "68e1932b5905d8b7b30e740b",
+      "liters": 41.33
+    },
+    {
+      "sensorId": "68e193315905d8b7b30e7415",
+      "liters": 55.36
+    },
+    {
+      "sensorId": "68e193385905d8b7b30e741f",
+      "liters": 66.07
+    }
+  ],
+  "recommendedLiters": 150,
+  "limitLiters": 400,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5db272"
+  },
+  "homeId": "68e191b95905d8b7b30e71ed",
+  "date": {
+    "$date": "2025-09-28T00:00:00.000Z"
+  },
+  "totalLiters": 677.13,
+  "bySensor": [
+    {
+      "sensorId": "68e1936d5905d8b7b30e7469",
+      "liters": 127.14
+    },
+    {
+      "sensorId": "68e193725905d8b7b30e7473",
+      "liters": 134.29
+    },
+    {
+      "sensorId": "68e193775905d8b7b30e747d",
+      "liters": 201.45
+    },
+    {
+      "sensorId": "68e1937e5905d8b7b30e7487",
+      "liters": 130.38
+    },
+    {
+      "sensorId": "68e193865905d8b7b30e7491",
+      "liters": 83.87
+    }
+  ],
+  "recommendedLiters": 600,
+  "limitLiters": 1600,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5db273"
+  },
+  "homeId": "68e191c85905d8b7b30e71fd",
+  "date": {
+    "$date": "2025-09-28T00:00:00.000Z"
+  },
+  "totalLiters": 781.44,
+  "bySensor": [
+    {
+      "sensorId": "68e193995905d8b7b30e749b",
+      "liters": 152.46
+    },
+    {
+      "sensorId": "68e1939d5905d8b7b30e74a5",
+      "liters": 78.81
+    },
+    {
+      "sensorId": "68e193a95905d8b7b30e74af",
+      "liters": 154.25
+    },
+    {
+      "sensorId": "68e193b55905d8b7b30e74b9",
+      "liters": 129.56
+    },
+    {
+      "sensorId": "68e193ba5905d8b7b30e74c3",
+      "liters": 0
+    },
+    {
+      "sensorId": "68e193c35905d8b7b30e74cd",
+      "liters": 107.01
+    },
+    {
+      "sensorId": "68e193c85905d8b7b30e74d7",
+      "liters": 159.35
+    }
+  ],
+  "recommendedLiters": 450,
+  "limitLiters": 1200,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5db274"
+  },
+  "homeId": "68e191dd5905d8b7b30e720d",
+  "date": {
+    "$date": "2025-09-28T00:00:00.000Z"
+  },
+  "totalLiters": 670.29,
+  "bySensor": [
+    {
+      "sensorId": "68e193d45905d8b7b30e74e1",
+      "liters": 219.54
+    },
+    {
+      "sensorId": "68e193da5905d8b7b30e74eb",
+      "liters": 154.38
+    },
+    {
+      "sensorId": "68e193df5905d8b7b30e74f5",
+      "liters": 244.37
+    },
+    {
+      "sensorId": "68e193e45905d8b7b30e74ff",
+      "liters": 52
+    }
+  ],
+  "recommendedLiters": 750,
+  "limitLiters": 2000,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5db275"
+  },
+  "homeId": "68e191f65905d8b7b30e721d",
+  "date": {
+    "$date": "2025-09-28T00:00:00.000Z"
+  },
+  "totalLiters": 527.83,
+  "bySensor": [
+    {
+      "sensorId": "68e193f55905d8b7b30e7509",
+      "liters": 166.07
+    },
+    {
+      "sensorId": "68e193fa5905d8b7b30e7513",
+      "liters": 101.59
+    },
+    {
+      "sensorId": "68e193ff5905d8b7b30e751d",
+      "liters": 174.33
+    },
+    {
+      "sensorId": "68e194045905d8b7b30e7527",
+      "liters": 85.84
+    },
+    {
+      "sensorId": "68e194095905d8b7b30e7531",
+      "liters": 0
+    },
+    {
+      "sensorId": "68e1940f5905d8b7b30e753b",
+      "liters": 0
+    }
+  ],
+  "recommendedLiters": 600,
+  "limitLiters": 1600,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5db276"
+  },
+  "homeId": "68e192125905d8b7b30e722d",
+  "date": {
+    "$date": "2025-09-28T00:00:00.000Z"
+  },
+  "totalLiters": 480.27,
+  "bySensor": [
+    {
+      "sensorId": "68e194135905d8b7b30e7545",
+      "liters": 194.79
+    },
+    {
+      "sensorId": "68e194185905d8b7b30e754f",
+      "liters": 101.29
+    },
+    {
+      "sensorId": "68e1941c5905d8b7b30e7559",
+      "liters": 121.93
+    },
+    {
+      "sensorId": "68e1942b5905d8b7b30e7563",
+      "liters": 62.26
+    },
+    {
+      "sensorId": "68e194305905d8b7b30e756d",
+      "liters": 0
+    }
+  ],
+  "recommendedLiters": 450,
+  "limitLiters": 1200,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5db57f"
+  },
+  "homeId": "68e191345905d8b7b30e719d",
+  "date": {
+    "$date": "2025-09-29T00:00:00.000Z"
+  },
+  "totalLiters": 446.57,
+  "bySensor": [
+    {
+      "sensorId": "68e192275905d8b7b30e7265",
+      "liters": 147.8
+    },
+    {
+      "sensorId": "68e192315905d8b7b30e726f",
+      "liters": 60.98
+    },
+    {
+      "sensorId": "68e192365905d8b7b30e7279",
+      "liters": 93.37
+    },
+    {
+      "sensorId": "68e1923f5905d8b7b30e7283",
+      "liters": 48.24
+    },
+    {
+      "sensorId": "68e192465905d8b7b30e728d",
+      "liters": 96.18
+    },
+    {
+      "sensorId": "68e1924b5905d8b7b30e7297",
+      "liters": 0
+    }
+  ],
+  "recommendedLiters": 450,
+  "limitLiters": 1200,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5db580"
+  },
+  "homeId": "68e1914a5905d8b7b30e71ad",
+  "date": {
+    "$date": "2025-09-29T00:00:00.000Z"
+  },
+  "totalLiters": 897.19,
+  "bySensor": [
+    {
+      "sensorId": "68e192515905d8b7b30e72a1",
+      "liters": 281.19
+    },
+    {
+      "sensorId": "68e192575905d8b7b30e72ab",
+      "liters": 95.93
+    },
+    {
+      "sensorId": "68e1925e5905d8b7b30e72c3",
+      "liters": 146.22
+    },
+    {
+      "sensorId": "68e192695905d8b7b30e72cd",
+      "liters": 72.28
+    },
+    {
+      "sensorId": "68e1926d5905d8b7b30e72d7",
+      "liters": 143.83
+    },
+    {
+      "sensorId": "68e192755905d8b7b30e72e1",
+      "liters": 48.46
+    },
+    {
+      "sensorId": "68e1927c5905d8b7b30e72eb",
+      "liters": 109.28
+    },
+    {
+      "sensorId": "68e192895905d8b7b30e72f5",
+      "liters": 0
+    }
+  ],
+  "recommendedLiters": 600,
+  "limitLiters": 1600,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5db581"
+  },
+  "homeId": "68e1916e5905d8b7b30e71bd",
+  "date": {
+    "$date": "2025-09-29T00:00:00.000Z"
+  },
+  "totalLiters": 311.48,
+  "bySensor": [
+    {
+      "sensorId": "68e192aa5905d8b7b30e7375",
+      "liters": 102.98
+    },
+    {
+      "sensorId": "68e192b05905d8b7b30e737f",
+      "liters": 46.84
+    },
+    {
+      "sensorId": "68e192b65905d8b7b30e7389",
+      "liters": 86.42
+    },
+    {
+      "sensorId": "68e192bb5905d8b7b30e7393",
+      "liters": 75.24
+    }
+  ],
+  "recommendedLiters": 300,
+  "limitLiters": 800,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5db582"
+  },
+  "homeId": "68e1918a5905d8b7b30e71cd",
+  "date": {
+    "$date": "2025-09-29T00:00:00.000Z"
+  },
+  "totalLiters": 1238.63,
+  "bySensor": [
+    {
+      "sensorId": "68e192cd5905d8b7b30e739d",
+      "liters": 272.19
+    },
+    {
+      "sensorId": "68e192db5905d8b7b30e73b1",
+      "liters": 119.31
+    },
+    {
+      "sensorId": "68e192e15905d8b7b30e73bb",
+      "liters": 235.92
+    },
+    {
+      "sensorId": "68e192f05905d8b7b30e73c5",
+      "liters": 180.69
+    },
+    {
+      "sensorId": "68e192f85905d8b7b30e73cf",
+      "liters": 120.83
+    },
+    {
+      "sensorId": "68e192fd5905d8b7b30e73d9",
+      "liters": 195.35
+    },
+    {
+      "sensorId": "68e193035905d8b7b30e73e3",
+      "liters": 65.73
+    },
+    {
+      "sensorId": "68e1930a5905d8b7b30e73ed",
+      "liters": 0
+    },
+    {
+      "sensorId": "68e193115905d8b7b30e73f7",
+      "liters": 48.61
+    },
+    {
+      "sensorId": "68e1931f5905d8b7b30e7401",
+      "liters": 0
+    }
+  ],
+  "recommendedLiters": 750,
+  "limitLiters": 2000,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5db583"
+  },
+  "homeId": "68e1919a5905d8b7b30e71dd",
+  "date": {
+    "$date": "2025-09-29T00:00:00.000Z"
+  },
+  "totalLiters": 200.24,
+  "bySensor": [
+    {
+      "sensorId": "68e192d25905d8b7b30e73a7",
+      "liters": 20.19
+    },
+    {
+      "sensorId": "68e1932b5905d8b7b30e740b",
+      "liters": 45.42
+    },
+    {
+      "sensorId": "68e193315905d8b7b30e7415",
+      "liters": 46.38
+    },
+    {
+      "sensorId": "68e193385905d8b7b30e741f",
+      "liters": 88.25
+    }
+  ],
+  "recommendedLiters": 150,
+  "limitLiters": 400,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5db584"
+  },
+  "homeId": "68e191b95905d8b7b30e71ed",
+  "date": {
+    "$date": "2025-09-29T00:00:00.000Z"
+  },
+  "totalLiters": 524.18,
+  "bySensor": [
+    {
+      "sensorId": "68e1936d5905d8b7b30e7469",
+      "liters": 178.57
+    },
+    {
+      "sensorId": "68e193725905d8b7b30e7473",
+      "liters": 117
+    },
+    {
+      "sensorId": "68e193775905d8b7b30e747d",
+      "liters": 159.42
+    },
+    {
+      "sensorId": "68e1937e5905d8b7b30e7487",
+      "liters": 69.19
+    },
+    {
+      "sensorId": "68e193865905d8b7b30e7491",
+      "liters": 0
+    }
+  ],
+  "recommendedLiters": 600,
+  "limitLiters": 1600,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5db585"
+  },
+  "homeId": "68e191c85905d8b7b30e71fd",
+  "date": {
+    "$date": "2025-09-29T00:00:00.000Z"
+  },
+  "totalLiters": 560.9,
+  "bySensor": [
+    {
+      "sensorId": "68e193995905d8b7b30e749b",
+      "liters": 78.09
+    },
+    {
+      "sensorId": "68e1939d5905d8b7b30e74a5",
+      "liters": 78.37
+    },
+    {
+      "sensorId": "68e193a95905d8b7b30e74af",
+      "liters": 109.92
+    },
+    {
+      "sensorId": "68e193b55905d8b7b30e74b9",
+      "liters": 67.78
+    },
+    {
+      "sensorId": "68e193ba5905d8b7b30e74c3",
+      "liters": 0
+    },
+    {
+      "sensorId": "68e193c35905d8b7b30e74cd",
+      "liters": 81.24
+    },
+    {
+      "sensorId": "68e193c85905d8b7b30e74d7",
+      "liters": 145.5
+    }
+  ],
+  "recommendedLiters": 450,
+  "limitLiters": 1200,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5db586"
+  },
+  "homeId": "68e191dd5905d8b7b30e720d",
+  "date": {
+    "$date": "2025-09-29T00:00:00.000Z"
+  },
+  "totalLiters": 466.18,
+  "bySensor": [
+    {
+      "sensorId": "68e193d45905d8b7b30e74e1",
+      "liters": 127.71
+    },
+    {
+      "sensorId": "68e193da5905d8b7b30e74eb",
+      "liters": 119.4
+    },
+    {
+      "sensorId": "68e193df5905d8b7b30e74f5",
+      "liters": 187.65
+    },
+    {
+      "sensorId": "68e193e45905d8b7b30e74ff",
+      "liters": 31.42
+    }
+  ],
+  "recommendedLiters": 750,
+  "limitLiters": 2000,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5db587"
+  },
+  "homeId": "68e191f65905d8b7b30e721d",
+  "date": {
+    "$date": "2025-09-29T00:00:00.000Z"
+  },
+  "totalLiters": 469.97,
+  "bySensor": [
+    {
+      "sensorId": "68e193f55905d8b7b30e7509",
+      "liters": 82.76
+    },
+    {
+      "sensorId": "68e193fa5905d8b7b30e7513",
+      "liters": 109.5
+    },
+    {
+      "sensorId": "68e193ff5905d8b7b30e751d",
+      "liters": 183.02
+    },
+    {
+      "sensorId": "68e194045905d8b7b30e7527",
+      "liters": 94.69
+    },
+    {
+      "sensorId": "68e194095905d8b7b30e7531",
+      "liters": 0
+    },
+    {
+      "sensorId": "68e1940f5905d8b7b30e753b",
+      "liters": 0
+    }
+  ],
+  "recommendedLiters": 600,
+  "limitLiters": 1600,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5db588"
+  },
+  "homeId": "68e192125905d8b7b30e722d",
+  "date": {
+    "$date": "2025-09-29T00:00:00.000Z"
+  },
+  "totalLiters": 435.28,
+  "bySensor": [
+    {
+      "sensorId": "68e194135905d8b7b30e7545",
+      "liters": 165.69
+    },
+    {
+      "sensorId": "68e194185905d8b7b30e754f",
+      "liters": 81.3
+    },
+    {
+      "sensorId": "68e1941c5905d8b7b30e7559",
+      "liters": 117.02
+    },
+    {
+      "sensorId": "68e1942b5905d8b7b30e7563",
+      "liters": 71.27
+    },
+    {
+      "sensorId": "68e194305905d8b7b30e756d",
+      "liters": 0
+    }
+  ],
+  "recommendedLiters": 450,
+  "limitLiters": 1200,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5db896"
+  },
+  "homeId": "68e191345905d8b7b30e719d",
+  "date": {
+    "$date": "2025-09-30T00:00:00.000Z"
+  },
+  "totalLiters": 343.85,
+  "bySensor": [
+    {
+      "sensorId": "68e192275905d8b7b30e7265",
+      "liters": 90.26
+    },
+    {
+      "sensorId": "68e192315905d8b7b30e726f",
+      "liters": 59.57
+    },
+    {
+      "sensorId": "68e192365905d8b7b30e7279",
+      "liters": 126.12
+    },
+    {
+      "sensorId": "68e1923f5905d8b7b30e7283",
+      "liters": 67.9
+    },
+    {
+      "sensorId": "68e192465905d8b7b30e728d",
+      "liters": 0
+    },
+    {
+      "sensorId": "68e1924b5905d8b7b30e7297",
+      "liters": 0
+    }
+  ],
+  "recommendedLiters": 450,
+  "limitLiters": 1200,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5db897"
+  },
+  "homeId": "68e1914a5905d8b7b30e71ad",
+  "date": {
+    "$date": "2025-09-30T00:00:00.000Z"
+  },
+  "totalLiters": 795.54,
+  "bySensor": [
+    {
+      "sensorId": "68e192515905d8b7b30e72a1",
+      "liters": 182.98
+    },
+    {
+      "sensorId": "68e192575905d8b7b30e72ab",
+      "liters": 97.41
+    },
+    {
+      "sensorId": "68e1925e5905d8b7b30e72c3",
+      "liters": 146.04
+    },
+    {
+      "sensorId": "68e192695905d8b7b30e72cd",
+      "liters": 81.43
+    },
+    {
+      "sensorId": "68e1926d5905d8b7b30e72d7",
+      "liters": 181.25
+    },
+    {
+      "sensorId": "68e192755905d8b7b30e72e1",
+      "liters": 106.43
+    },
+    {
+      "sensorId": "68e1927c5905d8b7b30e72eb",
+      "liters": 0
+    },
+    {
+      "sensorId": "68e192895905d8b7b30e72f5",
+      "liters": 0
+    }
+  ],
+  "recommendedLiters": 600,
+  "limitLiters": 1600,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5db898"
+  },
+  "homeId": "68e1916e5905d8b7b30e71bd",
+  "date": {
+    "$date": "2025-09-30T00:00:00.000Z"
+  },
+  "totalLiters": 293.23,
+  "bySensor": [
+    {
+      "sensorId": "68e192aa5905d8b7b30e7375",
+      "liters": 91.15
+    },
+    {
+      "sensorId": "68e192b05905d8b7b30e737f",
+      "liters": 55.46
+    },
+    {
+      "sensorId": "68e192b65905d8b7b30e7389",
+      "liters": 71.16
+    },
+    {
+      "sensorId": "68e192bb5905d8b7b30e7393",
+      "liters": 75.46
+    }
+  ],
+  "recommendedLiters": 300,
+  "limitLiters": 800,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5db899"
+  },
+  "homeId": "68e1918a5905d8b7b30e71cd",
+  "date": {
+    "$date": "2025-09-30T00:00:00.000Z"
+  },
+  "totalLiters": 1241.64,
+  "bySensor": [
+    {
+      "sensorId": "68e192cd5905d8b7b30e739d",
+      "liters": 230.61
+    },
+    {
+      "sensorId": "68e192db5905d8b7b30e73b1",
+      "liters": 148.17
+    },
+    {
+      "sensorId": "68e192e15905d8b7b30e73bb",
+      "liters": 204.93
+    },
+    {
+      "sensorId": "68e192f05905d8b7b30e73c5",
+      "liters": 256.84
+    },
+    {
+      "sensorId": "68e192f85905d8b7b30e73cf",
+      "liters": 121.55
+    },
+    {
+      "sensorId": "68e192fd5905d8b7b30e73d9",
+      "liters": 231.65
+    },
+    {
+      "sensorId": "68e193035905d8b7b30e73e3",
+      "liters": 47.89
+    },
+    {
+      "sensorId": "68e1930a5905d8b7b30e73ed",
+      "liters": 0
+    },
+    {
+      "sensorId": "68e193115905d8b7b30e73f7",
+      "liters": 0
+    },
+    {
+      "sensorId": "68e1931f5905d8b7b30e7401",
+      "liters": 0
+    }
+  ],
+  "recommendedLiters": 750,
+  "limitLiters": 2000,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5db89a"
+  },
+  "homeId": "68e1919a5905d8b7b30e71dd",
+  "date": {
+    "$date": "2025-09-30T00:00:00.000Z"
+  },
+  "totalLiters": 178.91,
+  "bySensor": [
+    {
+      "sensorId": "68e192d25905d8b7b30e73a7",
+      "liters": 20.57
+    },
+    {
+      "sensorId": "68e1932b5905d8b7b30e740b",
+      "liters": 39.28
+    },
+    {
+      "sensorId": "68e193315905d8b7b30e7415",
+      "liters": 38.42
+    },
+    {
+      "sensorId": "68e193385905d8b7b30e741f",
+      "liters": 80.64
+    }
+  ],
+  "recommendedLiters": 150,
+  "limitLiters": 400,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5db89b"
+  },
+  "homeId": "68e191b95905d8b7b30e71ed",
+  "date": {
+    "$date": "2025-09-30T00:00:00.000Z"
+  },
+  "totalLiters": 495.46,
+  "bySensor": [
+    {
+      "sensorId": "68e1936d5905d8b7b30e7469",
+      "liters": 148.84
+    },
+    {
+      "sensorId": "68e193725905d8b7b30e7473",
+      "liters": 100.29
+    },
+    {
+      "sensorId": "68e193775905d8b7b30e747d",
+      "liters": 165.46
+    },
+    {
+      "sensorId": "68e1937e5905d8b7b30e7487",
+      "liters": 80.87
+    },
+    {
+      "sensorId": "68e193865905d8b7b30e7491",
+      "liters": 0
+    }
+  ],
+  "recommendedLiters": 600,
+  "limitLiters": 1600,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5db89c"
+  },
+  "homeId": "68e191c85905d8b7b30e71fd",
+  "date": {
+    "$date": "2025-09-30T00:00:00.000Z"
+  },
+  "totalLiters": 627.35,
+  "bySensor": [
+    {
+      "sensorId": "68e193995905d8b7b30e749b",
+      "liters": 162.33
+    },
+    {
+      "sensorId": "68e1939d5905d8b7b30e74a5",
+      "liters": 68.44
+    },
+    {
+      "sensorId": "68e193a95905d8b7b30e74af",
+      "liters": 111.37
+    },
+    {
+      "sensorId": "68e193b55905d8b7b30e74b9",
+      "liters": 118.87
+    },
+    {
+      "sensorId": "68e193ba5905d8b7b30e74c3",
+      "liters": 0
+    },
+    {
+      "sensorId": "68e193c35905d8b7b30e74cd",
+      "liters": 64.96
+    },
+    {
+      "sensorId": "68e193c85905d8b7b30e74d7",
+      "liters": 101.38
+    }
+  ],
+  "recommendedLiters": 450,
+  "limitLiters": 1200,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5db89d"
+  },
+  "homeId": "68e191dd5905d8b7b30e720d",
+  "date": {
+    "$date": "2025-09-30T00:00:00.000Z"
+  },
+  "totalLiters": 648.13,
+  "bySensor": [
+    {
+      "sensorId": "68e193d45905d8b7b30e74e1",
+      "liters": 228.29
+    },
+    {
+      "sensorId": "68e193da5905d8b7b30e74eb",
+      "liters": 131.65
+    },
+    {
+      "sensorId": "68e193df5905d8b7b30e74f5",
+      "liters": 231.81
+    },
+    {
+      "sensorId": "68e193e45905d8b7b30e74ff",
+      "liters": 56.38
+    }
+  ],
+  "recommendedLiters": 750,
+  "limitLiters": 2000,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5db89e"
+  },
+  "homeId": "68e191f65905d8b7b30e721d",
+  "date": {
+    "$date": "2025-09-30T00:00:00.000Z"
+  },
+  "totalLiters": 595.36,
+  "bySensor": [
+    {
+      "sensorId": "68e193f55905d8b7b30e7509",
+      "liters": 131.63
+    },
+    {
+      "sensorId": "68e193fa5905d8b7b30e7513",
+      "liters": 111.95
+    },
+    {
+      "sensorId": "68e193ff5905d8b7b30e751d",
+      "liters": 150.87
+    },
+    {
+      "sensorId": "68e194045905d8b7b30e7527",
+      "liters": 71.62
+    },
+    {
+      "sensorId": "68e194095905d8b7b30e7531",
+      "liters": 129.29
+    },
+    {
+      "sensorId": "68e1940f5905d8b7b30e753b",
+      "liters": 0
+    }
+  ],
+  "recommendedLiters": 600,
+  "limitLiters": 1600,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5db89f"
+  },
+  "homeId": "68e192125905d8b7b30e722d",
+  "date": {
+    "$date": "2025-09-30T00:00:00.000Z"
+  },
+  "totalLiters": 541.41,
+  "bySensor": [
+    {
+      "sensorId": "68e194135905d8b7b30e7545",
+      "liters": 232.51
+    },
+    {
+      "sensorId": "68e194185905d8b7b30e754f",
+      "liters": 79.14
+    },
+    {
+      "sensorId": "68e1941c5905d8b7b30e7559",
+      "liters": 139.95
+    },
+    {
+      "sensorId": "68e1942b5905d8b7b30e7563",
+      "liters": 89.81
+    },
+    {
+      "sensorId": "68e194305905d8b7b30e756d",
+      "liters": 0
+    }
+  ],
+  "recommendedLiters": 450,
+  "limitLiters": 1200,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5dbb9d"
+  },
+  "homeId": "68e191345905d8b7b30e719d",
+  "date": {
+    "$date": "2025-10-01T00:00:00.000Z"
+  },
+  "totalLiters": 397.67,
+  "bySensor": [
+    {
+      "sensorId": "68e192275905d8b7b30e7265",
+      "liters": 93.96
+    },
+    {
+      "sensorId": "68e192315905d8b7b30e726f",
+      "liters": 66.63
+    },
+    {
+      "sensorId": "68e192365905d8b7b30e7279",
+      "liters": 137.63
+    },
+    {
+      "sensorId": "68e1923f5905d8b7b30e7283",
+      "liters": 99.45
+    },
+    {
+      "sensorId": "68e192465905d8b7b30e728d",
+      "liters": 0
+    },
+    {
+      "sensorId": "68e1924b5905d8b7b30e7297",
+      "liters": 0
+    }
+  ],
+  "recommendedLiters": 450,
+  "limitLiters": 1200,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5dbb9e"
+  },
+  "homeId": "68e1914a5905d8b7b30e71ad",
+  "date": {
+    "$date": "2025-10-01T00:00:00.000Z"
+  },
+  "totalLiters": 830.75,
+  "bySensor": [
+    {
+      "sensorId": "68e192515905d8b7b30e72a1",
+      "liters": 237.8
+    },
+    {
+      "sensorId": "68e192575905d8b7b30e72ab",
+      "liters": 94.42
+    },
+    {
+      "sensorId": "68e1925e5905d8b7b30e72c3",
+      "liters": 184.84
+    },
+    {
+      "sensorId": "68e192695905d8b7b30e72cd",
+      "liters": 93.16
+    },
+    {
+      "sensorId": "68e1926d5905d8b7b30e72d7",
+      "liters": 141.3
+    },
+    {
+      "sensorId": "68e192755905d8b7b30e72e1",
+      "liters": 79.23
+    },
+    {
+      "sensorId": "68e1927c5905d8b7b30e72eb",
+      "liters": 0
+    },
+    {
+      "sensorId": "68e192895905d8b7b30e72f5",
+      "liters": 0
+    }
+  ],
+  "recommendedLiters": 600,
+  "limitLiters": 1600,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5dbb9f"
+  },
+  "homeId": "68e1916e5905d8b7b30e71bd",
+  "date": {
+    "$date": "2025-10-01T00:00:00.000Z"
+  },
+  "totalLiters": 279.03,
+  "bySensor": [
+    {
+      "sensorId": "68e192aa5905d8b7b30e7375",
+      "liters": 96.48
+    },
+    {
+      "sensorId": "68e192b05905d8b7b30e737f",
+      "liters": 58.75
+    },
+    {
+      "sensorId": "68e192b65905d8b7b30e7389",
+      "liters": 88.39
+    },
+    {
+      "sensorId": "68e192bb5905d8b7b30e7393",
+      "liters": 35.41
+    }
+  ],
+  "recommendedLiters": 300,
+  "limitLiters": 800,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5dbba0"
+  },
+  "homeId": "68e1918a5905d8b7b30e71cd",
+  "date": {
+    "$date": "2025-10-01T00:00:00.000Z"
+  },
+  "totalLiters": 1255.23,
+  "bySensor": [
+    {
+      "sensorId": "68e192cd5905d8b7b30e739d",
+      "liters": 265.4
+    },
+    {
+      "sensorId": "68e192db5905d8b7b30e73b1",
+      "liters": 137.64
+    },
+    {
+      "sensorId": "68e192e15905d8b7b30e73bb",
+      "liters": 182.75
+    },
+    {
+      "sensorId": "68e192f05905d8b7b30e73c5",
+      "liters": 171.65
+    },
+    {
+      "sensorId": "68e192f85905d8b7b30e73cf",
+      "liters": 138.57
+    },
+    {
+      "sensorId": "68e192fd5905d8b7b30e73d9",
+      "liters": 179.4
+    },
+    {
+      "sensorId": "68e193035905d8b7b30e73e3",
+      "liters": 94.57
+    },
+    {
+      "sensorId": "68e1930a5905d8b7b30e73ed",
+      "liters": 0
+    },
+    {
+      "sensorId": "68e193115905d8b7b30e73f7",
+      "liters": 0
+    },
+    {
+      "sensorId": "68e1931f5905d8b7b30e7401",
+      "liters": 85.25
+    }
+  ],
+  "recommendedLiters": 750,
+  "limitLiters": 2000,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5dbba1"
+  },
+  "homeId": "68e1919a5905d8b7b30e71dd",
+  "date": {
+    "$date": "2025-10-01T00:00:00.000Z"
+  },
+  "totalLiters": 193.74,
+  "bySensor": [
+    {
+      "sensorId": "68e192d25905d8b7b30e73a7",
+      "liters": 22.32
+    },
+    {
+      "sensorId": "68e1932b5905d8b7b30e740b",
+      "liters": 46.4
+    },
+    {
+      "sensorId": "68e193315905d8b7b30e7415",
+      "liters": 45.13
+    },
+    {
+      "sensorId": "68e193385905d8b7b30e741f",
+      "liters": 79.89
+    }
+  ],
+  "recommendedLiters": 150,
+  "limitLiters": 400,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5dbba2"
+  },
+  "homeId": "68e191b95905d8b7b30e71ed",
+  "date": {
+    "$date": "2025-10-01T00:00:00.000Z"
+  },
+  "totalLiters": 502.72,
+  "bySensor": [
+    {
+      "sensorId": "68e1936d5905d8b7b30e7469",
+      "liters": 151.34
+    },
+    {
+      "sensorId": "68e193725905d8b7b30e7473",
+      "liters": 90.69
+    },
+    {
+      "sensorId": "68e193775905d8b7b30e747d",
+      "liters": 196.02
+    },
+    {
+      "sensorId": "68e1937e5905d8b7b30e7487",
+      "liters": 64.67
+    },
+    {
+      "sensorId": "68e193865905d8b7b30e7491",
+      "liters": 0
+    }
+  ],
+  "recommendedLiters": 600,
+  "limitLiters": 1600,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5dbba3"
+  },
+  "homeId": "68e191c85905d8b7b30e71fd",
+  "date": {
+    "$date": "2025-10-01T00:00:00.000Z"
+  },
+  "totalLiters": 761.56,
+  "bySensor": [
+    {
+      "sensorId": "68e193995905d8b7b30e749b",
+      "liters": 151.2
+    },
+    {
+      "sensorId": "68e1939d5905d8b7b30e74a5",
+      "liters": 73.6
+    },
+    {
+      "sensorId": "68e193a95905d8b7b30e74af",
+      "liters": 149.73
+    },
+    {
+      "sensorId": "68e193b55905d8b7b30e74b9",
+      "liters": 75.07
+    },
+    {
+      "sensorId": "68e193ba5905d8b7b30e74c3",
+      "liters": 98.2
+    },
+    {
+      "sensorId": "68e193c35905d8b7b30e74cd",
+      "liters": 78.3
+    },
+    {
+      "sensorId": "68e193c85905d8b7b30e74d7",
+      "liters": 135.46
+    }
+  ],
+  "recommendedLiters": 450,
+  "limitLiters": 1200,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5dbba4"
+  },
+  "homeId": "68e191dd5905d8b7b30e720d",
+  "date": {
+    "$date": "2025-10-01T00:00:00.000Z"
+  },
+  "totalLiters": 543.9,
+  "bySensor": [
+    {
+      "sensorId": "68e193d45905d8b7b30e74e1",
+      "liters": 201.27
+    },
+    {
+      "sensorId": "68e193da5905d8b7b30e74eb",
+      "liters": 114.86
+    },
+    {
+      "sensorId": "68e193df5905d8b7b30e74f5",
+      "liters": 172.69
+    },
+    {
+      "sensorId": "68e193e45905d8b7b30e74ff",
+      "liters": 55.08
+    }
+  ],
+  "recommendedLiters": 750,
+  "limitLiters": 2000,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5dbba5"
+  },
+  "homeId": "68e191f65905d8b7b30e721d",
+  "date": {
+    "$date": "2025-10-01T00:00:00.000Z"
+  },
+  "totalLiters": 458.7,
+  "bySensor": [
+    {
+      "sensorId": "68e193f55905d8b7b30e7509",
+      "liters": 149.06
+    },
+    {
+      "sensorId": "68e193fa5905d8b7b30e7513",
+      "liters": 86.99
+    },
+    {
+      "sensorId": "68e193ff5905d8b7b30e751d",
+      "liters": 170.9
+    },
+    {
+      "sensorId": "68e194045905d8b7b30e7527",
+      "liters": 51.75
+    },
+    {
+      "sensorId": "68e194095905d8b7b30e7531",
+      "liters": 0
+    },
+    {
+      "sensorId": "68e1940f5905d8b7b30e753b",
+      "liters": 0
+    }
+  ],
+  "recommendedLiters": 600,
+  "limitLiters": 1600,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5dbba6"
+  },
+  "homeId": "68e192125905d8b7b30e722d",
+  "date": {
+    "$date": "2025-10-01T00:00:00.000Z"
+  },
+  "totalLiters": 346.46,
+  "bySensor": [
+    {
+      "sensorId": "68e194135905d8b7b30e7545",
+      "liters": 118.21
+    },
+    {
+      "sensorId": "68e194185905d8b7b30e754f",
+      "liters": 59.17
+    },
+    {
+      "sensorId": "68e1941c5905d8b7b30e7559",
+      "liters": 110.66
+    },
+    {
+      "sensorId": "68e1942b5905d8b7b30e7563",
+      "liters": 58.42
+    },
+    {
+      "sensorId": "68e194305905d8b7b30e756d",
+      "liters": 0
+    }
+  ],
+  "recommendedLiters": 450,
+  "limitLiters": 1200,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5dbea7"
+  },
+  "homeId": "68e191345905d8b7b30e719d",
+  "date": {
+    "$date": "2025-10-02T00:00:00.000Z"
+  },
+  "totalLiters": 378.06,
+  "bySensor": [
+    {
+      "sensorId": "68e192275905d8b7b30e7265",
+      "liters": 133.45
+    },
+    {
+      "sensorId": "68e192315905d8b7b30e726f",
+      "liters": 73.88
+    },
+    {
+      "sensorId": "68e192365905d8b7b30e7279",
+      "liters": 125.57
+    },
+    {
+      "sensorId": "68e1923f5905d8b7b30e7283",
+      "liters": 45.16
+    },
+    {
+      "sensorId": "68e192465905d8b7b30e728d",
+      "liters": 0
+    },
+    {
+      "sensorId": "68e1924b5905d8b7b30e7297",
+      "liters": 0
+    }
+  ],
+  "recommendedLiters": 450,
+  "limitLiters": 1200,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5dbea8"
+  },
+  "homeId": "68e1914a5905d8b7b30e71ad",
+  "date": {
+    "$date": "2025-10-02T00:00:00.000Z"
+  },
+  "totalLiters": 696.15,
+  "bySensor": [
+    {
+      "sensorId": "68e192515905d8b7b30e72a1",
+      "liters": 124.17
+    },
+    {
+      "sensorId": "68e192575905d8b7b30e72ab",
+      "liters": 74.71
+    },
+    {
+      "sensorId": "68e1925e5905d8b7b30e72c3",
+      "liters": 185.35
+    },
+    {
+      "sensorId": "68e192695905d8b7b30e72cd",
+      "liters": 86.67
+    },
+    {
+      "sensorId": "68e1926d5905d8b7b30e72d7",
+      "liters": 141.57
+    },
+    {
+      "sensorId": "68e192755905d8b7b30e72e1",
+      "liters": 83.68
+    },
+    {
+      "sensorId": "68e1927c5905d8b7b30e72eb",
+      "liters": 0
+    },
+    {
+      "sensorId": "68e192895905d8b7b30e72f5",
+      "liters": 0
+    }
+  ],
+  "recommendedLiters": 600,
+  "limitLiters": 1600,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5dbea9"
+  },
+  "homeId": "68e1916e5905d8b7b30e71bd",
+  "date": {
+    "$date": "2025-10-02T00:00:00.000Z"
+  },
+  "totalLiters": 339.63,
+  "bySensor": [
+    {
+      "sensorId": "68e192aa5905d8b7b30e7375",
+      "liters": 109.26
+    },
+    {
+      "sensorId": "68e192b05905d8b7b30e737f",
+      "liters": 57.72
+    },
+    {
+      "sensorId": "68e192b65905d8b7b30e7389",
+      "liters": 93.74
+    },
+    {
+      "sensorId": "68e192bb5905d8b7b30e7393",
+      "liters": 78.91
+    }
+  ],
+  "recommendedLiters": 300,
+  "limitLiters": 800,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5dbeaa"
+  },
+  "homeId": "68e1918a5905d8b7b30e71cd",
+  "date": {
+    "$date": "2025-10-02T00:00:00.000Z"
+  },
+  "totalLiters": 1110.11,
+  "bySensor": [
+    {
+      "sensorId": "68e192cd5905d8b7b30e739d",
+      "liters": 201.68
+    },
+    {
+      "sensorId": "68e192db5905d8b7b30e73b1",
+      "liters": 98.69
+    },
+    {
+      "sensorId": "68e192e15905d8b7b30e73bb",
+      "liters": 222.95
+    },
+    {
+      "sensorId": "68e192f05905d8b7b30e73c5",
+      "liters": 230.84
+    },
+    {
+      "sensorId": "68e192f85905d8b7b30e73cf",
+      "liters": 101.64
+    },
+    {
+      "sensorId": "68e192fd5905d8b7b30e73d9",
+      "liters": 200.18
+    },
+    {
+      "sensorId": "68e193035905d8b7b30e73e3",
+      "liters": 54.13
+    },
+    {
+      "sensorId": "68e1930a5905d8b7b30e73ed",
+      "liters": 0
+    },
+    {
+      "sensorId": "68e193115905d8b7b30e73f7",
+      "liters": 0
+    },
+    {
+      "sensorId": "68e1931f5905d8b7b30e7401",
+      "liters": 0
+    }
+  ],
+  "recommendedLiters": 750,
+  "limitLiters": 2000,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5dbeab"
+  },
+  "homeId": "68e1919a5905d8b7b30e71dd",
+  "date": {
+    "$date": "2025-10-02T00:00:00.000Z"
+  },
+  "totalLiters": 224.37,
+  "bySensor": [
+    {
+      "sensorId": "68e192d25905d8b7b30e73a7",
+      "liters": 28.18
+    },
+    {
+      "sensorId": "68e1932b5905d8b7b30e740b",
+      "liters": 80.63
+    },
+    {
+      "sensorId": "68e193315905d8b7b30e7415",
+      "liters": 34.22
+    },
+    {
+      "sensorId": "68e193385905d8b7b30e741f",
+      "liters": 81.34
+    }
+  ],
+  "recommendedLiters": 150,
+  "limitLiters": 400,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5dbeac"
+  },
+  "homeId": "68e191b95905d8b7b30e71ed",
+  "date": {
+    "$date": "2025-10-02T00:00:00.000Z"
+  },
+  "totalLiters": 579.88,
+  "bySensor": [
+    {
+      "sensorId": "68e1936d5905d8b7b30e7469",
+      "liters": 149.52
+    },
+    {
+      "sensorId": "68e193725905d8b7b30e7473",
+      "liters": 82.48
+    },
+    {
+      "sensorId": "68e193775905d8b7b30e747d",
+      "liters": 147.45
+    },
+    {
+      "sensorId": "68e1937e5905d8b7b30e7487",
+      "liters": 90.34
+    },
+    {
+      "sensorId": "68e193865905d8b7b30e7491",
+      "liters": 110.09
+    }
+  ],
+  "recommendedLiters": 600,
+  "limitLiters": 1600,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5dbead"
+  },
+  "homeId": "68e191c85905d8b7b30e71fd",
+  "date": {
+    "$date": "2025-10-02T00:00:00.000Z"
+  },
+  "totalLiters": 552.64,
+  "bySensor": [
+    {
+      "sensorId": "68e193995905d8b7b30e749b",
+      "liters": 81.51
+    },
+    {
+      "sensorId": "68e1939d5905d8b7b30e74a5",
+      "liters": 60.05
+    },
+    {
+      "sensorId": "68e193a95905d8b7b30e74af",
+      "liters": 132.12
+    },
+    {
+      "sensorId": "68e193b55905d8b7b30e74b9",
+      "liters": 69.89
+    },
+    {
+      "sensorId": "68e193ba5905d8b7b30e74c3",
+      "liters": 0
+    },
+    {
+      "sensorId": "68e193c35905d8b7b30e74cd",
+      "liters": 76.27
+    },
+    {
+      "sensorId": "68e193c85905d8b7b30e74d7",
+      "liters": 132.8
+    }
+  ],
+  "recommendedLiters": 450,
+  "limitLiters": 1200,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5dbeae"
+  },
+  "homeId": "68e191dd5905d8b7b30e720d",
+  "date": {
+    "$date": "2025-10-02T00:00:00.000Z"
+  },
+  "totalLiters": 639.08,
+  "bySensor": [
+    {
+      "sensorId": "68e193d45905d8b7b30e74e1",
+      "liters": 260.74
+    },
+    {
+      "sensorId": "68e193da5905d8b7b30e74eb",
+      "liters": 145.11
+    },
+    {
+      "sensorId": "68e193df5905d8b7b30e74f5",
+      "liters": 183.48
+    },
+    {
+      "sensorId": "68e193e45905d8b7b30e74ff",
+      "liters": 49.75
+    }
+  ],
+  "recommendedLiters": 750,
+  "limitLiters": 2000,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5dbeaf"
+  },
+  "homeId": "68e191f65905d8b7b30e721d",
+  "date": {
+    "$date": "2025-10-02T00:00:00.000Z"
+  },
+  "totalLiters": 484.38,
+  "bySensor": [
+    {
+      "sensorId": "68e193f55905d8b7b30e7509",
+      "liters": 164.75
+    },
+    {
+      "sensorId": "68e193fa5905d8b7b30e7513",
+      "liters": 112.7
+    },
+    {
+      "sensorId": "68e193ff5905d8b7b30e751d",
+      "liters": 160.7
+    },
+    {
+      "sensorId": "68e194045905d8b7b30e7527",
+      "liters": 46.23
+    },
+    {
+      "sensorId": "68e194095905d8b7b30e7531",
+      "liters": 0
+    },
+    {
+      "sensorId": "68e1940f5905d8b7b30e753b",
+      "liters": 0
+    }
+  ],
+  "recommendedLiters": 600,
+  "limitLiters": 1600,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5dbeb0"
+  },
+  "homeId": "68e192125905d8b7b30e722d",
+  "date": {
+    "$date": "2025-10-02T00:00:00.000Z"
+  },
+  "totalLiters": 427.53,
+  "bySensor": [
+    {
+      "sensorId": "68e194135905d8b7b30e7545",
+      "liters": 156
+    },
+    {
+      "sensorId": "68e194185905d8b7b30e754f",
+      "liters": 74.62
+    },
+    {
+      "sensorId": "68e1941c5905d8b7b30e7559",
+      "liters": 138.43
+    },
+    {
+      "sensorId": "68e1942b5905d8b7b30e7563",
+      "liters": 58.48
+    },
+    {
+      "sensorId": "68e194305905d8b7b30e756d",
+      "liters": 0
+    }
+  ],
+  "recommendedLiters": 450,
+  "limitLiters": 1200,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5dc1bf"
+  },
+  "homeId": "68e191345905d8b7b30e719d",
+  "date": {
+    "$date": "2025-10-03T00:00:00.000Z"
+  },
+  "totalLiters": 532.59,
+  "bySensor": [
+    {
+      "sensorId": "68e192275905d8b7b30e7265",
+      "liters": 149.54
+    },
+    {
+      "sensorId": "68e192315905d8b7b30e726f",
+      "liters": 87.98
+    },
+    {
+      "sensorId": "68e192365905d8b7b30e7279",
+      "liters": 127.8
+    },
+    {
+      "sensorId": "68e1923f5905d8b7b30e7283",
+      "liters": 77.32
+    },
+    {
+      "sensorId": "68e192465905d8b7b30e728d",
+      "liters": 89.95
+    },
+    {
+      "sensorId": "68e1924b5905d8b7b30e7297",
+      "liters": 0
+    }
+  ],
+  "recommendedLiters": 450,
+  "limitLiters": 1200,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5dc1c0"
+  },
+  "homeId": "68e1914a5905d8b7b30e71ad",
+  "date": {
+    "$date": "2025-10-03T00:00:00.000Z"
+  },
+  "totalLiters": 739.93,
+  "bySensor": [
+    {
+      "sensorId": "68e192515905d8b7b30e72a1",
+      "liters": 158.85
+    },
+    {
+      "sensorId": "68e192575905d8b7b30e72ab",
+      "liters": 97.09
+    },
+    {
+      "sensorId": "68e1925e5905d8b7b30e72c3",
+      "liters": 158.02
+    },
+    {
+      "sensorId": "68e192695905d8b7b30e72cd",
+      "liters": 101.26
+    },
+    {
+      "sensorId": "68e1926d5905d8b7b30e72d7",
+      "liters": 153.87
+    },
+    {
+      "sensorId": "68e192755905d8b7b30e72e1",
+      "liters": 70.84
+    },
+    {
+      "sensorId": "68e1927c5905d8b7b30e72eb",
+      "liters": 0
+    },
+    {
+      "sensorId": "68e192895905d8b7b30e72f5",
+      "liters": 0
+    }
+  ],
+  "recommendedLiters": 600,
+  "limitLiters": 1600,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5dc1c1"
+  },
+  "homeId": "68e1916e5905d8b7b30e71bd",
+  "date": {
+    "$date": "2025-10-03T00:00:00.000Z"
+  },
+  "totalLiters": 348.61,
+  "bySensor": [
+    {
+      "sensorId": "68e192aa5905d8b7b30e7375",
+      "liters": 117.88
+    },
+    {
+      "sensorId": "68e192b05905d8b7b30e737f",
+      "liters": 44.89
+    },
+    {
+      "sensorId": "68e192b65905d8b7b30e7389",
+      "liters": 90.21
+    },
+    {
+      "sensorId": "68e192bb5905d8b7b30e7393",
+      "liters": 95.63
+    }
+  ],
+  "recommendedLiters": 300,
+  "limitLiters": 800,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5dc1c2"
+  },
+  "homeId": "68e1918a5905d8b7b30e71cd",
+  "date": {
+    "$date": "2025-10-03T00:00:00.000Z"
+  },
+  "totalLiters": 1088.6,
+  "bySensor": [
+    {
+      "sensorId": "68e192cd5905d8b7b30e739d",
+      "liters": 184.45
+    },
+    {
+      "sensorId": "68e192db5905d8b7b30e73b1",
+      "liters": 120.13
+    },
+    {
+      "sensorId": "68e192e15905d8b7b30e73bb",
+      "liters": 200.45
+    },
+    {
+      "sensorId": "68e192f05905d8b7b30e73c5",
+      "liters": 194.84
+    },
+    {
+      "sensorId": "68e192f85905d8b7b30e73cf",
+      "liters": 119.45
+    },
+    {
+      "sensorId": "68e192fd5905d8b7b30e73d9",
+      "liters": 221.22
+    },
+    {
+      "sensorId": "68e193035905d8b7b30e73e3",
+      "liters": 48.06
+    },
+    {
+      "sensorId": "68e1930a5905d8b7b30e73ed",
+      "liters": 0
+    },
+    {
+      "sensorId": "68e193115905d8b7b30e73f7",
+      "liters": 0
+    },
+    {
+      "sensorId": "68e1931f5905d8b7b30e7401",
+      "liters": 0
+    }
+  ],
+  "recommendedLiters": 750,
+  "limitLiters": 2000,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5dc1c3"
+  },
+  "homeId": "68e1919a5905d8b7b30e71dd",
+  "date": {
+    "$date": "2025-10-03T00:00:00.000Z"
+  },
+  "totalLiters": 214.17,
+  "bySensor": [
+    {
+      "sensorId": "68e192d25905d8b7b30e73a7",
+      "liters": 25.72
+    },
+    {
+      "sensorId": "68e1932b5905d8b7b30e740b",
+      "liters": 65.96
+    },
+    {
+      "sensorId": "68e193315905d8b7b30e7415",
+      "liters": 44.4
+    },
+    {
+      "sensorId": "68e193385905d8b7b30e741f",
+      "liters": 78.09
+    }
+  ],
+  "recommendedLiters": 150,
+  "limitLiters": 400,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5dc1c4"
+  },
+  "homeId": "68e191b95905d8b7b30e71ed",
+  "date": {
+    "$date": "2025-10-03T00:00:00.000Z"
+  },
+  "totalLiters": 399.36,
+  "bySensor": [
+    {
+      "sensorId": "68e1936d5905d8b7b30e7469",
+      "liters": 83.22
+    },
+    {
+      "sensorId": "68e193725905d8b7b30e7473",
+      "liters": 76.24
+    },
+    {
+      "sensorId": "68e193775905d8b7b30e747d",
+      "liters": 150.07
+    },
+    {
+      "sensorId": "68e1937e5905d8b7b30e7487",
+      "liters": 89.83
+    },
+    {
+      "sensorId": "68e193865905d8b7b30e7491",
+      "liters": 0
+    }
+  ],
+  "recommendedLiters": 600,
+  "limitLiters": 1600,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5dc1c5"
+  },
+  "homeId": "68e191c85905d8b7b30e71fd",
+  "date": {
+    "$date": "2025-10-03T00:00:00.000Z"
+  },
+  "totalLiters": 608.79,
+  "bySensor": [
+    {
+      "sensorId": "68e193995905d8b7b30e749b",
+      "liters": 170.88
+    },
+    {
+      "sensorId": "68e1939d5905d8b7b30e74a5",
+      "liters": 68.06
+    },
+    {
+      "sensorId": "68e193a95905d8b7b30e74af",
+      "liters": 98.33
+    },
+    {
+      "sensorId": "68e193b55905d8b7b30e74b9",
+      "liters": 63.03
+    },
+    {
+      "sensorId": "68e193ba5905d8b7b30e74c3",
+      "liters": 0
+    },
+    {
+      "sensorId": "68e193c35905d8b7b30e74cd",
+      "liters": 77.47
+    },
+    {
+      "sensorId": "68e193c85905d8b7b30e74d7",
+      "liters": 131.02
+    }
+  ],
+  "recommendedLiters": 450,
+  "limitLiters": 1200,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5dc1c6"
+  },
+  "homeId": "68e191dd5905d8b7b30e720d",
+  "date": {
+    "$date": "2025-10-03T00:00:00.000Z"
+  },
+  "totalLiters": 669.09,
+  "bySensor": [
+    {
+      "sensorId": "68e193d45905d8b7b30e74e1",
+      "liters": 290.94
+    },
+    {
+      "sensorId": "68e193da5905d8b7b30e74eb",
+      "liters": 117.88
+    },
+    {
+      "sensorId": "68e193df5905d8b7b30e74f5",
+      "liters": 180.74
+    },
+    {
+      "sensorId": "68e193e45905d8b7b30e74ff",
+      "liters": 79.53
+    }
+  ],
+  "recommendedLiters": 750,
+  "limitLiters": 2000,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5dc1c7"
+  },
+  "homeId": "68e191f65905d8b7b30e721d",
+  "date": {
+    "$date": "2025-10-03T00:00:00.000Z"
+  },
+  "totalLiters": 561.67,
+  "bySensor": [
+    {
+      "sensorId": "68e193f55905d8b7b30e7509",
+      "liters": 199.31
+    },
+    {
+      "sensorId": "68e193fa5905d8b7b30e7513",
+      "liters": 122.28
+    },
+    {
+      "sensorId": "68e193ff5905d8b7b30e751d",
+      "liters": 193.43
+    },
+    {
+      "sensorId": "68e194045905d8b7b30e7527",
+      "liters": 46.65
+    },
+    {
+      "sensorId": "68e194095905d8b7b30e7531",
+      "liters": 0
+    },
+    {
+      "sensorId": "68e1940f5905d8b7b30e753b",
+      "liters": 0
+    }
+  ],
+  "recommendedLiters": 600,
+  "limitLiters": 1600,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5dc1c8"
+  },
+  "homeId": "68e192125905d8b7b30e722d",
+  "date": {
+    "$date": "2025-10-03T00:00:00.000Z"
+  },
+  "totalLiters": 365.51,
+  "bySensor": [
+    {
+      "sensorId": "68e194135905d8b7b30e7545",
+      "liters": 109.57
+    },
+    {
+      "sensorId": "68e194185905d8b7b30e754f",
+      "liters": 76.77
+    },
+    {
+      "sensorId": "68e1941c5905d8b7b30e7559",
+      "liters": 133.98
+    },
+    {
+      "sensorId": "68e1942b5905d8b7b30e7563",
+      "liters": 45.19
+    },
+    {
+      "sensorId": "68e194305905d8b7b30e756d",
+      "liters": 0
+    }
+  ],
+  "recommendedLiters": 450,
+  "limitLiters": 1200,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5dc529"
+  },
+  "homeId": "68e191345905d8b7b30e719d",
+  "date": {
+    "$date": "2025-10-04T00:00:00.000Z"
+  },
+  "totalLiters": 467.18,
+  "bySensor": [
+    {
+      "sensorId": "68e192275905d8b7b30e7265",
+      "liters": 146.04
+    },
+    {
+      "sensorId": "68e192315905d8b7b30e726f",
+      "liters": 71.92
+    },
+    {
+      "sensorId": "68e192365905d8b7b30e7279",
+      "liters": 117.93
+    },
+    {
+      "sensorId": "68e1923f5905d8b7b30e7283",
+      "liters": 131.29
+    },
+    {
+      "sensorId": "68e192465905d8b7b30e728d",
+      "liters": 0
+    },
+    {
+      "sensorId": "68e1924b5905d8b7b30e7297",
+      "liters": 0
+    }
+  ],
+  "recommendedLiters": 450,
+  "limitLiters": 1200,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5dc52a"
+  },
+  "homeId": "68e1914a5905d8b7b30e71ad",
+  "date": {
+    "$date": "2025-10-04T00:00:00.000Z"
+  },
+  "totalLiters": 901.93,
+  "bySensor": [
+    {
+      "sensorId": "68e192515905d8b7b30e72a1",
+      "liters": 244.2
+    },
+    {
+      "sensorId": "68e192575905d8b7b30e72ab",
+      "liters": 110.73
+    },
+    {
+      "sensorId": "68e1925e5905d8b7b30e72c3",
+      "liters": 157.64
+    },
+    {
+      "sensorId": "68e192695905d8b7b30e72cd",
+      "liters": 94.94
+    },
+    {
+      "sensorId": "68e1926d5905d8b7b30e72d7",
+      "liters": 166.62
+    },
+    {
+      "sensorId": "68e192755905d8b7b30e72e1",
+      "liters": 127.8
+    },
+    {
+      "sensorId": "68e1927c5905d8b7b30e72eb",
+      "liters": 0
+    },
+    {
+      "sensorId": "68e192895905d8b7b30e72f5",
+      "liters": 0
+    }
+  ],
+  "recommendedLiters": 600,
+  "limitLiters": 1600,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5dc52b"
+  },
+  "homeId": "68e1916e5905d8b7b30e71bd",
+  "date": {
+    "$date": "2025-10-04T00:00:00.000Z"
+  },
+  "totalLiters": 312.12,
+  "bySensor": [
+    {
+      "sensorId": "68e192aa5905d8b7b30e7375",
+      "liters": 95.25
+    },
+    {
+      "sensorId": "68e192b05905d8b7b30e737f",
+      "liters": 41.46
+    },
+    {
+      "sensorId": "68e192b65905d8b7b30e7389",
+      "liters": 77.75
+    },
+    {
+      "sensorId": "68e192bb5905d8b7b30e7393",
+      "liters": 97.66
+    }
+  ],
+  "recommendedLiters": 300,
+  "limitLiters": 800,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5dc52c"
+  },
+  "homeId": "68e1918a5905d8b7b30e71cd",
+  "date": {
+    "$date": "2025-10-04T00:00:00.000Z"
+  },
+  "totalLiters": 1176.84,
+  "bySensor": [
+    {
+      "sensorId": "68e192cd5905d8b7b30e739d",
+      "liters": 169.72
+    },
+    {
+      "sensorId": "68e192db5905d8b7b30e73b1",
+      "liters": 124.95
+    },
+    {
+      "sensorId": "68e192e15905d8b7b30e73bb",
+      "liters": 218.91
+    },
+    {
+      "sensorId": "68e192f05905d8b7b30e73c5",
+      "liters": 193.42
+    },
+    {
+      "sensorId": "68e192f85905d8b7b30e73cf",
+      "liters": 135.33
+    },
+    {
+      "sensorId": "68e192fd5905d8b7b30e73d9",
+      "liters": 281.08
+    },
+    {
+      "sensorId": "68e193035905d8b7b30e73e3",
+      "liters": 53.43
+    },
+    {
+      "sensorId": "68e1930a5905d8b7b30e73ed",
+      "liters": 0
+    },
+    {
+      "sensorId": "68e193115905d8b7b30e73f7",
+      "liters": 0
+    },
+    {
+      "sensorId": "68e1931f5905d8b7b30e7401",
+      "liters": 0
+    }
+  ],
+  "recommendedLiters": 750,
+  "limitLiters": 2000,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5dc52d"
+  },
+  "homeId": "68e1919a5905d8b7b30e71dd",
+  "date": {
+    "$date": "2025-10-04T00:00:00.000Z"
+  },
+  "totalLiters": 256.73,
+  "bySensor": [
+    {
+      "sensorId": "68e192d25905d8b7b30e73a7",
+      "liters": 30.98
+    },
+    {
+      "sensorId": "68e1932b5905d8b7b30e740b",
+      "liters": 43.67
+    },
+    {
+      "sensorId": "68e193315905d8b7b30e7415",
+      "liters": 55.28
+    },
+    {
+      "sensorId": "68e193385905d8b7b30e741f",
+      "liters": 126.8
+    }
+  ],
+  "recommendedLiters": 150,
+  "limitLiters": 400,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5dc52e"
+  },
+  "homeId": "68e191b95905d8b7b30e71ed",
+  "date": {
+    "$date": "2025-10-04T00:00:00.000Z"
+  },
+  "totalLiters": 518.42,
+  "bySensor": [
+    {
+      "sensorId": "68e1936d5905d8b7b30e7469",
+      "liters": 157.66
+    },
+    {
+      "sensorId": "68e193725905d8b7b30e7473",
+      "liters": 127.44
+    },
+    {
+      "sensorId": "68e193775905d8b7b30e747d",
+      "liters": 164.63
+    },
+    {
+      "sensorId": "68e1937e5905d8b7b30e7487",
+      "liters": 68.69
+    },
+    {
+      "sensorId": "68e193865905d8b7b30e7491",
+      "liters": 0
+    }
+  ],
+  "recommendedLiters": 600,
+  "limitLiters": 1600,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5dc52f"
+  },
+  "homeId": "68e191c85905d8b7b30e71fd",
+  "date": {
+    "$date": "2025-10-04T00:00:00.000Z"
+  },
+  "totalLiters": 719.27,
+  "bySensor": [
+    {
+      "sensorId": "68e193995905d8b7b30e749b",
+      "liters": 129.98
+    },
+    {
+      "sensorId": "68e1939d5905d8b7b30e74a5",
+      "liters": 88.78
+    },
+    {
+      "sensorId": "68e193a95905d8b7b30e74af",
+      "liters": 134.43
+    },
+    {
+      "sensorId": "68e193b55905d8b7b30e74b9",
+      "liters": 40.17
+    },
+    {
+      "sensorId": "68e193ba5905d8b7b30e74c3",
+      "liters": 93.28
+    },
+    {
+      "sensorId": "68e193c35905d8b7b30e74cd",
+      "liters": 74.19
+    },
+    {
+      "sensorId": "68e193c85905d8b7b30e74d7",
+      "liters": 158.44
+    }
+  ],
+  "recommendedLiters": 450,
+  "limitLiters": 1200,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5dc530"
+  },
+  "homeId": "68e191dd5905d8b7b30e720d",
+  "date": {
+    "$date": "2025-10-04T00:00:00.000Z"
+  },
+  "totalLiters": 653.37,
+  "bySensor": [
+    {
+      "sensorId": "68e193d45905d8b7b30e74e1",
+      "liters": 176.44
+    },
+    {
+      "sensorId": "68e193da5905d8b7b30e74eb",
+      "liters": 147.59
+    },
+    {
+      "sensorId": "68e193df5905d8b7b30e74f5",
+      "liters": 210.4
+    },
+    {
+      "sensorId": "68e193e45905d8b7b30e74ff",
+      "liters": 118.94
+    }
+  ],
+  "recommendedLiters": 750,
+  "limitLiters": 2000,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5dc531"
+  },
+  "homeId": "68e191f65905d8b7b30e721d",
+  "date": {
+    "$date": "2025-10-04T00:00:00.000Z"
+  },
+  "totalLiters": 635.53,
+  "bySensor": [
+    {
+      "sensorId": "68e193f55905d8b7b30e7509",
+      "liters": 215.86
+    },
+    {
+      "sensorId": "68e193fa5905d8b7b30e7513",
+      "liters": 100.7
+    },
+    {
+      "sensorId": "68e193ff5905d8b7b30e751d",
+      "liters": 198.6
+    },
+    {
+      "sensorId": "68e194045905d8b7b30e7527",
+      "liters": 120.37
+    },
+    {
+      "sensorId": "68e194095905d8b7b30e7531",
+      "liters": 0
+    },
+    {
+      "sensorId": "68e1940f5905d8b7b30e753b",
+      "liters": 0
+    }
+  ],
+  "recommendedLiters": 600,
+  "limitLiters": 1600,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5dc532"
+  },
+  "homeId": "68e192125905d8b7b30e722d",
+  "date": {
+    "$date": "2025-10-04T00:00:00.000Z"
+  },
+  "totalLiters": 528.09,
+  "bySensor": [
+    {
+      "sensorId": "68e194135905d8b7b30e7545",
+      "liters": 194.27
+    },
+    {
+      "sensorId": "68e194185905d8b7b30e754f",
+      "liters": 80.63
+    },
+    {
+      "sensorId": "68e1941c5905d8b7b30e7559",
+      "liters": 142.27
+    },
+    {
+      "sensorId": "68e1942b5905d8b7b30e7563",
+      "liters": 110.92
+    },
+    {
+      "sensorId": "68e194305905d8b7b30e756d",
+      "liters": 0
+    }
+  ],
+  "recommendedLiters": 450,
+  "limitLiters": 1200,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5dc8b8"
+  },
+  "homeId": "68e191345905d8b7b30e719d",
+  "date": {
+    "$date": "2025-10-05T00:00:00.000Z"
+  },
+  "totalLiters": 388.81,
+  "bySensor": [
+    {
+      "sensorId": "68e192275905d8b7b30e7265",
+      "liters": 117.34
+    },
+    {
+      "sensorId": "68e192315905d8b7b30e726f",
+      "liters": 69.61
+    },
+    {
+      "sensorId": "68e192365905d8b7b30e7279",
+      "liters": 141.94
+    },
+    {
+      "sensorId": "68e1923f5905d8b7b30e7283",
+      "liters": 59.92
+    },
+    {
+      "sensorId": "68e192465905d8b7b30e728d",
+      "liters": 0
+    },
+    {
+      "sensorId": "68e1924b5905d8b7b30e7297",
+      "liters": 0
+    }
+  ],
+  "recommendedLiters": 450,
+  "limitLiters": 1200,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5dc8b9"
+  },
+  "homeId": "68e1914a5905d8b7b30e71ad",
+  "date": {
+    "$date": "2025-10-05T00:00:00.000Z"
+  },
+  "totalLiters": 942.13,
+  "bySensor": [
+    {
+      "sensorId": "68e192515905d8b7b30e72a1",
+      "liters": 198.17
+    },
+    {
+      "sensorId": "68e192575905d8b7b30e72ab",
+      "liters": 92.47
+    },
+    {
+      "sensorId": "68e1925e5905d8b7b30e72c3",
+      "liters": 170.87
+    },
+    {
+      "sensorId": "68e192695905d8b7b30e72cd",
+      "liters": 116.85
+    },
+    {
+      "sensorId": "68e1926d5905d8b7b30e72d7",
+      "liters": 213.59
+    },
+    {
+      "sensorId": "68e192755905d8b7b30e72e1",
+      "liters": 34.6
+    },
+    {
+      "sensorId": "68e1927c5905d8b7b30e72eb",
+      "liters": 115.58
+    },
+    {
+      "sensorId": "68e192895905d8b7b30e72f5",
+      "liters": 0
+    }
+  ],
+  "recommendedLiters": 600,
+  "limitLiters": 1600,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5dc8ba"
+  },
+  "homeId": "68e1916e5905d8b7b30e71bd",
+  "date": {
+    "$date": "2025-10-05T00:00:00.000Z"
+  },
+  "totalLiters": 319.48,
+  "bySensor": [
+    {
+      "sensorId": "68e192aa5905d8b7b30e7375",
+      "liters": 67.93
+    },
+    {
+      "sensorId": "68e192b05905d8b7b30e737f",
+      "liters": 57.24
+    },
+    {
+      "sensorId": "68e192b65905d8b7b30e7389",
+      "liters": 89.85
+    },
+    {
+      "sensorId": "68e192bb5905d8b7b30e7393",
+      "liters": 104.46
+    }
+  ],
+  "recommendedLiters": 300,
+  "limitLiters": 800,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5dc8bb"
+  },
+  "homeId": "68e1918a5905d8b7b30e71cd",
+  "date": {
+    "$date": "2025-10-05T00:00:00.000Z"
+  },
+  "totalLiters": 1558.68,
+  "bySensor": [
+    {
+      "sensorId": "68e192cd5905d8b7b30e739d",
+      "liters": 312.09
+    },
+    {
+      "sensorId": "68e192db5905d8b7b30e73b1",
+      "liters": 137.76
+    },
+    {
+      "sensorId": "68e192e15905d8b7b30e73bb",
+      "liters": 265.33
+    },
+    {
+      "sensorId": "68e192f05905d8b7b30e73c5",
+      "liters": 349.18
+    },
+    {
+      "sensorId": "68e192f85905d8b7b30e73cf",
+      "liters": 142.6
+    },
+    {
+      "sensorId": "68e192fd5905d8b7b30e73d9",
+      "liters": 250.3
+    },
+    {
+      "sensorId": "68e193035905d8b7b30e73e3",
+      "liters": 51.88
+    },
+    {
+      "sensorId": "68e1930a5905d8b7b30e73ed",
+      "liters": 0
+    },
+    {
+      "sensorId": "68e193115905d8b7b30e73f7",
+      "liters": 49.54
+    },
+    {
+      "sensorId": "68e1931f5905d8b7b30e7401",
+      "liters": 0
+    }
+  ],
+  "recommendedLiters": 750,
+  "limitLiters": 2000,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5dc8bc"
+  },
+  "homeId": "68e1919a5905d8b7b30e71dd",
+  "date": {
+    "$date": "2025-10-05T00:00:00.000Z"
+  },
+  "totalLiters": 215.74,
+  "bySensor": [
+    {
+      "sensorId": "68e192d25905d8b7b30e73a7",
+      "liters": 27.86
+    },
+    {
+      "sensorId": "68e1932b5905d8b7b30e740b",
+      "liters": 71.65
+    },
+    {
+      "sensorId": "68e193315905d8b7b30e7415",
+      "liters": 42.74
+    },
+    {
+      "sensorId": "68e193385905d8b7b30e741f",
+      "liters": 73.49
+    }
+  ],
+  "recommendedLiters": 150,
+  "limitLiters": 400,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5dc8bd"
+  },
+  "homeId": "68e191b95905d8b7b30e71ed",
+  "date": {
+    "$date": "2025-10-05T00:00:00.000Z"
+  },
+  "totalLiters": 652.25,
+  "bySensor": [
+    {
+      "sensorId": "68e1936d5905d8b7b30e7469",
+      "liters": 161.64
+    },
+    {
+      "sensorId": "68e193725905d8b7b30e7473",
+      "liters": 97.4
+    },
+    {
+      "sensorId": "68e193775905d8b7b30e747d",
+      "liters": 211.07
+    },
+    {
+      "sensorId": "68e1937e5905d8b7b30e7487",
+      "liters": 89.19
+    },
+    {
+      "sensorId": "68e193865905d8b7b30e7491",
+      "liters": 92.95
+    }
+  ],
+  "recommendedLiters": 600,
+  "limitLiters": 1600,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5dc8be"
+  },
+  "homeId": "68e191c85905d8b7b30e71fd",
+  "date": {
+    "$date": "2025-10-05T00:00:00.000Z"
+  },
+  "totalLiters": 567.24,
+  "bySensor": [
+    {
+      "sensorId": "68e193995905d8b7b30e749b",
+      "liters": 80.34
+    },
+    {
+      "sensorId": "68e1939d5905d8b7b30e74a5",
+      "liters": 94.45
+    },
+    {
+      "sensorId": "68e193a95905d8b7b30e74af",
+      "liters": 127.97
+    },
+    {
+      "sensorId": "68e193b55905d8b7b30e74b9",
+      "liters": 55.82
+    },
+    {
+      "sensorId": "68e193ba5905d8b7b30e74c3",
+      "liters": 0
+    },
+    {
+      "sensorId": "68e193c35905d8b7b30e74cd",
+      "liters": 96.25
+    },
+    {
+      "sensorId": "68e193c85905d8b7b30e74d7",
+      "liters": 112.41
+    }
+  ],
+  "recommendedLiters": 450,
+  "limitLiters": 1200,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5dc8bf"
+  },
+  "homeId": "68e191dd5905d8b7b30e720d",
+  "date": {
+    "$date": "2025-10-05T00:00:00.000Z"
+  },
+  "totalLiters": 678.44,
+  "bySensor": [
+    {
+      "sensorId": "68e193d45905d8b7b30e74e1",
+      "liters": 222.08
+    },
+    {
+      "sensorId": "68e193da5905d8b7b30e74eb",
+      "liters": 160.36
+    },
+    {
+      "sensorId": "68e193df5905d8b7b30e74f5",
+      "liters": 242.62
+    },
+    {
+      "sensorId": "68e193e45905d8b7b30e74ff",
+      "liters": 53.38
+    }
+  ],
+  "recommendedLiters": 750,
+  "limitLiters": 2000,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5dc8c0"
+  },
+  "homeId": "68e191f65905d8b7b30e721d",
+  "date": {
+    "$date": "2025-10-05T00:00:00.000Z"
+  },
+  "totalLiters": 643.11,
+  "bySensor": [
+    {
+      "sensorId": "68e193f55905d8b7b30e7509",
+      "liters": 261.94
+    },
+    {
+      "sensorId": "68e193fa5905d8b7b30e7513",
+      "liters": 121.64
+    },
+    {
+      "sensorId": "68e193ff5905d8b7b30e751d",
+      "liters": 195.97
+    },
+    {
+      "sensorId": "68e194045905d8b7b30e7527",
+      "liters": 63.56
+    },
+    {
+      "sensorId": "68e194095905d8b7b30e7531",
+      "liters": 0
+    },
+    {
+      "sensorId": "68e1940f5905d8b7b30e753b",
+      "liters": 0
+    }
+  ],
+  "recommendedLiters": 600,
+  "limitLiters": 1600,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5dc8c1"
+  },
+  "homeId": "68e192125905d8b7b30e722d",
+  "date": {
+    "$date": "2025-10-05T00:00:00.000Z"
+  },
+  "totalLiters": 432.93,
+  "bySensor": [
+    {
+      "sensorId": "68e194135905d8b7b30e7545",
+      "liters": 112.46
+    },
+    {
+      "sensorId": "68e194185905d8b7b30e754f",
+      "liters": 99.99
+    },
+    {
+      "sensorId": "68e1941c5905d8b7b30e7559",
+      "liters": 137.71
+    },
+    {
+      "sensorId": "68e1942b5905d8b7b30e7563",
+      "liters": 82.77
+    },
+    {
+      "sensorId": "68e194305905d8b7b30e756d",
+      "liters": 0
+    }
+  ],
+  "recommendedLiters": 450,
+  "limitLiters": 1200,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5dcbc9"
+  },
+  "homeId": "68e191345905d8b7b30e719d",
+  "date": {
+    "$date": "2025-10-06T00:00:00.000Z"
+  },
+  "totalLiters": 399.27,
+  "bySensor": [
+    {
+      "sensorId": "68e192275905d8b7b30e7265",
+      "liters": 145.93
+    },
+    {
+      "sensorId": "68e192315905d8b7b30e726f",
+      "liters": 74.41
+    },
+    {
+      "sensorId": "68e192365905d8b7b30e7279",
+      "liters": 114.87
+    },
+    {
+      "sensorId": "68e1923f5905d8b7b30e7283",
+      "liters": 64.06
+    },
+    {
+      "sensorId": "68e192465905d8b7b30e728d",
+      "liters": 0
+    },
+    {
+      "sensorId": "68e1924b5905d8b7b30e7297",
+      "liters": 0
+    }
+  ],
+  "recommendedLiters": 450,
+  "limitLiters": 1200,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5dcbca"
+  },
+  "homeId": "68e1914a5905d8b7b30e71ad",
+  "date": {
+    "$date": "2025-10-06T00:00:00.000Z"
+  },
+  "totalLiters": 767.46,
+  "bySensor": [
+    {
+      "sensorId": "68e192515905d8b7b30e72a1",
+      "liters": 157.05
+    },
+    {
+      "sensorId": "68e192575905d8b7b30e72ab",
+      "liters": 87.18
+    },
+    {
+      "sensorId": "68e1925e5905d8b7b30e72c3",
+      "liters": 191.28
+    },
+    {
+      "sensorId": "68e192695905d8b7b30e72cd",
+      "liters": 97.32
+    },
+    {
+      "sensorId": "68e1926d5905d8b7b30e72d7",
+      "liters": 174.39
+    },
+    {
+      "sensorId": "68e192755905d8b7b30e72e1",
+      "liters": 60.24
+    },
+    {
+      "sensorId": "68e1927c5905d8b7b30e72eb",
+      "liters": 0
+    },
+    {
+      "sensorId": "68e192895905d8b7b30e72f5",
+      "liters": 0
+    }
+  ],
+  "recommendedLiters": 600,
+  "limitLiters": 1600,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5dcbcb"
+  },
+  "homeId": "68e1916e5905d8b7b30e71bd",
+  "date": {
+    "$date": "2025-10-06T00:00:00.000Z"
+  },
+  "totalLiters": 206.47,
+  "bySensor": [
+    {
+      "sensorId": "68e192aa5905d8b7b30e7375",
+      "liters": 37.74
+    },
+    {
+      "sensorId": "68e192b05905d8b7b30e737f",
+      "liters": 48.11
+    },
+    {
+      "sensorId": "68e192b65905d8b7b30e7389",
+      "liters": 66.35
+    },
+    {
+      "sensorId": "68e192bb5905d8b7b30e7393",
+      "liters": 54.27
+    }
+  ],
+  "recommendedLiters": 300,
+  "limitLiters": 800,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5dcbcc"
+  },
+  "homeId": "68e1918a5905d8b7b30e71cd",
+  "date": {
+    "$date": "2025-10-06T00:00:00.000Z"
+  },
+  "totalLiters": 1265.31,
+  "bySensor": [
+    {
+      "sensorId": "68e192cd5905d8b7b30e739d",
+      "liters": 248.9
+    },
+    {
+      "sensorId": "68e192db5905d8b7b30e73b1",
+      "liters": 100.61
+    },
+    {
+      "sensorId": "68e192e15905d8b7b30e73bb",
+      "liters": 252.62
+    },
+    {
+      "sensorId": "68e192f05905d8b7b30e73c5",
+      "liters": 200.72
+    },
+    {
+      "sensorId": "68e192f85905d8b7b30e73cf",
+      "liters": 117.19
+    },
+    {
+      "sensorId": "68e192fd5905d8b7b30e73d9",
+      "liters": 176.79
+    },
+    {
+      "sensorId": "68e193035905d8b7b30e73e3",
+      "liters": 89.55
+    },
+    {
+      "sensorId": "68e1930a5905d8b7b30e73ed",
+      "liters": 78.93
+    },
+    {
+      "sensorId": "68e193115905d8b7b30e73f7",
+      "liters": 0
+    },
+    {
+      "sensorId": "68e1931f5905d8b7b30e7401",
+      "liters": 0
+    }
+  ],
+  "recommendedLiters": 750,
+  "limitLiters": 2000,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5dcbcd"
+  },
+  "homeId": "68e1919a5905d8b7b30e71dd",
+  "date": {
+    "$date": "2025-10-06T00:00:00.000Z"
+  },
+  "totalLiters": 169.37,
+  "bySensor": [
+    {
+      "sensorId": "68e192d25905d8b7b30e73a7",
+      "liters": 26.48
+    },
+    {
+      "sensorId": "68e1932b5905d8b7b30e740b",
+      "liters": 39.25
+    },
+    {
+      "sensorId": "68e193315905d8b7b30e7415",
+      "liters": 34.99
+    },
+    {
+      "sensorId": "68e193385905d8b7b30e741f",
+      "liters": 68.65
+    }
+  ],
+  "recommendedLiters": 150,
+  "limitLiters": 400,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5dcbce"
+  },
+  "homeId": "68e191b95905d8b7b30e71ed",
+  "date": {
+    "$date": "2025-10-06T00:00:00.000Z"
+  },
+  "totalLiters": 387.03,
+  "bySensor": [
+    {
+      "sensorId": "68e1936d5905d8b7b30e7469",
+      "liters": 91.17
+    },
+    {
+      "sensorId": "68e193725905d8b7b30e7473",
+      "liters": 83.6
+    },
+    {
+      "sensorId": "68e193775905d8b7b30e747d",
+      "liters": 146.93
+    },
+    {
+      "sensorId": "68e1937e5905d8b7b30e7487",
+      "liters": 65.33
+    },
+    {
+      "sensorId": "68e193865905d8b7b30e7491",
+      "liters": 0
+    }
+  ],
+  "recommendedLiters": 600,
+  "limitLiters": 1600,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5dcbcf"
+  },
+  "homeId": "68e191c85905d8b7b30e71fd",
+  "date": {
+    "$date": "2025-10-06T00:00:00.000Z"
+  },
+  "totalLiters": 572.53,
+  "bySensor": [
+    {
+      "sensorId": "68e193995905d8b7b30e749b",
+      "liters": 134.86
+    },
+    {
+      "sensorId": "68e1939d5905d8b7b30e74a5",
+      "liters": 72.73
+    },
+    {
+      "sensorId": "68e193a95905d8b7b30e74af",
+      "liters": 96.79
+    },
+    {
+      "sensorId": "68e193b55905d8b7b30e74b9",
+      "liters": 68.2
+    },
+    {
+      "sensorId": "68e193ba5905d8b7b30e74c3",
+      "liters": 0
+    },
+    {
+      "sensorId": "68e193c35905d8b7b30e74cd",
+      "liters": 80.58
+    },
+    {
+      "sensorId": "68e193c85905d8b7b30e74d7",
+      "liters": 119.37
+    }
+  ],
+  "recommendedLiters": 450,
+  "limitLiters": 1200,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5dcbd0"
+  },
+  "homeId": "68e191dd5905d8b7b30e720d",
+  "date": {
+    "$date": "2025-10-06T00:00:00.000Z"
+  },
+  "totalLiters": 598.99,
+  "bySensor": [
+    {
+      "sensorId": "68e193d45905d8b7b30e74e1",
+      "liters": 212.03
+    },
+    {
+      "sensorId": "68e193da5905d8b7b30e74eb",
+      "liters": 123.01
+    },
+    {
+      "sensorId": "68e193df5905d8b7b30e74f5",
+      "liters": 221.59
+    },
+    {
+      "sensorId": "68e193e45905d8b7b30e74ff",
+      "liters": 42.36
+    }
+  ],
+  "recommendedLiters": 750,
+  "limitLiters": 2000,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5dcbd1"
+  },
+  "homeId": "68e191f65905d8b7b30e721d",
+  "date": {
+    "$date": "2025-10-06T00:00:00.000Z"
+  },
+  "totalLiters": 552.66,
+  "bySensor": [
+    {
+      "sensorId": "68e193f55905d8b7b30e7509",
+      "liters": 199.15
+    },
+    {
+      "sensorId": "68e193fa5905d8b7b30e7513",
+      "liters": 111.98
+    },
+    {
+      "sensorId": "68e193ff5905d8b7b30e751d",
+      "liters": 159.05
+    },
+    {
+      "sensorId": "68e194045905d8b7b30e7527",
+      "liters": 82.48
+    },
+    {
+      "sensorId": "68e194095905d8b7b30e7531",
+      "liters": 0
+    },
+    {
+      "sensorId": "68e1940f5905d8b7b30e753b",
+      "liters": 0
+    }
+  ],
+  "recommendedLiters": 600,
+  "limitLiters": 1600,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5dcbd2"
+  },
+  "homeId": "68e192125905d8b7b30e722d",
+  "date": {
+    "$date": "2025-10-06T00:00:00.000Z"
+  },
+  "totalLiters": 422.27,
+  "bySensor": [
+    {
+      "sensorId": "68e194135905d8b7b30e7545",
+      "liters": 128.7
+    },
+    {
+      "sensorId": "68e194185905d8b7b30e754f",
+      "liters": 85.4
+    },
+    {
+      "sensorId": "68e1941c5905d8b7b30e7559",
+      "liters": 145.69
+    },
+    {
+      "sensorId": "68e1942b5905d8b7b30e7563",
+      "liters": 62.48
+    },
+    {
+      "sensorId": "68e194305905d8b7b30e756d",
+      "liters": 0
+    }
+  ],
+  "recommendedLiters": 450,
+  "limitLiters": 1200,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5dcee1"
+  },
+  "homeId": "68e191345905d8b7b30e719d",
+  "date": {
+    "$date": "2025-10-07T00:00:00.000Z"
+  },
+  "totalLiters": 476.8,
+  "bySensor": [
+    {
+      "sensorId": "68e192275905d8b7b30e7265",
+      "liters": 102.1
+    },
+    {
+      "sensorId": "68e192315905d8b7b30e726f",
+      "liters": 86.49
+    },
+    {
+      "sensorId": "68e192365905d8b7b30e7279",
+      "liters": 111.88
+    },
+    {
+      "sensorId": "68e1923f5905d8b7b30e7283",
+      "liters": 77.55
+    },
+    {
+      "sensorId": "68e192465905d8b7b30e728d",
+      "liters": 98.78
+    },
+    {
+      "sensorId": "68e1924b5905d8b7b30e7297",
+      "liters": 0
+    }
+  ],
+  "recommendedLiters": 450,
+  "limitLiters": 1200,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5dcee2"
+  },
+  "homeId": "68e1914a5905d8b7b30e71ad",
+  "date": {
+    "$date": "2025-10-07T00:00:00.000Z"
+  },
+  "totalLiters": 858.11,
+  "bySensor": [
+    {
+      "sensorId": "68e192515905d8b7b30e72a1",
+      "liters": 135.39
+    },
+    {
+      "sensorId": "68e192575905d8b7b30e72ab",
+      "liters": 86.49
+    },
+    {
+      "sensorId": "68e1925e5905d8b7b30e72c3",
+      "liters": 149.06
+    },
+    {
+      "sensorId": "68e192695905d8b7b30e72cd",
+      "liters": 104.38
+    },
+    {
+      "sensorId": "68e1926d5905d8b7b30e72d7",
+      "liters": 184.31
+    },
+    {
+      "sensorId": "68e192755905d8b7b30e72e1",
+      "liters": 39.95
+    },
+    {
+      "sensorId": "68e1927c5905d8b7b30e72eb",
+      "liters": 105.8
+    },
+    {
+      "sensorId": "68e192895905d8b7b30e72f5",
+      "liters": 52.73
+    }
+  ],
+  "recommendedLiters": 600,
+  "limitLiters": 1600,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5dcee3"
+  },
+  "homeId": "68e1916e5905d8b7b30e71bd",
+  "date": {
+    "$date": "2025-10-07T00:00:00.000Z"
+  },
+  "totalLiters": 299.84,
+  "bySensor": [
+    {
+      "sensorId": "68e192aa5905d8b7b30e7375",
+      "liters": 92.95
+    },
+    {
+      "sensorId": "68e192b05905d8b7b30e737f",
+      "liters": 57.79
+    },
+    {
+      "sensorId": "68e192b65905d8b7b30e7389",
+      "liters": 80.07
+    },
+    {
+      "sensorId": "68e192bb5905d8b7b30e7393",
+      "liters": 69.03
+    }
+  ],
+  "recommendedLiters": 300,
+  "limitLiters": 800,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5dcee4"
+  },
+  "homeId": "68e1918a5905d8b7b30e71cd",
+  "date": {
+    "$date": "2025-10-07T00:00:00.000Z"
+  },
+  "totalLiters": 1256.01,
+  "bySensor": [
+    {
+      "sensorId": "68e192cd5905d8b7b30e739d",
+      "liters": 243.17
+    },
+    {
+      "sensorId": "68e192db5905d8b7b30e73b1",
+      "liters": 125
+    },
+    {
+      "sensorId": "68e192e15905d8b7b30e73bb",
+      "liters": 192.9
+    },
+    {
+      "sensorId": "68e192f05905d8b7b30e73c5",
+      "liters": 240.96
+    },
+    {
+      "sensorId": "68e192f85905d8b7b30e73cf",
+      "liters": 146.91
+    },
+    {
+      "sensorId": "68e192fd5905d8b7b30e73d9",
+      "liters": 178.52
+    },
+    {
+      "sensorId": "68e193035905d8b7b30e73e3",
+      "liters": 37.84
+    },
+    {
+      "sensorId": "68e1930a5905d8b7b30e73ed",
+      "liters": 90.71
+    },
+    {
+      "sensorId": "68e193115905d8b7b30e73f7",
+      "liters": 0
+    },
+    {
+      "sensorId": "68e1931f5905d8b7b30e7401",
+      "liters": 0
+    }
+  ],
+  "recommendedLiters": 750,
+  "limitLiters": 2000,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5dcee5"
+  },
+  "homeId": "68e1919a5905d8b7b30e71dd",
+  "date": {
+    "$date": "2025-10-07T00:00:00.000Z"
+  },
+  "totalLiters": 164.7,
+  "bySensor": [
+    {
+      "sensorId": "68e192d25905d8b7b30e73a7",
+      "liters": 24.19
+    },
+    {
+      "sensorId": "68e1932b5905d8b7b30e740b",
+      "liters": 45.39
+    },
+    {
+      "sensorId": "68e193315905d8b7b30e7415",
+      "liters": 34.24
+    },
+    {
+      "sensorId": "68e193385905d8b7b30e741f",
+      "liters": 60.88
+    }
+  ],
+  "recommendedLiters": 150,
+  "limitLiters": 400,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5dcee6"
+  },
+  "homeId": "68e191b95905d8b7b30e71ed",
+  "date": {
+    "$date": "2025-10-07T00:00:00.000Z"
+  },
+  "totalLiters": 449.58,
+  "bySensor": [
+    {
+      "sensorId": "68e1936d5905d8b7b30e7469",
+      "liters": 137.69
+    },
+    {
+      "sensorId": "68e193725905d8b7b30e7473",
+      "liters": 79.28
+    },
+    {
+      "sensorId": "68e193775905d8b7b30e747d",
+      "liters": 183.85
+    },
+    {
+      "sensorId": "68e1937e5905d8b7b30e7487",
+      "liters": 48.76
+    },
+    {
+      "sensorId": "68e193865905d8b7b30e7491",
+      "liters": 0
+    }
+  ],
+  "recommendedLiters": 600,
+  "limitLiters": 1600,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5dcee7"
+  },
+  "homeId": "68e191c85905d8b7b30e71fd",
+  "date": {
+    "$date": "2025-10-07T00:00:00.000Z"
+  },
+  "totalLiters": 510.35,
+  "bySensor": [
+    {
+      "sensorId": "68e193995905d8b7b30e749b",
+      "liters": 98.47
+    },
+    {
+      "sensorId": "68e1939d5905d8b7b30e74a5",
+      "liters": 89.57
+    },
+    {
+      "sensorId": "68e193a95905d8b7b30e74af",
+      "liters": 105.76
+    },
+    {
+      "sensorId": "68e193b55905d8b7b30e74b9",
+      "liters": 35.85
+    },
+    {
+      "sensorId": "68e193ba5905d8b7b30e74c3",
+      "liters": 0
+    },
+    {
+      "sensorId": "68e193c35905d8b7b30e74cd",
+      "liters": 62.41
+    },
+    {
+      "sensorId": "68e193c85905d8b7b30e74d7",
+      "liters": 118.29
+    }
+  ],
+  "recommendedLiters": 450,
+  "limitLiters": 1200,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5dcee8"
+  },
+  "homeId": "68e191dd5905d8b7b30e720d",
+  "date": {
+    "$date": "2025-10-07T00:00:00.000Z"
+  },
+  "totalLiters": 596.1,
+  "bySensor": [
+    {
+      "sensorId": "68e193d45905d8b7b30e74e1",
+      "liters": 237.95
+    },
+    {
+      "sensorId": "68e193da5905d8b7b30e74eb",
+      "liters": 119.88
+    },
+    {
+      "sensorId": "68e193df5905d8b7b30e74f5",
+      "liters": 188.2
+    },
+    {
+      "sensorId": "68e193e45905d8b7b30e74ff",
+      "liters": 50.07
+    }
+  ],
+  "recommendedLiters": 750,
+  "limitLiters": 2000,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5dcee9"
+  },
+  "homeId": "68e191f65905d8b7b30e721d",
+  "date": {
+    "$date": "2025-10-07T00:00:00.000Z"
+  },
+  "totalLiters": 789.19,
+  "bySensor": [
+    {
+      "sensorId": "68e193f55905d8b7b30e7509",
+      "liters": 272.61
+    },
+    {
+      "sensorId": "68e193fa5905d8b7b30e7513",
+      "liters": 84.62
+    },
+    {
+      "sensorId": "68e193ff5905d8b7b30e751d",
+      "liters": 173.04
+    },
+    {
+      "sensorId": "68e194045905d8b7b30e7527",
+      "liters": 80.69
+    },
+    {
+      "sensorId": "68e194095905d8b7b30e7531",
+      "liters": 109.29
+    },
+    {
+      "sensorId": "68e1940f5905d8b7b30e753b",
+      "liters": 68.94
+    }
+  ],
+  "recommendedLiters": 600,
+  "limitLiters": 1600,
+  "alerts": []
+},
+{
+  "_id": {
+    "$oid": "68e1993644c6c7eefa5dceea"
+  },
+  "homeId": "68e192125905d8b7b30e722d",
+  "date": {
+    "$date": "2025-10-07T00:00:00.000Z"
+  },
+  "totalLiters": 440.36,
+  "bySensor": [
+    {
+      "sensorId": "68e194135905d8b7b30e7545",
+      "liters": 172.56
+    },
+    {
+      "sensorId": "68e194185905d8b7b30e754f",
+      "liters": 66.21
+    },
+    {
+      "sensorId": "68e1941c5905d8b7b30e7559",
+      "liters": 105.85
+    },
+    {
+      "sensorId": "68e1942b5905d8b7b30e7563",
+      "liters": 95.74
+    },
+    {
+      "sensorId": "68e194305905d8b7b30e756d",
+      "liters": 0
+    }
+  ],
+  "recommendedLiters": 450,
+  "limitLiters": 1200,
+  "alerts": []
+}]

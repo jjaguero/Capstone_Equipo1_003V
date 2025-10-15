@@ -1,0 +1,1416 @@
+[{
+  "_id": {
+    "$oid": "68e192275905d8b7b30e7265"
+  },
+  "homeId": "68e191345905d8b7b30e719d",
+  "serialNumber": "SN-DUCHA-1759613479138-4072",
+  "category": "agua",
+  "subType": "ducha",
+  "location": "baño_principal",
+  "status": "active",
+  "tags": [
+    "litros"
+  ],
+  "installedAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "createdAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-10-04T22:46:47.541Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68e192315905d8b7b30e726f"
+  },
+  "homeId": "68e191345905d8b7b30e719d",
+  "serialNumber": "SN-LAVAMANOS-1759613489089-9117",
+  "category": "agua",
+  "subType": "lavamanos",
+  "location": "baño_principal",
+  "status": "active",
+  "tags": [
+    "litros"
+  ],
+  "installedAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "createdAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68e192365905d8b7b30e7279"
+  },
+  "homeId": "68e191345905d8b7b30e719d",
+  "serialNumber": "SN-INODORO-1759613494888-4902",
+  "category": "agua",
+  "subType": "inodoro",
+  "location": "baño_principal",
+  "status": "active",
+  "tags": [
+    "litros"
+  ],
+  "installedAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "createdAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68e1923f5905d8b7b30e7283"
+  },
+  "homeId": "68e191345905d8b7b30e719d",
+  "serialNumber": "SN-LAVAPLATOS-1759613503224-3599",
+  "category": "agua",
+  "subType": "lavaplatos",
+  "location": "cocina",
+  "status": "active",
+  "tags": [
+    "litros"
+  ],
+  "installedAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "createdAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68e192465905d8b7b30e728d"
+  },
+  "homeId": "68e191345905d8b7b30e719d",
+  "serialNumber": "SN-LAVADORA-1759613510401-4531",
+  "category": "agua",
+  "subType": "lavadora",
+  "location": "loggia",
+  "status": "active",
+  "tags": [
+    "litros"
+  ],
+  "installedAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "createdAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68e1924b5905d8b7b30e7297"
+  },
+  "homeId": "68e191345905d8b7b30e719d",
+  "serialNumber": "SN-LLAVE_JARDIN-1759613515752-7350",
+  "category": "agua",
+  "subType": "llave_jardin",
+  "location": "jardin",
+  "status": "active",
+  "tags": [
+    "litros"
+  ],
+  "installedAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "createdAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68e192515905d8b7b30e72a1"
+  },
+  "homeId": "68e1914a5905d8b7b30e71ad",
+  "serialNumber": "SN-DUCHA-1759613521357-9457",
+  "category": "agua",
+  "subType": "ducha",
+  "location": "baño_principal",
+  "status": "active",
+  "tags": [
+    "litros"
+  ],
+  "installedAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "createdAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68e192575905d8b7b30e72ab"
+  },
+  "homeId": "68e1914a5905d8b7b30e71ad",
+  "serialNumber": "SN-LAVAMANOS-1759613527100-272",
+  "category": "agua",
+  "subType": "lavamanos",
+  "location": "baño_principal",
+  "status": "active",
+  "tags": [
+    "litros"
+  ],
+  "installedAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "createdAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68e1925e5905d8b7b30e72c3"
+  },
+  "homeId": "68e1914a5905d8b7b30e71ad",
+  "serialNumber": "SN-INODORO-1759613534657-754",
+  "category": "agua",
+  "subType": "inodoro",
+  "location": "baño_principal",
+  "status": "active",
+  "tags": [
+    "litros"
+  ],
+  "installedAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "createdAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68e192695905d8b7b30e72cd"
+  },
+  "homeId": "68e1914a5905d8b7b30e71ad",
+  "serialNumber": "SN-LAVAMANOS-1759613545934-3857",
+  "category": "agua",
+  "subType": "lavamanos",
+  "location": "baño_secundario",
+  "status": "active",
+  "tags": [
+    "litros"
+  ],
+  "installedAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "createdAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68e1926d5905d8b7b30e72d7"
+  },
+  "homeId": "68e1914a5905d8b7b30e71ad",
+  "serialNumber": "SN-INODORO-1759613549949-6236",
+  "category": "agua",
+  "subType": "inodoro",
+  "location": "baño_secundario",
+  "status": "active",
+  "tags": [
+    "litros"
+  ],
+  "installedAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "createdAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68e192755905d8b7b30e72e1"
+  },
+  "homeId": "68e1914a5905d8b7b30e71ad",
+  "serialNumber": "SN-LAVAPLATOS-1759613557128-6268",
+  "category": "agua",
+  "subType": "lavaplatos",
+  "location": "cocina",
+  "status": "active",
+  "tags": [
+    "litros"
+  ],
+  "installedAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "createdAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68e1927c5905d8b7b30e72eb"
+  },
+  "homeId": "68e1914a5905d8b7b30e71ad",
+  "serialNumber": "SN-LAVADORA-1759613564453-3045",
+  "category": "agua",
+  "subType": "lavadora",
+  "location": "loggia",
+  "status": "active",
+  "tags": [
+    "litros"
+  ],
+  "installedAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "createdAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68e192895905d8b7b30e72f5"
+  },
+  "homeId": "68e1914a5905d8b7b30e71ad",
+  "serialNumber": "SN-LLAVE_PATIO-1759613577421-7738",
+  "category": "agua",
+  "subType": "llave_patio",
+  "location": "patio",
+  "status": "active",
+  "tags": [
+    "litros"
+  ],
+  "installedAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "createdAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68e192aa5905d8b7b30e7375"
+  },
+  "homeId": "68e1916e5905d8b7b30e71bd",
+  "serialNumber": "SN-DUCHA-1759613610938-9064",
+  "category": "agua",
+  "subType": "ducha",
+  "location": "baño_principal",
+  "status": "active",
+  "tags": [
+    "litros"
+  ],
+  "installedAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "createdAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68e192b05905d8b7b30e737f"
+  },
+  "homeId": "68e1916e5905d8b7b30e71bd",
+  "serialNumber": "SN-LAVAMANOS-1759613616640-6528",
+  "category": "agua",
+  "subType": "lavamanos",
+  "location": "baño_principal",
+  "status": "active",
+  "tags": [
+    "litros"
+  ],
+  "installedAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "createdAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68e192b65905d8b7b30e7389"
+  },
+  "homeId": "68e1916e5905d8b7b30e71bd",
+  "serialNumber": "SN-INODORO-1759613622041-6419",
+  "category": "agua",
+  "subType": "inodoro",
+  "location": "baño_principal",
+  "status": "active",
+  "tags": [
+    "litros"
+  ],
+  "installedAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "createdAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68e192bb5905d8b7b30e7393"
+  },
+  "homeId": "68e1916e5905d8b7b30e71bd",
+  "serialNumber": "SN-LAVAPLATOS-1759613627887-2297",
+  "category": "agua",
+  "subType": "lavaplatos",
+  "location": "cocina",
+  "status": "active",
+  "tags": [
+    "litros"
+  ],
+  "installedAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "createdAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68e192cd5905d8b7b30e739d"
+  },
+  "homeId": "68e1918a5905d8b7b30e71cd",
+  "serialNumber": "SN-DUCHA-1759613645432-7447",
+  "category": "agua",
+  "subType": "ducha",
+  "location": "baño_principal",
+  "status": "active",
+  "tags": [
+    "litros"
+  ],
+  "installedAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "createdAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68e192d25905d8b7b30e73a7"
+  },
+  "homeId": "68e1919a5905d8b7b30e71dd",
+  "serialNumber": "SN-LAVAMANOS-1759613650258-1472",
+  "category": "agua",
+  "subType": "lavamanos",
+  "location": "baño_principal",
+  "status": "active",
+  "tags": [
+    "litros"
+  ],
+  "installedAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "createdAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68e192db5905d8b7b30e73b1"
+  },
+  "homeId": "68e1918a5905d8b7b30e71cd",
+  "serialNumber": "SN-LAVAMANOS-1759613659609-55",
+  "category": "agua",
+  "subType": "lavamanos",
+  "location": "baño_principal",
+  "status": "active",
+  "tags": [
+    "litros"
+  ],
+  "installedAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "createdAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68e192e15905d8b7b30e73bb"
+  },
+  "homeId": "68e1918a5905d8b7b30e71cd",
+  "serialNumber": "SN-INODORO-1759613665524-7164",
+  "category": "agua",
+  "subType": "inodoro",
+  "location": "baño_principal",
+  "status": "active",
+  "tags": [
+    "litros"
+  ],
+  "installedAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "createdAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68e192f05905d8b7b30e73c5"
+  },
+  "homeId": "68e1918a5905d8b7b30e71cd",
+  "serialNumber": "SN-DUCHA-1759613680014-5175",
+  "category": "agua",
+  "subType": "ducha",
+  "location": "baño_secundario",
+  "status": "active",
+  "tags": [
+    "litros"
+  ],
+  "installedAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "createdAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68e192f85905d8b7b30e73cf"
+  },
+  "homeId": "68e1918a5905d8b7b30e71cd",
+  "serialNumber": "SN-LAVAMANOS-1759613688885-6754",
+  "category": "agua",
+  "subType": "lavamanos",
+  "location": "baño_secundario",
+  "status": "active",
+  "tags": [
+    "litros"
+  ],
+  "installedAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "createdAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68e192fd5905d8b7b30e73d9"
+  },
+  "homeId": "68e1918a5905d8b7b30e71cd",
+  "serialNumber": "SN-INODORO-1759613693973-7901",
+  "category": "agua",
+  "subType": "inodoro",
+  "location": "baño_secundario",
+  "status": "active",
+  "tags": [
+    "litros"
+  ],
+  "installedAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "createdAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68e193035905d8b7b30e73e3"
+  },
+  "homeId": "68e1918a5905d8b7b30e71cd",
+  "serialNumber": "SN-LAVAPLATOS-1759613699746-2576",
+  "category": "agua",
+  "subType": "lavaplatos",
+  "location": "cocina",
+  "status": "active",
+  "tags": [
+    "litros"
+  ],
+  "installedAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "createdAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68e1930a5905d8b7b30e73ed"
+  },
+  "homeId": "68e1918a5905d8b7b30e71cd",
+  "serialNumber": "SN-LAVADORA-1759613706517-634",
+  "category": "agua",
+  "subType": "lavadora",
+  "location": "loggia",
+  "status": "active",
+  "tags": [
+    "litros"
+  ],
+  "installedAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "createdAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68e193115905d8b7b30e73f7"
+  },
+  "homeId": "68e1918a5905d8b7b30e71cd",
+  "serialNumber": "SN-LLAVE_PATIO-1759613713592-9438",
+  "category": "agua",
+  "subType": "llave_patio",
+  "location": "patio",
+  "status": "active",
+  "tags": [
+    "litros"
+  ],
+  "installedAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "createdAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68e1931f5905d8b7b30e7401"
+  },
+  "homeId": "68e1918a5905d8b7b30e71cd",
+  "serialNumber": "SN-LLAVE_JARDIN-1759613727489-7992",
+  "category": "agua",
+  "subType": "llave_jardin",
+  "location": "jardin",
+  "status": "active",
+  "tags": [
+    "litros"
+  ],
+  "installedAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "createdAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68e1932b5905d8b7b30e740b"
+  },
+  "homeId": "68e1919a5905d8b7b30e71dd",
+  "serialNumber": "SN-DUCHA-1759613739327-2909",
+  "category": "agua",
+  "subType": "ducha",
+  "location": "baño_principal",
+  "status": "active",
+  "tags": [
+    "litros"
+  ],
+  "installedAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "createdAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68e193315905d8b7b30e7415"
+  },
+  "homeId": "68e1919a5905d8b7b30e71dd",
+  "serialNumber": "SN-INODORO-1759613745994-1332",
+  "category": "agua",
+  "subType": "inodoro",
+  "location": "baño_principal",
+  "status": "active",
+  "tags": [
+    "litros"
+  ],
+  "installedAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "createdAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68e193385905d8b7b30e741f"
+  },
+  "homeId": "68e1919a5905d8b7b30e71dd",
+  "serialNumber": "SN-LAVAPLATOS-1759613752826-7937",
+  "category": "agua",
+  "subType": "lavaplatos",
+  "location": "cocina",
+  "status": "active",
+  "tags": [
+    "litros"
+  ],
+  "installedAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "createdAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68e1936d5905d8b7b30e7469"
+  },
+  "homeId": "68e191b95905d8b7b30e71ed",
+  "serialNumber": "SN-DUCHA-1759613805654-9591",
+  "category": "agua",
+  "subType": "ducha",
+  "location": "baño_principal",
+  "status": "active",
+  "tags": [
+    "litros"
+  ],
+  "installedAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "createdAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68e193725905d8b7b30e7473"
+  },
+  "homeId": "68e191b95905d8b7b30e71ed",
+  "serialNumber": "SN-LAVAMANOS-1759613810060-5835",
+  "category": "agua",
+  "subType": "lavamanos",
+  "location": "baño_principal",
+  "status": "active",
+  "tags": [
+    "litros"
+  ],
+  "installedAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "createdAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68e193775905d8b7b30e747d"
+  },
+  "homeId": "68e191b95905d8b7b30e71ed",
+  "serialNumber": "SN-INODORO-1759613815720-583",
+  "category": "agua",
+  "subType": "inodoro",
+  "location": "baño_principal",
+  "status": "active",
+  "tags": [
+    "litros"
+  ],
+  "installedAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "createdAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68e1937e5905d8b7b30e7487"
+  },
+  "homeId": "68e191b95905d8b7b30e71ed",
+  "serialNumber": "SN-LAVAPLATOS-1759613822720-9753",
+  "category": "agua",
+  "subType": "lavaplatos",
+  "location": "cocina",
+  "status": "active",
+  "tags": [
+    "litros"
+  ],
+  "installedAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "createdAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68e193865905d8b7b30e7491"
+  },
+  "homeId": "68e191b95905d8b7b30e71ed",
+  "serialNumber": "SN-LAVADORA-1759613830916-9853",
+  "category": "agua",
+  "subType": "lavadora",
+  "location": "loggia",
+  "status": "active",
+  "tags": [
+    "litros"
+  ],
+  "installedAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "createdAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68e193995905d8b7b30e749b"
+  },
+  "homeId": "68e191c85905d8b7b30e71fd",
+  "serialNumber": "SN-DUCHA-1759613849260-3503",
+  "category": "agua",
+  "subType": "ducha",
+  "location": "baño_principal",
+  "status": "active",
+  "tags": [
+    "litros"
+  ],
+  "installedAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "createdAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68e1939d5905d8b7b30e74a5"
+  },
+  "homeId": "68e191c85905d8b7b30e71fd",
+  "serialNumber": "SN-LAVAMANOS-1759613853828-5294",
+  "category": "agua",
+  "subType": "lavamanos",
+  "location": "baño_principal",
+  "status": "active",
+  "tags": [
+    "litros"
+  ],
+  "installedAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "createdAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68e193a95905d8b7b30e74af"
+  },
+  "homeId": "68e191c85905d8b7b30e71fd",
+  "serialNumber": "SN-INODORO-1759613865802-2863",
+  "category": "agua",
+  "subType": "inodoro",
+  "location": "baño_principal",
+  "status": "active",
+  "tags": [
+    "litros"
+  ],
+  "installedAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "createdAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68e193b55905d8b7b30e74b9"
+  },
+  "homeId": "68e191c85905d8b7b30e71fd",
+  "serialNumber": "SN-LAVAPLATOS-1759613877614-8598",
+  "category": "agua",
+  "subType": "lavaplatos",
+  "location": "cocina",
+  "status": "active",
+  "tags": [
+    "litros"
+  ],
+  "installedAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "createdAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68e193ba5905d8b7b30e74c3"
+  },
+  "homeId": "68e191c85905d8b7b30e71fd",
+  "serialNumber": "SN-LAVADORA-1759613882625-6456",
+  "category": "agua",
+  "subType": "lavadora",
+  "location": "loggia",
+  "status": "active",
+  "tags": [
+    "litros"
+  ],
+  "installedAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "createdAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68e193c35905d8b7b30e74cd"
+  },
+  "homeId": "68e191c85905d8b7b30e71fd",
+  "serialNumber": "SN-LAVAMANOS-1759613891215-195",
+  "category": "agua",
+  "subType": "lavamanos",
+  "location": "baño_secundario",
+  "status": "active",
+  "tags": [
+    "litros"
+  ],
+  "installedAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "createdAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68e193c85905d8b7b30e74d7"
+  },
+  "homeId": "68e191c85905d8b7b30e71fd",
+  "serialNumber": "SN-INODORO-1759613896251-982",
+  "category": "agua",
+  "subType": "inodoro",
+  "location": "baño_secundario",
+  "status": "active",
+  "tags": [
+    "litros"
+  ],
+  "installedAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "createdAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68e193d45905d8b7b30e74e1"
+  },
+  "homeId": "68e191dd5905d8b7b30e720d",
+  "serialNumber": "SN-DUCHA-1759613908758-7786",
+  "category": "agua",
+  "subType": "ducha",
+  "location": "baño_principal",
+  "status": "active",
+  "tags": [
+    "litros"
+  ],
+  "installedAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "createdAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68e193da5905d8b7b30e74eb"
+  },
+  "homeId": "68e191dd5905d8b7b30e720d",
+  "serialNumber": "SN-LAVAMANOS-1759613914587-8973",
+  "category": "agua",
+  "subType": "lavamanos",
+  "location": "baño_principal",
+  "status": "active",
+  "tags": [
+    "litros"
+  ],
+  "installedAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "createdAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68e193df5905d8b7b30e74f5"
+  },
+  "homeId": "68e191dd5905d8b7b30e720d",
+  "serialNumber": "SN-INODORO-1759613919573-2699",
+  "category": "agua",
+  "subType": "inodoro",
+  "location": "baño_principal",
+  "status": "active",
+  "tags": [
+    "litros"
+  ],
+  "installedAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "createdAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68e193e45905d8b7b30e74ff"
+  },
+  "homeId": "68e191dd5905d8b7b30e720d",
+  "serialNumber": "SN-LAVAPLATOS-1759613924309-2038",
+  "category": "agua",
+  "subType": "lavaplatos",
+  "location": "cocina",
+  "status": "active",
+  "tags": [
+    "litros"
+  ],
+  "installedAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "createdAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68e193f55905d8b7b30e7509"
+  },
+  "homeId": "68e191f65905d8b7b30e721d",
+  "serialNumber": "SN-DUCHA-1759613941286-9114",
+  "category": "agua",
+  "subType": "ducha",
+  "location": "baño_principal",
+  "status": "active",
+  "tags": [
+    "litros"
+  ],
+  "installedAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "createdAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68e193fa5905d8b7b30e7513"
+  },
+  "homeId": "68e191f65905d8b7b30e721d",
+  "serialNumber": "SN-LAVAMANOS-1759613946706-4132",
+  "category": "agua",
+  "subType": "lavamanos",
+  "location": "baño_principal",
+  "status": "active",
+  "tags": [
+    "litros"
+  ],
+  "installedAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "createdAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68e193ff5905d8b7b30e751d"
+  },
+  "homeId": "68e191f65905d8b7b30e721d",
+  "serialNumber": "SN-INODORO-1759613951803-3246",
+  "category": "agua",
+  "subType": "inodoro",
+  "location": "baño_principal",
+  "status": "active",
+  "tags": [
+    "litros"
+  ],
+  "installedAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "createdAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68e194045905d8b7b30e7527"
+  },
+  "homeId": "68e191f65905d8b7b30e721d",
+  "serialNumber": "SN-LAVAPLATOS-1759613956904-1321",
+  "category": "agua",
+  "subType": "lavaplatos",
+  "location": "cocina",
+  "status": "active",
+  "tags": [
+    "litros"
+  ],
+  "installedAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "createdAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68e194095905d8b7b30e7531"
+  },
+  "homeId": "68e191f65905d8b7b30e721d",
+  "serialNumber": "SN-LAVADORA-1759613961679-2643",
+  "category": "agua",
+  "subType": "lavadora",
+  "location": "loggia",
+  "status": "active",
+  "tags": [
+    "litros"
+  ],
+  "installedAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "createdAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68e1940f5905d8b7b30e753b"
+  },
+  "homeId": "68e191f65905d8b7b30e721d",
+  "serialNumber": "SN-LLAVE_PATIO-1759613967373-168",
+  "category": "agua",
+  "subType": "llave_patio",
+  "location": "patio",
+  "status": "active",
+  "tags": [
+    "litros"
+  ],
+  "installedAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "createdAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68e194135905d8b7b30e7545"
+  },
+  "homeId": "68e192125905d8b7b30e722d",
+  "serialNumber": "SN-DUCHA-1759613971418-3300",
+  "category": "agua",
+  "subType": "ducha",
+  "location": "baño_principal",
+  "status": "active",
+  "tags": [
+    "litros"
+  ],
+  "installedAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "createdAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68e194185905d8b7b30e754f"
+  },
+  "homeId": "68e192125905d8b7b30e722d",
+  "serialNumber": "SN-LAVAMANOS-1759613976071-6834",
+  "category": "agua",
+  "subType": "lavamanos",
+  "location": "baño_principal",
+  "status": "active",
+  "tags": [
+    "litros"
+  ],
+  "installedAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "createdAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68e1941c5905d8b7b30e7559"
+  },
+  "homeId": "68e192125905d8b7b30e722d",
+  "serialNumber": "SN-INODORO-1759613980099-6118",
+  "category": "agua",
+  "subType": "inodoro",
+  "location": "baño_principal",
+  "status": "active",
+  "tags": [
+    "litros"
+  ],
+  "installedAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "createdAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68e1942b5905d8b7b30e7563"
+  },
+  "homeId": "68e192125905d8b7b30e722d",
+  "serialNumber": "SN-LAVAPLATOS-1759613995179-654",
+  "category": "agua",
+  "subType": "lavaplatos",
+  "location": "cocina",
+  "status": "active",
+  "tags": [
+    "litros"
+  ],
+  "installedAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "createdAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68e194305905d8b7b30e756d"
+  },
+  "homeId": "68e192125905d8b7b30e722d",
+  "serialNumber": "SN-LLAVE_PATIO-1759614000940-4468",
+  "category": "agua",
+  "subType": "llave_patio",
+  "location": "patio",
+  "status": "active",
+  "tags": [
+    "litros"
+  ],
+  "installedAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "createdAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2025-09-14T00:00:00.000Z"
+  },
+  "__v": 0
+}]
