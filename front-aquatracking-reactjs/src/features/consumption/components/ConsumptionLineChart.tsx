@@ -21,37 +21,43 @@ interface ConsumptionLineChartProps {
     homes: Home[]
 }
 
-const ConsumptionLineChart = ({ consumptions, homes }: ConsumptionLineChartProps) => {
+const ConsumptionLineChart = ({
+    consumptions,
+    homes,
+}: ConsumptionLineChartProps) => {
     const chartData = useMemo(() => {
-        // Agrupar consumos por fecha
         const dateMap = new Map<string, Map<string, number>>()
-        
-        consumptions.forEach(consumption => {
-            const date = new Date(consumption.date).toLocaleDateString('es-CL', {
-                day: '2-digit',
-                month: 'short',
-            })
-            
+
+        consumptions.forEach((consumption) => {
+            const date = new Date(consumption.date).toLocaleDateString(
+                'es-CL',
+                {
+                    day: '2-digit',
+                    month: 'short',
+                },
+            )
+
             if (!dateMap.has(date)) {
                 dateMap.set(date, new Map())
             }
-            
+
             const homeData = dateMap.get(date)!
             homeData.set(consumption.homeId, consumption.totalLiters)
         })
 
-        // Ordenar fechas
-        const sortedDates = Array.from(dateMap.keys()).sort((a, b) => {
-            const dateA = new Date(a)
-            const dateB = new Date(b)
-            return dateA.getTime() - dateB.getTime()
-        })
+        // Ordenar fechas y luego invertir para mostrar los primeros datos a la derecha
+        const sortedDates = Array.from(dateMap.keys())
+            .sort((a, b) => {
+                const dateA = new Date(a)
+                const dateB = new Date(b)
+                return dateA.getTime() - dateB.getTime()
+            })
+            .reverse()
 
-        // Crear series por home
-        const series = homes.map(home => {
+        const series = homes.map((home) => {
             return {
                 name: home.name,
-                data: sortedDates.map(date => {
+                data: sortedDates.map((date) => {
                     const homeData = dateMap.get(date)
                     return homeData?.get(home._id) || 0
                 }),
@@ -64,12 +70,22 @@ const ConsumptionLineChart = ({ consumptions, homes }: ConsumptionLineChartProps
         }
     }, [consumptions, homes])
 
+    const maxValue = Math.max(
+        ...chartData.series.flatMap((serie) => serie.data),
+        660 
+    )
     const customOptions: ApexOptions = {
         xaxis: {
             categories: chartData.categories,
             labels: {
                 rotate: -45,
                 rotateAlways: false,
+                offsetX: 20,
+            },
+        },
+        grid: {
+            padding: {
+                left: 30,
             },
         },
         yaxis: {
@@ -77,12 +93,29 @@ const ConsumptionLineChart = ({ consumptions, homes }: ConsumptionLineChartProps
                 text: 'Consumo (Litros)',
             },
             labels: {
-                formatter: (value) => `${Math.round(value)}L`,
+                formatter: (value: number) => `${Math.round(value)}L`,
             },
+            max: maxValue > 660 ? Math.ceil(maxValue * 1.1) : 700,
+        },
+        annotations: {
+            yaxis: [
+                {
+                    y: 660,
+                    borderColor: '#00B8A9',
+                    label: {
+                        borderColor: '#00B8A9',
+                        style: {
+                            color: '#fff',
+                            background: '#00B8A9',
+                        },
+                        text: 'Meta Diaria (660L)',
+                    },
+                },
+            ],
         },
         tooltip: {
             y: {
-                formatter: (value) => `${Math.round(value)} litros`,
+                formatter: (value: number) => `${Math.round(value)} litros`,
             },
         },
         legend: {

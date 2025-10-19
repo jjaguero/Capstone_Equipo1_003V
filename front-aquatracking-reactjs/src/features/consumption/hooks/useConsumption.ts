@@ -77,6 +77,7 @@ export const useConsumption = (): UseConsumptionReturn => {
 
             const response = await apiClient.get<DailyConsumption[]>(ENDPOINTS.DAILY_CONSUMPTION)
             const data = response.data
+            console.log('Datos recibidos del backend (consumptions):', data)
 
             setConsumptions(data)
             setFilteredConsumptions(data)

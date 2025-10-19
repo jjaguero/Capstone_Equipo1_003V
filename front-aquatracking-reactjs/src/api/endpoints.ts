@@ -1,9 +1,3 @@
-/**
- * API endpoints for NestJS backend
- * Simple string constants - NO business logic
- * Matches backend routes from api-nestjs-aquatracking
- */
-
 export const ENDPOINTS = {
   // Server session endpoint
   SERVER_SESSION: '/server-session',

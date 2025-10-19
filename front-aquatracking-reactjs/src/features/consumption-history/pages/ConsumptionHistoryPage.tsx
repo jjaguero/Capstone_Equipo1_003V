@@ -4,8 +4,10 @@ import { useConsumption } from '@/hooks/useConsumption'
 import { useSensors } from '@/features/sensors/hooks/useSensors'
 import { useAquaTrackingAuth } from '@/features/auth/hooks/useAquaTrackingAuth'
 import { normalizeSensorName, getFullSensorName } from '@/utils/sensor-name.utils'
-import { useState } from 'react'
-import { format, subDays, startOfMonth, endOfMonth, startOfWeek, endOfWeek } from 'date-fns'
+import { useState, useMemo, useEffect } from 'react'
+import { format, subDays, startOfMonth, endOfMonth, startOfWeek, endOfWeek, parseISO } from 'date-fns'
+import dayjs, { Dayjs } from 'dayjs'
+import MuiDateCalendarInput from '@/components/shared/MuiDateCalendarInput'
 import { es } from 'date-fns/locale'
 import { 
   PiDropDuotone, 
@@ -29,8 +31,31 @@ const ConsumptionHistoryPage = () => {
   // Estados para filtros de fecha y sensores
   const [timePeriod, setTimePeriod] = useState<'Weekly' | 'Monthly' | 'Annually'>('Monthly')
   const [selectedMetric, setSelectedMetric] = useState<'consumption' | 'efficiency' | 'savings'>('consumption')
-  const [dateFrom, setDateFrom] = useState(format(subDays(new Date(), 30), 'yyyy-MM-dd'))
-  const [dateTo, setDateTo] = useState(format(new Date(), 'yyyy-MM-dd'))
+  // Fechas disponibles según los datos
+  const availableDates = useMemo(() => {
+    // Ordenar y filtrar duplicados
+    const unique = Array.from(new Set(consumptions.map(c => c.date)))
+      .map(dateStr => dayjs(dateStr))
+      .sort((a, b) => a.valueOf() - b.valueOf())
+    return unique
+  }, [consumptions])
+
+
+  // Estado para el rango de fechas
+  const [dateFrom, setDateFrom] = useState<Dayjs | null>(null)
+  const [dateTo, setDateTo] = useState<Dayjs | null>(null)
+
+  // Cuando cambian las fechas disponibles, setear defaults: Hasta = última fecha, Desde = un mes antes o la primera fecha
+  useEffect(() => {
+    if (availableDates.length > 0) {
+      const last = availableDates[availableDates.length - 1]
+      let monthBefore = last.subtract(1, 'month')
+      // Buscar la fecha más cercana >= monthBefore
+      let from = availableDates.find(d => !d.isBefore(monthBefore, 'day')) || availableDates[0]
+      setDateTo(last)
+      setDateFrom(from)
+    }
+  }, [availableDates])
   const [selectedSensorId, setSelectedSensorId] = useState<string | null>(null)
   
   // Estados para tooltips interactivos
@@ -67,8 +92,9 @@ const ConsumptionHistoryPage = () => {
 
   // Datos filtrados por fecha
   const filteredConsumptions = consumptions.filter(c => {
-    const date = c.date
-    return date >= dateFrom && date <= dateTo
+    if (!dateFrom || !dateTo) return false
+    const d = dayjs(c.date)
+    return (d.isSame(dateFrom, 'day') || d.isAfter(dateFrom, 'day')) && (d.isSame(dateTo, 'day') || d.isBefore(dateTo, 'day'))
   })
 
   // Datos filtrados por sensor específico para análisis detallado
@@ -195,35 +221,38 @@ const ConsumptionHistoryPage = () => {
         </div>
 
         {/* Filtros de fecha y sensores */}
+
+
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 animate-fade-in-up animation-delay-100">
-          {/* Filtros de fecha */}
-          <Card className="p-6 transform transition-all duration-300 hover:shadow-lg">
-            <div className="flex items-center space-x-3 mb-4">
-              <PiCalendarDuotone className="w-5 h-5 text-blue-600" />
-              <h3 className="font-semibold text-gray-800">Filtrar por Período</h3>
-            </div>
-            
-            <div className="grid grid-cols-2 gap-4">
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">Desde</label>
-                <input
-                  type="date"
-                  value={dateFrom}
-                  onChange={(e) => setDateFrom(e.target.value)}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
-                />
+          {/* Filtros de fecha: Desde y Hasta, alineados horizontalmente y centrados */}
+          <div className="w-full">
+            <Card className="flex flex-row items-center gap-6 bg-white border border-gray-200 rounded-2xl shadow-md px-8 py-4">
+              <div className="flex flex-row items-center gap-6">
+                <div className="flex flex-col items-start">
+                  <span className="text-xs text-gray-500 mb-1">Desde</span>
+                  <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-2">
+                    <MuiDateCalendarInput
+                      value={dateFrom}
+                      onChange={setDateFrom}
+                      availableDates={availableDates}
+                      label={undefined}
+                    />
+                  </div>
+                </div>
+                <div className="flex flex-col items-start">
+                  <span className="text-xs text-gray-500 mb-1">Hasta</span>
+                  <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-2">
+                    <MuiDateCalendarInput
+                      value={dateTo}
+                      onChange={setDateTo}
+                      availableDates={availableDates}
+                      label={undefined}
+                    />
+                  </div>
+                </div>
               </div>
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">Hasta</label>
-                <input
-                  type="date"
-                  value={dateTo}
-                  onChange={(e) => setDateTo(e.target.value)}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
-                />
-              </div>
-            </div>
-          </Card>
+            </Card>
+          </div>
 
           {/* Selector de sensores */}
           <Card className="p-6 transform transition-all duration-300 hover:shadow-lg">
@@ -231,7 +260,6 @@ const ConsumptionHistoryPage = () => {
               <PiDropDuotone className="w-5 h-5 text-green-600" />
               <h3 className="font-semibold text-gray-800">Filtrar por Sensor</h3>
             </div>
-            
             <div className="space-y-3">
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">Sensor específico</label>
@@ -248,7 +276,6 @@ const ConsumptionHistoryPage = () => {
                   ))}
                 </select>
               </div>
-
             </div>
           </Card>
         </div>
@@ -590,7 +617,7 @@ const ConsumptionHistoryPage = () => {
             </div>
             <div className="flex items-center space-x-2">
               <span className="text-sm text-gray-500">
-                {format(new Date(dateFrom), 'dd/MM/yyyy')} - {format(new Date(dateTo), 'dd/MM/yyyy')}
+                {dateFrom ? dateFrom.format('DD/MM/YYYY') : ''} - {dateTo ? dateTo.format('DD/MM/YYYY') : ''}
               </span>
             </div>
           </div>

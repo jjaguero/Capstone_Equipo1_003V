@@ -26,6 +26,7 @@ interface Home {
 const ConsumptionPage = () => {
     const {
         stats,
+        consumptions,
         loading: consumptionLoading,
         error: consumptionError,
         refetch,
@@ -138,6 +139,17 @@ const ConsumptionPage = () => {
                     Actualizar
                 </Button>
             </div>
+
+            {/* Filtros de consumo */}
+            <ConsumptionFilters
+                homes={homes}
+                consumptions={consumptions}
+                onFilterHome={refetch}
+                onFilterDateRange={refetch}
+                onFilterPeriod={refetch}
+                currentPeriod={null}
+                onReset={refetch}
+            />
 
             {/* KPIs - Estadísticas principales */}
             <div className="animate-slideUp" style={{ animationDelay: '0.1s' }}>
