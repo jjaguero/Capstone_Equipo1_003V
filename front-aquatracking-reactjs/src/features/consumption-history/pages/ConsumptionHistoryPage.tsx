@@ -261,7 +261,10 @@ const ConsumptionHistoryPage = () => {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 animate-fade-in-up animation-delay-100">
                     <div className="w-full">
                         <Card className="flex flex-col gap-4 bg-gradient-to-br from-gray-50 to-white border border-gray-100 rounded-3xl shadow-lg px-10 py-6">
-                            <div className="flex flex-row w-full justify-end">
+                            <div
+                                className="flex flex-row w-full justify-start"
+                                style={{ paddingBottom: 30 }}
+                            >
                                 <select
                                     value={timePeriod}
                                     onChange={(e) => {
@@ -314,12 +317,12 @@ const ConsumptionHistoryPage = () => {
                                     <option value="Monthly">Mes</option>
                                 </select>
                             </div>
-                            <div className="flex flex-row items-center gap-8 w-full">
-                                <div className="flex flex-col items-start">
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full">
+                                <div className="flex flex-col w-full">
                                     <span className="text-sm font-medium text-gray-600 mb-2">
                                         Desde
                                     </span>
-                                    <div className="bg-white rounded-2xl border border-gray-200 shadow p-3">
+                                    <div className="bg-white rounded-2xl border border-gray-200 shadow p-3 w-full">
                                         <MuiDateCalendarInput
                                             value={dateFrom}
                                             onChange={setDateFrom}
@@ -328,11 +331,11 @@ const ConsumptionHistoryPage = () => {
                                         />
                                     </div>
                                 </div>
-                                <div className="flex flex-col items-start">
+                                <div className="flex flex-col w-full">
                                     <span className="text-sm font-medium text-gray-600 mb-2">
                                         Hasta
                                     </span>
-                                    <div className="bg-white rounded-2xl border border-gray-200 shadow p-3">
+                                    <div className="bg-white rounded-2xl border border-gray-200 shadow p-3 w-full">
                                         <MuiDateCalendarInput
                                             value={dateTo}
                                             onChange={setDateTo}
