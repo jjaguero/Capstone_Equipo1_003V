@@ -2,101 +2,126 @@ import { lazy } from 'react';
 import type { Routes } from '@/@types/routes';
 
 const aquaTrackingRoutes: Routes = [
+  // ========================================
+  // 👤 RUTAS DE USUARIO (USER)
+  // ========================================
+  
+  // Dashboard Principal del Usuario
   {
-    key: 'aquatracking.userOverview',
-    path: '/user/overview',
-    component: lazy(() => import('@/features/user-dashboard/pages/UserDashboardPage')),
-    authority: [],
+    key: 'user.dashboard',
+    path: '/user/dashboard',
+    component: lazy(() => import('@/features/user/dashboard/pages/UserDashboardPage')),
+    authority: ['user'],
   },
+
+  // Consumo
   {
-    key: 'aquatracking.userSensors',
-    path: '/user/sensors',
-    component: lazy(() => import('@/features/sensors/pages/SensorsPage')),
-    authority: [],
-  },
-  {
-    key: 'aquatracking.userAlerts',
-    path: '/user/alerts',
-    component: lazy(() => import('@/features/user-alerts/pages/UserAlertsPage')),
-    authority: [],
-  },
-  {
-    key: 'aquatracking.userConsumptionHistory',
+    key: 'user.consumption',
     path: '/user/consumption',
-    component: lazy(() => import('@/features/consumption-history/pages/ConsumptionHistoryPage')),
-    authority: [],
+    component: lazy(() => import('@/features/user/consumption-history/pages/ConsumptionHistoryPage')),
+    authority: ['user'],
+  },
+
+  // Sensores
+  {
+    key: 'user.sensors',
+    path: '/user/sensors',
+    component: lazy(() => import('@/features/user/sensors/pages/SensorsPage')),
+    authority: ['user'],
   },
   {
-    key: 'aquatracking.sensorDetail',
+    key: 'user.sensors.detail',
     path: '/user/sensors/:sensorId',
-    component: lazy(() => import('@/features/sensors/pages/SensorDetailPage')),
-    authority: [],
+    component: lazy(() => import('@/features/user/sensors/pages/SensorDetailPage')),
+    authority: ['user'],
   },
+
+  // Alertas
   {
-    key: 'aquatracking.adminOverview',
-    path: '/admin/overview',
-    component: lazy(() => import('@/features/consumption/pages/ConsumptionPage')),
-    authority: [],
+    key: 'user.alerts',
+    path: '/user/alerts',
+    component: lazy(() => import('@/features/user/alerts/pages/UserAlertsPage')),
+    authority: ['user'],
   },
+
+  // ========================================
+  // 🔧 RUTAS DE ADMINISTRADOR (ADMIN)
+  // ========================================
+
+  // Dashboard Principal del Admin
   {
-    key: 'aquatracking.adminUsers',
+    key: 'admin.dashboard',
+    path: '/admin/dashboard',
+    component: lazy(() => import('@/features/admin/consumption/pages/ConsumptionPage')),
+    authority: ['admin'],
+  },
+
+  // Gestión de Usuarios
+  {
+    key: 'admin.users.list',
     path: '/admin/users',
-    component: lazy(() => import('@/features/users/pages/UsersManagementPage')),
-    authority: [],
+    component: lazy(() => import('@/features/admin/users/pages/UsersManagementPage')),
+    authority: ['admin'],
   },
   {
-    key: 'aquatracking.adminAddUser',
+    key: 'admin.users.add',
     path: '/admin/users/add',
-    component: lazy(() => import('@/features/users/pages/AddUserPage')),
-    authority: [],
+    component: lazy(() => import('@/features/admin/users/pages/AddUserPage')),
+    authority: ['admin'],
   },
+
+  // Gestión de Hogares
   {
-    key: 'aquatracking.adminHomes',
+    key: 'admin.homes.list',
     path: '/admin/homes',
-    component: lazy(() => import('@/features/homes/pages/HomesManagementPage')),
-    authority: [],
+    component: lazy(() => import('@/features/admin/homes/pages/HomesManagementPage')),
+    authority: ['admin'],
   },
   {
-    key: 'aquatracking.adminAddHome',
+    key: 'admin.homes.add',
     path: '/admin/homes/add',
-    component: lazy(() => import('@/features/homes/pages/AddHomePage')),
-    authority: [],
+    component: lazy(() => import('@/features/admin/homes/pages/AddHomePage')),
+    authority: ['admin'],
   },
+
+  // Gestión de Sensores
   {
-    key: 'aquatracking.adminSensors',
+    key: 'admin.sensors.list',
     path: '/admin/sensors',
-    component: lazy(() => import('@/features/sensors/pages/SensorsManagementPage')),
-    authority: [],
+    component: lazy(() => import('@/features/user/sensors/pages/SensorsManagementPage')),
+    authority: ['admin'],
   },
+
+  // Gestión de Alertas
   {
-    key: 'aquatracking.adminConsumption',
-    path: '/admin/consumption',
-    component: lazy(() => import('@/features/consumption/pages/ConsumptionPage')),
-    authority: [],
-  },
-  {
-    key: 'aquatracking.adminAlerts',
+    key: 'admin.alerts.list',
     path: '/admin/alerts',
-    component: lazy(() => import('@/features/alerts/pages/AlertsPage')),
-    authority: [],
+    component: lazy(() => import('@/features/admin/alerts/pages/AlertsPage')),
+    authority: ['admin'],
   },
+
+  // Gestión de Sectores
   {
-    key: 'aquatracking.adminSectors',
+    key: 'admin.sectors.list',
     path: '/admin/sectors',
-    component: lazy(() => import('@/features/sectors/pages/SectorsPage')),
-    authority: [],
+    component: lazy(() => import('@/features/admin/sectors/pages/SectorsPage')),
+    authority: ['admin'],
   },
+
+  // Estadísticas
   {
-    key: 'aquatracking.adminStatistics',
+    key: 'admin.statistics',
     path: '/admin/statistics',
-    component: lazy(() => import('@/features/statistics/pages/StatisticsPage')),
-    authority: [],
+    component: lazy(() => import('@/features/admin/statistics/pages/StatisticsPage')),
+    authority: ['admin'],
   },
+
+
   {
-    key: 'aquatracking.settings',
+    key: 'settings.profile',
     path: '/settings',
-    component: lazy(() => import('@/features/user-profile/pages/UserProfilePage')),
-    authority: [],
+    component: lazy(() => import('@/features/user/profile/pages/UserProfilePage')),
+    authority: ['user', 'admin'],
   },
 ];
 

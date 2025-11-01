@@ -58,6 +58,30 @@ export class MeasurementsController {
     return this.measurementsService.sumLitersByHome(homeId);
   }
 
+  @Get('sensor/:sensorId/hourly')
+  getHourlyConsumption(@Param('sensorId') sensorId: string) {
+    return this.measurementsService.getHourlyConsumptionToday(sensorId);
+  }
+
+  @Get('sensor/:sensorId/today')
+  getTodayConsumption(@Param('sensorId') sensorId: string) {
+    return this.measurementsService.getTodayConsumption(sensorId);
+  }
+
+  @Get('sensor/:sensorId/recent')
+  getRecentMeasurements(
+    @Param('sensorId') sensorId: string,
+    @Query('limit') limit?: string,
+  ) {
+    const limitNum = limit ? parseInt(limit, 10) : 10;
+    return this.measurementsService.getRecentMeasurements(sensorId, limitNum);
+  }
+
+  @Get('sensor/:sensorId/last-7-days')
+  getLast7Days(@Param('sensorId') sensorId: string) {
+    return this.measurementsService.getLast7DaysConsumption(sensorId);
+  }
+
   @Get('count')
   count() {
     return this.measurementsService.count();

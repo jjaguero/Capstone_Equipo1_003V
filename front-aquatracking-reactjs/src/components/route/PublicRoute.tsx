@@ -10,7 +10,7 @@ const PublicRoute = () => {
     }
 
     if (authenticated && currentUser) {
-        const destination = currentUser.role === 'admin' ? '/admin/overview' : '/user/overview'
+        const destination = currentUser.role === 'admin' ? '/admin/dashboard' : '/user/dashboard'
         return <Navigate to={destination} replace />
     }
 

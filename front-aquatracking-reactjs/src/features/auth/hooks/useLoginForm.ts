@@ -27,7 +27,7 @@ export const useLoginForm = () => {
 
     try {
       const user = await signIn(values.email, values.password)
-      navigate(user.role === 'admin' ? '/admin/overview' : '/user/overview')
+      navigate(user.role === 'admin' ? '/admin/dashboard' : '/user/dashboard')
     } catch (error: any) {
       setErrorMessage(error.message || 'Error al iniciar sesión')
     } finally {

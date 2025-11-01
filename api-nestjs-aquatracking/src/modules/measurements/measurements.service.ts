@@ -90,4 +90,117 @@ export class MeasurementsService {
     ]);
     return result[0]?.total || 0;
   }
+
+  // 🆕 Consumo por hora del día actual para un sensor
+  async getHourlyConsumptionToday(sensorId: string): Promise<any[]> {
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+    const tomorrow = new Date(today);
+    tomorrow.setDate(tomorrow.getDate() + 1);
+
+    return await this.measurementModel.aggregate([
+      {
+        $match: {
+          sensorId,
+          startTime: { $gte: today, $lt: tomorrow },
+        },
+      },
+      {
+        $group: {
+          _id: {
+            $hour: '$startTime',
+          },
+          liters: { $sum: '$liters' },
+          count: { $sum: 1 },
+          avgDuration: { $avg: '$durationSec' },
+        },
+      },
+      {
+        $sort: { _id: 1 },
+      },
+      {
+        $project: {
+          hour: '$_id',
+          liters: 1,
+          count: 1,
+          avgDuration: 1,
+          _id: 0,
+        },
+      },
+    ]);
+  }
+
+  // 🆕 Consumo total del día actual para un sensor
+  async getTodayConsumption(sensorId: string): Promise<any> {
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+    const tomorrow = new Date(today);
+    tomorrow.setDate(tomorrow.getDate() + 1);
+
+    const result = await this.measurementModel.aggregate([
+      {
+        $match: {
+          sensorId,
+          startTime: { $gte: today, $lt: tomorrow },
+        },
+      },
+      {
+        $group: {
+          _id: null,
+          totalLiters: { $sum: '$liters' },
+          count: { $sum: 1 },
+          avgDuration: { $avg: '$durationSec' },
+          minStartTime: { $min: '$startTime' },
+          maxEndTime: { $max: '$endTime' },
+        },
+      },
+    ]);
+
+    return result[0] || { totalLiters: 0, count: 0, avgDuration: 0 };
+  }
+
+  // 🆕 Últimas mediciones de un sensor
+  async getRecentMeasurements(sensorId: string, limit: number = 10): Promise<Measurement[]> {
+    return await this.measurementModel
+      .find({ sensorId })
+      .sort({ startTime: -1 })
+      .limit(limit)
+      .exec();
+  }
+
+  // 🆕 Consumo por día (últimos 7 días)
+  async getLast7DaysConsumption(sensorId: string): Promise<any[]> {
+    const sevenDaysAgo = new Date();
+    sevenDaysAgo.setDate(sevenDaysAgo.getDate() - 7);
+    sevenDaysAgo.setHours(0, 0, 0, 0);
+
+    return await this.measurementModel.aggregate([
+      {
+        $match: {
+          sensorId,
+          startTime: { $gte: sevenDaysAgo },
+        },
+      },
+      {
+        $group: {
+          _id: {
+            $dateToString: { format: '%Y-%m-%d', date: '$startTime' },
+          },
+          liters: { $sum: '$liters' },
+          count: { $sum: 1 },
+        },
+      },
+      {
+        $sort: { _id: 1 },
+      },
+      {
+        $project: {
+          date: '$_id',
+          liters: 1,
+          count: 1,
+          _id: 0,
+        },
+      },
+    ]);
+  }
 }

@@ -23,7 +23,7 @@ const AquaTrackingProtectedRoute = ({
   }
 
   if (requireAdmin && !isAdmin()) {
-    return <Navigate to="/user/overview" replace />;
+    return <Navigate to="/user/dashboard" replace />;
   }
 
   return <>{children}</>;

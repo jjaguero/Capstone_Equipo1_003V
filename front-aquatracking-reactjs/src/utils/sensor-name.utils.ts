@@ -2,7 +2,7 @@
  * Utilidades para normalizar nombres de sensores
  */
 
-import { SENSOR_LOCATIONS, SENSOR_SUBTYPES } from '@/features/sensors/constants/sensors.constant';
+import { SENSOR_LOCATIONS, SENSOR_SUBTYPES } from '@/features/user/sensors/constants/sensors.constant';
 
 /**
  * Normaliza un nombre de sensor convirtiéndolo a un formato legible
