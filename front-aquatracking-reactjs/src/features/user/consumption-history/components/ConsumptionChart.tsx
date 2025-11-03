@@ -25,8 +25,15 @@ export const ConsumptionChart = ({
   onMouseEnter,
   onMouseLeave,
 }: ConsumptionChartProps) => {
-  const maxConsumption = Math.max(...chartData.map((d) => d.consumption))
+  const maxConsumption = Math.max(...chartData.map((d) => d.consumption), userDailyLimit)
   const avgValue = parseFloat(metrics.avgDaily)
+
+  const dataPoints = chartData.length
+  const minWidth = 1200
+  const widthPerPoint = 40
+  const dynamicWidth = Math.max(minWidth, dataPoints * widthPerPoint)
+  const chartWidth = dynamicWidth - 100
+  const labelFrequency = Math.max(1, Math.ceil(dataPoints / 12))
 
   return (
     <Card className="transform p-6 transition-all duration-500 hover:shadow-xl">
@@ -106,11 +113,13 @@ export const ConsumptionChart = ({
         </div>
       </div>
 
-      <div className="relative h-80 overflow-hidden">
+      <div className="relative h-80 overflow-x-auto overflow-y-hidden">
         <svg
           className="h-full w-full animate-fade-in"
-          viewBox="0 0 800 300"
+          viewBox={`0 0 ${dynamicWidth} 300`}
+          preserveAspectRatio="xMidYMid meet"
           onMouseLeave={onMouseLeave}
+          style={{ minWidth: `${dynamicWidth}px` }}
         >
           <defs>
             <pattern
@@ -143,12 +152,12 @@ export const ConsumptionChart = ({
             <>
               <path
                 fill="url(#blueGradient)"
-                d={`M 25,250 ${chartData
+                d={`M 50,250 ${chartData
                   .map(
                     (item, index) =>
-                      `L ${(index / (chartData.length - 1)) * 750 + 25},${250 - (item.consumption / maxConsumption) * 200}`
+                      `L ${(index / (chartData.length - 1)) * chartWidth + 50},${250 - (item.consumption / maxConsumption) * 200}`
                   )
-                  .join(' ')} L ${((chartData.length - 1) / (chartData.length - 1)) * 750 + 25},250 Z`}
+                  .join(' ')} L ${((chartData.length - 1) / (chartData.length - 1)) * chartWidth + 50},250 Z`}
                 className="animation-delay-500 animate-fade-in"
               />
 
@@ -161,7 +170,7 @@ export const ConsumptionChart = ({
                 points={chartData
                   .map(
                     (item, index) =>
-                      `${(index / (chartData.length - 1)) * 750 + 25},${250 - (item.consumption / maxConsumption) * 200}`
+                      `${(index / (chartData.length - 1)) * chartWidth + 50},${250 - (item.consumption / maxConsumption) * 200}`
                   )
                   .join(' ')}
                 className="animation-delay-600 animate-fade-in"
@@ -170,7 +179,7 @@ export const ConsumptionChart = ({
               {chartData.map((item, index) => (
                 <circle
                   key={item.date}
-                  cx={(index / (chartData.length - 1)) * 750 + 25}
+                  cx={(index / (chartData.length - 1)) * chartWidth + 50}
                   cy={250 - (item.consumption / maxConsumption) * 200}
                   r="6"
                   fill="#3b82f6"
@@ -185,29 +194,53 @@ export const ConsumptionChart = ({
               ))}
 
               {!isNaN(avgValue) && avgValue > 0 && (
-                <line
-                  x1="25"
-                  y1={250 - (avgValue / maxConsumption) * 200}
-                  x2="775"
-                  y2={250 - (avgValue / maxConsumption) * 200}
-                  stroke="#06b6d4"
-                  strokeWidth="2"
-                  strokeDasharray="5,5"
-                  className="animation-delay-700 animate-fade-in"
-                />
+                <>
+                  <line
+                    x1="50"
+                    y1={250 - (avgValue / maxConsumption) * 200}
+                    x2={chartWidth + 50}
+                    y2={250 - (avgValue / maxConsumption) * 200}
+                    stroke="#06b6d4"
+                    strokeWidth="2.5"
+                    strokeDasharray="6,6"
+                    className="animation-delay-700 animate-fade-in"
+                    opacity="0.8"
+                  />
+                  <text
+                    x={chartWidth + 55}
+                    y={250 - (avgValue / maxConsumption) * 200 + 4}
+                    fontSize="11"
+                    fill="#06b6d4"
+                    fontWeight="600"
+                  >
+                    Promedio
+                  </text>
+                </>
               )}
 
               {userDailyLimit > 0 && (
-                <line
-                  x1="25"
-                  y1={250 - (userDailyLimit / maxConsumption) * 200}
-                  x2="775"
-                  y2={250 - (userDailyLimit / maxConsumption) * 200}
-                  stroke="#10b981"
-                  strokeWidth="2"
-                  strokeDasharray="8,4"
-                  className="animation-delay-800 animate-fade-in"
-                />
+                <>
+                  <line
+                    x1="50"
+                    y1={250 - (userDailyLimit / maxConsumption) * 200}
+                    x2={chartWidth + 50}
+                    y2={250 - (userDailyLimit / maxConsumption) * 200}
+                    stroke="#10b981"
+                    strokeWidth="2.5"
+                    strokeDasharray="6,6"
+                    className="animation-delay-800 animate-fade-in"
+                    opacity="0.8"
+                  />
+                  <text
+                    x={chartWidth + 55}
+                    y={250 - (userDailyLimit / maxConsumption) * 200 + 4}
+                    fontSize="11"
+                    fill="#10b981"
+                    fontWeight="600"
+                  >
+                    Meta ({userDailyLimit}L)
+                  </text>
+                </>
               )}
             </>
           )}
@@ -229,11 +262,11 @@ export const ConsumptionChart = ({
           })}
 
           {chartData.map((item, index) => {
-            if (index % Math.ceil(chartData.length / 8) === 0) {
+            if (index % labelFrequency === 0 || index === chartData.length - 1) {
               return (
                 <text
                   key={item.date}
-                  x={(index / (chartData.length - 1)) * 750 + 25}
+                  x={(index / (chartData.length - 1)) * chartWidth + 50}
                   y="280"
                   fontSize="11"
                   fill="#6b7280"

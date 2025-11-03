@@ -54,14 +54,12 @@ export const calculateMetrics = (
 }
 
 export const prepareChartData = (
-  filteredData: any[],
-  limit: number = 15
+  filteredData: any[]
 ): Array<{ date: string; consumption: number }> => {
   const sorted = [...filteredData].sort(
     (a, b) => new Date(a.date).getTime() - new Date(b.date).getTime()
   )
-  const lastN = sorted.slice(-limit)
-  return lastN.map((c) => ({ date: c.date, consumption: c.totalLiters }))
+  return sorted.map((c) => ({ date: c.date, consumption: c.totalLiters }))
 }
 
 export const aggregateHourlyData = (

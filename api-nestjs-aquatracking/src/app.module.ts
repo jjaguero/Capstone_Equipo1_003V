@@ -11,6 +11,7 @@ import { MeasurementsModule } from './modules/measurements/measurements.module';
 import { DailyConsumptionModule } from './modules/daily-consumption/daily-consumption.module';
 import { AlertsModule } from './modules/alerts/alerts.module';
 import { UploadModule } from './modules/upload/upload.module';
+import { RealtimeModule } from './modules/realtime/realtime.module';
 
 @Module({
   imports: [
@@ -33,6 +34,7 @@ import { UploadModule } from './modules/upload/upload.module';
     DailyConsumptionModule,
     AlertsModule,
     UploadModule,
+    RealtimeModule,
   ],
   controllers: [AppController],
   providers: [AppService],

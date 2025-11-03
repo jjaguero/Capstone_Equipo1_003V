@@ -17,14 +17,27 @@ export const useConsumptionFilters = (consumptions: any[]) => {
   useEffect(() => {
     if (availableDates.length > 0) {
       const last = availableDates[availableDates.length - 1]
-      let monthBefore = last.subtract(1, 'month')
-      let from =
-        availableDates.find((d) => !d.isBefore(monthBefore, 'day')) ||
-        availableDates[0]
+      let from: Dayjs
+
+      switch (timePeriod) {
+        case 'Weekly':
+          from = last.subtract(1, 'week')
+          break
+        case 'Monthly':
+          from = last.subtract(1, 'month')
+          break
+        case 'Annually':
+          from = last.subtract(1, 'year')
+          break
+        default:
+          from = last.subtract(1, 'month')
+      }
+
+      const foundFrom = availableDates.find((d) => !d.isBefore(from, 'day')) || availableDates[0]
       setDateTo(last)
-      setDateFrom(from)
+      setDateFrom(foundFrom)
     }
-  }, [availableDates])
+  }, [availableDates, timePeriod])
 
   const filteredConsumptions = useMemo(() => {
     return consumptions.filter((c) => {

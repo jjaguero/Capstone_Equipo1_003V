@@ -6,6 +6,7 @@ import AquaTrackingAuthProvider from '@/features/auth/context/AquaTrackingAuthPr
 import { AuthProvider } from '@/auth'
 import Layout from '@/components/layouts'
 import Views from '@/views'
+import { RealtimeNotification } from '@/components/shared/RealtimeNotification'
 import appConfig from './configs/app.config'
 
 if (appConfig.enableMock) {
@@ -22,6 +23,7 @@ function App() {
                         <AuthProvider>
                             <Layout>
                                 <Views />
+                                <RealtimeNotification />
                             </Layout>
                         </AuthProvider>
                     </BrowserRouter>

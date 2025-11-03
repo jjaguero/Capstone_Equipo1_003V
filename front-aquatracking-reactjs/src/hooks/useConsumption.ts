@@ -2,28 +2,29 @@ import { useState, useEffect } from 'react';
 import { apiClient } from '../api/client';
 import { ENDPOINTS } from '../api/endpoints';
 import type { DailyConsumption } from '../@types/entities';
-
-/**
- * Hook to fetch daily consumption data from backend
- * NO business logic - just HTTP calls to NestJS
- */
+import { useWebSocket } from './useWebSocket';
 
 export const useConsumption = (homeId?: string) => {
   const [consumptions, setConsumptions] = useState<DailyConsumption[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const { newDailyData } = useWebSocket();
 
   useEffect(() => {
-
     if (homeId) {
       fetchConsumptionByHome(homeId);
     } else {
-      // Si no hay homeId, no buscar consumos (para usuarios sin hogar asignado)
       setConsumptions([])
       setLoading(false)
       setError(null)
     }
   }, [homeId]);
+
+  useEffect(() => {
+    if (newDailyData && homeId) {
+      fetchConsumptionByHome(homeId);
+    }
+  }, [newDailyData, homeId]);
 
   /**
    * Fetch all daily consumptions

@@ -39,7 +39,7 @@ const HomesManagementPage = () => {
     const navigate = useNavigate()
     const { homes, loading, fetchAllHomes, updateHome: updateHomeHook } = useHomes()
     const { users } = useUsers()
-    const { sensors } = useSensors()
+    const { sensors } = useSensors(undefined, true)
     const { sectors } = useSectors()
 
     const [searchTerm, setSearchTerm] = useState('')
@@ -51,11 +51,7 @@ const HomesManagementPage = () => {
     // Formulario de edición (solo miembros)
     const [members, setMembers] = useState(0)
 
-    // Formulario de sensor
-    const [sensorForm, setSensorForm] = useState({
-        location: '',
-        subType: '',
-    })
+    const [selectedSensorTypes, setSelectedSensorTypes] = useState<Set<string>>(new Set())
 
     // Filtrar hogares por búsqueda
     const filteredHomes = useMemo(() => {
@@ -141,60 +137,91 @@ const HomesManagementPage = () => {
         setSensorsDialogOpen(true)
     }
 
-    // Abrir modal de agregar sensor
     const handleAddSensor = (home: Home) => {
         setSelectedHome(home)
-        setSensorForm({ location: '', subType: '' })
+        setSelectedSensorTypes(new Set())
         setAddSensorDialogOpen(true)
     }
 
-    // Guardar nuevo sensor
+    const handleToggleSensorType = (location: string, subType: string) => {
+        const key = `${location}|${subType}`
+        const newSelected = new Set(selectedSensorTypes)
+        
+        if (newSelected.has(key)) {
+            newSelected.delete(key)
+        } else {
+            newSelected.add(key)
+        }
+        
+        setSelectedSensorTypes(newSelected)
+    }
+
+    const handleSelectAllInLocation = (location: string, types: Array<{value: string; label: string}>) => {
+        const newSelected = new Set(selectedSensorTypes)
+        const allSelected = types.every(type => newSelected.has(`${location}|${type.value}`))
+        
+        if (allSelected) {
+            types.forEach(type => newSelected.delete(`${location}|${type.value}`))
+        } else {
+            types.forEach(type => newSelected.add(`${location}|${type.value}`))
+        }
+        
+        setSelectedSensorTypes(newSelected)
+    }
+
     const handleSaveSensor = async () => {
         if (!selectedHome) return
 
-        if (!sensorForm.location || !sensorForm.subType) {
+        if (selectedSensorTypes.size === 0) {
             toast.push(
                 <div className="bg-yellow-50 dark:bg-yellow-900/20 p-3 rounded-lg">
                     <p className="font-semibold text-yellow-800 dark:text-yellow-200">
-                        Campos requeridos
+                        Sin sensores
                     </p>
                     <p className="text-sm text-yellow-600 dark:text-yellow-300">
-                        Por favor selecciona ubicación y tipo de sensor
+                        Selecciona al menos un sensor
                     </p>
                 </div>
             )
             return
         }
 
-        // Auto-generar serial number
-        const timestamp = Date.now()
-        const randomNum = Math.floor(Math.random() * 10000)
-        const serialNumber = `SN-${sensorForm.subType.toUpperCase()}-${timestamp}-${randomNum}`
-
         try {
-            await apiClient.post(ENDPOINTS.SENSORS, {
-                serialNumber,
-                category: 'agua',
-                location: sensorForm.location,
-                subType: sensorForm.subType,
-                status: 'active',
-                homeId: selectedHome._id,
+            const promises = Array.from(selectedSensorTypes).map(async (key) => {
+                const [location, subType] = key.split('|')
+                const timestamp = Date.now()
+                const randomNum = Math.floor(Math.random() * 10000)
+                const serialNumber = `SN-${subType.toUpperCase()}-${timestamp}-${randomNum}`
+
+                await new Promise(resolve => setTimeout(resolve, 10))
+
+                return apiClient.post(ENDPOINTS.SENSORS, {
+                    serialNumber,
+                    category: 'agua',
+                    location,
+                    subType,
+                    status: 'active',
+                    homeId: selectedHome._id,
+                })
             })
+
+            await Promise.all(promises)
+
             toast.push(
                 <div className="bg-green-50 dark:bg-green-900/20 p-3 rounded-lg">
                     <p className="font-semibold text-green-800 dark:text-green-200">
-                        Sensor agregado
+                        Sensores agregados
                     </p>
                     <p className="text-sm text-green-600 dark:text-green-300">
-                        El sensor se agregó correctamente al hogar
+                        Se agregaron {selectedSensorTypes.size} sensores correctamente
                     </p>
                 </div>
             )
             setAddSensorDialogOpen(false)
-            // Refrescar sensores
-            window.location.reload() // TODO: Mejorar con refetch del hook
+            setSelectedSensorTypes(new Set())
+            window.location.reload()
         } catch (error) {
-            console.error('Error adding sensor:', error)
+            console.error('Error adding sensors:', error)
             toast.push(
                 <div className="bg-red-50 dark:bg-red-900/20 p-3 rounded-lg">
                     <p className="font-semibold text-red-800 dark:text-red-200">Error</p>
@@ -400,39 +427,42 @@ const HomesManagementPage = () => {
                 onRequestClose={() => setSensorsDialogOpen(false)}
                 width={1000}
             >
-                <div className="p-6">
-                    <div className="flex items-center justify-between mb-6">
-                        <div>
-                            <h5 className="text-xl font-bold">
-                                Sensores de {selectedHome?.name}
-                            </h5>
-                            <p className="text-sm text-gray-500 mt-1">
-                                {selectedHome?.address}
-                            </p>
+                <div className="flex flex-col max-h-[90vh]">
+                    <div className="p-6 border-b dark:border-gray-700">
+                        <div className="flex items-center justify-between">
+                            <div>
+                                <h5 className="text-xl font-bold">
+                                    Sensores de {selectedHome?.name}
+                                </h5>
+                                <p className="text-sm text-gray-500 mt-1">
+                                    {selectedHome?.address}
+                                </p>
+                            </div>
+                            <Button
+                                size="sm"
+                                variant="solid"
+                                icon={<PiPlusDuotone />}
+                                onClick={() => {
+                                    setSensorsDialogOpen(false)
+                                    handleAddSensor(selectedHome!)
+                                }}
+                            >
+                                Agregar Sensor
+                            </Button>
                         </div>
-                        <Button
-                            size="sm"
-                            variant="solid"
-                            icon={<PiPlusDuotone />}
-                            onClick={() => {
-                                setSensorsDialogOpen(false)
-                                handleAddSensor(selectedHome!)
-                            }}
-                        >
-                            Agregar Sensor
-                        </Button>
                     </div>
 
-                    {selectedHome && getHomeSensors(selectedHome._id).length === 0 ? (
-                        <div className="text-center py-12 text-gray-500">
-                            <PiDropDuotone className="text-6xl mx-auto mb-4 text-gray-300" />
-                            <p className="text-lg font-medium">No hay sensores instalados</p>
-                            <p className="text-sm mt-2">
-                                Agrega sensores para monitorear el consumo de agua
-                            </p>
-                        </div>
-                    ) : (
-                        <div className="space-y-3">
+                    <div className="flex-1 overflow-y-auto p-6">
+                        {selectedHome && getHomeSensors(selectedHome._id).length === 0 ? (
+                            <div className="text-center py-12 text-gray-500">
+                                <PiDropDuotone className="text-6xl mx-auto mb-4 text-gray-300" />
+                                <p className="text-lg font-medium">No hay sensores instalados</p>
+                                <p className="text-sm mt-2">
+                                    Agrega sensores para monitorear el consumo de agua
+                                </p>
+                            </div>
+                        ) : (
+                            <div className="space-y-3">
                             {selectedHome &&
                                 getHomeSensors(selectedHome._id).map((sensor: Sensor) => (
                                     <Card key={sensor._id} className="p-4">
@@ -500,94 +530,123 @@ const HomesManagementPage = () => {
                                     </Card>
                                 ))}
                         </div>
-                    )}
+                        )}
+                    </div>
 
-                    <div className="flex justify-end mt-6">
-                        <Button variant="plain" onClick={() => setSensorsDialogOpen(false)}>
-                            Cerrar
-                        </Button>
+                    <div className="border-t dark:border-gray-700 p-6">
+                        <div className="flex justify-end">
+                            <Button variant="plain" onClick={() => setSensorsDialogOpen(false)}>
+                                Cerrar
+                            </Button>
+                        </div>
                     </div>
                 </div>
             </Dialog>
 
-            {/* Dialog de agregar sensor */}
             <Dialog
                 isOpen={addSensorDialogOpen}
                 onClose={() => setAddSensorDialogOpen(false)}
                 onRequestClose={() => setAddSensorDialogOpen(false)}
             >
-                <div className="p-6">
-                    <h5 className="text-xl font-bold mb-6">
-                        Agregar Sensor a {selectedHome?.name}
-                    </h5>
-
-                    <div className="space-y-4">
-                        <div>
-                            <label className="block text-sm font-medium mb-2">
-                                Ubicación del Sensor
-                            </label>
-                            <select
-                                className="w-full px-3 py-2 border rounded-lg dark:bg-gray-700 dark:border-gray-600"
-                                value={sensorForm.location}
-                                onChange={(e) => {
-                                    setSensorForm({
-                                        location: e.target.value,
-                                        subType: '', // Reset subType when location changes
-                                    })
-                                }}
-                            >
-                                <option value="">Seleccionar ubicación</option>
-                                {SENSOR_LOCATIONS.map((loc) => (
-                                    <option key={loc.value} value={loc.value}>
-                                        {loc.label}
-                                    </option>
-                                ))}
-                            </select>
-                        </div>
-
-                        {sensorForm.location && (
-                            <div>
-                                <label className="block text-sm font-medium mb-2">
-                                    Tipo de Sensor
-                                </label>
-                                <select
-                                    className="w-full px-3 py-2 border rounded-lg dark:bg-gray-700 dark:border-gray-600"
-                                    value={sensorForm.subType}
-                                    onChange={(e) =>
-                                        setSensorForm({
-                                            ...sensorForm,
-                                            subType: e.target.value,
-                                        })
-                                    }
-                                >
-                                    <option value="">Seleccionar tipo</option>
-                                    {getAvailableSensorTypes(sensorForm.location).map(
-                                        (type) => (
-                                            <option key={type.value} value={type.value}>
-                                                {type.label}
-                                            </option>
-                                        )
-                                    )}
-                                </select>
-                            </div>
-                        )}
-
-                        <p className="text-xs text-gray-500">
-                            El número de serie se generará automáticamente. El sensor se
-                            creará como activo por defecto.
-                        </p>
+                <div className="flex flex-col max-w-3xl max-h-[90vh]">
+                    <div className="p-6 border-b dark:border-gray-700">
+                        <h5 className="text-xl font-bold">
+                            Agregar Sensores a {selectedHome?.name}
+                        </h5>
                     </div>
 
-                    <div className="flex justify-end gap-3 mt-6">
-                        <Button
-                            variant="plain"
-                            onClick={() => setAddSensorDialogOpen(false)}
-                        >
-                            Cancelar
-                        </Button>
-                        <Button variant="solid" onClick={handleSaveSensor}>
-                            Agregar Sensor
-                        </Button>
+                    <div className="flex-1 overflow-y-auto p-6 space-y-6">
+                        {SENSOR_LOCATIONS.map((location) => {
+                            const types = getAvailableSensorTypes(location.value)
+                            const homeSensors = selectedHome ? getHomeSensors(selectedHome._id) : []
+                            
+                            const availableTypes = types.filter(type => {
+                                const exists = homeSensors.some((sensor: Sensor) => 
+                                    sensor.location === location.value && sensor.subType === type.value
+                                )
+                                return !exists
+                            })
+
+                            if (availableTypes.length === 0) return null
+
+                            const allSelected = availableTypes.every(type => 
+                                selectedSensorTypes.has(`${location.value}|${type.value}`)
+                            )
+
+                            return (
+                                <div key={location.value} className="border rounded-lg p-4 dark:border-gray-700">
+                                    <div className="flex items-center justify-between mb-4">
+                                        <div className="flex items-center gap-3">
+                                            <PiDropDuotone className="text-blue-500 text-2xl" />
+                                            <h6 className="text-lg font-semibold">{location.label}</h6>
+                                        </div>
+                                        <Button
+                                            variant="plain"
+                                            size="sm"
+                                            onClick={() => handleSelectAllInLocation(location.value, availableTypes)}
+                                            className="text-sm text-indigo-600 hover:text-indigo-700"
+                                        >
+                                            {allSelected ? 'Deseleccionar todos' : 'Seleccionar todos'}
+                                        </Button>
+                                    </div>
+
+                                    <div className="grid grid-cols-2 gap-3">
+                                        {availableTypes.map((type) => {
+                                            const key = `${location.value}|${type.value}`
+                                            const isSelected = selectedSensorTypes.has(key)
+
+                                            return (
+                                                <label
+                                                    key={type.value}
+                                                    className={`flex items-center gap-3 p-3 rounded-lg border-2 cursor-pointer transition-all ${
+                                                        isSelected
+                                                            ? 'border-indigo-500 bg-indigo-50 dark:bg-indigo-900/20'
+                                                            : 'border-gray-200 hover:border-gray-300 dark:border-gray-700'
+                                                    }`}
+                                                >
+                                                    <input
+                                                        type="checkbox"
+                                                        checked={isSelected}
+                                                        onChange={() => handleToggleSensorType(location.value, type.value)}
+                                                        className="w-5 h-5 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
+                                                    />
+                                                    <div className="flex-1">
+                                                        <p className="text-sm font-medium">{type.label}</p>
+                                                    </div>
+                                                </label>
+                                            )
+                                        })}
+                                    </div>
+                                </div>
+                            )
+                        })}
+                    </div>
+
+                    <div className="border-t dark:border-gray-700 p-6">
+                        <div className="mb-4 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
+                            <p className="text-sm text-blue-800 dark:text-blue-200">
+                                <strong>{selectedSensorTypes.size}</strong> sensor{selectedSensorTypes.size !== 1 ? 'es' : ''} seleccionado{selectedSensorTypes.size !== 1 ? 's' : ''}
+                            </p>
+                            <p className="text-xs text-blue-600 dark:text-blue-300 mt-1">
+                                Los números de serie se generarán automáticamente
+                            </p>
+                        </div>
+
+                        <div className="flex justify-end gap-3">
+                            <Button
+                                variant="plain"
+                                onClick={() => setAddSensorDialogOpen(false)}
+                            >
+                                Cancelar
+                            </Button>
+                            <Button 
+                                variant="solid" 
+                                onClick={handleSaveSensor}
+                                disabled={selectedSensorTypes.size === 0}
+                            >
+                                Agregar {selectedSensorTypes.size} Sensor{selectedSensorTypes.size !== 1 ? 'es' : ''}
+                            </Button>
+                        </div>
                     </div>
                 </div>
             </Dialog>

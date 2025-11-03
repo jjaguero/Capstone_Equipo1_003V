@@ -2,11 +2,7 @@ import { lazy } from 'react';
 import type { Routes } from '@/@types/routes';
 
 const aquaTrackingRoutes: Routes = [
-  // ========================================
-  // 👤 RUTAS DE USUARIO (USER)
-  // ========================================
-  
-  // Dashboard Principal del Usuario
+
   {
     key: 'user.dashboard',
     path: '/user/dashboard',
@@ -43,10 +39,6 @@ const aquaTrackingRoutes: Routes = [
     component: lazy(() => import('@/features/user/alerts/pages/UserAlertsPage')),
     authority: ['user'],
   },
-
-  // ========================================
-  // 🔧 RUTAS DE ADMINISTRADOR (ADMIN)
-  // ========================================
 
   // Dashboard Principal del Admin
   {

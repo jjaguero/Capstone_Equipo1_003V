@@ -130,7 +130,6 @@ export class MeasurementsService {
     ]);
   }
 
-  // 🆕 Consumo total del día actual para un sensor
   async getTodayConsumption(sensorId: string): Promise<any> {
     const today = new Date();
     today.setHours(0, 0, 0, 0);

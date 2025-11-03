@@ -47,10 +47,11 @@ const ConsumptionHistoryPage = () => {
   const { hourlyConsumption, loadingHourly, errorHourly } =
     useHourlyConsumption(selectedSensorId, !!selectedSensorId)
 
-  const { chartData, tooltipData, handleMouseEnter, handleMouseLeave } =
-    useChartData(sensorFilteredData)
-
   const userDailyLimit = currentUser?.limitLitersPerDay || 150
+  const avgDaily = parseFloat(metrics.avgDaily) || 0
+
+  const { chartData, tooltipData, handleMouseEnter, handleMouseLeave } =
+    useChartData(sensorFilteredData, userDailyLimit, avgDaily)
 
   const handleClearFilters = () => {
     setSelectedSensorId(null)
