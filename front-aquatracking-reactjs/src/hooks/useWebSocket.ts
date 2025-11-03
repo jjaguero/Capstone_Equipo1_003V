@@ -10,10 +10,22 @@ interface NewDailyData {
   simulatedDate: string
 }
 
+interface NewMeasurement {
+  sensorId: string
+  homeId: string
+  liters: number
+  flowRate: number
+  durationSec: number
+  startTime: string
+  endTime: string
+  action: 'open' | 'close'
+}
+
 interface UseWebSocketReturn {
   socket: Socket | null
   isConnected: boolean
   newDailyData: NewDailyData | null
+  newMeasurement: NewMeasurement | null
   currentSimulatedDate: string | null
 }
 
@@ -21,6 +33,7 @@ export const useWebSocket = (): UseWebSocketReturn => {
   const [socket, setSocket] = useState<Socket | null>(null)
   const [isConnected, setIsConnected] = useState(false)
   const [newDailyData, setNewDailyData] = useState<NewDailyData | null>(null)
+  const [newMeasurement, setNewMeasurement] = useState<NewMeasurement | null>(null)
   const [currentSimulatedDate, setCurrentSimulatedDate] = useState<string | null>(null)
 
   useEffect(() => {
@@ -47,6 +60,11 @@ export const useWebSocket = (): UseWebSocketReturn => {
       setCurrentSimulatedDate(data.simulatedDate)
     })
 
+    socketInstance.on('newMeasurement', (data: NewMeasurement) => {
+      console.log('Nuevo measurement:', data.action === 'close' ? 'Llave cerrada' : 'Llave abierta', data)
+      setNewMeasurement(data)
+    })
+
     socketInstance.on('newAlert', (data: any) => {
       console.log('Nueva alerta:', data)
     })
@@ -66,6 +84,7 @@ export const useWebSocket = (): UseWebSocketReturn => {
     socket,
     isConnected,
     newDailyData,
+    newMeasurement,
     currentSimulatedDate,
   }
 }

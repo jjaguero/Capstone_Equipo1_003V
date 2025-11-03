@@ -28,6 +28,21 @@ export class Sensor {
 
   @Prop({ type: [String], default: ['litros'] })
   tags: string[];
+
+  @Prop({ default: null })
+  lastMeasurementAt: Date;
+
+  @Prop({ default: 0 })
+  currentFlowRate: number;
+
+  @Prop({ default: 0 })
+  lastLiters: number;
+
+  @Prop({ default: 0 })
+  todayTotalLiters: number;
+
+  @Prop({ default: 'idle', enum: ['idle', 'flowing', 'stopped'] })
+  flowStatus: string;
 }
 
 export const SensorSchema = SchemaFactory.createForClass(Sensor);

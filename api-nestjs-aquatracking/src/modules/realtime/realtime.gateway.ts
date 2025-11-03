@@ -33,8 +33,21 @@ export class RealtimeGateway
     this.logger.log(`Client disconnected: ${client.id}`);
   }
 
-  emitNewMeasurement(data: any) {
-    this.server.emit('newMeasurement', data);
+  emitNewMeasurement(measurement: any) {
+    const flowRate = measurement.durationSec > 0 
+      ? (measurement.liters / measurement.durationSec) * 60 
+      : 0;
+
+    this.server.emit('newMeasurement', {
+      sensorId: measurement.sensorId,
+      homeId: measurement.homeId,
+      liters: measurement.liters,
+      flowRate: Math.round(flowRate * 100) / 100,
+      durationSec: measurement.durationSec,
+      startTime: measurement.startTime,
+      endTime: measurement.endTime,
+      action: measurement.liters > 0 ? 'close' : 'open',
+    });
   }
 
   emitNewDailyData(data: any) {

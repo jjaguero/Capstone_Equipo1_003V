@@ -7,6 +7,7 @@ import { AuthProvider } from '@/auth'
 import Layout from '@/components/layouts'
 import Views from '@/views'
 import { RealtimeNotification } from '@/components/shared/RealtimeNotification'
+import { RealtimeMeasurementNotification } from '@/components/shared/RealtimeMeasurementNotification'
 import appConfig from './configs/app.config'
 
 if (appConfig.enableMock) {
@@ -24,6 +25,7 @@ function App() {
                             <Layout>
                                 <Views />
                                 <RealtimeNotification />
+                                <RealtimeMeasurementNotification />
                             </Layout>
                         </AuthProvider>
                     </BrowserRouter>
