@@ -25,8 +25,12 @@ export const ConsumptionChart = ({
   onMouseEnter,
   onMouseLeave,
 }: ConsumptionChartProps) => {
-  const maxConsumption = Math.max(...chartData.map((d) => d.consumption), userDailyLimit)
-  const avgValue = parseFloat(metrics.avgDaily)
+  // Validar que haya datos
+  const hasData = chartData && chartData.length > 0
+  const maxConsumption = hasData 
+    ? Math.max(...chartData.map((d) => d.consumption), userDailyLimit)
+    : userDailyLimit || 100
+  const avgValue = parseFloat(metrics.avgDaily) || 0
 
   const dataPoints = chartData.length
   const minWidth = 1200
@@ -114,14 +118,27 @@ export const ConsumptionChart = ({
       </div>
 
       <div className="relative h-80 overflow-x-auto overflow-y-hidden">
-        <svg
-          className="h-full w-full animate-fade-in"
-          viewBox={`0 0 ${dynamicWidth} 300`}
-          preserveAspectRatio="xMidYMid meet"
-          onMouseLeave={onMouseLeave}
-          style={{ minWidth: `${dynamicWidth}px` }}
-        >
-          <defs>
+        {!hasData ? (
+          <div className="flex h-full items-center justify-center">
+            <div className="text-center">
+              <PiDropDuotone className="mx-auto mb-4 h-16 w-16 text-gray-300 dark:text-gray-600" />
+              <p className="text-lg font-medium text-gray-500 dark:text-gray-400">
+                No hay datos disponibles
+              </p>
+              <p className="mt-2 text-sm text-gray-400 dark:text-gray-500">
+                Este sensor no tiene registros en el período seleccionado
+              </p>
+            </div>
+          </div>
+        ) : (
+          <svg
+            className="h-full w-full animate-fade-in"
+            viewBox={`0 0 ${dynamicWidth} 300`}
+            preserveAspectRatio="xMidYMid meet"
+            onMouseLeave={onMouseLeave}
+            style={{ minWidth: `${dynamicWidth}px` }}
+          >
+            <defs>
             <pattern
               id="grid"
               width="40"
@@ -282,6 +299,7 @@ export const ConsumptionChart = ({
             return null
           })}
         </svg>
+        )}
       </div>
     </Card>
   )

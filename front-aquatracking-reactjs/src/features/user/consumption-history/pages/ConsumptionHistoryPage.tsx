@@ -5,7 +5,6 @@ import { useAquaTrackingAuth } from '@/features/auth/hooks/useAquaTrackingAuth'
 import {
   useConsumptionFilters,
   useConsumptionMetrics,
-  useHourlyConsumption,
   useChartData,
 } from '../hooks'
 import {
@@ -13,7 +12,6 @@ import {
   ConsumptionKPICards,
   ConsumptionChart,
   ChartTooltip,
-  HourlyConsumptionTable,
   DailyConsumptionTable,
 } from '../components'
 
@@ -43,9 +41,6 @@ const ConsumptionHistoryPage = () => {
     consumptions,
     sensors
   )
-
-  const { hourlyConsumption, loadingHourly, errorHourly } =
-    useHourlyConsumption(selectedSensorId, !!selectedSensorId)
 
   const userDailyLimit = currentUser?.limitLitersPerDay || 150
   const avgDaily = parseFloat(metrics.avgDaily) || 0
@@ -113,14 +108,6 @@ const ConsumptionHistoryPage = () => {
         />
 
         <ChartTooltip data={tooltipData} />
-
-        {selectedSensorId && (
-          <HourlyConsumptionTable
-            hourlyConsumption={hourlyConsumption}
-            loading={loadingHourly}
-            error={errorHourly}
-          />
-        )}
 
         <DailyConsumptionTable
           consumptions={sensorFilteredData}

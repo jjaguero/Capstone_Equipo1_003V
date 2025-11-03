@@ -1,7 +1,6 @@
 import { Module } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose';
 import { RealtimeGateway } from './realtime.gateway';
-import { DataSimulatorService } from './data-simulator.service';
 import {
   DailyConsumption,
   DailyConsumptionSchema,
@@ -18,7 +17,7 @@ import {
       { name: Measurement.name, schema: MeasurementSchema },
     ]),
   ],
-  providers: [RealtimeGateway, DataSimulatorService],
+  providers: [RealtimeGateway],
   exports: [RealtimeGateway],
 })
 export class RealtimeModule {}

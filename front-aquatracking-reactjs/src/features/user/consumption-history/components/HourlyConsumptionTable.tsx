@@ -56,11 +56,12 @@ export const HourlyConsumptionTable = ({
             </thead>
             <tbody className="divide-y divide-gray-200 bg-white dark:divide-gray-700 dark:bg-gray-900">
               {hourlyConsumption.map((item) => {
+                const consumption = item.consumption || 0
                 const total = hourlyConsumption.reduce(
-                  (sum, h) => sum + h.consumption,
+                  (sum, h) => sum + (h.consumption || 0),
                   0
                 )
-                const percentage = total > 0 ? (item.consumption / total) * 100 : 0
+                const percentage = total > 0 ? (consumption / total) * 100 : 0
 
                 return (
                   <tr
@@ -72,7 +73,7 @@ export const HourlyConsumptionTable = ({
                       {String(item.hour).padStart(2, '0')}:59
                     </td>
                     <td className="whitespace-nowrap px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                      {item.consumption.toFixed(2)} L
+                      {consumption.toFixed(2)} L
                     </td>
                     <td className="whitespace-nowrap px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
                       <div className="flex items-center gap-2">

@@ -70,7 +70,7 @@ export const useWebSocket = (): UseWebSocketReturn => {
     })
 
     socketInstance.on('connect_error', (error) => {
-      console.error('Connection error:', error)
+      console.warn('WebSocket connection error (ignored)')
     })
 
     setSocket(socketInstance)

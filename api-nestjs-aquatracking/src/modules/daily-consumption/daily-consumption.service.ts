@@ -20,7 +20,13 @@ export class DailyConsumptionService {
   }
 
   async findAll(): Promise<DailyConsumption[]> {
-    return await this.dailyConsumptionModel.find().sort({ date: -1 }).exec();
+    const today = new Date();
+    today.setHours(23, 59, 59, 999); // Final del día actual
+    
+    return await this.dailyConsumptionModel
+      .find({ date: { $lte: today } })
+      .sort({ date: -1 })
+      .exec();
   }
 
   async findOne(id: string): Promise<DailyConsumption> {
@@ -32,8 +38,14 @@ export class DailyConsumptionService {
   }
 
   async findByHome(homeId: string, limit?: number): Promise<DailyConsumption[]> {
+    const today = new Date();
+    today.setHours(23, 59, 59, 999); // Final del día actual
+    
     const query = this.dailyConsumptionModel
-      .find({ homeId })
+      .find({ 
+        homeId,
+        date: { $lte: today }
+      })
       .sort({ date: -1 });
     
     if (limit) {
@@ -129,7 +141,6 @@ export class DailyConsumptionService {
       { $sort: { "_id": 1 } }
     ]);
 
-    // Si no hay datos recientes, obtener los últimos datos disponibles
     if (!result.length) {
       result = await this.dailyConsumptionModel.aggregate([
         {
@@ -145,7 +156,6 @@ export class DailyConsumptionService {
       ]);
     }
 
-    // Mapear al formato esperado por el frontend
     return result.map(item => ({
       date: item._id,
       totalConsumption: item.totalConsumption,
@@ -154,13 +164,11 @@ export class DailyConsumptionService {
   }
 
   async getConsumptionDistribution(): Promise<any> {
-    // Buscar los datos más recientes disponibles
     const consumptions = await this.dailyConsumptionModel.find()
       .sort({ date: -1 })
       .limit(240); // Últimos 240 registros (aprox. 24 días × 10 hogares)
 
     if (!consumptions.length) {
-      // Si no hay datos, devolver distribución vacía
       return [
         { range: 'Bajo (0-50%)', count: 0, percentage: 0 },
         { range: 'Normal (50-80%)', count: 0, percentage: 0 },
@@ -169,7 +177,6 @@ export class DailyConsumptionService {
       ];
     }
 
-    // Categorizar los consumos
     const categories = {
       low: 0,    // 0-50%
       normal: 0, // 50-80%

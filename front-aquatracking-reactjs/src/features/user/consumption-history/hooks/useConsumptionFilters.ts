@@ -53,11 +53,26 @@ export const useConsumptionFilters = (consumptions: any[]) => {
   const sensorFilteredData = useMemo(() => {
     if (!selectedSensorId) return filteredConsumptions
     
-    return filteredConsumptions.map((consumption) => ({
-      ...consumption,
-      totalLiters:
-        consumption.bySensor.find((bs: any) => bs.sensorId === selectedSensorId)?.liters || 0,
-    }))
+    return filteredConsumptions
+      .map((consumption) => {
+        if (!consumption.bySensor) {
+          return null
+        }
+        
+        const sensorData = consumption.bySensor.find((bs: any) => 
+          String(bs.sensorId) === String(selectedSensorId)
+        )
+        
+        if (!sensorData || sensorData.liters === 0) {
+          return null
+        }
+        
+        return {
+          ...consumption,
+          totalLiters: sensorData.liters,
+        }
+      })
+      .filter((item) => item !== null)
   }, [filteredConsumptions, selectedSensorId])
 
   return {

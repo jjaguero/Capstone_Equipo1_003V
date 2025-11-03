@@ -14,6 +14,18 @@ export const calculateMetrics = (
   consumptions: any[],
   sensors: any[]
 ): ConsumptionMetrics => {
+  // Si no hay datos filtrados, retornar métricas vacías
+  if (!filteredConsumptions || filteredConsumptions.length === 0) {
+    return {
+      totalConsumption: '0.0',
+      avgDaily: '0.0',
+      changePercent: '0.0',
+      efficiencyRate: 100,
+      activeSensors: sensors?.filter((s) => s.status === 'activo').length || 0,
+      avgTimeOnSystem: 'Normal',
+    }
+  }
+
   const today = format(new Date(), 'yyyy-MM-dd')
   const yesterday = format(subDays(new Date(), 1), 'yyyy-MM-dd')
 
@@ -21,7 +33,7 @@ export const calculateMetrics = (
   const yesterdayData = consumptions.find((c) => c.date === yesterday)
 
   const totalConsumption = filteredConsumptions.reduce(
-    (sum, c) => sum + c.totalLiters,
+    (sum, c) => sum + (c.totalLiters || 0),
     0
   )
 
@@ -48,7 +60,7 @@ export const calculateMetrics = (
     avgDaily,
     changePercent,
     efficiencyRate,
-    activeSensors: sensors.filter((s) => s.status === 'activo').length,
+    activeSensors: sensors?.filter((s) => s.status === 'activo').length || 0,
     avgTimeOnSystem,
   }
 }
@@ -56,10 +68,14 @@ export const calculateMetrics = (
 export const prepareChartData = (
   filteredData: any[]
 ): Array<{ date: string; consumption: number }> => {
+  if (!filteredData || filteredData.length === 0) {
+    return []
+  }
+  
   const sorted = [...filteredData].sort(
     (a, b) => new Date(a.date).getTime() - new Date(b.date).getTime()
   )
-  return sorted.map((c) => ({ date: c.date, consumption: c.totalLiters }))
+  return sorted.map((c) => ({ date: c.date, consumption: c.totalLiters || 0 }))
 }
 
 export const aggregateHourlyData = (

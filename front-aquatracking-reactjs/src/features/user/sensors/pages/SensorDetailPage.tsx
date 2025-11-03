@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 
 import { Card, Button, Progress, Badge, Spinner } from '@/components/ui';
-import { useSensors } from '../hooks/useSensors';
 import { normalizeSensorName } from '@/utils/sensor-name.utils';
 import { apiClient } from '@/api/client';
 
@@ -44,11 +43,9 @@ interface SensorDetailStats {
 }
 
 const SensorDetailPage = () => {
-  // const { sensorId } = useParams<{ sensorId: string }>();
   const sensorId = window.location.pathname.split('/').pop();
-  // const navigate = useNavigate();
-  const { sensors, loading: sensorsLoading } = useSensors();
   
+  const [sensor, setSensor] = useState<any>(null);
   const [stats, setStats] = useState<SensorDetailStats>({
     todayUsage: 0,
     weeklyUsage: 0,
@@ -59,10 +56,8 @@ const SensorDetailPage = () => {
     hourlyConsumption: [],
     last7Days: []
   });
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-
-  const sensor = sensors.find(s => s._id === sensorId);
 
   const getStatusColor = (status: string) => {
     switch (status?.toLowerCase()) {
@@ -81,7 +76,7 @@ const SensorDetailPage = () => {
     window.location.href = '/user/sensors';
   };
 
-  // Cargar datos del sensor desde la API
+  // Cargar sensor y sus datos desde la API
   const loadSensorData = async () => {
     if (!sensorId) return;
     
@@ -89,6 +84,10 @@ const SensorDetailPage = () => {
     setError(null);
     
     try {
+      // Primero obtener el sensor
+      const sensorRes = await apiClient.get(`/sensors/${sensorId}`);
+      setSensor(sensorRes.data);
+      
       // Obtener datos de hoy, últimos 7 días y mediciones recientes en paralelo
       const [todayRes, last7Res, recentRes] = await Promise.all([
         apiClient.get(`/measurements/sensor/${sensorId}/today`),
@@ -117,7 +116,7 @@ const SensorDetailPage = () => {
       setStats({
         todayUsage,
         weeklyUsage,
-        monthlyUsage: weeklyUsage, // Mostrar últimos 7 días como "mensual"
+        monthlyUsage: weeklyUsage,
         averageDaily,
         recentMeasurements,
         totalMeasurements: recentMeasurements.length,
@@ -133,14 +132,14 @@ const SensorDetailPage = () => {
   };
 
   useEffect(() => {
-    if (sensor && sensorId) {
+    if (sensorId) {
       loadSensorData();
     }
-  }, [sensor, sensorId]);
+  }, [sensorId]);
 
-  if (sensorsLoading || loading) {
+  if (loading) {
     return (
-      <div className="p-6">
+      <div className="p-1">
         <div className="flex items-center justify-center h-96">
           <Spinner />
         </div>
@@ -184,220 +183,187 @@ const SensorDetailPage = () => {
   }
 
   return (
-    <div className="p-6 max-w-7xl mx-auto">
-      {/* Header */}
-      <div className="flex items-center justify-between mb-6">
-        <div className="flex items-center space-x-4">
-          <Button variant="plain" onClick={handleBack}>
-            <PiArrowLeftBold className="w-4 h-4 mr-2" />
-            Volver
-          </Button>
+    <div className="p-2 max-w-full">
+      {/* Header Compacto */}
+      <div className="mb-3">
+        <Button variant="plain" size="sm" onClick={handleBack} className="mb-2">
+          <PiArrowLeftBold className="w-4 h-4 mr-1" />
+          Volver
+        </Button>
+        <div className="flex items-center justify-between">
           <div>
-            <h1 className="text-2xl font-bold text-gray-900">
+            <h1 className="text-xl font-bold text-gray-900 dark:text-gray-100">
               {normalizeSensorName(sensor.subType || 'sensor')}
             </h1>
-            <div className="flex items-center space-x-2 text-gray-600 mt-1">
-              <PiMapPinDuotone className="w-4 h-4" />
-              <span>{normalizeSensorName(sensor.location || '')}</span>
+            <div className="flex items-center gap-3 text-sm text-gray-600 dark:text-gray-400 mt-1">
+              <span className="flex items-center gap-1">
+                <PiMapPinDuotone className="w-4 h-4" />
+                {normalizeSensorName(sensor.location || '')}
+              </span>
+              <span className="font-mono text-xs">{sensor.serialNumber}</span>
             </div>
           </div>
+          <Badge className={`text-${getStatusColor(sensor.status || '')}-600 bg-${getStatusColor(sensor.status || '')}-100`}>
+            {sensor.status || 'Desconocido'}
+          </Badge>
         </div>
-        <Badge className={`text-${getStatusColor(sensor.status || '')}-600 bg-${getStatusColor(sensor.status || '')}-100`}>
-          {sensor.status || 'Desconocido'}
-        </Badge>
       </div>
 
-      {/* Información del Sensor */}
-      <Card className="mb-6">
-        <div className="p-6">
-          <h2 className="text-lg font-semibold mb-4">Información del Sensor</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+      {/* Estadísticas Compactas */}
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-2 mb-3">
+        <Card className="p-2">
+          <div className="flex items-center justify-between">
             <div>
-              <label className="text-sm font-medium text-gray-500">Número de Serie</label>
-              <p className="text-gray-900 font-mono">{sensor.serialNumber}</p>
+              <p className="text-xs font-medium text-gray-500 dark:text-gray-400">Hoy</p>
+              <p className="text-xl font-bold text-blue-600 dark:text-blue-400">{stats.todayUsage.toFixed(1)}L</p>
             </div>
-            <div>
-              <label className="text-sm font-medium text-gray-500">Categoría</label>
-              <p className="text-gray-900">{sensor.category}</p>
-            </div>
-            <div>
-              <label className="text-sm font-medium text-gray-500">Ubicación</label>
-              <p className="text-gray-900">{normalizeSensorName(sensor.location || '')}</p>
-            </div>
-          </div>
-        </div>
-      </Card>
-
-      {/* Estadísticas de Consumo */}
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
-        <Card>
-          <div className="p-4">
-            <div className="flex items-center justify-between">
-              <div>
-                <p className="text-sm font-medium text-gray-500">Hoy</p>
-                <p className="text-2xl font-bold text-blue-600">{stats.todayUsage.toFixed(1)}L</p>
-              </div>
-              <PiDropDuotone className="w-8 h-8 text-blue-600" />
-            </div>
+            <PiDropDuotone className="w-6 h-6 text-blue-600 dark:text-blue-400" />
           </div>
         </Card>
 
-        <Card>
-          <div className="p-4">
-            <div className="flex items-center justify-between">
-              <div>
-                <p className="text-sm font-medium text-gray-500">Esta Semana</p>
-                <p className="text-2xl font-bold text-green-600">{stats.weeklyUsage.toFixed(1)}L</p>
-              </div>
-              <PiCalendarDuotone className="w-8 h-8 text-green-600" />
+        <Card className="p-3">
+          <div className="flex items-center justify-between">
+            <div>
+              <p className="text-xs font-medium text-gray-500 dark:text-gray-400">Esta Semana</p>
+              <p className="text-xl font-bold text-green-600 dark:text-green-400">{stats.weeklyUsage.toFixed(1)}L</p>
             </div>
+            <PiCalendarDuotone className="w-6 h-6 text-green-600 dark:text-green-400" />
           </div>
         </Card>
 
-        <Card>
-          <div className="p-4">
-            <div className="flex items-center justify-between">
-              <div>
-                <p className="text-sm font-medium text-gray-500">Promedio Diario</p>
-                <p className="text-2xl font-bold text-purple-600">{stats.averageDaily.toFixed(1)}L</p>
-              </div>
-              <PiChartBarDuotone className="w-8 h-8 text-purple-600" />
+        <Card className="p-3">
+          <div className="flex items-center justify-between">
+            <div>
+              <p className="text-xs font-medium text-gray-500 dark:text-gray-400">Promedio</p>
+              <p className="text-xl font-bold text-purple-600 dark:text-purple-400">{stats.averageDaily.toFixed(1)}L</p>
             </div>
+            <PiChartBarDuotone className="w-6 h-6 text-purple-600 dark:text-purple-400" />
           </div>
         </Card>
 
-        <Card>
-          <div className="p-4">
-            <div className="flex items-center justify-between">
-              <div>
-                <p className="text-sm font-medium text-gray-500">Total Mediciones</p>
-                <p className="text-2xl font-bold text-orange-600">{stats.totalMeasurements}</p>
-              </div>
-              <PiClockDuotone className="w-8 h-8 text-orange-600" />
+        <Card className="p-3">
+          <div className="flex items-center justify-between">
+            <div>
+              <p className="text-xs font-medium text-gray-500 dark:text-gray-400">Mediciones</p>
+              <p className="text-xl font-bold text-orange-600 dark:text-orange-400">{stats.totalMeasurements}</p>
             </div>
+            <PiClockDuotone className="w-6 h-6 text-orange-600 dark:text-orange-400" />
           </div>
         </Card>
       </div>
 
-      {/* Consumo por Hora */}
-      <Card className="mb-6">
-        <div className="p-6">
-          <h2 className="text-lg font-semibold mb-4 flex items-center">
-            <PiClockDuotone className="w-5 h-5 mr-2 text-blue-600" />
+      {/* Grid de 2 columnas para tablas */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 mb-3">
+        {/* Consumo por Hora */}
+        <Card className="p-2">
+          <h2 className="text-sm font-semibold mb-2 flex items-center text-gray-900 dark:text-gray-100">
+            <PiClockDuotone className="w-4 h-4 mr-2 text-blue-600 dark:text-blue-400" />
             Consumo por Hora (Hoy)
           </h2>
           {stats.hourlyConsumption.length > 0 ? (
-            <div className="overflow-x-auto">
-              <table className="w-full text-sm">
-                <thead>
-                  <tr className="border-b border-gray-200">
-                    <th className="text-left py-3 px-4 font-semibold text-gray-600">Hora</th>
-                    <th className="text-right py-3 px-4 font-semibold text-gray-600">Consumo (L)</th>
-                    <th className="text-center py-3 px-4 font-semibold text-gray-600">Eventos</th>
-                    <th className="text-right py-3 px-4 font-semibold text-gray-600">Duración Prom.</th>
+            <div className="overflow-x-auto max-h-80 overflow-y-auto">
+              <table className="w-full text-xs">
+                <thead className="sticky top-0 bg-white dark:bg-gray-900">
+                  <tr className="border-b border-gray-200 dark:border-gray-700">
+                    <th className="text-left py-1 px-2 font-semibold text-gray-600 dark:text-gray-400">Hora</th>
+                    <th className="text-right py-1 px-2 font-semibold text-gray-600 dark:text-gray-400">Litros</th>
+                    <th className="text-center py-1 px-2 font-semibold text-gray-600 dark:text-gray-400">Usos</th>
                   </tr>
                 </thead>
                 <tbody>
                   {stats.hourlyConsumption.map((hourData) => (
-                    <tr key={hourData.hour} className="border-b border-gray-100 hover:bg-gray-50">
-                      <td className="py-3 px-4 font-medium text-gray-900">
+                    <tr key={hourData.hour} className="border-b border-gray-100 dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-gray-800">
+                      <td className="py-1 px-2 font-medium text-gray-900 dark:text-gray-100">
                         {String(hourData.hour).padStart(2, '0')}:00
                       </td>
-                      <td className="py-3 px-4 text-right">
-                        <span className="font-semibold text-blue-600">{hourData.liters.toFixed(2)}L</span>
+                      <td className="py-1 px-2 text-right">
+                        <span className="font-semibold text-blue-600 dark:text-blue-400">{hourData.liters.toFixed(1)}L</span>
                       </td>
-                      <td className="py-3 px-4 text-center text-gray-600">{hourData.count}</td>
-                      <td className="py-3 px-4 text-right text-gray-600">
-                        {Math.floor(hourData.avgDuration / 60)}m {Math.floor(hourData.avgDuration % 60)}s
-                      </td>
+                      <td className="py-1 px-2 text-center text-gray-600 dark:text-gray-400">{hourData.count}</td>
                     </tr>
                   ))}
                 </tbody>
               </table>
             </div>
           ) : (
-            <div className="text-center py-8 text-gray-500">
-              <PiClockDuotone className="w-12 h-12 mx-auto mb-3 text-gray-300" />
-              <p>No hay datos de consumo por hora disponibles</p>
+            <div className="text-center py-6 text-gray-500 dark:text-gray-400">
+              <PiClockDuotone className="w-8 h-8 mx-auto mb-2 text-gray-300 dark:text-gray-600" />
+              <p className="text-xs">Sin datos</p>
             </div>
           )}
-        </div>
-      </Card>
+        </Card>
 
-      {/* Últimos 7 Días */}
-      {stats.last7Days.length > 0 && (
-        <Card className="mb-6">
-          <div className="p-6">
-            <h2 className="text-lg font-semibold mb-4 flex items-center">
-              <PiCalendarDuotone className="w-5 h-5 mr-2 text-green-600" />
+        {/* Últimos 7 Días */}
+        {stats.last7Days.length > 0 && (
+          <Card className="p-2">
+            <h2 className="text-sm font-semibold mb-2 flex items-center text-gray-900 dark:text-gray-100">
+              <PiCalendarDuotone className="w-4 h-4 mr-2 text-green-600 dark:text-green-400" />
               Últimos 7 Días
             </h2>
-            <div className="overflow-x-auto">
-              <table className="w-full text-sm">
-                <thead>
-                  <tr className="border-b border-gray-200">
-                    <th className="text-left py-3 px-4 font-semibold text-gray-600">Fecha</th>
-                    <th className="text-right py-3 px-4 font-semibold text-gray-600">Consumo (L)</th>
-                    <th className="text-center py-3 px-4 font-semibold text-gray-600">Eventos</th>
+            <div className="overflow-x-auto max-h-80 overflow-y-auto">
+              <table className="w-full text-xs">
+                <thead className="sticky top-0 bg-white dark:bg-gray-900">
+                  <tr className="border-b border-gray-200 dark:border-gray-700">
+                    <th className="text-left py-1 px-2 font-semibold text-gray-600 dark:text-gray-400">Fecha</th>
+                    <th className="text-right py-1 px-2 font-semibold text-gray-600 dark:text-gray-400">Litros</th>
+                    <th className="text-center py-1 px-2 font-semibold text-gray-600 dark:text-gray-400">Usos</th>
                   </tr>
                 </thead>
                 <tbody>
                   {stats.last7Days.map((dayData) => (
-                    <tr key={dayData.date} className="border-b border-gray-100 hover:bg-gray-50">
-                      <td className="py-3 px-4 font-medium text-gray-900">{dayData.date}</td>
-                      <td className="py-3 px-4 text-right">
-                        <span className="font-semibold text-green-600">{dayData.liters.toFixed(2)}L</span>
+                    <tr key={dayData.date} className="border-b border-gray-100 dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-gray-800">
+                      <td className="py-1 px-2 font-medium text-gray-900 dark:text-gray-100">{dayData.date}</td>
+                      <td className="py-1 px-2 text-right">
+                        <span className="font-semibold text-green-600 dark:text-green-400">{dayData.liters.toFixed(1)}L</span>
                       </td>
-                      <td className="py-3 px-4 text-center text-gray-600">{dayData.count}</td>
+                      <td className="py-1 px-2 text-center text-gray-600 dark:text-gray-400">{dayData.count}</td>
                     </tr>
                   ))}
                 </tbody>
               </table>
             </div>
-          </div>
-        </Card>
-      )}
+          </Card>
+        )}
+      </div>
 
       {/* Mediciones Recientes */}
-      <Card>
-        <div className="p-6">
-          <h2 className="text-lg font-semibold mb-4">Mediciones Recientes</h2>
-          <div className="space-y-3">
-            {stats.recentMeasurements.map((measurement) => (
-              <div 
-                key={measurement._id}
-                className="flex items-center justify-between p-4 bg-gray-50 rounded-lg"
-              >
-                <div className="flex items-center space-x-4">
-                  <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-                  <div>
-                    <p className="font-medium text-gray-900">
-                      {measurement.liters.toFixed(1)} litros
-                    </p>
-                    <p className="text-sm text-gray-500">
-                      Duración: {Math.floor(measurement.durationSec / 60)}m {measurement.durationSec % 60}s
-                    </p>
-                  </div>
-                </div>
-                <div className="text-right">
-                  <p className="text-sm font-medium text-gray-900">
-                    {format(new Date(measurement.startTime), 'HH:mm', { locale: es })}
+      <Card className="p-2">
+        <h2 className="text-sm font-semibold mb-2 text-gray-900 dark:text-gray-100">Mediciones Recientes</h2>
+        <div className="space-y-1 max-h-96 overflow-y-auto">
+          {stats.recentMeasurements.map((measurement) => (
+            <div 
+              key={measurement._id}
+              className="flex items-center justify-between p-2 bg-gray-50 dark:bg-gray-800 rounded-lg">
+            
+              <div className="flex items-center gap-3">
+                <div className="w-2 h-2 bg-blue-500 dark:bg-blue-400 rounded-full"></div>
+                <div>
+                  <p className="font-medium text-gray-900 dark:text-gray-100 text-sm">
+                    {measurement.liters.toFixed(1)}L
                   </p>
-                  <p className="text-xs text-gray-500">
-                    {format(new Date(measurement.startTime), 'dd/MM/yyyy', { locale: es })}
+                  <p className="text-xs text-gray-500 dark:text-gray-400">
+                    {Math.floor(measurement.durationSec / 60)}m {measurement.durationSec % 60}s
                   </p>
                 </div>
               </div>
-            ))}
-          </div>
-
-          {stats.recentMeasurements.length === 0 && (
-            <div className="text-center py-8 text-gray-500">
-              <PiDropDuotone className="w-12 h-12 mx-auto mb-3 text-gray-300" />
-              <p>No hay mediciones recientes disponibles</p>
+              <div className="text-right">
+                <p className="text-sm font-medium text-gray-900 dark:text-gray-100">
+                  {format(new Date(measurement.startTime), 'HH:mm', { locale: es })}
+                </p>
+                <p className="text-xs text-gray-500 dark:text-gray-400">
+                  {format(new Date(measurement.startTime), 'dd/MM', { locale: es })}
+                </p>
+              </div>
             </div>
-          )}
+          ))}
         </div>
+
+        {stats.recentMeasurements.length === 0 && (
+          <div className="text-center py-6 text-gray-500 dark:text-gray-400">
+            <PiDropDuotone className="w-8 h-8 mx-auto mb-2 text-gray-300 dark:text-gray-600" />
+            <p className="text-xs">No hay mediciones recientes</p>
+          </div>
+        )}
       </Card>
     </div>
   );
