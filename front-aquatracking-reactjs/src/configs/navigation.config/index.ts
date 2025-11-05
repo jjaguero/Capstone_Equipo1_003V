@@ -30,6 +30,16 @@ const navigationConfig: NavigationTree[] = [
         authority: ['user'],
         subMenu: [
             {
+                key: 'user.realtime',
+                path: '/user/realtime',
+                title: 'Monitoreo en Tiempo Real',
+                translateKey: 'nav.user.realtime',
+                icon: 'realtime',
+                type: NAV_ITEM_TYPE_ITEM,
+                authority: ['user'],
+                subMenu: [],
+            },
+            {
                 key: 'user.consumption',
                 path: '/user/consumption',
                 title: 'Historial de Consumo',

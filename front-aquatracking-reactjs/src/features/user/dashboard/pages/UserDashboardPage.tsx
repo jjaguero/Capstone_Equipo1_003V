@@ -4,14 +4,16 @@ import { useSensors } from '@/features/user/sensors/hooks/useSensors'
 import { useConsumption } from '@/hooks/useConsumption'
 import { useAlerts } from '@/hooks/useAlerts'
 import { useAquaTrackingAuth } from '@/features/auth/hooks/useAquaTrackingAuth'
-import { PiDropDuotone, PiDevicesDuotone, PiBellDuotone, PiTargetDuotone } from 'react-icons/pi'
+import { PiDropDuotone, PiDevicesDuotone, PiBellDuotone, PiTargetDuotone, PiChartLineDuotone, PiArrowRightDuotone } from 'react-icons/pi'
 import ConsumptionChart from '../components/ConsumptionChart'
 import EcmeConsumptionTimelineCompact from '../components/EcmeConsumptionTimelineCompact'
 import SensorStatusCard from '../components/SensorStatusCard'
 import AlertsCard from '../components/AlertsCard'
 import EmptyDataMessage from '../components/EmptyDataMessage'
+import { useNavigate } from 'react-router'
 
 const UserDashboardPage = () => {
+  const navigate = useNavigate()
   const { currentUser } = useAquaTrackingAuth()
   const { sensors, loading: sensorsLoading } = useSensors(currentUser?.homeId)
   const { consumptions, loading: consumptionLoading } = useConsumption(currentUser?.homeId)
@@ -68,7 +70,10 @@ const UserDashboardPage = () => {
       {/* KPIs Cards Mejoradas */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8 animate-slideUp" style={{ animationDelay: '0.1s' }}>
         {/* Consumo Hoy */}
-        <Card className="relative overflow-hidden bg-gradient-to-br from-blue-50 to-indigo-100 border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+        <Card 
+          className="relative overflow-hidden bg-gradient-to-br from-blue-50 to-indigo-100 border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 cursor-pointer"
+          onClick={() => navigate('/user/consumption-history')}
+        >
           <div className="absolute top-0 right-0 w-24 h-24 bg-blue-200 rounded-full -translate-y-12 translate-x-12 opacity-30" />
           <div className="relative p-6">
             <div className="flex items-center justify-between">
@@ -95,8 +100,10 @@ const UserDashboardPage = () => {
           </div>
         </Card>
 
-        {/* Sensores Activos */}
-        <Card className="relative overflow-hidden bg-gradient-to-br from-emerald-50 to-green-100 border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+        <Card 
+          className="relative overflow-hidden bg-gradient-to-br from-emerald-50 to-green-100 border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 cursor-pointer"
+          onClick={() => navigate('/user/sensors')}
+        >
           <div className="absolute top-0 right-0 w-24 h-24 bg-emerald-200 rounded-full -translate-y-12 translate-x-12 opacity-30" />
           <div className="relative p-6">
             <div className="flex items-center justify-between">
@@ -121,11 +128,14 @@ const UserDashboardPage = () => {
         </Card>
 
         {/* Alertas Pendientes */}
-        <Card className={`relative overflow-hidden border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 ${
-          unresolvedAlerts > 0 
-            ? 'bg-gradient-to-br from-red-50 to-rose-100' 
-            : 'bg-gradient-to-br from-gray-50 to-slate-100'
-        }`}>
+        <Card 
+          className={`relative overflow-hidden border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 cursor-pointer ${
+            unresolvedAlerts > 0 
+              ? 'bg-gradient-to-br from-red-50 to-rose-100' 
+              : 'bg-gradient-to-br from-gray-50 to-slate-100'
+          }`}
+          onClick={() => navigate('/user/alerts')}
+        >
           <div className={`absolute top-0 right-0 w-24 h-24 rounded-full -translate-y-12 translate-x-12 opacity-30 ${
             unresolvedAlerts > 0 ? 'bg-red-200' : 'bg-gray-200'
           }`} />
@@ -161,7 +171,10 @@ const UserDashboardPage = () => {
         </Card>
 
         {/* Límite Diario */}
-        <Card className="relative overflow-hidden bg-gradient-to-br from-amber-50 to-orange-100 border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+        <Card 
+          className="relative overflow-hidden bg-gradient-to-br from-amber-50 to-orange-100 border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 cursor-pointer"
+          onClick={() => navigate('/user/configuration')}
+        >
           <div className="absolute top-0 right-0 w-24 h-24 bg-amber-200 rounded-full -translate-y-12 translate-x-12 opacity-30" />
           <div className="relative p-6">
             <div className="flex items-center justify-between">
@@ -187,6 +200,29 @@ const UserDashboardPage = () => {
             </div>
           </div>
         </Card>
+      </div>
+
+      {/* Realtime Monitoring Button */}
+      <div className="mb-8 animate-slideUp" style={{ animationDelay: '0.15s' }}>
+        <button
+          onClick={() => navigate('/user/realtime')}
+          className="w-full flex items-center justify-between p-4 bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 text-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5"
+        >
+          <div className="flex items-center gap-3">
+            <div className="p-2 bg-white/20 rounded-lg">
+              <PiChartLineDuotone className="text-2xl" />
+            </div>
+            <div className="text-left">
+              <h4 className="font-semibold text-lg">Monitoreo en Tiempo Real</h4>
+              <p className="text-sm text-indigo-100">Ver consumo y flujo de agua en este momento</p>
+            </div>
+          </div>
+          <div className="flex items-center gap-2">
+            <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
+            <span className="text-sm font-medium">En Vivo</span>
+            <PiArrowRightDuotone className="text-xl" />
+          </div>
+        </button>
       </div>
 
       {/* Content Grid */}

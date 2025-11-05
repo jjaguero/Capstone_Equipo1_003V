@@ -20,11 +20,11 @@ export class DailyConsumptionService {
   }
 
   async findAll(): Promise<DailyConsumption[]> {
-    const today = new Date();
-    today.setHours(23, 59, 59, 999); // Final del día actual
+    const now = new Date();
+    now.setHours(23, 59, 59, 999);
     
     return await this.dailyConsumptionModel
-      .find({ date: { $lte: today } })
+      .find({ date: { $lte: now } })
       .sort({ date: -1 })
       .exec();
   }
@@ -38,13 +38,13 @@ export class DailyConsumptionService {
   }
 
   async findByHome(homeId: string, limit?: number): Promise<DailyConsumption[]> {
-    const today = new Date();
-    today.setHours(23, 59, 59, 999); // Final del día actual
+    const now = new Date();
+    now.setHours(23, 59, 59, 999);
     
     const query = this.dailyConsumptionModel
       .find({ 
         homeId,
-        date: { $lte: today }
+        date: { $lte: now }
       })
       .sort({ date: -1 });
     

@@ -32,6 +32,14 @@ const aquaTrackingRoutes: Routes = [
     authority: ['user'],
   },
 
+  // Tiempo Real
+  {
+    key: 'user.realtime',
+    path: '/user/realtime',
+    component: lazy(() => import('@/features/user/realtime/pages/RealtimePage')),
+    authority: ['user'],
+  },
+
   // Alertas
   {
     key: 'user.alerts',

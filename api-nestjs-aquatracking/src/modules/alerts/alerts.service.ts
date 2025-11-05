@@ -16,11 +16,10 @@ export class AlertsService {
   }
 
   async findAll(): Promise<Alert[]> {
-    const today = new Date();
-    today.setHours(23, 59, 59, 999); // Final del día actual
+    const now = new Date();
     
     return await this.alertModel
-      .find({ triggeredAt: { $lte: today } })
+      .find({ triggeredAt: { $lte: now } })
       .sort({ triggeredAt: -1 })
       .exec();
   }
@@ -34,13 +33,12 @@ export class AlertsService {
   }
 
   async findByHome(homeId: string): Promise<Alert[]> {
-    const today = new Date();
-    today.setHours(23, 59, 59, 999); // Final del día actual
+    const now = new Date();
     
     return await this.alertModel
       .find({ 
         homeId,
-        triggeredAt: { $lte: today }
+        triggeredAt: { $lte: now }
       })
       .sort({ triggeredAt: -1 })
       .exec();

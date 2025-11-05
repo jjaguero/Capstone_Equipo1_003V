@@ -40,11 +40,10 @@ export class MeasurementsService {
   }
 
   async findAll(limit?: number): Promise<Measurement[]> {
-    const today = new Date();
-    today.setHours(23, 59, 59, 999); // Final del día actual
+    const now = new Date();
     
     const query = this.measurementModel
-      .find({ startTime: { $lte: today } })
+      .find({ startTime: { $lte: now } })
       .sort({ startTime: -1 });
     if (limit) {
       query.limit(limit);
@@ -61,13 +60,12 @@ export class MeasurementsService {
   }
 
   async findByHome(homeId: string, limit?: number): Promise<Measurement[]> {
-    const today = new Date();
-    today.setHours(23, 59, 59, 999); // Final del día actual
+    const now = new Date();
     
     const query = this.measurementModel
       .find({ 
         homeId,
-        startTime: { $lte: today }
+        startTime: { $lte: now }
       })
       .sort({ startTime: -1 });
     if (limit) {
@@ -77,13 +75,12 @@ export class MeasurementsService {
   }
 
   async findBySensor(sensorId: string, limit?: number): Promise<Measurement[]> {
-    const today = new Date();
-    today.setHours(23, 59, 59, 999); // Final del día actual
+    const now = new Date();
     
     const query = this.measurementModel
       .find({ 
         sensorId,
-        startTime: { $lte: today }
+        startTime: { $lte: now }
       })
       .sort({ startTime: -1 });
     if (limit) {
@@ -136,18 +133,16 @@ export class MeasurementsService {
     return result[0]?.total || 0;
   }
 
-  // 🆕 Consumo por hora del día actual para un sensor
   async getHourlyConsumptionToday(sensorId: string): Promise<any[]> {
     const today = new Date();
     today.setHours(0, 0, 0, 0);
-    const endOfToday = new Date(today);
-    endOfToday.setHours(23, 59, 59, 999);
+    const now = new Date();
 
     return await this.measurementModel.aggregate([
       {
         $match: {
           sensorId,
-          startTime: { $gte: today, $lte: endOfToday },
+          startTime: { $gte: today, $lte: now },
         },
       },
       {
@@ -178,14 +173,13 @@ export class MeasurementsService {
   async getTodayConsumption(sensorId: string): Promise<any> {
     const today = new Date();
     today.setHours(0, 0, 0, 0);
-    const endOfToday = new Date(today);
-    endOfToday.setHours(23, 59, 59, 999);
+    const now = new Date();
 
     const result = await this.measurementModel.aggregate([
       {
         $match: {
           sensorId,
-          startTime: { $gte: today, $lte: endOfToday },
+          startTime: { $gte: today, $lte: now },
         },
       },
       {
@@ -203,27 +197,23 @@ export class MeasurementsService {
     return result[0] || { totalLiters: 0, count: 0, avgDuration: 0 };
   }
 
-  // 🆕 Últimas mediciones de un sensor
   async getRecentMeasurements(sensorId: string, limit: number = 10): Promise<Measurement[]> {
-    const today = new Date();
-    today.setHours(23, 59, 59, 999); // Final del día actual
+    const now = new Date();
     
     return await this.measurementModel
       .find({ 
         sensorId,
-        startTime: { $lte: today }
+        startTime: { $lte: now }
       })
       .sort({ startTime: -1 })
       .limit(limit)
       .exec();
   }
 
-  // 🆕 Consumo por día (últimos 7 días)
   async getLast7DaysConsumption(sensorId: string): Promise<any[]> {
-    const today = new Date();
-    today.setHours(23, 59, 59, 999); // Final del día actual
+    const now = new Date();
     
-    const sevenDaysAgo = new Date(today);
+    const sevenDaysAgo = new Date(now);
     sevenDaysAgo.setDate(sevenDaysAgo.getDate() - 7);
     sevenDaysAgo.setHours(0, 0, 0, 0);
 
@@ -231,7 +221,7 @@ export class MeasurementsService {
       {
         $match: {
           sensorId,
-          startTime: { $gte: sevenDaysAgo, $lte: today },
+          startTime: { $gte: sevenDaysAgo, $lte: now },
         },
       },
       {

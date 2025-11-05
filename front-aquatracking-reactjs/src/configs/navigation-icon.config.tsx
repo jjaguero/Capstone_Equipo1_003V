@@ -9,6 +9,7 @@ import {
     PiGearDuotone,
     PiDropDuotone,
     PiChartBarDuotone,
+    PiMonitorDuotone,
 } from 'react-icons/pi'
 import type { JSX } from 'react'
 
@@ -25,6 +26,7 @@ const navigationIcon: NavigationIcons = {
     alerts: <PiBellRingingDuotone />,
     statistics: <PiChartLineDuotone />,
     settings: <PiGearDuotone />,
+    realtime: <PiMonitorDuotone />,
 }
 
 export default navigationIcon
