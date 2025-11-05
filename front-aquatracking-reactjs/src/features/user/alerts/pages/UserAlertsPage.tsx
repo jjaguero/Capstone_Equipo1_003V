@@ -1,5 +1,6 @@
 import { Card, Button } from '@/components/ui'
 import Container from '@/components/shared/Container'
+import Breadcrumb from '@/components/shared/Breadcrumb'
 import { useAlerts } from '@/hooks/useAlerts'
 import { useAquaTrackingAuth } from '@/features/auth/hooks/useAquaTrackingAuth'
 import { 
@@ -7,7 +8,6 @@ import {
   PiWarningDuotone,
   PiCheckCircleDuotone,
   PiXCircleDuotone,
-  PiArrowLeftDuotone,
   PiCalendarDuotone,
   PiDropDuotone
 } from 'react-icons/pi'
@@ -17,10 +17,6 @@ import { es } from 'date-fns/locale'
 const UserAlertsPage = () => {
   const { currentUser } = useAquaTrackingAuth()
   const { alerts, loading } = useAlerts(currentUser?.homeId)
-
-  const handleBackToDashboard = () => {
-    window.location.href = '/user/dashboard'
-  }
 
   const handleMarkAsResolved = (alertId: string) => {
 
@@ -86,12 +82,7 @@ const UserAlertsPage = () => {
     return (
       <Container>
         <div className="space-y-6">
-          <div className="flex items-center justify-between">
-            <div>
-              <h1 className="text-2xl font-bold text-gray-900">Mis Alertas</h1>
-              <p className="text-gray-600 mt-1">Notificaciones de tus sensores de agua</p>
-            </div>
-          </div>
+          <Breadcrumb />
           
           <div className="flex items-center justify-center h-64">
             <div className="text-center">
@@ -107,19 +98,7 @@ const UserAlertsPage = () => {
   return (
     <Container>
       <div className="space-y-6">
-        {/* Header */}
-        <div className="flex items-center justify-between">
-          <div className="flex items-center space-x-4">
-            <Button variant="plain" onClick={handleBackToDashboard}>
-              <PiArrowLeftDuotone className="w-4 h-4 mr-2" />
-              Volver al Dashboard
-            </Button>
-            <div>
-              <h1 className="text-2xl font-bold text-gray-900">Mis Alertas</h1>
-              <p className="text-gray-600 mt-1">Notificaciones de tus sensores de agua</p>
-            </div>
-          </div>
-        </div>
+        <Breadcrumb />
 
         {/* Resumen de Alertas */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">

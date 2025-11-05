@@ -63,7 +63,7 @@ const UserDashboardPage = () => {
           Bienvenido, {currentUser?.name}
         </h3>
         <p className="text-gray-600 dark:text-gray-400 mt-1">
-          Monitoreo de consumo de agua en tiempo real
+          Vista general de tu consumo y sensores
         </p>
       </div>
 
@@ -72,7 +72,7 @@ const UserDashboardPage = () => {
         {/* Consumo Hoy */}
         <Card 
           className="relative overflow-hidden bg-gradient-to-br from-blue-50 to-indigo-100 border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 cursor-pointer"
-          onClick={() => navigate('/user/consumption-history')}
+          onClick={() => navigate('/user/realtime')}
         >
           <div className="absolute top-0 right-0 w-24 h-24 bg-blue-200 rounded-full -translate-y-12 translate-x-12 opacity-30" />
           <div className="relative p-6">
@@ -173,7 +173,7 @@ const UserDashboardPage = () => {
         {/* Límite Diario */}
         <Card 
           className="relative overflow-hidden bg-gradient-to-br from-amber-50 to-orange-100 border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 cursor-pointer"
-          onClick={() => navigate('/user/configuration')}
+          onClick={() => navigate('/settings', { state: { activeTab: 'consumption' } })}
         >
           <div className="absolute top-0 right-0 w-24 h-24 bg-amber-200 rounded-full -translate-y-12 translate-x-12 opacity-30" />
           <div className="relative p-6">
@@ -200,29 +200,6 @@ const UserDashboardPage = () => {
             </div>
           </div>
         </Card>
-      </div>
-
-      {/* Realtime Monitoring Button */}
-      <div className="mb-8 animate-slideUp" style={{ animationDelay: '0.15s' }}>
-        <button
-          onClick={() => navigate('/user/realtime')}
-          className="w-full flex items-center justify-between p-4 bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 text-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5"
-        >
-          <div className="flex items-center gap-3">
-            <div className="p-2 bg-white/20 rounded-lg">
-              <PiChartLineDuotone className="text-2xl" />
-            </div>
-            <div className="text-left">
-              <h4 className="font-semibold text-lg">Monitoreo en Tiempo Real</h4>
-              <p className="text-sm text-indigo-100">Ver consumo y flujo de agua en este momento</p>
-            </div>
-          </div>
-          <div className="flex items-center gap-2">
-            <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
-            <span className="text-sm font-medium">En Vivo</span>
-            <PiArrowRightDuotone className="text-xl" />
-          </div>
-        </button>
       </div>
 
       {/* Content Grid */}

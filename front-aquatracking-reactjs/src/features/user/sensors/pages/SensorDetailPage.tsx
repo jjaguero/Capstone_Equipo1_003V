@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react';
 
 import { Card, Button, Progress, Badge, Spinner } from '@/components/ui';
+import Breadcrumb from '@/components/shared/Breadcrumb';
 import { normalizeSensorName } from '@/utils/sensor-name.utils';
 import { apiClient } from '@/api/client';
 
 import { 
-  PiArrowLeftBold,
   PiMapPinDuotone,
   PiDropDuotone,
   PiClockDuotone,
@@ -150,12 +150,9 @@ const SensorDetailPage = () => {
   if (!sensor) {
     return (
       <div className="p-6">
+        <Breadcrumb />
         <div className="text-center py-12">
           <p className="text-gray-500 mb-4">Sensor no encontrado</p>
-          <Button onClick={handleBack}>
-            <PiArrowLeftBold className="w-4 h-4 mr-2" />
-            Volver a Sensores
-          </Button>
         </div>
       </div>
     );
@@ -164,13 +161,8 @@ const SensorDetailPage = () => {
   if (error) {
     return (
       <div className="p-6">
-        <div className="mb-4">
-          <Button variant="plain" onClick={handleBack}>
-            <PiArrowLeftBold className="w-4 h-4 mr-2" />
-            Volver
-          </Button>
-        </div>
-        <Card className="bg-red-50 border border-red-200">
+        <Breadcrumb />
+        <Card className="bg-red-50 border border-red-200 mt-4">
           <div className="p-6 text-center">
             <p className="text-red-600 mb-4">{error}</p>
             <Button onClick={loadSensorData}>
@@ -184,12 +176,10 @@ const SensorDetailPage = () => {
 
   return (
     <div className="p-2 max-w-full">
+      <Breadcrumb />
+      
       {/* Header Compacto */}
       <div className="mb-3">
-        <Button variant="plain" size="sm" onClick={handleBack} className="mb-2">
-          <PiArrowLeftBold className="w-4 h-4 mr-1" />
-          Volver
-        </Button>
         <div className="flex items-center justify-between">
           <div>
             <h1 className="text-xl font-bold text-gray-900 dark:text-gray-100">

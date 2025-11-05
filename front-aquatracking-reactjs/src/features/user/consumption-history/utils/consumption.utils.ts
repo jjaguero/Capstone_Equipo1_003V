@@ -9,58 +9,65 @@ export interface ConsumptionMetrics {
   avgTimeOnSystem: string
 }
 
+// Función helper para formatear números con separadores de miles (sin decimales)
+const formatNumber = (num: number): string => {
+  return Math.round(num).toLocaleString('es-CL')
+}
+
 export const calculateMetrics = (
   filteredConsumptions: any[],
   consumptions: any[],
   sensors: any[]
 ): ConsumptionMetrics => {
+  // Contar sensores activos (verificar tanto 'activo' como 'active')
+  const activeSensorsCount = sensors?.filter(
+    (s) => s.status?.toLowerCase() === 'activo' || s.status?.toLowerCase() === 'active'
+  ).length || 0
+
   // Si no hay datos filtrados, retornar métricas vacías
   if (!filteredConsumptions || filteredConsumptions.length === 0) {
     return {
-      totalConsumption: '0.0',
-      avgDaily: '0.0',
+      totalConsumption: '0',
+      avgDaily: '0',
       changePercent: '0.0',
       efficiencyRate: 100,
-      activeSensors: sensors?.filter((s) => s.status === 'activo').length || 0,
+      activeSensors: activeSensorsCount,
       avgTimeOnSystem: 'Normal',
     }
   }
-
-  const today = format(new Date(), 'yyyy-MM-dd')
-  const yesterday = format(subDays(new Date(), 1), 'yyyy-MM-dd')
-
-  const todayData = consumptions.find((c) => c.date === today)
-  const yesterdayData = consumptions.find((c) => c.date === yesterday)
 
   const totalConsumption = filteredConsumptions.reduce(
     (sum, c) => sum + (c.totalLiters || 0),
     0
   )
 
-  const avgDaily =
+  const avgDailyNum =
     filteredConsumptions.length > 0
-      ? (totalConsumption / filteredConsumptions.length).toFixed(1)
-      : '0.0'
+      ? totalConsumption / filteredConsumptions.length
+      : 0
 
-  const todayConsumption = todayData?.totalLiters || 0
-  const yesterdayConsumption = yesterdayData?.totalLiters || 0
-  const changePercent =
-    yesterdayConsumption > 0
-      ? (
-          ((todayConsumption - yesterdayConsumption) / yesterdayConsumption) *
-          100
-        ).toFixed(1)
-      : '0.0'
+  // Calcular cambio comparando el primer y último día del período filtrado
+  const sortedData = [...filteredConsumptions].sort(
+    (a, b) => new Date(a.date).getTime() - new Date(b.date).getTime()
+  )
+  
+  const firstDayConsumption = sortedData[0]?.totalLiters || 0
+  const lastDayConsumption = sortedData[sortedData.length - 1]?.totalLiters || 0
+  
+  const changePercentNum =
+    firstDayConsumption > 0
+      ? ((lastDayConsumption - firstDayConsumption) / firstDayConsumption) * 100
+      : 0
 
   const avgTimeOnSystem = 'Normal'
-  const efficiencyRate = Math.max(0, 100 - (parseFloat(changePercent) || 0))
+  const efficiencyRate = Math.max(0, 100 - Math.abs(changePercentNum))
 
   return {
-    totalConsumption: totalConsumption.toFixed(1),
-    avgDaily,
-    changePercent,
+    totalConsumption: formatNumber(totalConsumption),
+    avgDaily: formatNumber(avgDailyNum),
+    changePercent: changePercentNum.toFixed(1),
     efficiencyRate,
-    activeSensors: sensors?.filter((s) => s.status === 'activo').length || 0,
+    activeSensors: activeSensorsCount,
     avgTimeOnSystem,
   }
 }

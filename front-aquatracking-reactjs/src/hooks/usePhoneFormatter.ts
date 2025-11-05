@@ -10,11 +10,24 @@ interface UsePhoneFormatterReturn {
 export const usePhoneFormatter = (initialValue: string = ''): UsePhoneFormatterReturn => {
   const [displayValue, setDisplayValue] = useState(() => {
     if (!initialValue) return '+56 9 '
-    return formatChileanPhone(initialValue)
+    // Si el valor ya viene con +569, extraer solo los números después del código
+    if (initialValue.startsWith('+569')) {
+      const numbers = initialValue.slice(4) // Salta +569
+      return formatChileanPhone(numbers)
+    }
+    // Si solo tiene números, formatearlos
+    const numbersOnly = initialValue.replace(/[^0-9]/g, '')
+    return formatChileanPhone(numbersOnly)
   })
   const [rawValue, setRawValue] = useState(() => {
     if (!initialValue) return ''
-    return cleanPhone(initialValue)
+    // Si ya tiene el formato correcto, devolverlo tal cual
+    if (initialValue.startsWith('+569')) {
+      return initialValue
+    }
+    // Si no, limpiarlo y agregar el prefijo
+    const numbersOnly = initialValue.replace(/[^0-9]/g, '')
+    return numbersOnly.length > 0 ? `+569${numbersOnly}` : ''
   })
 
   const handleChange = useCallback((value: string) => {

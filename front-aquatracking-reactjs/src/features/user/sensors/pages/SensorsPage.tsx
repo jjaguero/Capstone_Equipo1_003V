@@ -1,5 +1,6 @@
 import { Card, Badge, Button } from '@/components/ui'
 import Container from '@/components/shared/Container'
+import Breadcrumb from '@/components/shared/Breadcrumb'
 import { useSensors } from '../hooks/useSensors'
 import { useAquaTrackingAuth } from '@/features/auth/hooks/useAquaTrackingAuth'
 import { normalizeSensorName } from '@/utils/sensor-name.utils'
@@ -10,7 +11,6 @@ import {
   PiCheckCircleDuotone,
   PiWarningCircleDuotone,
   PiMapPinDuotone,
-  PiArrowLeftDuotone,
   PiEyeDuotone
 } from 'react-icons/pi'
 
@@ -65,31 +65,9 @@ const SensorsPage = () => {
 
   return (
     <Container>
+      <Breadcrumb />
+      
       <div className="space-y-6">
-        {/* Header - Vista de Usuario */}
-        <div className="bg-white border border-gray-200 rounded-lg p-6">
-          <div className="flex items-center justify-between mb-4">
-            <Button 
-              size="sm" 
-              variant="plain" 
-              onClick={handleBackToDashboard}
-              className="text-gray-600 hover:text-gray-800"
-            >
-              <PiArrowLeftDuotone className="w-4 h-4 mr-1" />
-              Volver al Dashboard
-            </Button>
-          </div>
-          
-          <div className="flex items-center space-x-3">
-            <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
-              <PiDevicesDuotone className="w-6 h-6 text-blue-600" />
-            </div>
-            <div>
-              <h1 className="text-2xl font-bold text-gray-900">Mis Sensores</h1>
-              <p className="text-gray-600">Monitoreo de sensores de agua en tu hogar</p>
-            </div>
-          </div>
-        </div>
 
         {/* KPIs Simples como en tu imagen */}
         <div className="grid grid-cols-3 gap-4">

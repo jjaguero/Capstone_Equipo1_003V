@@ -1,4 +1,5 @@
 import Container from '@/components/shared/Container'
+import Breadcrumb from '@/components/shared/Breadcrumb'
 import { useConsumption } from '@/hooks/useConsumption'
 import { useSensors } from '@/features/user/sensors/hooks/useSensors'
 import { useAquaTrackingAuth } from '@/features/auth/hooks/useAquaTrackingAuth'
@@ -74,14 +75,7 @@ const ConsumptionHistoryPage = () => {
   return (
     <Container className="h-full">
       <div className="space-y-6 py-6">
-        <div>
-          <h1 className="text-3xl font-bold text-gray-900 dark:text-gray-100">
-            Historial de Consumo
-          </h1>
-          <p className="mt-2 text-gray-600 dark:text-gray-400">
-            Analiza tu consumo de agua en detalle con métricas y tendencias
-          </p>
-        </div>
+        <Breadcrumb />
 
         <ConsumptionFilters
           timePeriod={timePeriod}

@@ -1,4 +1,5 @@
 import Container from '@/components/shared/Container'
+import Breadcrumb from '@/components/shared/Breadcrumb'
 import { useAquaTrackingAuth } from '@/features/auth/hooks/useAquaTrackingAuth'
 import { useSensors } from '@/features/user/sensors/hooks/useSensors'
 import { useConsumption } from '@/hooks/useConsumption'
@@ -10,6 +11,7 @@ import {
   usePasswordForm,
   useAvatarManagement,
   useConsumptionConfig,
+  ProfileTab,
 } from '../hooks'
 import { useUpdateProfile } from '../hooks/useUpdateProfile'
 import {
@@ -19,8 +21,12 @@ import {
   NotificationsTabContent,
   ConsumptionTabContent,
 } from '../components'
+import { useLocation } from 'react-router'
 
 const UserProfilePage = () => {
+  const location = useLocation()
+  const initialTab = (location.state?.activeTab as ProfileTab) || 'profile'
+  
   const { currentUser } = useAquaTrackingAuth()
   const { sensors } = useSensors(currentUser?.homeId)
   const { consumptions } = useConsumption(currentUser?.homeId)
@@ -28,7 +34,7 @@ const UserProfilePage = () => {
   const { updateProfile } = useUpdateProfile()
 
   const { activeTab, setActiveTab, isProfile, isSecurity, isNotifications, isConsumption } =
-    useProfileTabs()
+    useProfileTabs(initialTab)
 
   const profileForm = useProfileForm(currentUser, phoneFormatter)
 
@@ -73,16 +79,9 @@ const UserProfilePage = () => {
 
   return (
     <Container>
-      <div className="animate-fadeIn mb-8">
-        <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100">
-          Configuración de Perfil
-        </h3>
-        <p className="mt-1 text-gray-600 dark:text-gray-400">
-          Administra tu cuenta y preferencias personales
-        </p>
-      </div>
+      <Breadcrumb />
 
-      <div className="grid grid-cols-12 gap-8">
+      <div className="grid grid-cols-12 gap-8 mt-6">
         <div
           className="col-span-12 animate-slideUp lg:col-span-3"
           style={{ animationDelay: '0.1s' }}

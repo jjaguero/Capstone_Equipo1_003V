@@ -1,16 +1,15 @@
 import { useState, useEffect } from 'react'
 import { Card } from '@/components/ui'
 import Container from '@/components/shared/Container'
+import Breadcrumb from '@/components/shared/Breadcrumb'
 import { useAquaTrackingAuth } from '@/features/auth/hooks/useAquaTrackingAuth'
 import { useSensors } from '@/features/user/sensors/hooks/useSensors'
 import { useWebSocket } from '@/hooks/useWebSocket'
 import { 
   PiDropDuotone, 
-  PiArrowLeftDuotone,
   PiDevicesDuotone,
   PiChartLineDuotone
 } from 'react-icons/pi'
-import { useNavigate } from 'react-router'
 import { RealtimeFlowChart, ActiveSensorsList, RecentMeasurements } from '../components'
 import ApiService from '@/services/ApiService'
 import { format } from 'date-fns'
@@ -27,7 +26,6 @@ interface Measurement {
 }
 
 const RealtimePage = () => {
-  const navigate = useNavigate()
   const { currentUser } = useAquaTrackingAuth()
   const { sensors, loading: sensorsLoading } = useSensors(currentUser?.homeId)
   const { isConnected, newMeasurement } = useWebSocket()
@@ -105,39 +103,24 @@ const RealtimePage = () => {
 
   return (
     <Container>
-      <div className="mb-6">
-        <button
-          onClick={() => navigate('/user/dashboard')}
-          className="flex items-center text-gray-600 hover:text-gray-900 mb-4 transition-colors"
-        >
-          <PiArrowLeftDuotone className="w-5 h-5 mr-2" />
-          Volver al Dashboard
-        </button>
+      <Breadcrumb />
+      
+      <div className="mb-6 flex items-center justify-between">
+        <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2 px-3 py-2 rounded-lg bg-green-100 text-green-700">
+            <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
+            <span className="text-sm font-medium">Conectado</span>
+          </div>
+          <div className="text-sm text-gray-600 dark:text-gray-400">
+            {format(new Date(), "EEEE, d 'de' MMMM 'de' yyyy", { locale: es })}
+          </div>
+        </div>
         
-        <div className="flex items-center justify-between">
-          <div>
-            <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100">
-              Monitoreo en Tiempo Real
-            </h3>
-            <p className="text-gray-600 dark:text-gray-400 mt-1">
-              {format(new Date(), "EEEE, d 'de' MMMM 'de' yyyy", { locale: es })}
-            </p>
-          </div>
-          
-          <div className="flex items-center gap-3">
-            <div className="text-right">
-              <p className="text-xs text-gray-500 dark:text-gray-400">Última actualización</p>
-              <p className="text-sm font-medium text-gray-700 dark:text-gray-300">
-                {format(lastUpdate, 'HH:mm:ss', { locale: es })}
-              </p>
-            </div>
-            <div className="flex items-center gap-2 px-3 py-2 rounded-lg bg-green-100 text-green-700">
-              <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-              <span className="text-sm font-medium">
-                Conectado
-              </span>
-            </div>
-          </div>
+        <div className="text-right">
+          <p className="text-xs text-gray-500 dark:text-gray-400">Última actualización</p>
+          <p className="text-sm font-medium text-gray-700 dark:text-gray-300">
+            {format(lastUpdate, 'HH:mm:ss', { locale: es })}
+          </p>
         </div>
       </div>
 
