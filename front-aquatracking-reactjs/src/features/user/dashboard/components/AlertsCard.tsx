@@ -149,18 +149,6 @@ const AlertsCard: React.FC<AlertsCardProps> = ({ alerts, loading, onAlertClick, 
                   </div>
                   
                   <p className="text-sm text-gray-800 mb-2">{alert.message}</p>
-                  
-                  {!alert.resolved && onMarkAsRead && (
-                    <button
-                      onClick={(e) => {
-                        e.stopPropagation()
-                        onMarkAsRead(alert._id)
-                      }}
-                      className="mt-2 text-xs text-indigo-600 hover:text-indigo-700 font-medium transition-colors"
-                    >
-                      Marcar como leída
-                    </button>
-                  )}
                 </div>
               </div>
             </div>

@@ -3,6 +3,9 @@ import { PiTrendUpDuotone, PiTrendDownDuotone } from 'react-icons/pi'
 import { format } from 'date-fns'
 import { es } from 'date-fns/locale'
 import { Dayjs } from 'dayjs'
+import dayjs from 'dayjs'
+import { useTodayConsumption } from '@/hooks/useTodayConsumption'
+import { useAquaTrackingAuth } from '@/features/auth/hooks/useAquaTrackingAuth'
 
 interface DailyConsumption {
   date: string
@@ -24,6 +27,15 @@ export const DailyConsumptionTable = ({
   selectedSensorId,
 }: DailyConsumptionTableProps) => {
   const displayData = consumptions.slice(0, 10)
+  const { currentUser } = useAquaTrackingAuth()
+  const { lastMeasurementTime } = useTodayConsumption(currentUser?.homeId)
+
+  // Obtener la fecha del día más reciente en los datos
+  const latestDate = consumptions.length > 0
+    ? dayjs([...consumptions].sort((a, b) => 
+        dayjs(b.date).valueOf() - dayjs(a.date).valueOf()
+      )[0].date).startOf('day')
+    : null
 
   return (
     <Card className="animation-delay-300 transform animate-fade-in-up p-6 transition-all duration-300 hover:shadow-lg">
@@ -86,21 +98,39 @@ export const DailyConsumptionTable = ({
                   ? (consumption.totalLiters / activeSensorsCount).toFixed(1)
                   : '0.0'
 
+              // Verificar si es el día más reciente (no necesariamente hoy)
+              const isLatestDay = latestDate && dayjs(consumption.date).isSame(latestDate, 'day')
+
               return (
                 <tr
                   key={consumption.date}
-                  className="border-b border-gray-100 transition-colors hover:bg-gray-50 dark:border-gray-800 dark:hover:bg-gray-800"
+                  className={`border-b border-gray-100 transition-colors hover:bg-gray-50 dark:border-gray-800 dark:hover:bg-gray-800 ${
+                    isLatestDay ? 'bg-blue-50 dark:bg-blue-950' : ''
+                  }`}
                 >
                   <td className="px-4 py-4">
-                    <div className="text-sm font-medium text-gray-900 dark:text-gray-100">
-                      {format(new Date(consumption.date), 'dd MMM yyyy', {
-                        locale: es,
-                      })}
-                    </div>
-                    <div className="text-xs text-gray-500 dark:text-gray-400">
-                      {format(new Date(consumption.date), 'EEEE', {
-                        locale: es,
-                      })}
+                    <div className="flex items-center gap-2">
+                      <div>
+                        <div className="flex items-center gap-2">
+                          <span className="text-sm font-medium text-gray-900 dark:text-gray-100">
+                            {format(new Date(consumption.date), 'dd MMM yyyy', {
+                              locale: es,
+                            })}
+                          </span>
+                          {isLatestDay && (
+                            <span className="rounded-full bg-blue-500 px-2 py-0.5 text-xs font-medium text-white">
+                              Hoy
+                            </span>
+                          )}
+                        </div>
+                        <div className="text-xs text-gray-500 dark:text-gray-400">
+                          {isLatestDay && lastMeasurementTime ? (
+                            <>Última medición: {format(lastMeasurementTime, 'HH:mm', { locale: es })}</>
+                          ) : (
+                            format(new Date(consumption.date), 'EEEE', { locale: es })
+                          )}
+                        </div>
+                      </div>
                     </div>
                   </td>
                   <td className="px-4 py-4">

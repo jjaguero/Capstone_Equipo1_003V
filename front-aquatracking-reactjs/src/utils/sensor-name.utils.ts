@@ -12,14 +12,18 @@ import { SENSOR_LOCATIONS, SENSOR_SUBTYPES } from '@/features/user/sensors/const
 export const normalizeSensorName = (sensorName: string): string => {
   if (!sensorName) return '';
 
-  // Buscar primero en las ubicaciones
-  const location = SENSOR_LOCATIONS.find(l => l.value === sensorName);
+  // Buscar primero en las ubicaciones (case-insensitive)
+  const location = SENSOR_LOCATIONS.find(l => 
+    l.value === sensorName || l.label.toLowerCase() === sensorName.toLowerCase()
+  );
   if (location) {
     return location.label;
   }
 
-  // Buscar en los subtipos
-  const subtype = SENSOR_SUBTYPES.find(s => s.value === sensorName);
+  // Buscar en los subtipos (case-insensitive)
+  const subtype = SENSOR_SUBTYPES.find(s => 
+    s.value === sensorName || s.label.toLowerCase() === sensorName.toLowerCase()
+  );
   if (subtype) {
     return subtype.label;
   }
@@ -33,31 +37,38 @@ export const normalizeSensorName = (sensorName: string): string => {
  * Convierte snake_case a Title Case y maneja casos especiales
  */
 const autoNormalizeName = (name: string): string => {
-  return name
+  // Primero corregir casos problemáticos específicos antes de procesar (case-insensitive)
+  let normalized = name
+    .replace(/BañO/gi, 'Baño')
+    .replace(/LoggiA/gi, 'Loggia')
+    .replace(/Loggía/gi, 'Loggia')
+    .toLowerCase()
     // Reemplazar guiones bajos con espacios
-    .replace(/_/g, ' ')
-    // Capitalizar primera letra de cada palabra
-    .replace(/\b\w+/g, (word) => {
-      // Casos especiales
-      const specialCases: Record<string, string> = {
-        'de': 'de',
-        'del': 'del',
-        'la': 'la',
-        'el': 'el',
-        'y': 'y',
-      };
-      
-      const lowerWord = word.toLowerCase();
-      if (specialCases[lowerWord]) {
-        return specialCases[lowerWord];
-      }
-      
-      // Capitalizar primera letra
-      return lowerWord.charAt(0).toUpperCase() + lowerWord.slice(1);
-    })
-    // Casos especiales para palabras completas
-    .replace(/\bJardin\b/g, 'Jardín')
-    .replace(/\bBano\b/g, 'Baño');
+    .replace(/_/g, ' ');
+  
+  // Capitalizar primera letra de cada palabra
+  normalized = normalized.replace(/\b\w+/g, (word) => {
+    // Casos especiales que deben permanecer en minúscula
+    const specialCases: Record<string, string> = {
+      'de': 'de',
+      'del': 'del',
+      'la': 'la',
+      'el': 'el',
+      'y': 'y',
+    };
+    
+    if (specialCases[word]) {
+      return specialCases[word];
+    }
+    
+    // Capitalizar primera letra solamente
+    return word.charAt(0).toUpperCase() + word.slice(1);
+  });
+  
+  // Casos especiales para palabras con acentos/caracteres especiales (final cleanup)
+  return normalized
+    .replace(/\bjardin\b/gi, 'Jardín')
+    .replace(/\bloggia\b/gi, 'Loggia');
 };
 
 /**

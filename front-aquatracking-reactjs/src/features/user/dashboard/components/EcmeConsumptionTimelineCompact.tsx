@@ -44,10 +44,11 @@ const EcmeConsumptionTimelineCompact = ({
     )
   }
 
-  // Procesar últimos 7 días
-  const last7Days = consumptions.slice(0, 7)
-  const totalWeekly = last7Days.reduce((sum, d) => sum + d.totalLiters, 0)
-  const avgDaily = totalWeekly / last7Days.length
+  // Procesar últimos 7 días EXCLUYENDO el día más reciente (día actual en curso)
+  // Mostramos del día anterior hacia atrás (días completos)
+  const last7DaysComplete = consumptions.slice(1, 8) // Saltar el primero [0], tomar del [1] al [7]
+  const totalWeekly = last7DaysComplete.reduce((sum, d) => sum + d.totalLiters, 0)
+  const avgDaily = totalWeekly / last7DaysComplete.length
   const weeklyLimit = userLimit * 7
   const efficiency = ((weeklyLimit - totalWeekly) / weeklyLimit) * 100
 
@@ -109,7 +110,7 @@ const EcmeConsumptionTimelineCompact = ({
               </div>
             </div>
             <div className="text-sm text-gray-600 mb-1">Días registrados</div>
-            <div className="text-2xl font-bold text-gray-900">{last7Days.length}</div>
+            <div className="text-2xl font-bold text-gray-900">{last7DaysComplete.length}</div>
             <div className="text-sm text-gray-500">
               de 7 días
             </div>
@@ -136,9 +137,8 @@ const EcmeConsumptionTimelineCompact = ({
           <h4 className="text-sm font-medium text-gray-700 mb-3">Consumo por día</h4>
           
           <div className="space-y-2">
-            {last7Days.map((day, index) => {
+            {last7DaysComplete.map((day, index) => {
               const percentage = (day.totalLiters / userLimit) * 100
-              const isToday = index === 0
               
               return (
                 <div key={day._id} className="flex items-center justify-between py-2 px-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
@@ -154,11 +154,6 @@ const EcmeConsumptionTimelineCompact = ({
                         <span className="text-sm font-medium text-gray-900">
                           {format(new Date(day.date), 'EEEE dd/MM', { locale: es })}
                         </span>
-                        {isToday && (
-                          <span className="text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded-full">
-                            Hoy
-                          </span>
-                        )}
                       </div>
                       <div className="text-xs text-gray-500">
                         {percentage.toFixed(0)}% del límite

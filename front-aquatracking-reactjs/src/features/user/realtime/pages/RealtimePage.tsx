@@ -35,6 +35,7 @@ const RealtimePage = () => {
   const [currentFlow, setCurrentFlow] = useState(0)
   const [activeSensorsCount, setActiveSensorsCount] = useState(0)
   const [lastUpdate, setLastUpdate] = useState<Date>(new Date())
+  const [selectedSensorId, setSelectedSensorId] = useState<string | null>(null)
 
   // Fetch initial measurements
   useEffect(() => {
@@ -48,6 +49,15 @@ const RealtimePage = () => {
         })
         setMeasurements(response)
         setLastUpdate(new Date())
+        
+        // Calcular el flowRate de la medición más reciente
+        if (response.length > 0) {
+          const latestMeasurement = response[0]
+          const flowRate = latestMeasurement.durationSec > 0 
+            ? (latestMeasurement.liters / latestMeasurement.durationSec) * 60 
+            : 0
+          setCurrentFlow(flowRate)
+        }
       } catch (error) {
         console.error('Error fetching measurements:', error)
       } finally {
@@ -175,11 +185,22 @@ const RealtimePage = () => {
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         <div className="lg:col-span-2">
-          <RealtimeFlowChart measurements={measurements} sensors={sensors} loading={measurementsLoading} />
+          <RealtimeFlowChart 
+            measurements={measurements} 
+            sensors={sensors} 
+            loading={measurementsLoading}
+            selectedSensorId={selectedSensorId}
+            onSensorSelect={setSelectedSensorId}
+          />
         </div>
         
         <div>
-          <ActiveSensorsList sensors={sensors} loading={sensorsLoading} />
+          <ActiveSensorsList 
+            sensors={sensors} 
+            loading={sensorsLoading}
+            selectedSensorId={selectedSensorId}
+            onSensorSelect={setSelectedSensorId}
+          />
         </div>
       </div>
 

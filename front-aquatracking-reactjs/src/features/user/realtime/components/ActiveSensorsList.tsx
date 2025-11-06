@@ -1,13 +1,16 @@
 import { Card } from '@/components/ui'
 import { PiDevicesDuotone, PiDropDuotone } from 'react-icons/pi'
 import { Sensor } from '@/@types/entities'
+import { normalizeSensorName } from '@/utils/sensor-name.utils'
 
 interface ActiveSensorsListProps {
   sensors: Sensor[]
   loading: boolean
+  selectedSensorId?: string | null
+  onSensorSelect?: (sensorId: string | null) => void
 }
 
-const ActiveSensorsList = ({ sensors, loading }: ActiveSensorsListProps) => {
+const ActiveSensorsList = ({ sensors, loading, selectedSensorId, onSensorSelect }: ActiveSensorsListProps) => {
   if (loading) {
     return (
       <Card>
@@ -39,20 +42,49 @@ const ActiveSensorsList = ({ sensors, loading }: ActiveSensorsListProps) => {
             {activeSensors.map((sensor) => (
               <div 
                 key={sensor._id}
-                className="p-3 bg-emerald-50 dark:bg-emerald-900/20 rounded-lg border border-emerald-200 dark:border-emerald-800"
+                onClick={() => onSensorSelect?.(sensor._id)}
+                className={`p-3 rounded-lg border transition-all cursor-pointer ${
+                  selectedSensorId === sensor._id
+                    ? 'bg-blue-100 dark:bg-blue-900/40 border-blue-400 dark:border-blue-600 shadow-md'
+                    : 'bg-emerald-50 dark:bg-emerald-900/20 border-emerald-200 dark:border-emerald-800 hover:shadow-md'
+                }`}
               >
                 <div className="flex items-center justify-between mb-2">
-                  <span className="font-medium text-gray-900 dark:text-gray-100 text-sm">
-                    {sensor.subType || 'Sensor'}
+                  <span className={`font-medium text-sm ${
+                    selectedSensorId === sensor._id 
+                      ? 'text-blue-900 dark:text-blue-100' 
+                      : 'text-gray-900 dark:text-gray-100'
+                  }`}>
+                    {normalizeSensorName(sensor.subType || sensor.category || 'Sensor')}
                   </span>
                   <div className="flex items-center gap-1">
-                    <div className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></div>
-                    <span className="text-xs text-emerald-600 dark:text-emerald-400">Activo</span>
+                    <div className={`w-2 h-2 rounded-full animate-pulse ${
+                      selectedSensorId === sensor._id ? 'bg-blue-500' : 'bg-emerald-500'
+                    }`}></div>
+                    <span className={`text-xs ${
+                      selectedSensorId === sensor._id 
+                        ? 'text-blue-600 dark:text-blue-400' 
+                        : 'text-emerald-600 dark:text-emerald-400'
+                    }`}>
+                      {selectedSensorId === sensor._id ? 'Seleccionado' : 'Activo'}
+                    </span>
                   </div>
                 </div>
                 
-                <p className="text-xs text-gray-600 dark:text-gray-400">
-                  {sensor.location}
+                <p className={`text-xs mb-1 ${
+                  selectedSensorId === sensor._id 
+                    ? 'text-blue-700 dark:text-blue-300' 
+                    : 'text-gray-600 dark:text-gray-400'
+                }`}>
+                  {normalizeSensorName(sensor.location || 'Sin ubicación')}
+                </p>
+                
+                <p className={`text-xs font-mono ${
+                  selectedSensorId === sensor._id 
+                    ? 'text-blue-600 dark:text-blue-400' 
+                    : 'text-gray-500 dark:text-gray-500'
+                }`}>
+                  {sensor.serialNumber}
                 </p>
               </div>
             ))}

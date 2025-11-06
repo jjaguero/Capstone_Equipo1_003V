@@ -2,7 +2,6 @@ import { Card } from '@/components/ui'
 import {
   PiUserDuotone,
   PiLockKeyDuotone,
-  PiBellDuotone,
   PiDropDuotone,
 } from 'react-icons/pi'
 import { ProfileTab } from '../hooks/useProfileTabs'
@@ -16,7 +15,6 @@ export const ProfileSidebar = ({ activeTab, onTabChange }: ProfileSidebarProps) 
   const tabs = [
     { id: 'profile' as ProfileTab, icon: PiUserDuotone, label: 'Perfil' },
     { id: 'security' as ProfileTab, icon: PiLockKeyDuotone, label: 'Seguridad' },
-    { id: 'notifications' as ProfileTab, icon: PiBellDuotone, label: 'Notificaciones' },
     { id: 'consumption' as ProfileTab, icon: PiDropDuotone, label: 'Consumo' },
   ]
 

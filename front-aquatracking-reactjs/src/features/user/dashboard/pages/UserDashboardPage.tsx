@@ -2,6 +2,7 @@ import { Card } from '@/components/ui'
 import Container from '@/components/shared/Container'
 import { useSensors } from '@/features/user/sensors/hooks/useSensors'
 import { useConsumption } from '@/hooks/useConsumption'
+import { useTodayConsumption } from '@/hooks/useTodayConsumption'
 import { useAlerts } from '@/hooks/useAlerts'
 import { useAquaTrackingAuth } from '@/features/auth/hooks/useAquaTrackingAuth'
 import { PiDropDuotone, PiDevicesDuotone, PiBellDuotone, PiTargetDuotone, PiChartLineDuotone, PiArrowRightDuotone } from 'react-icons/pi'
@@ -11,20 +12,26 @@ import SensorStatusCard from '../components/SensorStatusCard'
 import AlertsCard from '../components/AlertsCard'
 import EmptyDataMessage from '../components/EmptyDataMessage'
 import { useNavigate } from 'react-router'
+import { format } from 'date-fns'
+import { es } from 'date-fns/locale'
 
 const UserDashboardPage = () => {
   const navigate = useNavigate()
   const { currentUser } = useAquaTrackingAuth()
   const { sensors, loading: sensorsLoading } = useSensors(currentUser?.homeId)
   const { consumptions, loading: consumptionLoading } = useConsumption(currentUser?.homeId)
+  const { todayLiters, lastMeasurementTime, latestDate, loading: todayLoading } = useTodayConsumption(currentUser?.homeId)
   const { alerts, loading: alertsLoading } = useAlerts(currentUser?.homeId)
 
   const activeSensors = sensors.filter(s => s.status === 'active').length
   const totalSensors = sensors.length
   const unresolvedAlerts = alerts.filter(a => !a.resolved).length
-  const todayConsumption = consumptions[0]?.totalLiters || 0
 
-  // Si el usuario no tiene homeId asignado
+  // Formato para mostrar en la tarjeta (usar la fecha del hook)
+  const consumptionLabel = latestDate
+    ? format(latestDate, "d 'de' MMMM", { locale: es })
+    : 'Consumo'
+
   if (!currentUser?.homeId) {
     return (
       <Container>
@@ -69,7 +76,7 @@ const UserDashboardPage = () => {
 
       {/* KPIs Cards Mejoradas */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8 animate-slideUp" style={{ animationDelay: '0.1s' }}>
-        {/* Consumo Hoy */}
+        {/* Consumo Acumulado Hoy */}
         <Card 
           className="relative overflow-hidden bg-gradient-to-br from-blue-50 to-indigo-100 border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 cursor-pointer"
           onClick={() => navigate('/user/realtime')}
@@ -78,21 +85,24 @@ const UserDashboardPage = () => {
           <div className="relative p-6">
             <div className="flex items-center justify-between">
               <div>
-                <span className="text-blue-600 text-sm font-medium uppercase tracking-wide">Consumo Hoy</span>
+                <span className="text-blue-600 text-sm font-medium uppercase tracking-wide">
+                  {consumptionLabel}
+                </span>
                 <div className="text-3xl font-bold text-blue-700 mt-1">
-                  {todayConsumption.toFixed(1)}
+                  {todayLoading ? '...' : todayLiters.toFixed(1)}
                   <span className="text-lg text-blue-500 ml-1">L</span>
                 </div>
                 <div className="text-xs text-blue-500 mt-1">
-                  {currentUser?.limitLitersPerDay ? 
-                    `${((todayConsumption / currentUser.limitLitersPerDay) * 100).toFixed(0)}% del límite` :
-                    'Sin límite configurado'
-                  }
+                  {lastMeasurementTime ? (
+                    <>Última medición: {format(lastMeasurementTime, 'HH:mm', { locale: es })}</>
+                  ) : (
+                    'Sin mediciones'
+                  )}
                 </div>
               </div>
               <div className="relative">
                 <PiDropDuotone className="text-5xl text-blue-500" />
-                {todayConsumption > 0 && (
+                {todayLiters > 0 && (
                   <div className="absolute -top-1 -right-1 w-3 h-3 bg-blue-400 rounded-full animate-pulse" />
                 )}
               </div>
@@ -186,14 +196,14 @@ const UserDashboardPage = () => {
                 </div>
                 <div className="text-xs text-amber-500 mt-1">
                   {currentUser?.limitLitersPerDay ? 
-                    `${(currentUser.limitLitersPerDay - todayConsumption).toFixed(0)}L disponibles` :
+                    `${Math.max(0, currentUser.limitLitersPerDay - todayLiters).toFixed(0)}L disponibles` :
                     'Sin límite configurado'
                   }
                 </div>
               </div>
               <div className="relative">
                 <PiTargetDuotone className="text-5xl text-amber-500" />
-                {currentUser?.limitLitersPerDay && todayConsumption > currentUser.limitLitersPerDay && (
+                {currentUser?.limitLitersPerDay && todayLiters > currentUser.limitLitersPerDay && (
                   <div className="absolute -top-1 -right-1 w-3 h-3 bg-red-500 rounded-full animate-pulse" />
                 )}
               </div>
@@ -225,8 +235,7 @@ const UserDashboardPage = () => {
                 sensors={sensors} 
                 loading={sensorsLoading}
                 onSensorClick={(sensor) => {
-
-
+                  navigate(`/user/sensors/${sensor._id}`)
                 }}
               />
               
@@ -234,10 +243,6 @@ const UserDashboardPage = () => {
                 alerts={alerts} 
                 loading={alertsLoading}
                 onAlertClick={(alert) => {
-
-
-                }}
-                onMarkAsRead={(alertId) => {
 
 
                 }}

@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-export type ProfileTab = 'profile' | 'security' | 'notifications' | 'consumption'
+export type ProfileTab = 'profile' | 'security' | 'consumption'
 
 export const useProfileTabs = (initialTab: ProfileTab = 'profile') => {
   const [activeTab, setActiveTab] = useState<ProfileTab>(initialTab)
@@ -10,7 +10,6 @@ export const useProfileTabs = (initialTab: ProfileTab = 'profile') => {
     setActiveTab,
     isProfile: activeTab === 'profile',
     isSecurity: activeTab === 'security',
-    isNotifications: activeTab === 'notifications',
     isConsumption: activeTab === 'consumption',
   }
 }

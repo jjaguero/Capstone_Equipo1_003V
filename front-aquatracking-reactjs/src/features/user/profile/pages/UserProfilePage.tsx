@@ -18,7 +18,6 @@ import {
   ProfileSidebar,
   ProfileTabContent,
   SecurityTabContent,
-  NotificationsTabContent,
   ConsumptionTabContent,
 } from '../components'
 import { useLocation } from 'react-router'
@@ -33,7 +32,7 @@ const UserProfilePage = () => {
   const phoneFormatter = usePhoneFormatter(currentUser?.phone || '')
   const { updateProfile } = useUpdateProfile()
 
-  const { activeTab, setActiveTab, isProfile, isSecurity, isNotifications, isConsumption } =
+  const { activeTab, setActiveTab, isProfile, isSecurity, isConsumption } =
     useProfileTabs(initialTab)
 
   const profileForm = useProfileForm(currentUser, phoneFormatter)
@@ -123,8 +122,6 @@ const UserProfilePage = () => {
               handlePasswordUpdate={handlePasswordUpdate}
             />
           )}
-
-          {isNotifications && <NotificationsTabContent />}
 
           {isConsumption && (
             <ConsumptionTabContent
