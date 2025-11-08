@@ -3,6 +3,8 @@ import Container from '@/components/shared/Container'
 import Breadcrumb from '@/components/shared/Breadcrumb'
 import { useAlerts } from '@/hooks/useAlerts'
 import { useAquaTrackingAuth } from '@/features/auth/hooks/useAquaTrackingAuth'
+import { toast } from '@/components/ui/toast'
+import Notification from '@/components/ui/Notification'
 import { 
   PiBellDuotone,
   PiWarningDuotone,
@@ -16,11 +18,32 @@ import { es } from 'date-fns/locale'
 
 const UserAlertsPage = () => {
   const { currentUser } = useAquaTrackingAuth()
-  const { alerts, loading } = useAlerts(currentUser?.homeId)
+  const { alerts, loading, resolveAlert, fetchAlertsByHome } = useAlerts(currentUser?.homeId)
 
-  const handleMarkAsResolved = (alertId: string) => {
-
-
+  const handleMarkAsResolved = async (alertId: string) => {
+    try {
+      await resolveAlert(alertId)
+      
+      toast.push(
+        <Notification type="success" title="Alerta resuelta">
+          La alerta ha sido marcada como resuelta exitosamente
+        </Notification>,
+        { placement: 'top-end' }
+      )
+      
+      // Recargar alertas
+      if (currentUser?.homeId) {
+        fetchAlertsByHome(currentUser.homeId)
+      }
+    } catch (error) {
+      console.error('Error marking alert as resolved:', error)
+      toast.push(
+        <Notification type="danger" title="Error">
+          No se pudo marcar la alerta como resuelta
+        </Notification>,
+        { placement: 'top-end' }
+      )
+    }
   }
 
   if (!currentUser?.homeId) {
@@ -99,6 +122,36 @@ const UserAlertsPage = () => {
     <Container>
       <div className="space-y-6">
         <Breadcrumb />
+
+        {/* Header con explicación */}
+        <div className="mb-6">
+          <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-2">
+            Mis Alertas de Consumo
+          </h2>
+          <p className="text-gray-600 dark:text-gray-400">
+            Notificaciones sobre el consumo de agua en tu hogar. Cuando recibas una alerta, revisa el consumo y toma medidas para reducirlo.
+          </p>
+        </div>
+
+        {/* Información sobre qué hacer con las alertas */}
+        {unresolvedAlerts.length > 0 && (
+          <div className="p-4 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-lg">
+            <div className="flex items-start gap-3">
+              <div className="p-2 bg-amber-100 dark:bg-amber-900/30 rounded-lg">
+                <PiWarningDuotone className="w-5 h-5 text-amber-600 dark:text-amber-400" />
+              </div>
+              <div>
+                <h4 className="text-sm font-semibold text-amber-900 dark:text-amber-100 mb-1">
+                  Tienes {unresolvedAlerts.length} {unresolvedAlerts.length === 1 ? 'alerta pendiente' : 'alertas pendientes'}
+                </h4>
+                <p className="text-sm text-amber-800 dark:text-amber-200">
+                  Recomendaciones: Revisa fugas en grifos y cañerías, verifica el funcionamiento de los sensores, 
+                  y reduce el consumo innecesario. Marca como resuelta cuando hayas tomado acción.
+                </p>
+              </div>
+            </div>
+          </div>
+        )}
 
         {/* Resumen de Alertas */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">

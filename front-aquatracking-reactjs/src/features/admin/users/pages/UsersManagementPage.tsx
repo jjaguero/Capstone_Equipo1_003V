@@ -4,6 +4,7 @@ import THead from '@/components/ui/Table/THead'
 import Td from '@/components/ui/Table/Td'
 import Th from '@/components/ui/Table/Th'
 import Tr from '@/components/ui/Table/Tr'
+import Breadcrumb from '@/components/shared/Breadcrumb'
 import { useUsers } from '@/features/admin/users/hooks/useUsers'
 import { useHomes } from '@/features/admin/homes/hooks/useHomes'
 import { useNavigate } from 'react-router'
@@ -22,6 +23,8 @@ const UsersManagementPage = () => {
 
   return (
     <div className="space-y-8">
+      <Breadcrumb />
+      
       <Card className="bg-white/80 backdrop-blur-sm shadow-lg hover:shadow-xl transition-all duration-300">
         <div className="flex items-center justify-between mb-8 animate-fadeIn">
           <div>

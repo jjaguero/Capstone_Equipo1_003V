@@ -5,3 +5,4 @@ export * from './sensor.schema';
 export * from './measurement.schema';
 export * from './daily-consumption.schema';
 export * from './alert.schema';
+export * from './support-ticket.schema';

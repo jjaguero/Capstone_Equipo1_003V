@@ -16,6 +16,7 @@ import Table from '@/components/ui/Table'
 import Dialog from '@/components/ui/Dialog'
 import Select from '@/components/ui/Select'
 import Badge from '@/components/ui/Badge'
+import Breadcrumb from '@/components/shared/Breadcrumb'
 import { useHomes } from '@/features/admin/homes/hooks/useHomes'
 import { useUsers } from '@/features/admin/users/hooks/useUsers'
 import { useSensors } from '@/features/user/sensors/hooks/useSensors'
@@ -263,6 +264,8 @@ const HomesManagementPage = () => {
 
     return (
         <div className="space-y-8">
+            <Breadcrumb />
+            
             <Card className="bg-white/80 backdrop-blur-sm shadow-lg hover:shadow-xl transition-all duration-300">
                 <div className="flex items-center justify-between mb-8 animate-fadeIn">
                     <div>

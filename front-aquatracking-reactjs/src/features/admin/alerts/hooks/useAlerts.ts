@@ -83,8 +83,10 @@ export const useAlerts = (homeId?: string, fetchAll = false): UseAlertsReturn =>
         const total = data.length
         const pending = data.filter(a => !a.resolved).length
         const resolved = data.filter(a => a.resolved).length
-        const critical = data.filter(a => a.type === 'critical_consumption' && !a.resolved).length
-        const high = data.filter(a => a.type === 'high_consumption' && !a.resolved).length
+        // Alertas críticas: tipo 'critical' (consumo >100%)
+        const critical = data.filter(a => a.type === 'critical' && !a.resolved).length
+        // Alertas de advertencia: tipo 'warning' (consumo 90-100%)
+        const high = data.filter(a => a.type === 'warning' && !a.resolved).length
 
         setStats({
             total,

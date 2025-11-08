@@ -23,15 +23,22 @@ interface PlatformStatsProps {
 }
 
 const PlatformStats = (props: PlatformStatsProps) => {
+    // Calcular porcentajes
+    const userActivePercent = props.totalUsers > 0 ? Math.round((props.activeUsers / props.totalUsers) * 100) : 0
+    const homeActivePercent = props.totalHomes > 0 ? Math.round((props.activeHomes / props.totalHomes) * 100) : 0
+    const sensorActivePercent = props.totalSensors > 0 ? Math.round((props.activeSensors / props.totalSensors) * 100) : 0
+    const alertResolvedPercent = props.totalAlerts > 0 ? Math.round(((props.totalAlerts - props.pendingAlerts) / props.totalAlerts) * 100) : 100
+
     const stats = [
         {
             icon: <PiUsersDuotone className="text-4xl" />,
             label: 'Usuarios',
             value: props.activeUsers,
             total: props.totalUsers,
-            unit: 'activos',
-            color: 'text-blue-600',
-            bgColor: 'bg-blue-100',
+            unit: 'con hogar asignado',
+            percent: userActivePercent,
+            color: 'text-blue-600 dark:text-blue-400',
+            bgColor: 'bg-blue-100 dark:bg-blue-900/30',
         },
         {
             icon: <PiHouseDuotone className="text-4xl" />,
@@ -39,25 +46,27 @@ const PlatformStats = (props: PlatformStatsProps) => {
             value: props.activeHomes,
             total: props.totalHomes,
             unit: 'activos',
-            color: 'text-indigo-600',
-            bgColor: 'bg-indigo-100',
+            percent: homeActivePercent,
+            color: 'text-indigo-600 dark:text-indigo-400',
+            bgColor: 'bg-indigo-100 dark:bg-indigo-900/30',
         },
         {
             icon: <PiCircuitryDuotone className="text-4xl" />,
             label: 'Sensores',
             value: props.activeSensors,
             total: props.totalSensors,
-            unit: 'activos',
-            color: 'text-purple-600',
-            bgColor: 'bg-purple-100',
+            unit: 'operativos',
+            percent: sensorActivePercent,
+            color: 'text-purple-600 dark:text-purple-400',
+            bgColor: 'bg-purple-100 dark:bg-purple-900/30',
         },
         {
             icon: <PiDropDuotone className="text-4xl" />,
             label: 'Consumo Total',
             value: props.totalConsumption,
-            unit: 'litros',
-            color: 'text-cyan-600',
-            bgColor: 'bg-cyan-100',
+            unit: 'litros históricos',
+            color: 'text-cyan-600 dark:text-cyan-400',
+            bgColor: 'bg-cyan-100 dark:bg-cyan-900/30',
         },
         {
             icon: <PiChartLineDuotone className="text-4xl" />,
@@ -65,8 +74,8 @@ const PlatformStats = (props: PlatformStatsProps) => {
             value: props.currentMonthConsumption,
             unit: 'litros',
             trend: props.consumptionTrend,
-            color: props.consumptionTrend > 0 ? 'text-orange-600' : 'text-green-600',
-            bgColor: props.consumptionTrend > 0 ? 'bg-orange-100' : 'bg-green-100',
+            color: props.consumptionTrend > 0 ? 'text-orange-600 dark:text-orange-400' : 'text-green-600 dark:text-green-400',
+            bgColor: props.consumptionTrend > 0 ? 'bg-orange-100 dark:bg-orange-900/30' : 'bg-green-100 dark:bg-green-900/30',
         },
         {
             icon: <PiWarningDuotone className="text-4xl" />,
@@ -74,8 +83,9 @@ const PlatformStats = (props: PlatformStatsProps) => {
             value: props.pendingAlerts,
             total: props.totalAlerts,
             unit: 'pendientes',
-            color: props.pendingAlerts > 0 ? 'text-red-600' : 'text-gray-600',
-            bgColor: props.pendingAlerts > 0 ? 'bg-red-100' : 'bg-gray-100',
+            percent: 100 - alertResolvedPercent, // % pendientes
+            color: props.pendingAlerts > 0 ? 'text-red-600 dark:text-red-400' : 'text-green-600 dark:text-green-400',
+            bgColor: props.pendingAlerts > 0 ? 'bg-red-100 dark:bg-red-900/30' : 'bg-green-100 dark:bg-green-900/30',
         },
     ]
 
@@ -96,20 +106,29 @@ const PlatformStats = (props: PlatformStatsProps) => {
                                     {stat.value.toLocaleString('es-CL')}
                                 </span>
                                 {stat.total !== undefined && (
-                                    <span className="text-sm text-gray-500">
+                                    <span className="text-sm text-gray-500 dark:text-gray-400">
                                         / {stat.total}
                                     </span>
                                 )}
                             </div>
-                            <div className="flex items-center gap-2 mt-1">
+                            <div className="flex items-center justify-between mt-1">
                                 <span className="text-xs text-gray-500 dark:text-gray-400">
                                     {stat.unit}
                                 </span>
+                                {stat.percent !== undefined && (
+                                    <span className={`text-xs font-semibold px-2 py-0.5 rounded ${
+                                        stat.percent >= 80 ? 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400' :
+                                        stat.percent >= 50 ? 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-400' :
+                                        'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400'
+                                    }`}>
+                                        {stat.percent}%
+                                    </span>
+                                )}
                                 {stat.trend !== undefined && stat.trend !== 0 && (
                                     <span className={`text-xs font-medium ${
-                                        stat.trend > 0 ? 'text-orange-600' : 'text-green-600'
+                                        stat.trend > 0 ? 'text-orange-600 dark:text-orange-400' : 'text-green-600 dark:text-green-400'
                                     }`}>
-                                        {stat.trend > 0 ? '↗' : '↘'} {Math.abs(stat.trend)}%
+                                        {stat.trend > 0 ? '+' : ''}{stat.trend}%
                                     </span>
                                 )}
                             </div>

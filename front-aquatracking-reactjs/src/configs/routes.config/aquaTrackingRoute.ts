@@ -48,11 +48,19 @@ const aquaTrackingRoutes: Routes = [
     authority: ['user'],
   },
 
+  // Soporte Técnico
+  {
+    key: 'user.support',
+    path: '/user/support',
+    component: lazy(() => import('@/features/user/support/pages/UserSupportPage')),
+    authority: ['user'],
+  },
+
   // Dashboard Principal del Admin
   {
     key: 'admin.dashboard',
     path: '/admin/dashboard',
-    component: lazy(() => import('@/features/admin/consumption/pages/ConsumptionPage')),
+    component: lazy(() => import('@/features/admin/dashboard/pages/AdminDashboardPage')),
     authority: ['admin'],
   },
 
@@ -116,12 +124,20 @@ const aquaTrackingRoutes: Routes = [
     authority: ['admin'],
   },
 
+  // Soporte Técnico
+  {
+    key: 'admin.support',
+    path: '/admin/support',
+    component: lazy(() => import('@/features/admin/support/pages/AdminSupportPage')),
+    authority: ['admin'],
+  },
+
 
   {
     key: 'settings.profile',
     path: '/settings',
     component: lazy(() => import('@/features/user/profile/pages/UserProfilePage')),
-    authority: ['user', 'admin'],
+    authority: ['user'],
   },
 ];
 

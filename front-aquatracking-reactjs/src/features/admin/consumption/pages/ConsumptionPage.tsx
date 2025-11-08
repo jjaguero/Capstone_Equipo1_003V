@@ -4,12 +4,10 @@ import { ENDPOINTS } from '@/api/endpoints'
 import Container from '@/components/shared/Container'
 import AdaptiveCard from '@/components/shared/AdaptiveCard'
 import Spinner from '@/components/ui/Spinner'
-import Button from '@/components/ui/Button'
-import { PiArrowClockwiseDuotone } from 'react-icons/pi'
+import Breadcrumb from '@/components/shared/Breadcrumb'
 import useConsumption from '../hooks/useConsumption'
 import { useSystemDashboard } from '@/hooks/useSystemDashboard'
 import ConsumptionStats from '../components/ConsumptionStats'
-import ConsumptionFilters from '../components/ConsumptionFilters'
 import { SystemTrendsChart, AlertsTable } from '../components'
 import { DistributionChart } from '@/components/consumption/DistributionChart'
 
@@ -59,11 +57,6 @@ const ConsumptionPage = () => {
         fetchHomes()
     }, [])
 
-    const handleRefresh = () => {
-        refetch()
-        refreshData()
-    }
-
     const loading = consumptionLoading || dashboardLoading || loadingHomes
     const error = consumptionError || dashboardError
 
@@ -105,13 +98,12 @@ const ConsumptionPage = () => {
                                 {error}
                             </p>
                         </div>
-                        <Button 
-                            onClick={handleRefresh} 
-                            icon={<PiArrowClockwiseDuotone />}
-                            className="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-2"
+                        <button 
+                            onClick={() => window.location.reload()} 
+                            className="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-2 rounded-lg font-medium transition-colors"
                         >
                             Reintentar
-                        </Button>
+                        </button>
                     </div>
                 </AdaptiveCard>
             </Container>
@@ -120,36 +112,17 @@ const ConsumptionPage = () => {
 
     return (
         <Container>
+            <Breadcrumb />
+            
             {/* Header */}
-            <div className="flex items-center justify-between mb-8 animate-fadeIn">
-                <div>
-                    <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100">
-                        Vista de Consumo
-                    </h3>
-                    <p className="text-gray-600 dark:text-gray-400 mt-1">
-                        Monitoreo y análisis del consumo de agua por hogar
-                    </p>
-                </div>
-                <Button
-                    variant="solid"
-                    onClick={handleRefresh}
-                    icon={<PiArrowClockwiseDuotone />}
-                    className="hidden sm:flex bg-indigo-600 hover:bg-indigo-700 text-white transition-all duration-200 shadow-md hover:shadow-lg"
-                >
-                    Actualizar
-                </Button>
+            <div className="mb-8 animate-fadeIn">
+                <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100">
+                    Vista de Consumo
+                </h3>
+                <p className="text-gray-600 dark:text-gray-400 mt-1">
+                    Monitoreo y análisis del consumo de agua por hogar
+                </p>
             </div>
-
-            {/* Filtros de consumo */}
-            <ConsumptionFilters
-                homes={homes}
-                consumptions={consumptions}
-                onFilterHome={refetch}
-                onFilterDateRange={refetch}
-                onFilterPeriod={refetch}
-                currentPeriod={null}
-                onReset={refetch}
-            />
 
             {/* KPIs - Estadísticas principales */}
             <div className="animate-slideUp" style={{ animationDelay: '0.1s' }}>

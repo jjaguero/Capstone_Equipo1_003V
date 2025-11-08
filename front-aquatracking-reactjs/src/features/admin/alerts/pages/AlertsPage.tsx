@@ -3,9 +3,7 @@ import { apiClient } from '@/api/client'
 import { ENDPOINTS } from '@/api/endpoints'
 import Container from '@/components/shared/Container'
 import AdaptiveCard from '@/components/shared/AdaptiveCard'
-import Spinner from '@/components/ui/Spinner'
-import Button from '@/components/ui/Button'
-import { PiArrowClockwiseDuotone } from 'react-icons/pi'
+import Breadcrumb from '@/components/shared/Breadcrumb'
 import useAlerts from '../hooks/useAlerts'
 import AlertsStats from '../components/AlertsStats'
 import AlertsFilters from '../components/AlertsFilters'
@@ -94,13 +92,12 @@ const AlertsPage = () => {
                                 {error}
                             </p>
                         </div>
-                        <Button 
-                            onClick={refetch} 
-                            icon={<PiArrowClockwiseDuotone />}
-                            className="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-2"
+                        <button 
+                            onClick={() => window.location.reload()} 
+                            className="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-2 rounded-lg font-medium transition-colors"
                         >
                             Reintentar
-                        </Button>
+                        </button>
                     </div>
                 </AdaptiveCard>
             </Container>
@@ -109,24 +106,17 @@ const AlertsPage = () => {
 
     return (
         <Container>
-            <div className="flex items-center justify-between mb-8 animate-fadeIn">
-                <div>
-                    <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100">
-                        Gestión de Alertas del Sistema
-                    </h3>
-                    <p className="text-gray-600 dark:text-gray-400 mt-1">
-                        Monitoreo de alertas de consumo excesivo de agua de todo el sistema
-                    </p>
-                </div>
-                <Button
-                    variant="solid"
-                    onClick={refetch}
-                    icon={<PiArrowClockwiseDuotone />}
-                    className="hidden sm:flex bg-indigo-600 hover:bg-indigo-700 text-white transition-all duration-200 shadow-md hover:shadow-lg"
-                >
-                    Actualizar
-                </Button>
+            <Breadcrumb />
+            
+            <div className="mb-6 animate-fadeIn">
+                <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100">
+                    Gestión de Alertas del Sistema
+                </h3>
+                <p className="text-gray-600 dark:text-gray-400 mt-1">
+                    Monitoreo de alertas de consumo excesivo de agua de todos los hogares
+                </p>
             </div>
+            
             <div className="animate-slideUp" style={{ animationDelay: '0.1s' }}>
             {stats && (
                 <AlertsStats

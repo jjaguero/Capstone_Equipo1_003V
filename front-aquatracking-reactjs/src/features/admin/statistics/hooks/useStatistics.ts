@@ -24,6 +24,8 @@ interface TopHome {
     averageDaily: number
     members: number
     consumptionPerPerson: number
+    alertCount?: number
+    status?: 'critical' | 'high' | 'warning'
 }
 
 interface MonthlyTrend {
@@ -97,11 +99,11 @@ export const useStatistics = (): UseStatisticsReturn => {
 
             const stats: PlatformStats = {
                 totalUsers: users.length,
-                activeUsers: users.filter((u: any) => u.active).length,
+                activeUsers: users.filter((u: any) => u.homeId).length, // Usuarios con hogar asignado
                 totalHomes: homes.length,
                 activeHomes: homes.filter((h: any) => h.active).length,
                 totalSensors: sensors.length,
-                activeSensors: sensors.filter((s: any) => s.active).length,
+                activeSensors: sensors.filter((s: any) => s.status === 'active').length, // Sensores con status 'active'
                 totalConsumption: Math.round(totalConsumption),
                 totalAlerts: alerts.length,
                 pendingAlerts: alerts.filter((a: any) => !a.resolved).length,
@@ -112,19 +114,30 @@ export const useStatistics = (): UseStatisticsReturn => {
 
             setPlatformStats(stats)
 
-            // Calculate top 5 homes by consumption
+            // Calcular hogares que requieren atención (consumo anormal o con alertas)
             const homeConsumption = new Map<string, number>()
             consumptions.forEach((c: any) => {
                 const current = homeConsumption.get(c.homeId) || 0
                 homeConsumption.set(c.homeId, current + (c.totalLiters || 0))
             })
 
-            const topHomesData: TopHome[] = Array.from(homeConsumption.entries())
+            // Contar alertas por hogar
+            const homeAlerts = new Map<string, number>()
+            alerts.forEach((a: any) => {
+                if (!a.resolved) {
+                    const current = homeAlerts.get(String(a.homeId)) || 0
+                    homeAlerts.set(String(a.homeId), current + 1)
+                }
+            })
+
+            const homesWithIssues: TopHome[] = Array.from(homeConsumption.entries())
                 .map(([homeId, total]) => {
                     const home = homes.find((h: any) => String(h._id) === homeId)
                     const homeConsumptions = consumptions.filter((c: any) => String(c.homeId) === homeId)
                     const averageDaily = homeConsumptions.length > 0 ? total / homeConsumptions.length : 0
                     const members = home?.members || 1
+                    const consumptionPerPerson = Math.round(averageDaily / members)
+                    const alertCount = homeAlerts.get(homeId) || 0
                     
                     return {
                         homeId,
@@ -132,13 +145,33 @@ export const useStatistics = (): UseStatisticsReturn => {
                         totalConsumption: Math.round(total),
                         averageDaily: Math.round(averageDaily),
                         members,
-                        consumptionPerPerson: Math.round(averageDaily / members),
+                        consumptionPerPerson,
+                        alertCount,
+                        status: consumptionPerPerson > 200 || alertCount > 0 ? 'critical' as const : 
+                               consumptionPerPerson > 150 ? 'high' as const : 'warning' as const
                     }
                 })
-                .sort((a, b) => b.totalConsumption - a.totalConsumption)
-                .slice(0, 5)
+                // Filtrar solo hogares con consumo > 120 L/persona/día (umbral de monitoreo)
+                .filter(home => home.consumptionPerPerson > 120 || (home.alertCount && home.alertCount > 0))
+                // Ordenar por prioridad: primero críticos (con alertas o >200), luego por consumo
+                .sort((a, b) => {
+                    // Prioridad 1: Hogares con alertas
+                    if ((a.alertCount || 0) > 0 && (b.alertCount || 0) === 0) return -1
+                    if ((a.alertCount || 0) === 0 && (b.alertCount || 0) > 0) return 1
+                    
+                    // Prioridad 2: Consumo crítico (>200)
+                    const aCritical = a.consumptionPerPerson > 200
+                    const bCritical = b.consumptionPerPerson > 200
+                    if (aCritical && !bCritical) return -1
+                    if (!aCritical && bCritical) return 1
+                    
+                    // Prioridad 3: Mayor consumo per cápita
+                    return b.consumptionPerPerson - a.consumptionPerPerson
+                })
+                // Limitar a los 10 más críticos para no saturar la vista
+                .slice(0, 10)
 
-            setTopHomes(topHomesData)
+            setTopHomes(homesWithIssues)
 
             // Calculate monthly trend (last 6 months)
             const monthlyData = new Map<string, number>()

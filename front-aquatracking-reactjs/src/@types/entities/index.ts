@@ -9,3 +9,11 @@ export type { Sensor } from './sensor.type';
 export type { Measurement } from './measurement.type';
 export type { DailyConsumption, BySensorConsumption, AlertReference } from './daily-consumption.type';
 export type { Alert } from './alert.type';
+export type { 
+  SupportTicket, 
+  TicketComment, 
+  CreateSupportTicketRequest, 
+  UpdateSupportTicketRequest,
+  AddCommentRequest,
+  SupportTicketStats 
+} from './support';

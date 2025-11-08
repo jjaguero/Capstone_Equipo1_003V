@@ -71,6 +71,27 @@ const navigationConfig: NavigationTree[] = [
             },
         ],
     },
+    {
+        key: 'user.support.section',
+        path: '',
+        title: 'Soporte',
+        translateKey: 'nav.user.support.section',
+        icon: 'support',
+        type: NAV_ITEM_TYPE_TITLE,
+        authority: ['user'],
+        subMenu: [
+            {
+                key: 'user.support',
+                path: '/user/support',
+                title: 'Tickets de Soporte',
+                translateKey: 'nav.user.support',
+                icon: 'support',
+                type: NAV_ITEM_TYPE_ITEM,
+                authority: ['user'],
+                subMenu: [],
+            },
+        ],
+    },
 
     // ========================================
     // 🔧 NAVEGACIÓN DE ADMINISTRADOR
@@ -160,7 +181,17 @@ const navigationConfig: NavigationTree[] = [
                 path: '/admin/statistics',
                 title: 'Estadísticas',
                 translateKey: 'nav.admin.statistics',
-                icon: 'dashboard',
+                icon: 'statistics',
+                type: NAV_ITEM_TYPE_ITEM,
+                authority: ['admin'],
+                subMenu: [],
+            },
+            {
+                key: 'admin.support',
+                path: '/admin/support',
+                title: 'Soporte Técnico',
+                translateKey: 'nav.admin.support',
+                icon: 'support',
                 type: NAV_ITEM_TYPE_ITEM,
                 authority: ['admin'],
                 subMenu: [],
@@ -169,7 +200,7 @@ const navigationConfig: NavigationTree[] = [
     },
 
     // ========================================
-    // ⚙️ CONFIGURACIÓN (COMPARTIDA)
+    // ⚙️ CONFIGURACIÓN (SOLO USUARIO)
     // ========================================
     {
         key: 'settings',
@@ -178,7 +209,7 @@ const navigationConfig: NavigationTree[] = [
         translateKey: 'nav.settings',
         icon: 'settings',
         type: NAV_ITEM_TYPE_ITEM,
-        authority: ['admin', 'user'],
+        authority: ['user'],
         subMenu: [],
     },
 ]

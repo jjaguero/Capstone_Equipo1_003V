@@ -25,7 +25,7 @@ const Badge = (props: BadgeProps) => {
     const badgeBaseClass =
         'rounded-full text-xs font-semibold bg-error text-white'
 
-    const dot = typeof content !== 'number' && typeof content !== 'string'
+    const dot = (typeof content !== 'number' && typeof content !== 'string') && children
 
     const badgeClass = classNames(
         dot
@@ -46,14 +46,16 @@ const Badge = (props: BadgeProps) => {
                     )}
                     {...rest}
                 >
-                    <span
-                        className={classNames(badgeClass, 'badge-inner')}
-                        style={badgeStyle}
-                    >
-                        {typeof content === 'number' && content > maxCount
-                            ? `${maxCount}+`
-                            : content}
-                    </span>
+                    {(content || dot) && (
+                        <span
+                            className={classNames(badgeClass, 'badge-inner')}
+                            style={badgeStyle}
+                        >
+                            {typeof content === 'number' && content > maxCount
+                                ? `${maxCount}+`
+                                : content}
+                        </span>
+                    )}
                     {children}
                 </span>
             )
