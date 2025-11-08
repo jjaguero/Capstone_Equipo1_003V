@@ -1,8 +1,7 @@
 import Card from '@/components/ui/Card'
 import { 
     PiBellRingingDuotone, 
-    PiWarningCircleDuotone, 
-    PiCheckCircleDuotone,
+    PiWarningCircleDuotone,
     PiFireDuotone 
 } from 'react-icons/pi'
 
@@ -33,14 +32,6 @@ const AlertsStats = ({ total, pending, resolved, critical, high }: AlertsStatsPr
             bgColor: pending > 0 ? 'bg-orange-100' : 'bg-gray-100',
         },
         {
-            icon: <PiCheckCircleDuotone className="text-4xl" />,
-            label: 'Alertas Resueltas',
-            value: resolved,
-            unit: resolved === 1 ? 'resuelta' : 'resueltas',
-            color: 'text-green-600',
-            bgColor: 'bg-green-100',
-        },
-        {
             icon: <PiFireDuotone className="text-4xl" />,
             label: 'Alertas Críticas',
             value: critical,
@@ -51,8 +42,7 @@ const AlertsStats = ({ total, pending, resolved, critical, high }: AlertsStatsPr
     ]
 
     return (
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
-            {stats.map((stat, index) => (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-6">{stats.map((stat, index) => (
                 <Card key={index} className="hover:shadow-lg transition-shadow">
                     <div className="flex items-center gap-4">
                         <div className={`${stat.bgColor} ${stat.color} p-3 rounded-lg`}>

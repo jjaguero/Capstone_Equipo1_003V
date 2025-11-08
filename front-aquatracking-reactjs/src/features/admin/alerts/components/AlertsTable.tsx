@@ -114,7 +114,7 @@ const AlertsTable = ({ alerts, homes }: AlertsTableProps) => {
                     </THead>
                     <TBody>
                         {paginatedData.map((alert) => (
-                            <Tr key={alert._id} className={alert.resolved ? 'opacity-60' : ''}>
+                            <Tr key={alert._id}>
                                 <Td>
                                     <div className="flex items-center gap-2">
                                         {getTypeIcon(alert.type)}
@@ -150,16 +150,9 @@ const AlertsTable = ({ alerts, homes }: AlertsTableProps) => {
                                     </p>
                                 </Td>
                                 <Td className="text-center">
-                                    {alert.resolved ? (
-                                        <Badge className="bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200">
-                                            <PiCheckCircleDuotone className="inline mr-1" />
-                                            Resuelta
-                                        </Badge>
-                                    ) : (
-                                        <Badge className="bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200">
-                                            Pendiente
-                                        </Badge>
-                                    )}
+                                    <Badge className="bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200">
+                                        Activa
+                                    </Badge>
                                 </Td>
                             </Tr>
                         ))}

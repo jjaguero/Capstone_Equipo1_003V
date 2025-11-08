@@ -1,12 +1,11 @@
-import { Card, Button } from '@/components/ui'
+import { useState } from 'react'
+import { Card } from '@/components/ui'
 import Container from '@/components/shared/Container'
 import Breadcrumb from '@/components/shared/Breadcrumb'
+import Pagination from '@/components/ui/Pagination'
 import { useAlerts } from '@/hooks/useAlerts'
 import { useAquaTrackingAuth } from '@/features/auth/hooks/useAquaTrackingAuth'
-import { toast } from '@/components/ui/toast'
-import Notification from '@/components/ui/Notification'
 import { 
-  PiBellDuotone,
   PiWarningDuotone,
   PiCheckCircleDuotone,
   PiXCircleDuotone,
@@ -18,33 +17,9 @@ import { es } from 'date-fns/locale'
 
 const UserAlertsPage = () => {
   const { currentUser } = useAquaTrackingAuth()
-  const { alerts, loading, resolveAlert, fetchAlertsByHome } = useAlerts(currentUser?.homeId)
-
-  const handleMarkAsResolved = async (alertId: string) => {
-    try {
-      await resolveAlert(alertId)
-      
-      toast.push(
-        <Notification type="success" title="Alerta resuelta">
-          La alerta ha sido marcada como resuelta exitosamente
-        </Notification>,
-        { placement: 'top-end' }
-      )
-      
-      // Recargar alertas
-      if (currentUser?.homeId) {
-        fetchAlertsByHome(currentUser.homeId)
-      }
-    } catch (error) {
-      console.error('Error marking alert as resolved:', error)
-      toast.push(
-        <Notification type="danger" title="Error">
-          No se pudo marcar la alerta como resuelta
-        </Notification>,
-        { placement: 'top-end' }
-      )
-    }
-  }
+  const { alerts, loading } = useAlerts(currentUser?.homeId)
+  const [currentPage, setCurrentPage] = useState(1)
+  const itemsPerPage = 10
 
   if (!currentUser?.homeId) {
     return (
@@ -59,8 +34,14 @@ const UserAlertsPage = () => {
     )
   }
 
-  const unresolvedAlerts = alerts.filter(alert => !alert.resolved)
-  const resolvedAlerts = alerts.filter(alert => alert.resolved)
+  // Filtrar solo alertas activas (no resueltas)
+  const activeAlerts = alerts.filter(alert => !alert.resolved)
+
+  // Paginación
+  const totalPages = Math.ceil(activeAlerts.length / itemsPerPage)
+  const startIndex = (currentPage - 1) * itemsPerPage
+  const endIndex = startIndex + itemsPerPage
+  const paginatedAlerts = activeAlerts.slice(startIndex, endIndex)
 
   const getAlertTypeIcon = (type: string) => {
     switch (type) {
@@ -71,7 +52,7 @@ const UserAlertsPage = () => {
       case 'sensor_offline':
         return <PiXCircleDuotone className="w-5 h-5 text-gray-600" />
       default:
-        return <PiBellDuotone className="w-5 h-5 text-blue-600" />
+        return <PiWarningDuotone className="w-5 h-5 text-blue-600" />
     }
   }
 
@@ -82,7 +63,7 @@ const UserAlertsPage = () => {
       case 'high_consumption':
         return 'Consumo Alto'
       case 'sensor_offline':
-        return 'Sensor Desconectado'
+        return 'Sensor Inactivo'
       default:
         return type
     }
@@ -123,130 +104,33 @@ const UserAlertsPage = () => {
       <div className="space-y-6">
         <Breadcrumb />
 
-        {/* Header con explicación */}
-        <div className="mb-6">
-          <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-2">
-            Mis Alertas de Consumo
-          </h2>
-          <p className="text-gray-600 dark:text-gray-400">
-            Notificaciones sobre el consumo de agua en tu hogar. Cuando recibas una alerta, revisa el consumo y toma medidas para reducirlo.
-          </p>
-        </div>
-
-        {/* Información sobre qué hacer con las alertas */}
-        {unresolvedAlerts.length > 0 && (
-          <div className="p-4 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-lg">
-            <div className="flex items-start gap-3">
-              <div className="p-2 bg-amber-100 dark:bg-amber-900/30 rounded-lg">
-                <PiWarningDuotone className="w-5 h-5 text-amber-600 dark:text-amber-400" />
-              </div>
-              <div>
-                <h4 className="text-sm font-semibold text-amber-900 dark:text-amber-100 mb-1">
-                  Tienes {unresolvedAlerts.length} {unresolvedAlerts.length === 1 ? 'alerta pendiente' : 'alertas pendientes'}
-                </h4>
-                <p className="text-sm text-amber-800 dark:text-amber-200">
-                  Recomendaciones: Revisa fugas en grifos y cañerías, verifica el funcionamiento de los sensores, 
-                  y reduce el consumo innecesario. Marca como resuelta cuando hayas tomado acción.
-                </p>
-              </div>
+        {/* Contador de alertas */}
+        <Card className="p-6">
+          <div className="flex items-center justify-between">
+            <div>
+              <p className="text-sm font-medium text-gray-500 dark:text-gray-400">Total de Alertas</p>
+              <p className="text-3xl font-bold text-orange-600">{activeAlerts.length}</p>
             </div>
+            <PiWarningDuotone className="w-8 h-8 text-orange-600" />
           </div>
-        )}
+        </Card>
 
-        {/* Resumen de Alertas */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <Card className="p-6">
-            <div className="flex items-center justify-between">
-              <div>
-                <p className="text-sm font-medium text-gray-500">Total de Alertas</p>
-                <p className="text-3xl font-bold text-blue-600">{alerts.length}</p>
-              </div>
-              <PiBellDuotone className="w-8 h-8 text-blue-600" />
-            </div>
-          </Card>
-
-          <Card className="p-6">
-            <div className="flex items-center justify-between">
-              <div>
-                <p className="text-sm font-medium text-gray-500">Pendientes</p>
-                <p className="text-3xl font-bold text-orange-600">{unresolvedAlerts.length}</p>
-              </div>
-              <PiWarningDuotone className="w-8 h-8 text-orange-600" />
-            </div>
-          </Card>
-
-          <Card className="p-6">
-            <div className="flex items-center justify-between">
-              <div>
-                <p className="text-sm font-medium text-gray-500">Resueltas</p>
-                <p className="text-3xl font-bold text-green-600">{resolvedAlerts.length}</p>
-              </div>
-              <PiCheckCircleDuotone className="w-8 h-8 text-green-600" />
-            </div>
-          </Card>
-        </div>
-
-        {/* Alertas Pendientes */}
-        {unresolvedAlerts.length > 0 && (
+        {/* Lista de Alertas con paginación */}
+        {paginatedAlerts.length > 0 ? (
           <div>
-            <h2 className="text-lg font-semibold text-gray-900 mb-4">Alertas Pendientes</h2>
             <div className="space-y-3">
-              {unresolvedAlerts.map((alert) => (
-                <Card key={alert._id} className="p-4 border-l-4 border-orange-500">
-                  <div className="flex items-start justify-between">
-                    <div className="flex items-start space-x-3 flex-1">
-                      {getAlertTypeIcon(alert.type)}
-                      <div className="flex-1">
-                        <div className="flex items-center space-x-2 mb-1">
-                          <span className={`px-2 py-1 rounded-md text-xs font-medium ${getAlertTypeColor(alert.type)}`}>
-                            {getAlertTypeText(alert.type)}
-                          </span>
-                        </div>
-                        <p className="text-gray-900 font-medium">{alert.message}</p>
-                        <div className="flex items-center text-sm text-gray-500 mt-2">
-                          <PiCalendarDuotone className="w-4 h-4 mr-1" />
-                          <span>
-                            {format(new Date(alert.triggeredAt), "d 'de' MMMM 'a las' HH:mm", { locale: es })}
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                    
-                    <Button 
-                      size="sm" 
-                      variant="solid"
-                      className="bg-green-600 hover:bg-green-700 text-white"
-                      onClick={() => handleMarkAsResolved(alert._id)}
-                    >
-                      Marcar como Resuelto
-                    </Button>
-                  </div>
-                </Card>
-              ))}
-            </div>
-          </div>
-        )}
-
-        {/* Alertas Resueltas */}
-        {resolvedAlerts.length > 0 && (
-          <div>
-            <h2 className="text-lg font-semibold text-gray-900 mb-4">Alertas Resueltas</h2>
-            <div className="space-y-3">
-              {resolvedAlerts.slice(0, 5).map((alert) => (
-                <Card key={alert._id} className="p-4 border-l-4 border-green-500 bg-green-50">
+              {paginatedAlerts.map((alert) => (
+                <Card key={alert._id} className="p-4 border-l-4 border-orange-500 dark:border-orange-600">
                   <div className="flex items-start space-x-3">
-                    <PiCheckCircleDuotone className="w-5 h-5 text-green-600" />
+                    {getAlertTypeIcon(alert.type)}
                     <div className="flex-1">
                       <div className="flex items-center space-x-2 mb-1">
-                        <span className="px-2 py-1 bg-green-100 text-green-800 rounded-md text-xs font-medium">
+                        <span className={`px-2 py-1 rounded-md text-xs font-medium ${getAlertTypeColor(alert.type)}`}>
                           {getAlertTypeText(alert.type)}
                         </span>
-                        <span className="px-2 py-1 bg-green-200 text-green-800 rounded-md text-xs font-medium">
-                          Resuelto
-                        </span>
                       </div>
-                      <p className="text-gray-700">{alert.message}</p>
-                      <div className="flex items-center text-sm text-gray-500 mt-2">
+                      <p className="text-gray-900 dark:text-gray-100 font-medium">{alert.message}</p>
+                      <div className="flex items-center text-sm text-gray-500 dark:text-gray-400 mt-2">
                         <PiCalendarDuotone className="w-4 h-4 mr-1" />
                         <span>
                           {format(new Date(alert.triggeredAt), "d 'de' MMMM 'a las' HH:mm", { locale: es })}
@@ -256,22 +140,33 @@ const UserAlertsPage = () => {
                   </div>
                 </Card>
               ))}
-              {resolvedAlerts.length > 5 && (
-                <p className="text-center text-gray-500 text-sm">
-                  Y {resolvedAlerts.length - 5} alertas resueltas más...
-                </p>
-              )}
             </div>
-          </div>
-        )}
 
-        {/* Sin Alertas */}
-        {alerts.length === 0 && (
+            {/* Paginación */}
+            {totalPages > 1 && (
+              <div className="flex items-center justify-between mt-6">
+                <p className="text-sm text-gray-600 dark:text-gray-400">
+                  Mostrando {startIndex + 1} a {Math.min(endIndex, activeAlerts.length)} de {activeAlerts.length} alertas
+                </p>
+                <Pagination
+                  currentPage={currentPage}
+                  total={activeAlerts.length}
+                  pageSize={itemsPerPage}
+                  onChange={setCurrentPage}
+                />
+              </div>
+            )}
+          </div>
+        ) : (
           <Card className="p-12">
             <div className="text-center">
               <PiCheckCircleDuotone className="w-16 h-16 mx-auto mb-4 text-green-500" />
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">¡Todo está en orden!</h3>
-              <p className="text-gray-600">No tienes alertas en este momento. Tus sensores están funcionando correctamente.</p>
+              <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-2">
+                ¡Todo está en orden!
+              </h3>
+              <p className="text-gray-600 dark:text-gray-400">
+                No tienes alertas activas. Tus sensores están funcionando correctamente y el consumo está dentro de los parámetros normales.
+              </p>
             </div>
           </Card>
         )}

@@ -15,6 +15,7 @@ import {
   ChartTooltip,
   DailyConsumptionTable,
 } from '../components'
+import ExportPDFButton from '@/components/shared/ExportPDFButton'
 
 const ConsumptionHistoryPage = () => {
   const { currentUser } = useAquaTrackingAuth()
@@ -90,6 +91,16 @@ const ConsumptionHistoryPage = () => {
           onClearFilters={handleClearFilters}
           availableDates={availableDates}
         />
+
+        <div className="flex justify-end">
+          <ExportPDFButton
+            measurements={consumptions}
+            sensors={sensors}
+            userName={currentUser?.name || 'Usuario'}
+            homeAddress="Mi Hogar"
+            showPeriodSelector={true}
+          />
+        </div>
 
         <ConsumptionKPICards metrics={metrics} />
 

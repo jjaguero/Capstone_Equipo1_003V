@@ -39,8 +39,7 @@ const AlertsFilters = ({ homes, onFilterHome, onFilterType, onFilterStatus, onRe
 
     const statusOptions = [
         { value: '', label: 'Todas' },
-        { value: 'pending', label: 'Pendientes' },
-        { value: 'resolved', label: 'Resueltas' }
+        { value: 'pending', label: 'Activas' }
     ]
 
     const handleHomeChange = (option: any) => {
