@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { apiClient } from '@/api/client'
 import { ENDPOINTS } from '@/api/endpoints'
+import dayjs, { Dayjs } from 'dayjs'
 
 interface Sector {
     _id: string
@@ -30,6 +31,12 @@ interface UseSectorsReturn {
     refetch: () => void
     filterByPeriod: (period: PeriodFilter) => void
     currentPeriod: PeriodFilter
+    dateFrom: Dayjs | null
+    dateTo: Dayjs | null
+    setDateFrom: (date: Dayjs | null) => void
+    setDateTo: (date: Dayjs | null) => void
+    availableDates: Dayjs[]
+    handleClearFilters: () => void
 }
 
 export const useSectors = (): UseSectorsReturn => {
@@ -38,31 +45,15 @@ export const useSectors = (): UseSectorsReturn => {
     const [loading, setLoading] = useState(true)
     const [error, setError] = useState<string | null>(null)
     const [periodFilter, setPeriodFilter] = useState<PeriodFilter>('month')
+    const [dateFrom, setDateFrom] = useState<Dayjs | null>(null)
+    const [dateTo, setDateTo] = useState<Dayjs | null>(null)
+    const [availableDates, setAvailableDates] = useState<Dayjs[]>([])
+    const [allConsumptions, setAllConsumptions] = useState<any[]>([])
 
     const fetchData = async () => {
         try {
             setLoading(true)
             setError(null)
-
-            // Calcular rango de fechas según el período
-            const now = new Date()
-            const today = new Date(now.getFullYear(), now.getMonth(), now.getDate())
-            let startDate: Date | null = null
-
-            switch (periodFilter) {
-                case 'week':
-                    startDate = new Date(today)
-                    startDate.setDate(startDate.getDate() - 7)
-                    break
-                case 'month':
-                    startDate = new Date(today)
-                    startDate.setMonth(startDate.getMonth() - 1)
-                    break
-                case 'quarter':
-                    startDate = new Date(today)
-                    startDate.setMonth(startDate.getMonth() - 3)
-                    break
-            }
 
             // Fetch sectors
             const sectorsResponse = await apiClient.get<Sector[]>(ENDPOINTS.SECTORS)
@@ -72,15 +63,34 @@ export const useSectors = (): UseSectorsReturn => {
             const homesResponse = await apiClient.get(ENDPOINTS.HOMES)
             const homesData = homesResponse.data
 
-            // Fetch daily consumption (filtrado por período)
+            // Fetch daily consumption
             const consumptionResponse = await apiClient.get(ENDPOINTS.DAILY_CONSUMPTION)
-            let consumptionData = consumptionResponse.data
+            const allConsumptionData = consumptionResponse.data
+            setAllConsumptions(allConsumptionData)
 
-            // Filtrar consumptions por período si hay filtro activo
-            if (startDate) {
-                consumptionData = consumptionData.filter((c: any) => {
-                    const consumptionDate = new Date(c.date)
-                    return consumptionDate >= startDate && consumptionDate <= today
+            // Calcular fechas disponibles
+            const dates = allConsumptionData.map((c: any) => dayjs(c.date))
+            const uniqueDates: Dayjs[] = Array.from(new Set(dates.map((d: Dayjs) => d.format('YYYY-MM-DD'))))
+                .map((dateStr) => dayjs(dateStr as string))
+                .sort((a, b) => a.valueOf() - b.valueOf())
+            setAvailableDates(uniqueDates)
+
+            // Inicializar fechas si es la primera vez
+            if (!dateFrom && !dateTo && uniqueDates.length > 0) {
+                const last = uniqueDates[uniqueDates.length - 1]
+                const monthBefore = last.subtract(1, 'month')
+                const from = uniqueDates.find(d => !d.isBefore(monthBefore, 'day')) || uniqueDates[0]
+                setDateFrom(from)
+                setDateTo(last)
+            }
+
+            // Filtrar consumptions por rango de fechas seleccionado
+            let consumptionData = allConsumptionData
+            if (dateFrom && dateTo) {
+                consumptionData = allConsumptionData.filter((c: any) => {
+                    const consumptionDate = dayjs(c.date)
+                    return (consumptionDate.isAfter(dateFrom, 'day') || consumptionDate.isSame(dateFrom, 'day')) && 
+                           (consumptionDate.isBefore(dateTo, 'day') || consumptionDate.isSame(dateTo, 'day'))
                 })
             }
 
@@ -90,24 +100,17 @@ export const useSectors = (): UseSectorsReturn => {
 
             // Calculate stats per sector
             const sectorStats: SectorStats[] = sectorsData.map(sector => {
-                // Homes in this sector
                 const sectorHomes = homesData.filter((h: any) => h.sectorId === sector._id && h.active)
-                // Convertir homeIds a string para comparar con consumptionData
                 const homeIds = sectorHomes.map((h: any) => String(h._id))
-
-                // Total members
                 const totalMembers = sectorHomes.reduce((sum: number, h: any) => sum + (h.members || 0), 0)
 
-                // Consumption for these homes (sumar todos los registros históricos)
                 const sectorConsumption = consumptionData.filter((c: any) => homeIds.includes(String(c.homeId)))
                 const totalConsumption = sectorConsumption.reduce((sum: number, c: any) => sum + (c.totalLiters || c.consumedLiters || 0), 0)
                 
-                // Calcular promedio por hogar basado en el total de días registrados
                 const daysCount = sectorConsumption.length
                 const averagePerDay = daysCount > 0 ? totalConsumption / daysCount : 0
                 const averageConsumption = sectorHomes.length > 0 ? averagePerDay : 0
 
-                // Alerts for these homes (convertir homeIds a string también)
                 const sectorAlerts = alertsData.filter((a: any) => homeIds.includes(String(a.homeId)))
                 const pendingAlerts = sectorAlerts.filter((a: any) => !a.resolved).length
 
@@ -135,6 +138,47 @@ export const useSectors = (): UseSectorsReturn => {
 
     const filterByPeriod = (period: PeriodFilter) => {
         setPeriodFilter(period)
+        
+        // Actualizar fechas según el período seleccionado
+        if (availableDates.length > 0) {
+            const last = availableDates[availableDates.length - 1]
+            let from: Dayjs
+            
+            switch (period) {
+                case 'week':
+                    // Últimos 7 días
+                    const weekBefore = last.subtract(7, 'day')
+                    from = availableDates.find(d => !d.isBefore(weekBefore, 'day')) || availableDates[0]
+                    break
+                case 'month':
+                    // Último mes
+                    const monthBefore = last.subtract(1, 'month')
+                    from = availableDates.find(d => !d.isBefore(monthBefore, 'day')) || availableDates[0]
+                    break
+                case 'quarter':
+                    // Últimos 3 meses (anual)
+                    const quarterBefore = last.subtract(3, 'month')
+                    from = availableDates.find(d => !d.isBefore(quarterBefore, 'day')) || availableDates[0]
+                    break
+                default:
+                    // Por defecto, último mes
+                    const defaultBefore = last.subtract(1, 'month')
+                    from = availableDates.find(d => !d.isBefore(defaultBefore, 'day')) || availableDates[0]
+            }
+            
+            setDateFrom(from)
+            setDateTo(last)
+        }
+    }
+
+    const handleClearFilters = () => {
+        if (availableDates.length > 0) {
+            const last = availableDates[availableDates.length - 1]
+            const monthBefore = last.subtract(1, 'month')
+            const from = availableDates.find(d => !d.isBefore(monthBefore, 'day')) || availableDates[0]
+            setDateTo(last)
+            setDateFrom(from)
+        }
     }
 
     useEffect(() => {
@@ -142,8 +186,10 @@ export const useSectors = (): UseSectorsReturn => {
     }, [])
 
     useEffect(() => {
-        fetchData()
-    }, [periodFilter])
+        if (allConsumptions.length > 0 && dateFrom && dateTo) {
+            fetchData()
+        }
+    }, [dateFrom, dateTo])
 
     return {
         sectors,
@@ -153,6 +199,12 @@ export const useSectors = (): UseSectorsReturn => {
         refetch: fetchData,
         filterByPeriod,
         currentPeriod: periodFilter,
+        dateFrom,
+        dateTo,
+        setDateFrom,
+        setDateTo,
+        availableDates,
+        handleClearFilters,
     }
 }
 

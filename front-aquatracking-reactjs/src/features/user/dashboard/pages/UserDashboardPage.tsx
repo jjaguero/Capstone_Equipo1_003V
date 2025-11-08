@@ -27,7 +27,6 @@ const UserDashboardPage = () => {
   const totalSensors = sensors.length
   const unresolvedAlerts = alerts.filter(a => !a.resolved).length
 
-  // Formato para mostrar en la tarjeta (usar la fecha del hook)
   const consumptionLabel = latestDate
     ? format(latestDate, "d 'de' MMMM", { locale: es })
     : 'Consumo'

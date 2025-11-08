@@ -4,7 +4,7 @@ import AdaptiveCard from '@/components/shared/AdaptiveCard'
 import Spinner from '@/components/ui/Spinner'
 import Button from '@/components/ui/Button'
 import Breadcrumb from '@/components/shared/Breadcrumb'
-import { PiFilePdfDuotone } from 'react-icons/pi'
+import { PiFilePdfDuotone, PiCalendarDuotone } from 'react-icons/pi'
 import useStatistics from '../hooks/useStatistics'
 import PlatformStats from '../components/PlatformStats'
 import TopHomesTable from '../components/TopHomesTable'
@@ -12,6 +12,8 @@ import MonthlyTrendChart from '../components/MonthlyTrendChart'
 import { ReportGenerator } from '@/utils/reportGenerator'
 import { toast } from '@/components/ui/toast'
 import Notification from '@/components/ui/Notification'
+import MuiDateCalendarInput from '@/components/shared/MuiDateCalendarInput'
+import Card from '@/components/ui/Card'
 
 const StatisticsPage = () => {
     const {
@@ -21,6 +23,17 @@ const StatisticsPage = () => {
         loading,
         error,
         refetch,
+        filterByPeriod,
+        currentPeriod,
+        dateFrom,
+        dateTo,
+        setDateFrom,
+        setDateTo,
+        availableDates,
+        handleClearFilters,
+        sectors,
+        selectedSector,
+        setSelectedSector,
     } = useStatistics()
 
     const [isGenerating, setIsGenerating] = useState(false)
@@ -38,9 +51,18 @@ const StatisticsPage = () => {
 
         setIsGenerating(true)
         try {
+            // Formato de fechas para el subtitle
+            const dateRange = dateFrom && dateTo
+                ? `Del ${dateFrom.format('DD/MM/YYYY')} al ${dateTo.format('DD/MM/YYYY')}`
+                : 'Período completo'
+            
+            const sectorInfo = selectedSector
+                ? ` - Sector: ${sectors.find(s => s._id === selectedSector)?.name || 'Desconocido'}`
+                : ' - Todos los sectores'
+
             const report = new ReportGenerator({
                 title: 'Reporte de Estadísticas Generales',
-                subtitle: 'Resumen completo del sistema AquaTracking'
+                subtitle: `Resumen completo del sistema AquaTracking - ${dateRange}${sectorInfo}`
             })
 
             // Sección: Estadísticas de la Plataforma
@@ -182,6 +204,90 @@ const StatisticsPage = () => {
         <Container>
             <Breadcrumb />
             
+            {/* Filtros de período */}
+            <Card className="mb-6">
+                <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
+                    {/* Selector de sector */}
+                    <div>
+                        <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                            Sector
+                        </label>
+                        <select
+                            value={selectedSector || ''}
+                            onChange={(e) => setSelectedSector(e.target.value || null)}
+                            className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-indigo-500 dark:bg-gray-700 dark:text-gray-200"
+                        >
+                            <option value="">Todos los sectores</option>
+                            {sectors.map((sector) => (
+                                <option key={sector._id} value={sector._id}>
+                                    {sector.name}
+                                </option>
+                            ))}
+                        </select>
+                    </div>
+
+                    {/* Selector de período */}
+                    <div>
+                        <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                            Período
+                        </label>
+                        <select
+                            value={currentPeriod || ''}
+                            onChange={(e) => {
+                                const value = e.target.value as 'week' | 'month' | 'quarter' | ''
+                                if (value) {
+                                    filterByPeriod(value)
+                                }
+                            }}
+                            className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-indigo-500 dark:bg-gray-700 dark:text-gray-200"
+                        >
+                            <option value="">Personalizado</option>
+                            <option value="week">Semanal (7 días)</option>
+                            <option value="month">Mensual (30 días)</option>
+                            <option value="quarter">Anual (90 días)</option>
+                        </select>
+                    </div>
+
+                    {/* Fecha desde */}
+                    <div>
+                        <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                            <PiCalendarDuotone className="inline mr-1" />
+                            Desde
+                        </label>
+                        <MuiDateCalendarInput
+                            value={dateFrom}
+                            onChange={(newValue) => setDateFrom(newValue)}
+                            availableDates={availableDates}
+                        />
+                    </div>
+
+                    {/* Fecha hasta */}
+                    <div>
+                        <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                            <PiCalendarDuotone className="inline mr-1" />
+                            Hasta
+                        </label>
+                        <MuiDateCalendarInput
+                            value={dateTo}
+                            onChange={(newValue) => setDateTo(newValue)}
+                            availableDates={availableDates}
+                        />
+                    </div>
+
+                    {/* Botón limpiar filtros */}
+                    <div className="flex items-end">
+                        <Button
+                            variant="default"
+                            size="sm"
+                            onClick={handleClearFilters}
+                            className="w-full"
+                        >
+                            Limpiar filtros
+                        </Button>
+                    </div>
+                </div>
+            </Card>
+
             {/* Header */}
             <div className="mb-6 flex items-center justify-between">
                 <div>

@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react'
 import { apiClient } from '@/api/client'
 import { ENDPOINTS } from '@/api/endpoints'
+import dayjs, { Dayjs } from 'dayjs'
+import { Sector } from '@/@types/entities/sector.type'
 
 interface PlatformStats {
     totalUsers: number
@@ -33,6 +35,8 @@ interface MonthlyTrend {
     consumption: number
 }
 
+type PeriodFilter = 'week' | 'month' | 'quarter' | null
+
 interface UseStatisticsReturn {
     platformStats: PlatformStats | null
     topHomes: TopHome[]
@@ -40,6 +44,17 @@ interface UseStatisticsReturn {
     loading: boolean
     error: string | null
     refetch: () => void
+    filterByPeriod: (period: PeriodFilter) => void
+    currentPeriod: PeriodFilter
+    dateFrom: Dayjs | null
+    dateTo: Dayjs | null
+    setDateFrom: (date: Dayjs | null) => void
+    setDateTo: (date: Dayjs | null) => void
+    availableDates: Dayjs[]
+    handleClearFilters: () => void
+    sectors: Sector[]
+    selectedSector: string | null
+    setSelectedSector: (sectorId: string | null) => void
 }
 
 export const useStatistics = (): UseStatisticsReturn => {
@@ -48,26 +63,85 @@ export const useStatistics = (): UseStatisticsReturn => {
     const [monthlyTrend, setMonthlyTrend] = useState<MonthlyTrend[]>([])
     const [loading, setLoading] = useState(true)
     const [error, setError] = useState<string | null>(null)
+    const [periodFilter, setPeriodFilter] = useState<PeriodFilter>('month')
+    const [dateFrom, setDateFrom] = useState<Dayjs | null>(null)
+    const [dateTo, setDateTo] = useState<Dayjs | null>(null)
+    const [availableDates, setAvailableDates] = useState<Dayjs[]>([])
+    const [allConsumptions, setAllConsumptions] = useState<any[]>([])
+    const [sectors, setSectors] = useState<Sector[]>([])
+    const [selectedSector, setSelectedSector] = useState<string | null>(null)
 
     const fetchStatistics = async () => {
         try {
             setLoading(true)
             setError(null)
 
-            // Fetch all data
-            const [usersRes, homesRes, sensorsRes, consumptionRes, alertsRes] = await Promise.all([
+            // Fetch all data including sectors
+            const [usersRes, homesRes, sensorsRes, consumptionRes, alertsRes, sectorsRes] = await Promise.all([
                 apiClient.get(ENDPOINTS.USERS),
                 apiClient.get(ENDPOINTS.HOMES),
                 apiClient.get(ENDPOINTS.SENSORS),
                 apiClient.get(ENDPOINTS.DAILY_CONSUMPTION),
                 apiClient.get(ENDPOINTS.ALERTS),
+                apiClient.get(ENDPOINTS.SECTORS),
             ])
 
             const users = usersRes.data
             const homes = homesRes.data
             const sensors = sensorsRes.data
-            const consumptions = consumptionRes.data
+            const allConsumptionData = consumptionRes.data
             const alerts = alertsRes.data
+            const sectorsData = sectorsRes.data.filter((s: Sector) => s.active)
+
+            setSectors(sectorsData)
+            setAllConsumptions(allConsumptionData)
+
+            // Calcular fechas disponibles
+            const dates = allConsumptionData.map((c: any) => dayjs(c.date))
+            const uniqueDates: Dayjs[] = Array.from(new Set(dates.map((d: Dayjs) => d.format('YYYY-MM-DD'))))
+                .map((dateStr) => dayjs(dateStr as string))
+                .sort((a, b) => a.valueOf() - b.valueOf())
+            setAvailableDates(uniqueDates)
+
+            // Inicializar fechas si es la primera vez
+            if (!dateFrom && !dateTo && uniqueDates.length > 0) {
+                const last = uniqueDates[uniqueDates.length - 1]
+                const monthBefore = last.subtract(1, 'month')
+                const from = uniqueDates.find(d => !d.isBefore(monthBefore, 'day')) || uniqueDates[0]
+                setDateFrom(from)
+                setDateTo(last)
+            }
+
+            // Filtrar homes por sector si hay uno seleccionado
+            let filteredHomes = homes
+            if (selectedSector) {
+                filteredHomes = homes.filter((h: any) => h.sectorId === selectedSector)
+            }
+
+            // Filtrar consumptions por sector y rango de fechas
+            let consumptions = allConsumptionData
+            if (selectedSector) {
+                const homeIdsInSector = filteredHomes.map((h: any) => h._id)
+                consumptions = consumptions.filter((c: any) => homeIdsInSector.includes(c.homeId))
+            }
+            if (dateFrom && dateTo) {
+                consumptions = consumptions.filter((c: any) => {
+                    const consumptionDate = dayjs(c.date)
+                    return (consumptionDate.isAfter(dateFrom, 'day') || consumptionDate.isSame(dateFrom, 'day')) && 
+                           (consumptionDate.isBefore(dateTo, 'day') || consumptionDate.isSame(dateTo, 'day'))
+                })
+            }
+
+            // Filtrar usuarios, sensores y alertas por sector si está seleccionado
+            let filteredUsers = users
+            let filteredSensors = sensors
+            let filteredAlerts = alerts
+            if (selectedSector) {
+                const homeIdsInSector = filteredHomes.map((h: any) => h._id)
+                filteredUsers = users.filter((u: any) => homeIdsInSector.includes(u.homeId))
+                filteredSensors = sensors.filter((s: any) => homeIdsInSector.includes(s.homeId))
+                filteredAlerts = alerts.filter((a: any) => homeIdsInSector.includes(a.homeId))
+            }
 
             // Calculate platform stats
             const now = new Date()
@@ -98,15 +172,15 @@ export const useStatistics = (): UseStatisticsReturn => {
             )
 
             const stats: PlatformStats = {
-                totalUsers: users.length,
-                activeUsers: users.filter((u: any) => u.homeId).length, // Usuarios con hogar asignado
-                totalHomes: homes.length,
-                activeHomes: homes.filter((h: any) => h.active).length,
-                totalSensors: sensors.length,
-                activeSensors: sensors.filter((s: any) => s.status === 'active').length, // Sensores con status 'active'
+                totalUsers: filteredUsers.length,
+                activeUsers: filteredUsers.filter((u: any) => u.homeId).length,
+                totalHomes: filteredHomes.length,
+                activeHomes: filteredHomes.filter((h: any) => h.active).length,
+                totalSensors: filteredSensors.length,
+                activeSensors: filteredSensors.filter((s: any) => s.status === 'active').length,
                 totalConsumption: Math.round(totalConsumption),
-                totalAlerts: alerts.length,
-                pendingAlerts: alerts.filter((a: any) => !a.resolved).length,
+                totalAlerts: filteredAlerts.length,
+                pendingAlerts: filteredAlerts.filter((a: any) => !a.resolved).length,
                 currentMonthConsumption: Math.round(currentMonthTotal),
                 previousMonthConsumption: Math.round(previousMonthTotal),
                 consumptionTrend: Math.round(consumptionTrend * 10) / 10,
@@ -123,7 +197,7 @@ export const useStatistics = (): UseStatisticsReturn => {
 
             // Contar alertas por hogar
             const homeAlerts = new Map<string, number>()
-            alerts.forEach((a: any) => {
+            filteredAlerts.forEach((a: any) => {
                 if (!a.resolved) {
                     const current = homeAlerts.get(String(a.homeId)) || 0
                     homeAlerts.set(String(a.homeId), current + 1)
@@ -132,7 +206,7 @@ export const useStatistics = (): UseStatisticsReturn => {
 
             const homesWithIssues: TopHome[] = Array.from(homeConsumption.entries())
                 .map(([homeId, total]) => {
-                    const home = homes.find((h: any) => String(h._id) === homeId)
+                    const home = filteredHomes.find((h: any) => String(h._id) === homeId)
                     const homeConsumptions = consumptions.filter((c: any) => String(c.homeId) === homeId)
                     const averageDaily = homeConsumptions.length > 0 ? total / homeConsumptions.length : 0
                     const members = home?.members || 1
@@ -173,7 +247,7 @@ export const useStatistics = (): UseStatisticsReturn => {
 
             setTopHomes(homesWithIssues)
 
-            // Calculate monthly trend (last 6 months)
+            // Calculate monthly trend (filtrado por período seleccionado)
             const monthlyData = new Map<string, number>()
             consumptions.forEach((c: any) => {
                 const date = new Date(c.date)
@@ -188,7 +262,7 @@ export const useStatistics = (): UseStatisticsReturn => {
                     consumption: Math.round(consumption),
                 }))
                 .sort((a, b) => a.date.localeCompare(b.date))
-                .slice(-6) // últimos 6 meses
+                // NO limitar a 6 meses - usar el rango seleccionado
 
             setMonthlyTrend(trend)
 
@@ -200,9 +274,58 @@ export const useStatistics = (): UseStatisticsReturn => {
         }
     }
 
+    const filterByPeriod = (period: PeriodFilter) => {
+        setPeriodFilter(period)
+        
+        // Actualizar fechas según el período seleccionado
+        if (availableDates.length > 0) {
+            const last = availableDates[availableDates.length - 1]
+            let from: Dayjs
+            
+            switch (period) {
+                case 'week':
+                    const weekBefore = last.subtract(7, 'day')
+                    from = availableDates.find(d => !d.isBefore(weekBefore, 'day')) || availableDates[0]
+                    break
+                case 'month':
+                    const monthBefore = last.subtract(1, 'month')
+                    from = availableDates.find(d => !d.isBefore(monthBefore, 'day')) || availableDates[0]
+                    break
+                case 'quarter':
+                    const quarterBefore = last.subtract(3, 'month')
+                    from = availableDates.find(d => !d.isBefore(quarterBefore, 'day')) || availableDates[0]
+                    break
+                default:
+                    const defaultBefore = last.subtract(1, 'month')
+                    from = availableDates.find(d => !d.isBefore(defaultBefore, 'day')) || availableDates[0]
+            }
+            
+            setDateFrom(from)
+            setDateTo(last)
+        }
+    }
+
+    const handleClearFilters = () => {
+        setSelectedSector(null)
+        setPeriodFilter('month')
+        if (availableDates.length > 0) {
+            const last = availableDates[availableDates.length - 1]
+            const monthBefore = last.subtract(1, 'month')
+            const from = availableDates.find(d => !d.isBefore(monthBefore, 'day')) || availableDates[0]
+            setDateTo(last)
+            setDateFrom(from)
+        }
+    }
+
     useEffect(() => {
         fetchStatistics()
     }, [])
+
+    useEffect(() => {
+        if (allConsumptions.length > 0 && dateFrom && dateTo) {
+            fetchStatistics()
+        }
+    }, [dateFrom, dateTo, selectedSector])
 
     return {
         platformStats,
@@ -211,6 +334,17 @@ export const useStatistics = (): UseStatisticsReturn => {
         loading,
         error,
         refetch: fetchStatistics,
+        filterByPeriod,
+        currentPeriod: periodFilter,
+        dateFrom,
+        dateTo,
+        setDateFrom,
+        setDateTo,
+        availableDates,
+        handleClearFilters,
+        sectors,
+        selectedSector,
+        setSelectedSector,
     }
 }
 
