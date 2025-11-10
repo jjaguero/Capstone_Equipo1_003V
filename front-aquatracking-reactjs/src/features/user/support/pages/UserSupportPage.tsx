@@ -317,7 +317,7 @@ const UserSupportPage = () => {
             variant="solid" 
             icon={<PiPlusDuotone />} 
             onClick={() => setShowCreateDialog(true)}
-            title="💬 Crear un nuevo ticket de soporte - Describe tu problema y recibe ayuda"
+            title="Crear un nuevo ticket de soporte - Describe tu problema y recibe ayuda"
           >
             Nuevo Ticket
           </Button>
@@ -522,7 +522,7 @@ const UserSupportPage = () => {
                         onClick={handleSendComment}
                         loading={sendingComment}
                         disabled={!newComment.trim()}
-                        title="📤 Enviar mensaje al equipo de soporte"
+                        title="Enviar mensaje al equipo de soporte"
                       />
                     </div>
                   </div>
@@ -585,7 +585,7 @@ const UserSupportPage = () => {
                     </label>
                     <p className="text-xs text-gray-500 mb-1">
                       {formData.category === 'sensor_maintenance_request' 
-                        ? '⚠️ El sensor seleccionado dejará de enviar datos hasta que se complete el mantenimiento'
+                        ? 'IMPORTANTE: El sensor seleccionado dejará de enviar datos hasta que se complete el mantenimiento'
                         : 'Selecciona el sensor que presenta problemas (opcional)'}
                     </p>
                     {loadingSensors ? (
@@ -650,7 +650,7 @@ const UserSupportPage = () => {
                   variant="solid" 
                   loading={creating} 
                   onClick={handleCreateTicket}
-                  title="✅ Crear ticket de soporte - Nuestro equipo lo revisará pronto"
+                  title="Crear ticket de soporte - Nuestro equipo lo revisará pronto"
                 >
                   Crear Ticket
                 </Button>

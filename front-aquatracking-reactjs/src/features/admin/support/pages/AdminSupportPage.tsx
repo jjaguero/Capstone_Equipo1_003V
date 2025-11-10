@@ -195,14 +195,14 @@ const AdminSupportPage = () => {
     if (newStatus === 'maintenance') {
       setConfirmAction({
         type: 'maintenance',
-        title: '⚠️ ¿Poner sensor en mantenimiento?',
+        title: '¿Poner sensor en mantenimiento?',
         message: 'El sensor DEJARÁ DE ENVIAR DATOS hasta que sea reactivado. Use esta opción solo si está seguro de que el sensor necesita mantenimiento.',
         onConfirm: () => handleToggleSensorMaintenance('maintenance')
       })
     } else {
       setConfirmAction({
         type: 'activate',
-        title: '✅ ¿Reactivar sensor?',
+        title: '¿Reactivar sensor?',
         message: 'El sensor volverá a estado ACTIVO y comenzará a enviar datos nuevamente. Úselo solo cuando el mantenimiento haya finalizado.',
         onConfirm: () => handleToggleSensorMaintenance('active')
       })
@@ -523,7 +523,7 @@ const AdminSupportPage = () => {
                             icon={<PiWrenchDuotone />}
                             onClick={() => confirmSensorMaintenance('maintenance')}
                             disabled={selectedTicket.status === 'resolved' || selectedTicket.status === 'closed'}
-                            title="⚠️ Poner sensor en mantenimiento - El sensor dejará de enviar datos"
+                            title="Poner sensor en mantenimiento - El sensor dejará de enviar datos"
                           >
                             <span className="hidden xl:inline ml-1">Mantenimiento</span>
                           </Button>
@@ -534,7 +534,7 @@ const AdminSupportPage = () => {
                             icon={<PiCircuitryDuotone />}
                             onClick={() => confirmSensorMaintenance('active')}
                             disabled={selectedTicket.status === 'resolved' || selectedTicket.status === 'closed'}
-                            title="✅ Reactivar sensor - El sensor volverá a enviar datos"
+                            title="Reactivar sensor - El sensor volverá a enviar datos"
                           >
                             <span className="hidden xl:inline ml-1">Reactivar</span>
                           </Button>
@@ -548,7 +548,7 @@ const AdminSupportPage = () => {
                         icon={<PiUsersDuotone />}
                         onClick={confirmSendTechnician}
                         disabled={selectedTicket.status === 'resolved' || selectedTicket.status === 'closed'}
-                        title="👷 Enviar técnico a terreno - Cambia ticket a 'En Progreso'"
+                        title="Enviar técnico a terreno - Cambia ticket a 'En Progreso'"
                       >
                         <span className="hidden xl:inline ml-1">Técnico</span>
                       </Button>
@@ -560,7 +560,7 @@ const AdminSupportPage = () => {
                         icon={<PiCheckCircleDuotone />}
                         onClick={confirmResolve}
                         disabled={selectedTicket.status === 'resolved' || selectedTicket.status === 'closed'}
-                        title="✓ Marcar como resuelto - Reactiva sensor automáticamente"
+                        title="Marcar como resuelto - Reactiva sensor automáticamente"
                       >
                         <span className="hidden xl:inline ml-1">Resuelto</span>
                       </Button>
@@ -570,7 +570,7 @@ const AdminSupportPage = () => {
                         icon={<PiXCircleDuotone />}
                         onClick={confirmClose}
                         disabled={selectedTicket.status === 'closed'}
-                        title="✕ Cerrar ticket permanentemente - No se puede deshacer"
+                        title="Cerrar ticket permanentemente - No se puede deshacer"
                       >
                         <span className="hidden xl:inline ml-1">Cerrar</span>
                       </Button>
