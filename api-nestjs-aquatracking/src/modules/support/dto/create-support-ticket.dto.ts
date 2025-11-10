@@ -21,7 +21,7 @@ export class CreateSupportTicketDto {
   @IsNotEmpty()
   description: string;
 
-  @IsEnum(['sensor_issue', 'high_consumption', 'leak_detection', 'general_inquiry', 'other'])
+  @IsEnum(['sensor_issue', 'sensor_maintenance_request', 'high_consumption', 'leak_detection', 'general_inquiry', 'other'])
   @IsNotEmpty()
   category: string;
 

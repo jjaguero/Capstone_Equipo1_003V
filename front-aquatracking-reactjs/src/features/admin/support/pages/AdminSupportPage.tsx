@@ -1,6 +1,8 @@
 import { useState, useEffect, useRef } from 'react'
 import { useAquaTrackingAuth } from '@/features/auth/hooks/useAquaTrackingAuth'
 import useSupportTickets from '@/hooks/useSupportTickets'
+import { apiClient } from '@/api/client'
+import { ENDPOINTS } from '@/api/endpoints'
 import Container from '@/components/shared/Container'
 import Card from '@/components/ui/Card'
 import Button from '@/components/ui/Button'
@@ -21,6 +23,8 @@ import {
   PiWrenchDuotone,
   PiUsersDuotone,
   PiMagnifyingGlassDuotone,
+  PiCircuitryDuotone,
+  PiPlayDuotone,
 } from 'react-icons/pi'
 import type { SupportTicket } from '@/@types/entities'
 import { format } from 'date-fns'
@@ -40,6 +44,15 @@ const AdminSupportPage = () => {
   const [filterStatus, setFilterStatus] = useState<string>('all')
   const [searchQuery, setSearchQuery] = useState('')
   const messagesEndRef = useRef<HTMLDivElement>(null)
+
+  // Estados para diálogos de confirmación
+  const [showConfirmDialog, setShowConfirmDialog] = useState(false)
+  const [confirmAction, setConfirmAction] = useState<{
+    type: 'resolve' | 'close' | 'maintenance' | 'activate' | 'sendTech'
+    title: string
+    message: string
+    onConfirm: () => void
+  } | null>(null)
 
   // Sincronizar tickets del hook con estado local
   useEffect(() => {
@@ -77,6 +90,9 @@ const AdminSupportPage = () => {
     } catch (error) {
       console.error('Error updating status:', error)
       toast.push(<Notification type="danger">Error al actualizar estado</Notification>)
+    } finally {
+      setShowConfirmDialog(false)
+      setConfirmAction(null)
     }
   }
 
@@ -101,7 +117,97 @@ const AdminSupportPage = () => {
     } catch (error) {
       console.error('Error sending technician:', error)
       toast.push(<Notification type="danger">Error al enviar equipo técnico</Notification>)
+    } finally {
+      setShowConfirmDialog(false)
+      setConfirmAction(null)
     }
+  }
+
+  const handleToggleSensorMaintenance = async (newStatus: 'active' | 'maintenance') => {
+    if (!selectedTicket?.sensorId || !currentUser) return
+
+    try {
+      // Cambiar estado del sensor
+      await apiClient.patch(ENDPOINTS.SENSOR_TOGGLE_MAINTENANCE(selectedTicket.sensorId), { status: newStatus })
+
+      // Agregar comentario automático
+      const message = newStatus === 'maintenance' 
+        ? `Sensor ${selectedTicket.sensorId.slice(-6)} cambiado a MANTENIMIENTO. El sensor dejará de enviar datos hasta nueva orden.`
+        : `Sensor ${selectedTicket.sensorId.slice(-6)} REACTIVADO. El sensor volverá a enviar datos normalmente.`
+
+      await addComment(selectedTicket._id, {
+        userId: currentUser._id,
+        userName: currentUser.name,
+        userRole: 'admin',
+        message,
+      })
+
+      toast.push(
+        <Notification type="success">
+          {newStatus === 'maintenance' ? 'Sensor en mantenimiento' : 'Sensor reactivado'}
+        </Notification>
+      )
+
+      await refetch()
+      const updatedTicket = tickets.find((t) => t._id === selectedTicket._id)
+      if (updatedTicket) setSelectedTicket(updatedTicket)
+    } catch (error) {
+      console.error('Error toggling sensor maintenance:', error)
+      toast.push(<Notification type="danger">Error al cambiar estado del sensor</Notification>)
+    } finally {
+      setShowConfirmDialog(false)
+      setConfirmAction(null)
+    }
+  }
+
+  // Funciones auxiliares para mostrar diálogos de confirmación
+  const confirmResolve = () => {
+    setConfirmAction({
+      type: 'resolve',
+      title: '¿Marcar ticket como resuelto?',
+      message: 'El ticket se marcará como resuelto. Si tiene un sensor asociado, este volverá a estado activo automáticamente.',
+      onConfirm: () => handleChangeStatus('resolved')
+    })
+    setShowConfirmDialog(true)
+  }
+
+  const confirmClose = () => {
+    setConfirmAction({
+      type: 'close',
+      title: '¿Cerrar este ticket?',
+      message: 'El ticket se cerrará permanentemente. Si tiene un sensor asociado, este volverá a estado activo. Esta acción no se puede deshacer.',
+      onConfirm: () => handleChangeStatus('closed')
+    })
+    setShowConfirmDialog(true)
+  }
+
+  const confirmSendTechnician = () => {
+    setConfirmAction({
+      type: 'sendTech',
+      title: '¿Enviar técnico a terreno?',
+      message: 'Se notificará al cliente que un técnico será enviado para revisar el problema. El ticket pasará a estado "En Progreso".',
+      onConfirm: handleSendTechnician
+    })
+    setShowConfirmDialog(true)
+  }
+
+  const confirmSensorMaintenance = (newStatus: 'active' | 'maintenance') => {
+    if (newStatus === 'maintenance') {
+      setConfirmAction({
+        type: 'maintenance',
+        title: '⚠️ ¿Poner sensor en mantenimiento?',
+        message: 'El sensor DEJARÁ DE ENVIAR DATOS hasta que sea reactivado. Use esta opción solo si está seguro de que el sensor necesita mantenimiento.',
+        onConfirm: () => handleToggleSensorMaintenance('maintenance')
+      })
+    } else {
+      setConfirmAction({
+        type: 'activate',
+        title: '✅ ¿Reactivar sensor?',
+        message: 'El sensor volverá a estado ACTIVO y comenzará a enviar datos nuevamente. Úselo solo cuando el mantenimiento haya finalizado.',
+        onConfirm: () => handleToggleSensorMaintenance('active')
+      })
+    }
+    setShowConfirmDialog(true)
   }
 
   const handleSendComment = async () => {
@@ -196,7 +302,8 @@ const AdminSupportPage = () => {
 
   const getCategoryLabel = (category: string) => {
     const labels: Record<string, string> = {
-      sensor_issue: 'Sensor',
+      sensor_issue: 'Problema Sensor',
+      sensor_maintenance_request: 'Mantenimiento',
       high_consumption: 'Consumo Alto',
       leak_detection: 'Fuga',
       general_inquiry: 'Consulta',
@@ -405,31 +512,68 @@ const AdminSupportPage = () => {
                     </div>
 
                     {/* Botones de acción compactos */}
-                    <div className="flex gap-1">
+                    <div className="flex gap-1 flex-wrap">
+                      {/* Botones de mantenimiento de sensor - solo si hay sensorId */}
+                      {selectedTicket.sensorId && (
+                        <>
+                          <Button
+                            size="sm"
+                            variant="solid"
+                            className="bg-amber-600 hover:bg-amber-700"
+                            icon={<PiWrenchDuotone />}
+                            onClick={() => confirmSensorMaintenance('maintenance')}
+                            disabled={selectedTicket.status === 'resolved' || selectedTicket.status === 'closed'}
+                            title="⚠️ Poner sensor en mantenimiento - El sensor dejará de enviar datos"
+                          >
+                            <span className="hidden xl:inline ml-1">Mantenimiento</span>
+                          </Button>
+                          <Button
+                            size="sm"
+                            variant="solid"
+                            className="bg-emerald-600 hover:bg-emerald-700"
+                            icon={<PiCircuitryDuotone />}
+                            onClick={() => confirmSensorMaintenance('active')}
+                            disabled={selectedTicket.status === 'resolved' || selectedTicket.status === 'closed'}
+                            title="✅ Reactivar sensor - El sensor volverá a enviar datos"
+                          >
+                            <span className="hidden xl:inline ml-1">Reactivar</span>
+                          </Button>
+                        </>
+                      )}
+
                       <Button
                         size="sm"
                         variant="solid"
                         className="bg-blue-600 hover:bg-blue-700"
                         icon={<PiUsersDuotone />}
-                        onClick={handleSendTechnician}
+                        onClick={confirmSendTechnician}
                         disabled={selectedTicket.status === 'resolved' || selectedTicket.status === 'closed'}
-                      />
+                        title="👷 Enviar técnico a terreno - Cambia ticket a 'En Progreso'"
+                      >
+                        <span className="hidden xl:inline ml-1">Técnico</span>
+                      </Button>
 
                       <Button
                         size="sm"
                         variant="solid"
                         className="bg-green-600 hover:bg-green-700"
                         icon={<PiCheckCircleDuotone />}
-                        onClick={() => handleChangeStatus('resolved')}
+                        onClick={confirmResolve}
                         disabled={selectedTicket.status === 'resolved' || selectedTicket.status === 'closed'}
-                      />
+                        title="✓ Marcar como resuelto - Reactiva sensor automáticamente"
+                      >
+                        <span className="hidden xl:inline ml-1">Resuelto</span>
+                      </Button>
 
                       <Button
                         size="sm"
                         icon={<PiXCircleDuotone />}
-                        onClick={() => handleChangeStatus('closed')}
+                        onClick={confirmClose}
                         disabled={selectedTicket.status === 'closed'}
-                      />
+                        title="✕ Cerrar ticket permanentemente - No se puede deshacer"
+                      >
+                        <span className="hidden xl:inline ml-1">Cerrar</span>
+                      </Button>
                     </div>
                   </div>
                 </div>
@@ -500,6 +644,46 @@ const AdminSupportPage = () => {
           </Card>
         </div>
       </div>
+
+      {/* Diálogo de confirmación */}
+      {showConfirmDialog && confirmAction && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50">
+          <Card className="w-full max-w-md mx-4">
+            <div className="p-6">
+              <h3 className="text-lg font-bold text-gray-900 dark:text-gray-100 mb-2">
+                {confirmAction.title}
+              </h3>
+              <p className="text-sm text-gray-600 dark:text-gray-400 mb-6">
+                {confirmAction.message}
+              </p>
+              <div className="flex gap-3 justify-end">
+                <Button
+                  variant="plain"
+                  onClick={() => {
+                    setShowConfirmDialog(false)
+                    setConfirmAction(null)
+                  }}
+                >
+                  Cancelar
+                </Button>
+                <Button
+                  variant="solid"
+                  className={
+                    confirmAction.type === 'maintenance' || confirmAction.type === 'close'
+                      ? 'bg-red-600 hover:bg-red-700'
+                      : 'bg-blue-600 hover:bg-blue-700'
+                  }
+                  onClick={confirmAction.onConfirm}
+                >
+                  {confirmAction.type === 'maintenance' || confirmAction.type === 'close'
+                    ? 'Sí, continuar'
+                    : 'Confirmar'}
+                </Button>
+              </div>
+            </div>
+          </Card>
+        </div>
+      )}
     </Container>
   )
 }

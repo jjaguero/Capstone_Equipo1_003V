@@ -43,11 +43,17 @@ const UserSupportPage = () => {
   const messagesEndRef = useRef<HTMLDivElement>(null)
 
   // Form state para crear ticket
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<{
+    subject: string
+    description: string
+    category: 'sensor_issue' | 'sensor_maintenance_request' | 'high_consumption' | 'leak_detection' | 'general_inquiry' | 'other'
+    priority: 'low' | 'medium' | 'high' | 'urgent'
+    sensorId: string
+  }>({
     subject: '',
     description: '',
-    category: 'sensor_issue' as const,
-    priority: 'medium' as const,
+    category: 'sensor_issue',
+    priority: 'medium',
     sensorId: '',
   })
   const [creating, setCreating] = useState(false)
@@ -80,6 +86,10 @@ const UserSupportPage = () => {
 
   const categoryOptions = [
     { value: 'sensor_issue', label: 'Problema con Sensor' },
+    { value: 'sensor_maintenance_request', label: 'Solicitar Mantenimiento de Sensor' },
+    { value: 'high_consumption', label: 'Consumo Elevado' },
+    { value: 'leak_detection', label: 'Posible Fuga' },
+    { value: 'general_inquiry', label: 'Consulta General' },
     { value: 'other', label: 'Otro' },
   ]
 
@@ -115,6 +125,16 @@ const UserSupportPage = () => {
       return
     }
 
+    // Validar que si es mantenimiento, debe tener sensor
+    if (formData.category === 'sensor_maintenance_request' && !formData.sensorId) {
+      toast.push(
+        <Notification type="warning">
+          Debes seleccionar un sensor para solicitar mantenimiento
+        </Notification>
+      )
+      return
+    }
+
     try {
       setCreating(true)
       await createTicket({
@@ -140,8 +160,14 @@ const UserSupportPage = () => {
         sensorId: '',
       })
       refetch()
-    } catch (error) {
-      toast.push(<Notification type="danger">Error al crear ticket</Notification>)
+    } catch (error: any) {
+      console.error('Error creating ticket:', error)
+      const errorMessage = error?.response?.data?.message || error?.message || 'Error al crear ticket'
+      toast.push(
+        <Notification type="danger">
+          {errorMessage}
+        </Notification>
+      )
     } finally {
       setCreating(false)
     }
@@ -240,6 +266,7 @@ const UserSupportPage = () => {
   const getCategoryLabel = (category: string) => {
     const labels: Record<string, string> = {
       sensor_issue: 'Problema con Sensor',
+      sensor_maintenance_request: 'Solicitar Mantenimiento',
       high_consumption: 'Consumo Alto',
       leak_detection: 'Posible Fuga',
       general_inquiry: 'Consulta General',
@@ -286,7 +313,12 @@ const UserSupportPage = () => {
       {/* Header */}
       <div className="mb-6">
         <div className="flex items-center justify-between">
-          <Button variant="solid" icon={<PiPlusDuotone />} onClick={() => setShowCreateDialog(true)}>
+          <Button 
+            variant="solid" 
+            icon={<PiPlusDuotone />} 
+            onClick={() => setShowCreateDialog(true)}
+            title="💬 Crear un nuevo ticket de soporte - Describe tu problema y recibe ayuda"
+          >
             Nuevo Ticket
           </Button>
         </div>
@@ -350,10 +382,8 @@ const UserSupportPage = () => {
               {tickets.length === 0 ? (
                 <div className="p-8 text-center text-gray-500">
                   <PiChatCircleDotsDuotone className="w-12 h-12 mx-auto mb-2 text-gray-300" />
-                  <p className="text-sm mb-4">No tienes tickets de soporte activos</p>
-                  <Button variant="solid" size="sm" icon={<PiPlusDuotone />} onClick={() => setShowCreateDialog(true)}>
-                    Crear Primer Ticket
-                  </Button>
+                  <p className="text-sm mb-2">No tienes tickets de soporte activos</p>
+                  <p className="text-xs">Usa el botón "Nuevo Ticket" arriba para crear uno</p>
                 </div>
               ) : (
                 <div className="divide-y divide-gray-200 dark:divide-gray-700">
@@ -407,12 +437,8 @@ const UserSupportPage = () => {
               <div className="flex-1 flex items-center justify-center text-gray-500">
                 <div className="text-center">
                   <PiChatCircleDotsDuotone className="w-20 h-20 mx-auto mb-4 text-gray-300" />
-                  <p className="mb-4">Selecciona un ticket para ver la conversación</p>
-                  {tickets.length === 0 && (
-                    <Button variant="solid" icon={<PiPlusDuotone />} onClick={() => setShowCreateDialog(true)}>
-                      Crear Nuevo Ticket
-                    </Button>
-                  )}
+                  <p className="mb-2">Selecciona un ticket para ver la conversación</p>
+                  <p className="text-xs">o crea uno nuevo usando el botón arriba</p>
                 </div>
               </div>
             ) : (
@@ -484,7 +510,7 @@ const UserSupportPage = () => {
                         type="text"
                         value={newComment}
                         onChange={(e) => setNewComment(e.target.value)}
-                        placeholder="Escribe tu mensaje..."
+                        placeholder="Escribe tu mensaje... (Presiona Enter para enviar)"
                         onKeyPress={(e) => e.key === 'Enter' && !e.shiftKey && handleSendComment()}
                         className="flex-1 text-sm"
                         size="sm"
@@ -496,6 +522,7 @@ const UserSupportPage = () => {
                         onClick={handleSendComment}
                         loading={sendingComment}
                         disabled={!newComment.trim()}
+                        title="📤 Enviar mensaje al equipo de soporte"
                       />
                     </div>
                   </div>
@@ -524,6 +551,9 @@ const UserSupportPage = () => {
                   <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                     Asunto <span className="text-red-500">*</span>
                   </label>
+                  <p className="text-xs text-gray-500 mb-1">
+                    Resumen breve del problema (ej: "Sensor sin señal", "Consumo muy elevado")
+                  </p>
                   <Input
                     type="text"
                     value={formData.subject}
@@ -536,6 +566,9 @@ const UserSupportPage = () => {
                   <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                     Categoría
                   </label>
+                  <p className="text-xs text-gray-500 mb-1">
+                    Selecciona la categoría que mejor describa tu problema
+                  </p>
                   <Select
                     options={categoryOptions}
                     value={categoryOptions.find((opt) => opt.value === formData.category)}
@@ -545,11 +578,16 @@ const UserSupportPage = () => {
                   />
                 </div>
 
-                {formData.category === 'sensor_issue' && (
+                {(formData.category === 'sensor_issue' || formData.category === 'sensor_maintenance_request') && (
                   <div>
                     <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                      Sensor afectado
+                      Sensor afectado {formData.category === 'sensor_maintenance_request' && <span className="text-red-500">*</span>}
                     </label>
+                    <p className="text-xs text-gray-500 mb-1">
+                      {formData.category === 'sensor_maintenance_request' 
+                        ? '⚠️ El sensor seleccionado dejará de enviar datos hasta que se complete el mantenimiento'
+                        : 'Selecciona el sensor que presenta problemas (opcional)'}
+                    </p>
                     {loadingSensors ? (
                       <div className="text-sm text-gray-500 py-2">Cargando sensores...</div>
                     ) : sensors.length === 0 ? (
@@ -571,6 +609,9 @@ const UserSupportPage = () => {
                   <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                     Prioridad
                   </label>
+                  <p className="text-xs text-gray-500 mb-1">
+                    Urgente: Requiere atención inmediata | Alta: Importante pero no urgente | Media/Baja: Puede esperar
+                  </p>
                   <Select
                     options={priorityOptions}
                     value={priorityOptions.find((opt) => opt.value === formData.priority)}
@@ -582,6 +623,9 @@ const UserSupportPage = () => {
                   <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                     Descripción <span className="text-red-500">*</span>
                   </label>
+                  <p className="text-xs text-gray-500 mb-1">
+                    Explica el problema con el mayor detalle posible. Incluye cuándo comenzó y qué has intentado.
+                  </p>
                   <Input
                     textArea
                     value={formData.description}
@@ -595,10 +639,19 @@ const UserSupportPage = () => {
               </div>
 
               <div className="flex gap-2 justify-end mt-6">
-                <Button variant="plain" onClick={() => setShowCreateDialog(false)}>
+                <Button 
+                  variant="plain" 
+                  onClick={() => setShowCreateDialog(false)}
+                  title="Cancelar y cerrar el formulario"
+                >
                   Cancelar
                 </Button>
-                <Button variant="solid" loading={creating} onClick={handleCreateTicket}>
+                <Button 
+                  variant="solid" 
+                  loading={creating} 
+                  onClick={handleCreateTicket}
+                  title="✅ Crear ticket de soporte - Nuestro equipo lo revisará pronto"
+                >
                   Crear Ticket
                 </Button>
               </div>

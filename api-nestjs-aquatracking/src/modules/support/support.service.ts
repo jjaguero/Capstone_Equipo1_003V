@@ -18,7 +18,7 @@ export class SupportService {
 
   /**
    * Crear un nuevo ticket de soporte
-   * Si es un problema de sensor, cambia su estado a "maintenance"
+   * Si es un problema de sensor o solicitud de mantenimiento, cambia su estado a "maintenance"
    */
   async create(createDto: CreateSupportTicketDto): Promise<SupportTicket> {
     const ticket = new this.supportTicketModel({
@@ -30,8 +30,8 @@ export class SupportService {
     
     const savedTicket = await ticket.save();
 
-    // Si el ticket es sobre un sensor, cambiar su estado a "maintenance"
-    if (createDto.category === 'sensor_issue' && createDto.sensorId) {
+    // Si el ticket es sobre un sensor (problema o solicitud de mantenimiento), cambiar estado a "maintenance"
+    if ((createDto.category === 'sensor_issue' || createDto.category === 'sensor_maintenance_request') && createDto.sensorId) {
       await this.sensorModel.findByIdAndUpdate(
         createDto.sensorId,
         { status: 'maintenance' },
@@ -127,7 +127,7 @@ export class SupportService {
 
     // Si se resolvió un ticket de sensor, cambiar el sensor de vuelta a "active"
     if (ticket && (updateDto.status === 'resolved' || updateDto.status === 'closed')) {
-      if (ticket.category === 'sensor_issue' && ticket.sensorId) {
+      if ((ticket.category === 'sensor_issue' || ticket.category === 'sensor_maintenance_request') && ticket.sensorId) {
         await this.sensorModel.findByIdAndUpdate(
           ticket.sensorId,
           { status: 'active' },

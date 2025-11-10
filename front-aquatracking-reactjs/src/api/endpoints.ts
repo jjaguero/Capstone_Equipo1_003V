@@ -21,6 +21,8 @@ export const ENDPOINTS = {
   SENSORS: '/sensors',
   SENSOR_BY_ID: (id: string) => `/sensors/${id}`,
   SENSORS_BY_HOME: (homeId: string) => `/sensors?homeId=${homeId}`,
+  SENSOR_TOGGLE_MAINTENANCE: (id: string) => `/sensors/${id}/maintenance`,
+  SENSOR_CHECK_INACTIVE: '/sensors/check-inactive',
 
   // Measurements endpoints
   MEASUREMENTS: '/measurements',

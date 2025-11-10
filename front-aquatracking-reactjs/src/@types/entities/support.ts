@@ -5,7 +5,7 @@ export interface SupportTicket {
   sensorId?: string
   subject: string
   description: string
-  category: 'sensor_issue' | 'high_consumption' | 'leak_detection' | 'general_inquiry' | 'other'
+  category: 'sensor_issue' | 'sensor_maintenance_request' | 'high_consumption' | 'leak_detection' | 'general_inquiry' | 'other'
   status: 'open' | 'in_progress' | 'resolved' | 'closed'
   priority: 'low' | 'medium' | 'high' | 'urgent'
   assignedTo?: string
@@ -31,7 +31,7 @@ export interface CreateSupportTicketRequest {
   sensorId?: string
   subject: string
   description: string
-  category: 'sensor_issue' | 'high_consumption' | 'leak_detection' | 'general_inquiry' | 'other'
+  category: 'sensor_issue' | 'sensor_maintenance_request' | 'high_consumption' | 'leak_detection' | 'general_inquiry' | 'other'
   priority?: 'low' | 'medium' | 'high' | 'urgent'
   attachments?: string[]
 }
@@ -39,7 +39,7 @@ export interface CreateSupportTicketRequest {
 export interface UpdateSupportTicketRequest {
   subject?: string
   description?: string
-  category?: 'sensor_issue' | 'high_consumption' | 'leak_detection' | 'general_inquiry' | 'other'
+  category?: 'sensor_issue' | 'sensor_maintenance_request' | 'high_consumption' | 'leak_detection' | 'general_inquiry' | 'other'
   status?: 'open' | 'in_progress' | 'resolved' | 'closed'
   priority?: 'low' | 'medium' | 'high' | 'urgent'
   assignedTo?: string

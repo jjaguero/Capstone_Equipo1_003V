@@ -22,7 +22,7 @@ export class SupportTicket {
 
   @Prop({ 
     required: true, 
-    enum: ['sensor_issue', 'high_consumption', 'leak_detection', 'general_inquiry', 'other'],
+    enum: ['sensor_issue', 'sensor_maintenance_request', 'high_consumption', 'leak_detection', 'general_inquiry', 'other'],
     default: 'other'
   })
   category: string; // Categoría del problema
