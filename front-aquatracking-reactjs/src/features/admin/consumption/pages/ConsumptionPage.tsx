@@ -113,16 +113,6 @@ const ConsumptionPage = () => {
     return (
         <Container>
             <Breadcrumb />
-            
-            {/* Header */}
-            <div className="mb-8 animate-fadeIn">
-                <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100">
-                    Vista de Consumo
-                </h3>
-                <p className="text-gray-600 dark:text-gray-400 mt-1">
-                    Monitoreo y análisis del consumo de agua por hogar
-                </p>
-            </div>
 
             {/* KPIs - Estadísticas principales */}
             <div className="animate-slideUp" style={{ animationDelay: '0.1s' }}>

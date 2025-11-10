@@ -15,7 +15,7 @@ import {
     PiUsersDuotone,
     PiHouseDuotone,
     PiDropDuotone,
-    PiWarningCircleDuotone,
+    PiWarningDuotone,
     PiCheckCircleDuotone,
     PiUserPlusDuotone,
     PiPlusDuotone,
@@ -115,7 +115,7 @@ const AdminDashboardPage = () => {
                     description: `${home?.name || 'Hogar'} - ${alert.message}`,
                     timestamp: typeof alert.triggeredAt === 'string' ? alert.triggeredAt : alert.triggeredAt.toISOString(),
                     icon: (
-                        <PiWarningCircleDuotone className="text-red-500 text-xl" />
+                        <PiWarningDuotone className="text-red-500 text-xl" />
                     ),
                 })
             })
@@ -179,20 +179,12 @@ const AdminDashboardPage = () => {
 
     return (
         <Container>
-            <Breadcrumb />
-            
-            {/* Header */}
-            <div className="mb-6">
-                <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100">
-                    Panel de Control
-                </h3>
-                <p className="text-gray-600 dark:text-gray-400 mt-1">
-                    Vista general del sistema AquaTracking
-                </p>
+            <div className="animate-fadeIn">
+                <Breadcrumb />
             </div>
 
             {/* KPI Cards */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-6 animate-slideUp" style={{ animationDelay: '0.1s' }}>
                 {/* Usuarios */}
                 <Card className="hover:shadow-lg transition-shadow">
                     <div className="p-6">
@@ -293,7 +285,7 @@ const AdminDashboardPage = () => {
                                     : 'bg-green-100 dark:bg-green-900/30'
                             }`}>
                                 {(metrics?.criticalAlerts || 0) > 0 ? (
-                                    <PiWarningCircleDuotone className="text-2xl text-red-600 dark:text-red-400" />
+                                    <PiWarningDuotone className="text-2xl text-red-600 dark:text-red-400" />
                                 ) : (
                                     <PiCheckCircleDuotone className="text-2xl text-green-600 dark:text-green-400" />
                                 )}
@@ -325,13 +317,13 @@ const AdminDashboardPage = () => {
             </div>
 
             {/* Main Content Grid */}
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 animate-slideUp" style={{ animationDelay: '0.2s' }}>
                 {/* Alertas Críticas - 2/3 width */}
                 <Card className="lg:col-span-2">
                     <div className="p-6">
                         <div className="flex items-center justify-between mb-6">
                             <div className="flex items-center gap-2">
-                                <PiWarningCircleDuotone className="text-xl text-gray-600 dark:text-gray-400" />
+                                <PiWarningDuotone className="text-xl text-gray-600 dark:text-gray-400" />
                                 <h4 className="text-lg font-semibold text-gray-900 dark:text-gray-100">
                                     Alertas Críticas
                                 </h4>
@@ -369,7 +361,7 @@ const AdminDashboardPage = () => {
                                             <Tr key={alert._id}>
                                                 <Td>
                                                     <div className="flex items-start gap-2">
-                                                        <PiWarningCircleDuotone className="text-lg text-red-500 mt-0.5" />
+                                                        <PiWarningDuotone className="text-lg text-red-500 mt-0.5" />
                                                         <span className="text-sm">{alert.message}</span>
                                                     </div>
                                                 </Td>

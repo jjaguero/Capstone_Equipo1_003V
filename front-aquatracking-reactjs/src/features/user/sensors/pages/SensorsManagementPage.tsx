@@ -110,16 +110,6 @@ const SensorsManagementPage = () => {
 
     return (
         <div className="space-y-8">
-            {/* Header */}
-            <div className="animate-fadeIn">
-                <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100">
-                    Gestión de Sensores
-                </h3>
-                <p className="text-gray-600 dark:text-gray-400 mt-1">
-                    Monitoreo y administración de sensores del sistema
-                </p>
-            </div>
-
             {/* Estadísticas */}
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6 animate-slideUp" style={{ animationDelay: '0.1s' }}>
                 <Card className="p-6 bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900/20 dark:to-blue-800/20 border-blue-200 dark:border-blue-700 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">

@@ -1,6 +1,6 @@
 import { Card, Badge, Progress } from '@/components/ui'
 import { Sensor } from '@/@types/entities/sensor.type'
-import { PiDropDuotone, PiWifiXDuotone, PiWarningCircleDuotone } from 'react-icons/pi'
+import { PiDropDuotone, PiWifiXDuotone, PiWarningDuotone } from 'react-icons/pi'
 import { normalizeSensorName } from '@/utils/sensor-name.utils'
 
 interface EcmeSensorDistributionProps {
@@ -207,7 +207,7 @@ const EcmeSensorDistribution = ({ sensors, loading }: EcmeSensorDistributionProp
         {activePercentage < 50 && (
           <div className="bg-red-50 border border-red-200 rounded-lg p-3">
             <div className="flex items-center">
-              <PiWarningCircleDuotone className="text-red-500 mr-2" />
+              <PiWarningDuotone className="text-red-500 mr-2" />
               <span className="text-sm text-red-700 font-medium">
                 Atención: Baja disponibilidad de sensores
               </span>

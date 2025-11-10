@@ -23,18 +23,12 @@ const UsersManagementPage = () => {
 
   return (
     <div className="space-y-8">
-      <Breadcrumb />
+      <div className="animate-fadeIn">
+        <Breadcrumb />
+      </div>
       
-      <Card className="bg-white/80 backdrop-blur-sm shadow-lg hover:shadow-xl transition-all duration-300">
+      <Card className="bg-white/80 backdrop-blur-sm shadow-lg hover:shadow-xl transition-all duration-300 animate-slideUp" style={{ animationDelay: '0.1s' }}>
         <div className="flex items-center justify-between mb-8 animate-fadeIn">
-          <div>
-            <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
-              Gestión de Usuarios
-            </h3>
-            <p className="text-gray-600 dark:text-gray-400 mt-1">
-              Administra los usuarios del sistema
-            </p>
-          </div>
           <Button
             variant="solid"
             size="sm"

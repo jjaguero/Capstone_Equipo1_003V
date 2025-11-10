@@ -3,7 +3,7 @@ import Card from '@/components/ui/Card'
 import Table from '@/components/ui/Table'
 import Badge from '@/components/ui/Badge'
 import Pagination from '@/components/ui/Pagination'
-import { PiWarningCircleDuotone, PiCheckCircleDuotone } from 'react-icons/pi'
+import { PiWarningDuotone, PiCheckCircleDuotone } from 'react-icons/pi'
 
 interface DailyConsumption {
     _id: string
@@ -167,7 +167,7 @@ const ConsumptionTable = ({ consumptions, homes }: ConsumptionTableProps) => {
                                         ${row.status === 'success' ? 'bg-green-100 text-green-800' : ''}
                                     `}>
                                         {row.status === 'success' && <PiCheckCircleDuotone className="inline mr-1" />}
-                                        {row.status !== 'success' && <PiWarningCircleDuotone className="inline mr-1" />}
+                                        {row.status !== 'success' && <PiWarningDuotone className="inline mr-1" />}
                                         {row.statusText}
                                     </Badge>
                                 </Td>

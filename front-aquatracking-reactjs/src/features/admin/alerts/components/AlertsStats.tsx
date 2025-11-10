@@ -1,7 +1,7 @@
 import Card from '@/components/ui/Card'
 import { 
     PiBellRingingDuotone, 
-    PiWarningCircleDuotone,
+    PiWarningDuotone,
     PiFireDuotone 
 } from 'react-icons/pi'
 
@@ -24,7 +24,7 @@ const AlertsStats = ({ total, pending, resolved, critical, high }: AlertsStatsPr
             bgColor: 'bg-blue-100',
         },
         {
-            icon: <PiWarningCircleDuotone className="text-4xl" />,
+            icon: <PiWarningDuotone className="text-4xl" />,
             label: 'Alertas Pendientes',
             value: pending,
             unit: pending === 1 ? 'pendiente' : 'pendientes',

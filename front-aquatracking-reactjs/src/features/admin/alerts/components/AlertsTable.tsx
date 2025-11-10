@@ -5,7 +5,7 @@ import Badge from '@/components/ui/Badge'
 import Button from '@/components/ui/Button'
 import Pagination from '@/components/ui/Pagination'
 import { 
-    PiWarningCircleDuotone, 
+    PiWarningDuotone, 
     PiCheckCircleDuotone, 
     PiFireDuotone,
     PiHouseDuotone 
@@ -55,13 +55,6 @@ const AlertsTable = ({ alerts, homes }: AlertsTableProps) => {
     }, [tableData, currentPage])
 
     const totalPages = Math.ceil(tableData.length / itemsPerPage)
-
-    const getTypeIcon = (type: string) => {
-        if (type === 'critical_consumption') {
-            return <PiFireDuotone className="text-red-500 text-xl" />
-        }
-        return <PiWarningCircleDuotone className="text-orange-500 text-xl" />
-    }
 
     const getTypeBadge = (type: string) => {
         if (type === 'critical_consumption') {
@@ -117,7 +110,6 @@ const AlertsTable = ({ alerts, homes }: AlertsTableProps) => {
                             <Tr key={alert._id}>
                                 <Td>
                                     <div className="flex items-center gap-2">
-                                        {getTypeIcon(alert.type)}
                                         {getTypeBadge(alert.type)}
                                     </div>
                                 </Td>
@@ -150,9 +142,9 @@ const AlertsTable = ({ alerts, homes }: AlertsTableProps) => {
                                     </p>
                                 </Td>
                                 <Td className="text-center">
-                                    <Badge className="bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200">
+                                    <span className="text-sm text-gray-700 dark:text-gray-300">
                                         Activa
-                                    </Badge>
+                                    </span>
                                 </Td>
                             </Tr>
                         ))}

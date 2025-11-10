@@ -63,16 +63,6 @@ const UserDashboardPage = () => {
 
   return (
     <Container>
-      {/* Header */}
-      <div className="mb-8 animate-fadeIn">
-        <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100">
-          Bienvenido, {currentUser?.name}
-        </h3>
-        <p className="text-gray-600 dark:text-gray-400 mt-1">
-          Vista general de tu consumo y sensores
-        </p>
-      </div>
-
       {/* KPIs Cards Mejoradas */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8 animate-slideUp" style={{ animationDelay: '0.1s' }}>
         {/* Consumo Acumulado Hoy */}
@@ -101,9 +91,6 @@ const UserDashboardPage = () => {
               </div>
               <div className="relative">
                 <PiDropDuotone className="text-5xl text-blue-500" />
-                {todayLiters > 0 && (
-                  <div className="absolute -top-1 -right-1 w-3 h-3 bg-blue-400 rounded-full animate-pulse" />
-                )}
               </div>
             </div>
           </div>
@@ -128,9 +115,6 @@ const UserDashboardPage = () => {
               </div>
               <div className="relative">
                 <PiDevicesDuotone className="text-5xl text-emerald-500" />
-                {activeSensors === totalSensors && totalSensors > 0 && (
-                  <div className="absolute -top-1 -right-1 w-3 h-3 bg-emerald-400 rounded-full animate-pulse" />
-                )}
               </div>
             </div>
           </div>
@@ -169,11 +153,6 @@ const UserDashboardPage = () => {
                 <PiBellDuotone className={`text-5xl ${
                   unresolvedAlerts > 0 ? 'text-red-500' : 'text-gray-400'
                 }`} />
-                {unresolvedAlerts > 0 && (
-                  <div className="absolute -top-1 -right-1 w-4 h-4 bg-red-500 text-white text-xs font-bold rounded-full flex items-center justify-center animate-bounce">
-                    {unresolvedAlerts > 9 ? '9+' : unresolvedAlerts}
-                  </div>
-                )}
               </div>
             </div>
           </div>
@@ -202,9 +181,6 @@ const UserDashboardPage = () => {
               </div>
               <div className="relative">
                 <PiTargetDuotone className="text-5xl text-amber-500" />
-                {currentUser?.limitLitersPerDay && todayLiters > currentUser.limitLitersPerDay && (
-                  <div className="absolute -top-1 -right-1 w-3 h-3 bg-red-500 rounded-full animate-pulse" />
-                )}
               </div>
             </div>
           </div>

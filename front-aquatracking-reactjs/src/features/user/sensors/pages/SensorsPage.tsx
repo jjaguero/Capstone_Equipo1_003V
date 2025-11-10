@@ -9,7 +9,7 @@ import {
   PiGearDuotone,
   PiWifiXDuotone,
   PiCheckCircleDuotone,
-  PiWarningCircleDuotone,
+  PiWarningDuotone,
   PiMapPinDuotone,
   PiEyeDuotone
 } from 'react-icons/pi'
@@ -58,7 +58,7 @@ const SensorsPage = () => {
       case 'active': return <PiCheckCircleDuotone className="w-5 h-5 text-green-600" />
       case 'inactive': return <PiWifiXDuotone className="w-5 h-5 text-gray-600" />
       case 'maintenance': return <PiGearDuotone className="w-5 h-5 text-yellow-600" />
-      case 'absent': return <PiWarningCircleDuotone className="w-5 h-5 text-red-600" />
+      case 'absent': return <PiWarningDuotone className="w-5 h-5 text-red-600" />
       default: return <PiDevicesDuotone className="w-5 h-5 text-gray-600" />
     }
   }

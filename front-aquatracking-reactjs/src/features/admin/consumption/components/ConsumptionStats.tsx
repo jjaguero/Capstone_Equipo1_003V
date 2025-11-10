@@ -1,5 +1,5 @@
 import Card from '@/components/ui/Card'
-import { PiDropDuotone, PiChartBarDuotone, PiWarningCircleDuotone, PiHouseDuotone } from 'react-icons/pi'
+import { PiDropDuotone, PiChartBarDuotone, PiWarningDuotone, PiHouseDuotone } from 'react-icons/pi'
 
 interface ConsumptionStatsProps {
     totalConsumed: number
@@ -27,7 +27,7 @@ const ConsumptionStats = ({ totalConsumed, averageDaily, totalAlerts, homesCount
             bgColor: 'bg-green-100',
         },
         {
-            icon: <PiWarningCircleDuotone className="text-4xl" />,
+            icon: <PiWarningDuotone className="text-4xl" />,
             label: 'Alertas Generadas',
             value: totalAlerts,
             unit: totalAlerts === 1 ? 'alerta' : 'alertas',

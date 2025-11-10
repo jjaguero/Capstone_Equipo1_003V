@@ -3,7 +3,7 @@ import { Card } from '@/components/ui'
 import { Timeline } from '@/components/ui/Timeline'
 import { Progress } from '@/components/ui/Progress'
 import { DailyConsumption } from '@/@types/entities'
-import { PiDropDuotone, PiWarningCircleDuotone, PiCheckCircleDuotone, PiTrendUpDuotone } from 'react-icons/pi'
+import { PiDropDuotone, PiWarningDuotone, PiCheckCircleDuotone, PiTrendUpDuotone } from 'react-icons/pi'
 
 interface EcmeConsumptionTimelineProps {
   consumptions: DailyConsumption[]
@@ -87,8 +87,8 @@ const EcmeConsumptionTimeline: React.FC<EcmeConsumptionTimelineProps> = ({
 
   const getDayIcon = (consumption: number) => {
     const percentage = (consumption / userLimit) * 100
-    if (percentage >= 90) return <PiWarningCircleDuotone className="w-6 h-6 text-red-500" />
-    if (percentage >= 75) return <PiWarningCircleDuotone className="w-6 h-6 text-amber-500" />
+    if (percentage >= 90) return <PiWarningDuotone className="w-6 h-6 text-red-500" />
+    if (percentage >= 75) return <PiWarningDuotone className="w-6 h-6 text-amber-500" />
     return <PiCheckCircleDuotone className="w-6 h-6 text-emerald-500" />
   }
 
@@ -187,7 +187,7 @@ const EcmeConsumptionTimeline: React.FC<EcmeConsumptionTimelineProps> = ({
                   {/* Alerta si excede límite */}
                   {consumption.totalLiters > userLimit && (
                     <div className="mt-3 flex items-center gap-2 text-red-700 bg-red-50 px-3 py-2 rounded-lg border border-red-200">
-                      <PiWarningCircleDuotone className="w-4 h-4" />
+                      <PiWarningDuotone className="w-4 h-4" />
                       <span className="text-sm font-medium">
                         Límite excedido por {(consumption.totalLiters - userLimit).toFixed(1)}L
                       </span>

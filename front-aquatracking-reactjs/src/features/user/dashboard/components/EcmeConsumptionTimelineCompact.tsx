@@ -5,7 +5,7 @@ import { es } from 'date-fns/locale'
 import { 
   PiDropDuotone, 
   PiTrendUpDuotone, 
-  PiWarningCircleDuotone,
+  PiWarningDuotone,
   PiCheckCircleDuotone 
 } from 'react-icons/pi'
 
@@ -54,8 +54,8 @@ const EcmeConsumptionTimelineCompact = ({
 
   const getStatusIcon = (liters: number) => {
     const percentage = (liters / userLimit) * 100
-    if (percentage > 100) return <PiWarningCircleDuotone className="w-4 h-4 text-red-500" />
-    if (percentage > 80) return <PiWarningCircleDuotone className="w-4 h-4 text-yellow-500" />
+    if (percentage > 100) return <PiWarningDuotone className="w-4 h-4 text-red-500" />
+    if (percentage > 80) return <PiWarningDuotone className="w-4 h-4 text-yellow-500" />
     return <PiCheckCircleDuotone className="w-4 h-4 text-green-500" />
   }
 
@@ -119,7 +119,7 @@ const EcmeConsumptionTimelineCompact = ({
           <div className="bg-white border border-gray-200 rounded-lg p-4">
             <div className="flex items-center justify-between mb-2">
               <div className="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center">
-                <PiWarningCircleDuotone className="w-5 h-5 text-purple-600" />
+                <PiWarningDuotone className="w-5 h-5 text-purple-600" />
               </div>
             </div>
             <div className="text-sm text-gray-600 mb-1">Estado</div>
@@ -184,7 +184,7 @@ const EcmeConsumptionTimelineCompact = ({
         {efficiency < -10 && (
           <div className="mt-4 p-3 bg-red-50 border border-red-200 rounded-lg">
             <div className="flex items-center space-x-2">
-              <PiWarningCircleDuotone className="w-4 h-4 text-red-500" />
+              <PiWarningDuotone className="w-4 h-4 text-red-500" />
               <span className="text-sm text-red-700 font-medium">
                 Consumo elevado esta semana ({Math.abs(efficiency).toFixed(0)}% sobre límite)
               </span>

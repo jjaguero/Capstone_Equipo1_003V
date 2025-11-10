@@ -202,10 +202,13 @@ const StatisticsPage = () => {
 
     return (
         <Container>
-            <Breadcrumb />
+            <div className="animate-fadeIn">
+                <Breadcrumb />
+            </div>
             
             {/* Filtros de período */}
-            <Card className="mb-6">
+            <div className="animate-slideUp" style={{ animationDelay: '0.1s' }}>
+                <Card className="mb-6">
                 <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
                     {/* Selector de sector */}
                     <div>
@@ -287,18 +290,10 @@ const StatisticsPage = () => {
                     </div>
                 </div>
             </Card>
+            </div>
 
             {/* Header */}
-            <div className="mb-6 flex items-center justify-between">
-                <div>
-                    <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100">
-                        Estadísticas Generales
-                    </h3>
-                    <p className="text-gray-600 dark:text-gray-400 mt-1">
-                        Métricas y reportes de toda la plataforma
-                    </p>
-                </div>
-                
+            <div className="mb-6 flex items-center justify-end animate-slideUp" style={{ animationDelay: '0.2s' }}>
                 {/* Botón de exportación PDF */}
                 <Button
                     variant="solid"
@@ -314,6 +309,7 @@ const StatisticsPage = () => {
             </div>
 
             {/* KPIs - Estadísticas principales */}
+            <div className="animate-slideUp" style={{ animationDelay: '0.3s' }}>
             {platformStats && (
                 <PlatformStats
                     totalUsers={platformStats.totalUsers}
@@ -329,8 +325,10 @@ const StatisticsPage = () => {
                     consumptionTrend={platformStats.consumptionTrend}
                 />
             )}
+            </div>
 
             {/* Tendencia mensual */}
+            <div className="animate-slideUp" style={{ animationDelay: '0.4s' }}>
             {monthlyTrend.length > 0 && (
                 <AdaptiveCard className="mb-6">
                     <h4 className="text-lg font-bold text-gray-900 dark:text-gray-100 mb-4">
@@ -339,9 +337,12 @@ const StatisticsPage = () => {
                     <MonthlyTrendChart data={monthlyTrend} />
                 </AdaptiveCard>
             )}
+            </div>
 
             {/* Top 5 hogares */}
+            <div className="animate-slideUp" style={{ animationDelay: '0.5s' }}>
             <TopHomesTable homes={topHomes} />
+            </div>
         </Container>
     )
 }

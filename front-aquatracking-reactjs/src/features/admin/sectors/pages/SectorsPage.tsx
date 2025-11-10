@@ -58,32 +58,26 @@ const SectorsPage = () => {
 
     return (
         <Container>
-            <Breadcrumb />
-            
-            {/* Header */}
-            <div className="mb-6">
-                <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100">
-                    Análisis por Sectores
-                </h3>
-                <p className="text-gray-600 dark:text-gray-400 mt-1">
-                    Comparación de consumo de agua entre sectores
-                </p>
+            <div className="animate-fadeIn">
+                <Breadcrumb />
             </div>
 
-            {/* Period Filter */}
-            <SectorPeriodFilter
-                currentPeriod={currentPeriod}
-                onFilterPeriod={filterByPeriod}
-                dateFrom={dateFrom}
-                dateTo={dateTo}
-                onDateFromChange={setDateFrom}
-                onDateToChange={setDateTo}
-                availableDates={availableDates}
-                onClearFilters={handleClearFilters}
-            />
+            {/* Filtros */}
+            <div className="animate-slideUp" style={{ animationDelay: '0.1s' }}>
+                <SectorPeriodFilter
+                    currentPeriod={currentPeriod}
+                    onFilterPeriod={filterByPeriod}
+                    dateFrom={dateFrom}
+                    dateTo={dateTo}
+                    onDateFromChange={setDateFrom}
+                    onDateToChange={setDateTo}
+                    availableDates={availableDates}
+                    onClearFilters={handleClearFilters}
+                />
+            </div>
 
             {/* Sector Cards */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6 animate-slideUp" style={{ animationDelay: '0.2s' }}>
                 {stats.map((stat) => (
                     <SectorCard
                         key={stat.sectorId}
@@ -99,12 +93,12 @@ const SectorsPage = () => {
             </div>
 
             {/* Comparison Section */}
-            <div className="mb-6">
+            <div className="mb-6 animate-slideUp" style={{ animationDelay: '0.3s' }}>
                 <SectorComparison stats={stats} />
             </div>
 
             {/* Charts */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 animate-slideUp" style={{ animationDelay: '0.4s' }}>
                 {/* Consumption Comparison Chart */}
                 <AdaptiveCard>
                     <h4 className="text-lg font-bold text-gray-900 dark:text-gray-100 mb-4">

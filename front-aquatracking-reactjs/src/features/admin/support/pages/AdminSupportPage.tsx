@@ -15,7 +15,7 @@ import Notification from '@/components/ui/Notification'
 import {
   PiChatCircleDotsDuotone,
   PiCheckCircleDuotone,
-  PiWarningCircleDuotone,
+  PiWarningDuotone,
   PiPaperPlaneTiltDuotone,
   PiXCircleDuotone,
   PiWrenchDuotone,
@@ -220,14 +220,15 @@ const AdminSupportPage = () => {
 
   return (
     <Container>
-      {/* Header con Stats */}
-      <div className="mb-6">
-        <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-4">
-          Soporte Técnico
-        </h3>
+      {/* Breadcrumb */}
+      <div className="mb-6 animate-fadeIn">
+        <Breadcrumb />
+      </div>
 
+      {/* Header con Stats */}
+      <div className="mb-6 animate-fadeIn">
         {stats && (
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-3">
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-3 animate-slideUp" style={{ animationDelay: '0.1s' }}>
             <Card className="p-4">
               <div className="flex items-center gap-3">
                 <PiChatCircleDotsDuotone className="text-2xl text-blue-600" />
@@ -240,7 +241,7 @@ const AdminSupportPage = () => {
 
             <Card className="p-4">
               <div className="flex items-center gap-3">
-                <PiWarningCircleDuotone className="text-2xl text-blue-600" />
+                <PiWarningDuotone className="text-2xl text-blue-600" />
                 <div>
                   <p className="text-xs text-gray-600 dark:text-gray-400">Abiertos</p>
                   <p className="text-xl font-bold">{stats.open}</p>
@@ -282,7 +283,7 @@ const AdminSupportPage = () => {
       </div>
 
       {/* Layout estilo Chat - 2 columnas */}
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-4">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 animate-slideUp" style={{ animationDelay: '0.2s' }}>
         {/* Columna izquierda: Lista de tickets */}
         <div className="col-span-1 lg:col-span-4 xl:col-span-3">
           <Card className="h-[600px] flex flex-col">

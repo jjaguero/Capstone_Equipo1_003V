@@ -19,7 +19,7 @@ import {
   PiPlusDuotone,
   PiClockDuotone,
   PiCheckCircleDuotone,
-  PiWarningCircleDuotone,
+  PiWarningDuotone,
   PiPaperPlaneTiltDuotone,
 } from 'react-icons/pi'
 import type { Sensor, SupportTicket } from '@/@types/entities'
@@ -267,7 +267,7 @@ const UserSupportPage = () => {
         <div className="min-h-screen flex items-center justify-center">
           <div className="text-center max-w-md">
             <div className="w-16 h-16 mx-auto mb-4 bg-amber-100 rounded-full flex items-center justify-center">
-              <PiWarningCircleDuotone className="text-4xl text-amber-600" />
+              <PiWarningDuotone className="text-4xl text-amber-600" />
             </div>
             <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-2">
               Configuración Pendiente
