@@ -75,35 +75,36 @@ const ExportPDFButton = ({
 
       const now = new Date()
       let startDate: Date
-      let endDate: Date = endOfDay(now)
+      let endDate: Date // Se asignará según el período
       let periodLabel: 'daily' | 'weekly' | 'monthly' | 'yearly' = 'monthly'
 
       switch (selectedPeriod) {
         case 'daily':
           startDate = startOfDay(now)
-          endDate = endOfDay(now)
+          endDate = endOfDay(now) // Día completo (DailyConsumption representa todo el día)
           periodLabel = 'daily'
           break
         case 'weekly':
-          startDate = startOfDay(subDays(now, 7))
-          endDate = endOfDay(now)
+          startDate = startOfDay(subDays(now, 6)) // Últimos 7 días incluyendo hoy
+          endDate = endOfDay(now) // Hasta fin del día actual
           periodLabel = 'weekly'
           break
         case 'monthly':
           startDate = startOfMonth(now)
-          endDate = endOfMonth(now)
+          endDate = endOfMonth(now) // Mes completo
           periodLabel = 'monthly'
           break
         case 'yearly':
           startDate = startOfYear(now)
-          endDate = endOfYear(now)
+          endDate = endOfYear(now) // Año completo
           periodLabel = 'yearly'
           break
         case 'specific-month':
           const month = parseInt(selectedMonth)
           const year = parseInt(selectedYear)
-          startDate = startOfMonth(new Date(year, month, 1))
-          endDate = endOfMonth(new Date(year, month, 1))
+          const specifiedDate = new Date(year, month, 1)
+          startDate = startOfMonth(specifiedDate)
+          endDate = endOfMonth(specifiedDate) // Mes completo
           periodLabel = 'monthly'
           break
         case 'custom':
@@ -118,7 +119,7 @@ const ExportPDFButton = ({
             return
           }
           startDate = startOfDay(customStartDate)
-          endDate = endOfDay(customEndDate)
+          endDate = endOfDay(customEndDate) // Día completo
           // Determinar el tipo de período basado en el rango
           const daysDiff = Math.ceil((endDate.getTime() - startDate.getTime()) / (1000 * 60 * 60 * 24))
           if (daysDiff <= 1) {
@@ -133,7 +134,8 @@ const ExportPDFButton = ({
           break
         default:
           startDate = startOfMonth(now)
-          endDate = endOfMonth(now)
+          const isDefaultCurrentMonth = now.getMonth() === new Date().getMonth() && now.getFullYear() === new Date().getFullYear()
+          endDate = isDefaultCurrentMonth ? now : endOfMonth(now)
           periodLabel = 'monthly'
       }
 
@@ -142,16 +144,43 @@ const ExportPDFButton = ({
       console.log('Period Label:', periodLabel)
       console.log('Start Date:', startDate)
       console.log('End Date:', endDate)
+      console.log('Sample measurement:', measurements[0])
+      console.log('All measurement dates:', measurements.map(m => m.date))
 
       // Filtrar measurements por el rango de fechas seleccionado
+      // Los datos son DailyConsumption con campo "date" en formato ISO "YYYY-MM-DD"
+      // Normalizamos las fechas a medianoche para comparar solo días
+      const startDateOnly = new Date(startDate.getFullYear(), startDate.getMonth(), startDate.getDate())
+      const endDateOnly = new Date(endDate.getFullYear(), endDate.getMonth(), endDate.getDate())
+      
+      console.log('Start Date Only:', startDateOnly.toISOString())
+      console.log('End Date Only:', endDateOnly.toISOString())
+      
       const filteredMeasurements = measurements.filter((m) => {
+        // El campo date viene como "2025-11-13T00:00:00.000Z"
         const measurementDate = new Date(m.date)
-        return measurementDate >= startDate && measurementDate <= endDate
+        const measurementDateOnly = new Date(measurementDate.getFullYear(), measurementDate.getMonth(), measurementDate.getDate())
+        
+        const isInRange = measurementDateOnly >= startDateOnly && measurementDateOnly <= endDateOnly
+        
+        if (measurements.indexOf(m) < 5) {
+          console.log(`Checking measurement ${measurements.indexOf(m)}:`, {
+            date: m.date,
+            measurementDateOnly: measurementDateOnly.toISOString(),
+            startDateOnly: startDateOnly.toISOString(),
+            endDateOnly: endDateOnly.toISOString(),
+            isAfterStart: measurementDateOnly >= startDateOnly,
+            isBeforeEnd: measurementDateOnly <= endDateOnly,
+            isInRange
+          })
+        }
+        return isInRange
       })
 
       console.log('Total Measurements:', measurements.length)
       console.log('Filtered Measurements:', filteredMeasurements.length)
-      console.log('Filtered Data:', filteredMeasurements)
+      console.log('First filtered:', filteredMeasurements[0])
+      console.log('Last filtered:', filteredMeasurements[filteredMeasurements.length - 1])
 
       if (filteredMeasurements.length === 0) {
         toast.push(
@@ -173,7 +202,7 @@ const ExportPDFButton = ({
       const sensorConsumption = calculateSensorConsumption(filteredMeasurements, sensors)
       console.log('Sensor Consumption:', sensorConsumption)
       
-      // Calcular consumo total desde los measurements filtrados
+      // Calcular consumo total desde los DailyConsumption filtrados
       const totalConsumption = filteredMeasurements.reduce((sum, m) => sum + (m.totalLiters || 0), 0)
       const days = Math.ceil((endDate.getTime() - startDate.getTime()) / (1000 * 60 * 60 * 24))
       const averageDaily = days > 0 ? totalConsumption / days : totalConsumption

@@ -165,11 +165,39 @@ export const generateConsumptionPDF = (options: ExportPDFOptions) => {
 
     // Limitar a los últimos 10 registros para que quepa
     const recentData = consumptionData.slice(-10)
-    const consumptionTableData = recentData.map(item => [
-      format(new Date(item.date), 'dd/MM/yyyy', { locale: es }),
-      item.sensor || 'General',
-      `${item.liters.toFixed(2)} L`
-    ])
+    const consumptionTableData = recentData.map(item => {
+      // item.date puede venir en varios formatos según el período
+      let dateStr: string
+      try {
+        // Si ya es un string legible (como "Enero 2025" o "Semana 45"), usarlo directamente
+        if (item.date.includes('Semana') || item.date.includes('enero') || item.date.includes('febrero') || 
+            item.date.includes('marzo') || item.date.includes('abril') || item.date.includes('mayo') || 
+            item.date.includes('junio') || item.date.includes('julio') || item.date.includes('agosto') || 
+            item.date.includes('septiembre') || item.date.includes('octubre') || item.date.includes('noviembre') || 
+            item.date.includes('diciembre')) {
+          dateStr = item.date
+        } else {
+          // Si es un string formato YYYY-MM-DD, parsearlo correctamente
+          const dateParts = item.date.split('-')
+          if (dateParts.length === 3) {
+            const [year, month, day] = dateParts.map(Number)
+            const dateObj = new Date(year, month - 1, day)
+            dateStr = format(dateObj, 'dd/MM/yyyy', { locale: es })
+          } else {
+            dateStr = format(new Date(item.date), 'dd/MM/yyyy', { locale: es })
+          }
+        }
+      } catch (error) {
+        console.error('Error formatting date:', item.date, error)
+        dateStr = item.date
+      }
+      
+      return [
+        dateStr,
+        item.sensor || 'General',
+        `${item.liters.toFixed(2)} L`
+      ]
+    })
 
     autoTable(doc, {
       startY: finalY + 20,
@@ -258,18 +286,23 @@ export const prepareConsumptionDataForPDF = (
       const dateObj = new Date(date)
       let key: string
 
+      // Decidir granularidad según el período
       switch (period) {
         case 'daily':
+          // Para un día, mostrar día completo (o por sensor si hay datos)
           key = format(dateObj, 'yyyy-MM-dd')
           break
         case 'weekly':
-          key = format(dateObj, 'yyyy-ww')
+          // Para semana, mostrar cada día
+          key = format(dateObj, 'yyyy-MM-dd')
           break
         case 'monthly':
-          key = format(dateObj, 'yyyy-MM')
+          // Para mes, agrupar por semana para no saturar
+          key = `Semana ${format(dateObj, 'w', { locale: es })} (${format(dateObj, 'dd/MM')})`
           break
         case 'yearly':
-          key = format(dateObj, 'yyyy')
+          // Para año, agrupar por mes
+          key = format(dateObj, 'MMMM yyyy', { locale: es })
           break
         default:
           key = format(dateObj, 'yyyy-MM-dd')
