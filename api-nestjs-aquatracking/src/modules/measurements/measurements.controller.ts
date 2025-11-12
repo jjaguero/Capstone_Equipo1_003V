@@ -28,8 +28,21 @@ export class MeasurementsController {
     @Query('homeId') homeId?: string,
     @Query('sensorId') sensorId?: string,
     @Query('limit') limit?: string,
+    @Query('startDate') startDate?: string,
+    @Query('endDate') endDate?: string,
+    @Query('sort') sort?: string,
   ) {
     const limitNum = limit ? parseInt(limit, 10) : undefined;
+    
+    // Si hay fechas, usar filtro por rango
+    if (homeId && startDate && endDate) {
+      return this.measurementsService.findByDateRange(
+        homeId,
+        new Date(startDate),
+        new Date(endDate),
+        sort,
+      );
+    }
     
     if (homeId) {
       return this.measurementsService.findByHome(homeId, limitNum);

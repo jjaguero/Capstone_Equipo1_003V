@@ -93,13 +93,15 @@ export class MeasurementsService {
     homeId: string,
     startDate: Date,
     endDate: Date,
+    sortOrder?: string,
   ): Promise<Measurement[]> {
+    const sort = sortOrder || '-startTime';
     return await this.measurementModel
       .find({
         homeId,
         startTime: { $gte: startDate, $lte: endDate },
       })
-      .sort({ startTime: -1 })
+      .sort(sort)
       .exec();
   }
 

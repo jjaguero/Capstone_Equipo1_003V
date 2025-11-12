@@ -14,6 +14,7 @@ import { RealtimeFlowChart, ActiveSensorsList, RecentMeasurements } from '../com
 import ApiService from '@/services/ApiService'
 import { format } from 'date-fns'
 import { es } from 'date-fns/locale'
+// removed normalizeSensorName: panel removed
 
 interface Measurement {
   _id: string
@@ -37,16 +38,32 @@ const RealtimePage = () => {
   const [lastUpdate, setLastUpdate] = useState<Date>(new Date())
   const [selectedSensorId, setSelectedSensorId] = useState<string | null>(null)
 
-  // Fetch initial measurements
+  // Fetch initial measurements (today's data)
   useEffect(() => {
     const fetchMeasurements = async () => {
       if (!currentUser?.homeId) return
       
       try {
         setMeasurementsLoading(true)
-        const response = await ApiService.fetchDataWithAxios<Measurement[]>({
-          url: `/measurements?homeId=${currentUser.homeId}&limit=20`
+        
+  // Obtener inicio del día actual (solo fecha) y fin = ahora (para que el fetch vaya hasta la hora actual)
+  const today = new Date()
+  const startOfDay = new Date(today.getFullYear(), today.getMonth(), today.getDate(), 0, 0, 0, 0)
+  const endOfDay = new Date() // ahora
+        
+        console.log('Fetching measurements for today:', {
+          startOfDay: startOfDay.toISOString(),
+          endOfDay: endOfDay.toISOString(),
+          homeId: currentUser.homeId
         })
+        
+        // Fetch measurements from today only
+        const response = await ApiService.fetchDataWithAxios<Measurement[]>({
+          url: `/measurements?homeId=${currentUser.homeId}&startDate=${startOfDay.toISOString()}&endDate=${endOfDay.toISOString()}&sort=-startTime`
+        })
+        
+        console.log(`Received ${response.length} measurements for today`)
+        
         setMeasurements(response)
         setLastUpdate(new Date())
         
@@ -57,6 +74,8 @@ const RealtimePage = () => {
             ? (latestMeasurement.liters / latestMeasurement.durationSec) * 60 
             : 0
           setCurrentFlow(flowRate)
+        } else {
+          setCurrentFlow(0)
         }
       } catch (error) {
         console.error('Error fetching measurements:', error)
@@ -67,32 +86,50 @@ const RealtimePage = () => {
 
     fetchMeasurements()
     
-    // Refetch every 5 minutes for realtime updates
-    const interval = setInterval(fetchMeasurements, 5 * 60 * 1000)
+    // Refetch every 30 seconds for realtime updates
+    const interval = setInterval(fetchMeasurements, 30 * 1000)
     
     return () => clearInterval(interval)
   }, [currentUser?.homeId])
 
-  // Update flow from WebSocket
+  // Update flow from WebSocket (SOLO del usuario actual)
   useEffect(() => {
-    if (newMeasurement && newMeasurement.action === 'open') {
+    // Filtrar: solo procesar mediciones del homeId del usuario actual
+    if (!newMeasurement || newMeasurement.homeId !== currentUser?.homeId) {
+      return
+    }
+
+    // Ignorar mediciones con timestamp en el futuro (posible ruido/histórico mal enviado)
+    if (newMeasurement.startTime) {
+      const measurementTime = new Date(newMeasurement.startTime)
+      if (measurementTime.getTime() > Date.now()) {
+        // Ignorar
+        return
+      }
+    }
+
+    if (newMeasurement.action === 'open') {
       const flowRate = newMeasurement.durationSec > 0 
         ? (newMeasurement.liters / newMeasurement.durationSec) * 60 
         : newMeasurement.flowRate
       setCurrentFlow(flowRate)
       
-      // Add new measurement to the list
-      setMeasurements(prev => [newMeasurement as any, ...prev.slice(0, 19)])
-    } else if (newMeasurement && newMeasurement.action === 'close') {
+      // Add new measurement to the list (prepend to beginning)
+      setMeasurements(prev => [newMeasurement as any, ...prev])
+      setLastUpdate(new Date())
+    } else if (newMeasurement.action === 'close') {
       setCurrentFlow(0)
+      setLastUpdate(new Date())
     }
-  }, [newMeasurement])
+  }, [newMeasurement, currentUser?.homeId])
 
   // Update active sensors count
   useEffect(() => {
     const activeSensors = sensors.filter(s => s.status === 'active')
     setActiveSensorsCount(activeSensors.length)
   }, [sensors])
+
+  // panel for per-device consumption removed as requested
 
   if (!currentUser?.homeId) {
     return (
@@ -119,10 +156,13 @@ const RealtimePage = () => {
         <div className="flex items-center gap-3">
           <div className="flex items-center gap-2 px-3 py-2 rounded-lg bg-green-100 text-green-700">
             <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-            <span className="text-sm font-medium">Conectado</span>
+            <span className="text-sm font-medium">Monitoreo en Vivo</span>
           </div>
-          <div className="text-sm text-gray-600 dark:text-gray-400">
-            {format(new Date(), "EEEE, d 'de' MMMM 'de' yyyy", { locale: es })}
+          <div className="flex items-center gap-2 px-3 py-2 rounded-lg bg-blue-100 text-blue-700">
+            <PiChartLineDuotone className="text-lg" />
+            <span className="text-sm font-medium">
+              {format(new Date(), "EEEE, d 'de' MMMM", { locale: es })}
+            </span>
           </div>
         </div>
         
@@ -170,12 +210,12 @@ const RealtimePage = () => {
           <div className="p-6">
             <div className="flex items-center justify-between">
               <div>
-                <span className="text-purple-600 text-sm font-medium uppercase tracking-wide">Usos Recientes</span>
+                <span className="text-purple-600 text-sm font-medium uppercase tracking-wide">Usos de Hoy</span>
                 <div className="text-3xl font-bold text-purple-700 mt-1">
                   {measurements.length}
                   <span className="text-lg text-purple-500 ml-1">registros</span>
                 </div>
-                <p className="text-xs text-purple-600 mt-1">Últimos 20 usos de agua</p>
+                <p className="text-xs text-purple-600 mt-1">Total de usos del día actual</p>
               </div>
               <PiChartLineDuotone className="text-5xl text-purple-500" />
             </div>
@@ -194,13 +234,15 @@ const RealtimePage = () => {
           />
         </div>
         
-        <div>
+        <div className="space-y-6">
           <ActiveSensorsList 
             sensors={sensors} 
             loading={sensorsLoading}
             selectedSensorId={selectedSensorId}
             onSensorSelect={setSelectedSensorId}
           />
+
+          {/* per-device consumption panel removed */}
         </div>
       </div>
 

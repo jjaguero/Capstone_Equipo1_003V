@@ -54,9 +54,8 @@ const RealtimeFlowChart = ({ measurements, sensors, loading, selectedSensorId: e
     )
   }
 
-  // Process measurements into chart data (MISMA LÓGICA)
+  // Process measurements into chart data (TODOS los del día)
   const allChartData = measurements
-    .slice(0, 20)
     .map((measurement) => {
       const flowRate = measurement.durationSec > 0 
         ? (measurement.liters / measurement.durationSec) * 60 
@@ -114,7 +113,10 @@ const RealtimeFlowChart = ({ measurements, sensors, loading, selectedSensorId: e
 
   // Crear puntos para la línea
   const points = chartData.map((d, i) => {
-    const x = padding.left + (i / (chartData.length - 1)) * chartWidth
+    // Si solo hay 1 punto, centrarlo; si hay varios, distribuirlos
+    const x = chartData.length === 1 
+      ? padding.left + chartWidth / 2 
+      : padding.left + (i / (chartData.length - 1)) * chartWidth
     const y = yScale(d.liters)
     return { x, y, data: d }
   })
@@ -126,7 +128,9 @@ const RealtimeFlowChart = ({ measurements, sensors, loading, selectedSensorId: e
   }).join(' ')
 
   // Crear path para el área bajo la línea
-  const areaPath = `${linePath} L ${points[points.length - 1].x} ${padding.top + chartHeight} L ${points[0].x} ${padding.top + chartHeight} Z`
+  const areaPath = chartData.length === 1
+    ? '' // No mostrar área si solo hay 1 punto
+    : `${linePath} L ${points[points.length - 1].x} ${padding.top + chartHeight} L ${points[0].x} ${padding.top + chartHeight} Z`
 
   // Obtener lista de sensores únicos que tienen mediciones
   const uniqueSensors = Array.from(new Set(allChartData.map(d => d.sensorId)))
@@ -210,21 +214,25 @@ const RealtimeFlowChart = ({ measurements, sensors, loading, selectedSensorId: e
             />
 
             {/* Area bajo la línea */}
-            <path
-              d={areaPath}
-              fill="url(#areaGradient)"
-              opacity={0.3}
-            />
+            {areaPath && (
+              <path
+                d={areaPath}
+                fill="url(#areaGradient)"
+                opacity={0.3}
+              />
+            )}
 
             {/* Línea principal */}
-            <path
-              d={linePath}
-              fill="none"
-              stroke="#3b82f6"
-              strokeWidth={3}
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
+            {chartData.length > 1 && (
+              <path
+                d={linePath}
+                fill="none"
+                stroke="#3b82f6"
+                strokeWidth={3}
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            )}
 
             {/* Puntos en la línea */}
             {points.map((p, i) => (
@@ -232,7 +240,7 @@ const RealtimeFlowChart = ({ measurements, sensors, loading, selectedSensorId: e
                 key={`point-${i}`}
                 cx={p.x}
                 cy={p.y}
-                r={4}
+                r={chartData.length === 1 ? 6 : 4}
                 fill="#3b82f6"
                 stroke="#fff"
                 strokeWidth={2}
