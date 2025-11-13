@@ -11,6 +11,7 @@ import EcmeConsumptionTimelineCompact from '../components/EcmeConsumptionTimelin
 import SensorStatusCard from '../components/SensorStatusCard'
 import AlertsCard from '../components/AlertsCard'
 import EmptyDataMessage from '../components/EmptyDataMessage'
+import PredictionCard from '../components/PredictionCard'
 import { useNavigate } from 'react-router'
 import { format } from 'date-fns'
 import { es } from 'date-fns/locale'
@@ -63,6 +64,39 @@ const UserDashboardPage = () => {
 
   return (
     <Container>
+      {/* Breadcrumb */}
+      <div className="mb-6">
+        <nav className="flex items-center space-x-2 text-sm text-gray-600 dark:text-gray-400">
+          <span className="font-medium text-gray-900 dark:text-gray-100">Inicio</span>
+          <span>/</span>
+          <span>Dashboard</span>
+        </nav>
+      </div>
+
+      {/* Welcome Message */}
+      <div className="mb-8">
+        <div className="flex items-center justify-between">
+          <div>
+            <h1 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-2">
+              Bienvenido, {currentUser?.name}
+            </h1>
+            <p className="text-gray-600 dark:text-gray-400">
+              Monitoreo de consumo de agua y estado del sistema
+            </p>
+          </div>
+          <div className="hidden md:block">
+            <div className="text-right">
+              <p className="text-sm text-gray-500 dark:text-gray-400">
+                {format(new Date(), "EEEE, d 'de' MMMM", { locale: es })}
+              </p>
+              <p className="text-2xl font-bold text-gray-900 dark:text-gray-100">
+                {format(new Date(), 'HH:mm')}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* KPIs Cards Mejoradas */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8 animate-slideUp" style={{ animationDelay: '0.1s' }}>
         {/* Consumo Acumulado Hoy */}
@@ -195,13 +229,21 @@ const UserDashboardPage = () => {
           <EmptyDataMessage homeId={currentUser.homeId!} userName={currentUser.name} />
         ) : (
           <>
-            {/* Timeline de Consumo Compacto */}
-            <div className="w-full">
-              <EcmeConsumptionTimelineCompact 
-                consumptions={consumptions} 
-                loading={consumptionLoading}
-                userLimit={currentUser?.limitLitersPerDay || 500}
-              />
+            {/* Predicción de Consumo + Timeline */}
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+              {/* Predicción - Ocupa 1 columna */}
+              <div className="lg:col-span-1">
+                <PredictionCard homeId={currentUser.homeId!} days={7} />
+              </div>
+              
+              {/* Timeline - Ocupa 2 columnas */}
+              <div className="lg:col-span-2">
+                <EcmeConsumptionTimelineCompact 
+                  consumptions={consumptions} 
+                  loading={consumptionLoading}
+                  userLimit={currentUser?.limitLitersPerDay || 500}
+                />
+              </div>
             </div>
 
             {/* Distribución de Sensores y Alertas */}

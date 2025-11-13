@@ -13,6 +13,7 @@ import { AlertsModule } from './modules/alerts/alerts.module';
 import { UploadModule } from './modules/upload/upload.module';
 import { RealtimeModule } from './modules/realtime/realtime.module';
 import { SupportModule } from './modules/support/support.module';
+import { PredictionModule } from './modules/prediction/prediction.module';
 
 @Module({
   imports: [
@@ -37,6 +38,7 @@ import { SupportModule } from './modules/support/support.module';
     UploadModule,
     RealtimeModule,
     SupportModule,
+    PredictionModule,
   ],
   controllers: [AppController],
   providers: [AppService],

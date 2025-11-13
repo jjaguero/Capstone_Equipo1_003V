@@ -4,7 +4,11 @@ import {
   PiDropDuotone,
   PiGearDuotone,
   PiCalculatorDuotone,
+  PiSparkle,
+  PiLightbulbDuotone,
 } from 'react-icons/pi'
+import { usePredictions } from '@/hooks/usePredictions'
+import Spinner from '@/components/ui/Spinner'
 
 interface ConsumptionTabContentProps {
   currentUser: any
@@ -27,6 +31,14 @@ export const ConsumptionTabContent = ({
   updateProfile,
   loading,
 }: ConsumptionTabContentProps) => {
+  // Obtener predicciones ML
+  const { predictions, loading: predictionsLoading } = usePredictions(currentUser?.homeId, 7);
+  
+  // Calcular promedio predicho
+  const avgPredicted = predictions.length > 0
+    ? predictions.reduce((sum, p) => sum + p.predictedLiters, 0) / predictions.length
+    : 0;
+
   const handleSaveConfig = async () => {
     try {
       const newLimit = consumptionConfig.useAutoCalculation
@@ -104,6 +116,99 @@ export const ConsumptionTabContent = ({
             </p>
           </div>
         </div>
+
+        {/* Sugerencias basadas en Predicciones ML */}
+        {!predictionsLoading && predictions.length > 0 && (
+          <div className="rounded-xl bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-900 p-6 border-2 border-gray-200 dark:border-gray-700">
+            <div className="flex items-start gap-4">
+              <div className="p-3 bg-white dark:bg-gray-800 rounded-lg shadow-sm">
+                <PiLightbulbDuotone className="h-6 w-6 text-gray-700 dark:text-gray-300" />
+              </div>
+              <div className="flex-1">
+                <h6 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-2 flex items-center gap-2">
+                  Sugerencias Basadas en Predicción
+                  <span className="text-xs font-normal text-gray-500 bg-gray-200 dark:bg-gray-700 px-2 py-1 rounded">ML</span>
+                </h6>
+                <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
+                  Nuestro modelo de Machine Learning analiza tu historial de consumo y predice tus necesidades futuras
+                </p>
+
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                  <div className="bg-white dark:bg-gray-800 rounded-lg p-4 border border-gray-200 dark:border-gray-700">
+                    <p className="text-xs text-gray-500 dark:text-gray-400 mb-1">Promedio Predicho</p>
+                    <p className="text-2xl font-bold text-gray-900 dark:text-gray-100">
+                      {Math.round(avgPredicted)}
+                      <span className="text-sm font-normal text-gray-500 ml-1">L/día</span>
+                    </p>
+                  </div>
+
+                  <div className="bg-white dark:bg-gray-800 rounded-lg p-4 border border-gray-200 dark:border-gray-700">
+                    <p className="text-xs text-gray-500 dark:text-gray-400 mb-1">Límite Sugerido</p>
+                    <p className="text-2xl font-bold text-gray-900 dark:text-gray-100">
+                      {Math.round(avgPredicted * 1.15)}
+                      <span className="text-sm font-normal text-gray-500 ml-1">L/día</span>
+                    </p>
+                    <p className="text-xs text-gray-400 mt-1">+15% margen de seguridad</p>
+                  </div>
+
+                  <div className="bg-white dark:bg-gray-800 rounded-lg p-4 border border-gray-200 dark:border-gray-700">
+                    <p className="text-xs text-gray-500 dark:text-gray-400 mb-1">Precisión del Modelo</p>
+                    <p className="text-2xl font-bold text-gray-900 dark:text-gray-100">
+                      {predictions[0].confidence === 'high' ? 'Alta' : 'Media'}
+                    </p>
+                    <p className="text-xs text-gray-400 mt-1">Basado en 7 días</p>
+                  </div>
+                </div>
+
+                <div className="mt-4 flex gap-3">
+                  <Button
+                    size="sm"
+                    variant="solid"
+                    onClick={() => {
+                      setConsumptionConfig((prev: any) => ({
+                        ...prev,
+                        useAutoCalculation: false,
+                        customLimit: Math.round(avgPredicted * 1.15),
+                      }));
+                      toast.push(
+                        <Notification type="success" title="Sugerencia aplicada">
+                          Límite ajustado según predicción ML
+                        </Notification>
+                      );
+                    }}
+                    className="bg-gray-900 dark:bg-gray-700 hover:bg-gray-800 dark:hover:bg-gray-600"
+                  >
+                    Aplicar Límite Sugerido
+                  </Button>
+                  <Button
+                    size="sm"
+                    variant="plain"
+                    onClick={() => {
+                      setConsumptionConfig((prev: any) => ({
+                        ...prev,
+                        useAutoCalculation: false,
+                        customLimit: Math.round(avgPredicted),
+                      }));
+                    }}
+                  >
+                    Usar Solo Predicción
+                  </Button>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {predictionsLoading && (
+          <div className="rounded-xl bg-gray-50 dark:bg-gray-800 p-6 border border-gray-200 dark:border-gray-700">
+            <div className="flex items-center justify-center gap-3">
+              <Spinner size={20} />
+              <span className="text-sm text-gray-600 dark:text-gray-400">
+                Analizando predicciones...
+              </span>
+            </div>
+          </div>
+        )}
 
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
           <FormItem label="Número de personas en el hogar" asterisk>
