@@ -14,6 +14,7 @@ import { UploadModule } from './modules/upload/upload.module';
 import { RealtimeModule } from './modules/realtime/realtime.module';
 import { SupportModule } from './modules/support/support.module';
 import { PredictionModule } from './modules/prediction/prediction.module';
+import { ChatbotModule } from './modules/chatbot/chatbot.module';
 
 @Module({
   imports: [
@@ -39,6 +40,7 @@ import { PredictionModule } from './modules/prediction/prediction.module';
     RealtimeModule,
     SupportModule,
     PredictionModule,
+    ChatbotModule,
   ],
   controllers: [AppController],
   providers: [AppService],

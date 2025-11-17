@@ -3,6 +3,7 @@ import AuthContext from './AuthContext'
 import appConfig from '@/configs/app.config'
 import { useSessionUser, useToken } from '@/store/authStore'
 import { apiSignIn, apiSignOut, apiSignUp } from '@/services/AuthService'
+import { apiGetUserByEmail } from '@/services/UserService' // Importa el nuevo servicio
 import { REDIRECT_URL_KEY } from '@/constants/app.constant'
 import { useNavigate } from 'react-router'
 import type {
@@ -77,8 +78,17 @@ function AuthProvider({ children }: AuthProviderProps) {
     const signIn = async (values: SignInCredential): AuthResult => {
         try {
             const resp = await apiSignIn(values)
-            if (resp) {
-                handleSignIn({ accessToken: resp.token }, resp.user)
+            if (resp && resp.user?.email) {
+                // Segunda llamada para obtener los detalles completos del usuario
+                const userDetails = await apiGetUserByEmail(resp.user.email)
+
+                // Combina la información del usuario de ambas respuestas
+                const combinedUser = {
+                    ...resp.user,
+                    ...userDetails,
+                }
+
+                handleSignIn({ accessToken: resp.token }, combinedUser)
                 redirect()
                 return {
                     status: 'success',

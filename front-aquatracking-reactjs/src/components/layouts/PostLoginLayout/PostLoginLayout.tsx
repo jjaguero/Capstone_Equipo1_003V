@@ -8,6 +8,8 @@ import {
     LAYOUT_BLANK,
 } from '@/constants/theme.constant'
 import Loading from '@/components/shared/Loading'
+import TelegramChatButton from '@/components/shared/TelegramChatButton'
+import { useAquaTrackingAuth } from '@/features/auth/hooks/useAquaTrackingAuth'
 import type { CommonProps } from '@/@types/common'
 import type { LazyExoticComponent, JSX } from 'react'
 import type { LayoutType } from '@/@types/theme'
@@ -34,7 +36,14 @@ const layouts: Layouts = {
 
 const PostLoginLayout = ({ layoutType, children }: PostLoginLayoutProps) => {
     const AppLayout = layouts[layoutType] ?? layouts[Object.keys(layouts)[0]]
+    const { currentUser } = useAquaTrackingAuth()
+    const isUserRole = (
+        Array.isArray((currentUser as any)?.authority) && (currentUser as any).authority.includes('user')
+    ) || currentUser?.role === 'user'
 
+    // Debug: verificar datos de usuario y condición
+    console.log('PostLoginLayout currentUser:', currentUser)
+    console.log('PostLoginLayout isUserRole:', isUserRole)
     return (
         <Suspense
             fallback={
@@ -44,6 +53,7 @@ const PostLoginLayout = ({ layoutType, children }: PostLoginLayoutProps) => {
             }
         >
             <AppLayout>{children}</AppLayout>
+            {isUserRole && <TelegramChatButton />}
         </Suspense>
     )
 }
