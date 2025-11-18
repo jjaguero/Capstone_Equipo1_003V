@@ -1,5 +1,0 @@
-export { ProfileSidebar } from './ProfileSidebar'
-export { ProfileTabContent } from './ProfileTabContent'
-export { SecurityTabContent } from './SecurityTabContent'
-export { NotificationsTabContent } from './NotificationsTabContent'
-export { ConsumptionTabContent } from './ConsumptionTabContent'
