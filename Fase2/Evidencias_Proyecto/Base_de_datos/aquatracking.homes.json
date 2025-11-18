@@ -1,180 +1,170 @@
 [{
   "_id": {
-    "$oid": "68e191345905d8b7b30e719d"
+    "$oid": "691507a2b7ab0e3a275ff1fb"
   },
-  "name": "Casa de Juan Aguero",
-  "address": "Calbuco trapen 2",
-  "sectorId": "68ddb480dbd7ffab2815388a",
-  "ownerId": "68ddb480dbd7ffab2815388f",
-  "active": true,
-  "members": 3,
-  "createdAt": {
-    "$date": "2025-10-04T21:27:16.910Z"
-  },
-  "updatedAt": {
-    "$date": "2025-10-04T21:27:16.910Z"
-  },
-  "__v": 0
-},
-{
-  "_id": {
-    "$oid": "68e1914a5905d8b7b30e71ad"
-  },
-  "name": "Casa de Andrés Silva",
-  "address": "camino trapen km 2,3",
-  "sectorId": "68ddb480dbd7ffab2815388a",
-  "ownerId": "68ddb480dbd7ffab28153890",
+  "name": "Casa Juan",
+  "address": "Trapén Alto, Casa 12",
+  "sectorId": "691507a2b7ab0e3a275ff1ee",
+  "ownerId": "691507a2b7ab0e3a275ff1f0",
   "active": true,
   "members": 4,
   "createdAt": {
-    "$date": "2025-10-04T21:27:38.322Z"
+    "$date": "2025-11-12T22:18:10.868Z"
   },
   "updatedAt": {
-    "$date": "2025-10-04T21:27:38.322Z"
-  },
-  "__v": 0
+    "$date": "2025-11-12T22:18:10.868Z"
+  }
 },
 {
   "_id": {
-    "$oid": "68e1916e5905d8b7b30e71bd"
+    "$oid": "691507a2b7ab0e3a275ff1fc"
   },
-  "name": "Casa de Andrus Maldonado",
-  "address": "Volcan Callaquen 711 ",
-  "sectorId": "68ddb480dbd7ffab2815388a",
-  "ownerId": "68df31955c896aacc64ee8ee",
+  "name": "Casa Andres",
+  "address": "Panitao Norte 45",
+  "sectorId": "691507a2b7ab0e3a275ff1ef",
+  "ownerId": "691507a2b7ab0e3a275ff1f1",
+  "active": true,
+  "members": 3,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:10.868Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:10.868Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a2b7ab0e3a275ff1fd"
+  },
+  "name": "Casa Carmen",
+  "address": "Trapén Bajo 78",
+  "sectorId": "691507a2b7ab0e3a275ff1ee",
+  "ownerId": "691507a2b7ab0e3a275ff1f2",
+  "active": true,
+  "members": 5,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:10.868Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:10.868Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a2b7ab0e3a275ff1fe"
+  },
+  "name": "Casa Roberto",
+  "address": "Panitao Sur 23",
+  "sectorId": "691507a2b7ab0e3a275ff1ef",
+  "ownerId": "691507a2b7ab0e3a275ff1f3",
   "active": true,
   "members": 2,
   "createdAt": {
-    "$date": "2025-10-04T21:28:14.121Z"
+    "$date": "2025-11-12T22:18:10.869Z"
   },
   "updatedAt": {
-    "$date": "2025-10-04T21:28:14.121Z"
-  },
-  "__v": 0
+    "$date": "2025-11-12T22:18:10.869Z"
+  }
 },
 {
   "_id": {
-    "$oid": "68e1918a5905d8b7b30e71cd"
+    "$oid": "691507a2b7ab0e3a275ff1ff"
   },
-  "name": "Casa de Machuca Ruiz",
-  "address": "Camino avellanos trapen 233",
-  "sectorId": "68ddb480dbd7ffab2815388a",
-  "ownerId": "68e189ba5905d8b7b30e6e1d",
+  "name": "Casa Patricia",
+  "address": "Trapén Centro 56",
+  "sectorId": "691507a2b7ab0e3a275ff1ee",
+  "ownerId": "691507a2b7ab0e3a275ff1f4",
   "active": true,
-  "members": 5,
+  "members": 6,
   "createdAt": {
-    "$date": "2025-10-04T21:28:42.348Z"
+    "$date": "2025-11-12T22:18:10.869Z"
   },
   "updatedAt": {
-    "$date": "2025-10-04T21:28:42.348Z"
-  },
-  "__v": 0
+    "$date": "2025-11-12T22:18:10.869Z"
+  }
 },
 {
   "_id": {
-    "$oid": "68e1919a5905d8b7b30e71dd"
+    "$oid": "691507a2b7ab0e3a275ff200"
   },
-  "name": "Casa de Cristian Mendoza",
-  "address": "avellanos trapen 322",
-  "sectorId": "68ddb480dbd7ffab2815388a",
-  "ownerId": "68e18a535905d8b7b30e6e26",
+  "name": "Casa Luis",
+  "address": "Panitao Este 89",
+  "sectorId": "691507a2b7ab0e3a275ff1ef",
+  "ownerId": "691507a2b7ab0e3a275ff1f5",
+  "active": true,
+  "members": 4,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:10.869Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:10.869Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a2b7ab0e3a275ff201"
+  },
+  "name": "Casa Elena",
+  "address": "Trapén Oeste 34",
+  "sectorId": "691507a2b7ab0e3a275ff1ee",
+  "ownerId": "691507a2b7ab0e3a275ff1f6",
+  "active": true,
+  "members": 3,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:10.869Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:10.869Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a2b7ab0e3a275ff202"
+  },
+  "name": "Casa Miguel",
+  "address": "Panitao Central 67",
+  "sectorId": "691507a2b7ab0e3a275ff1ef",
+  "ownerId": "691507a2b7ab0e3a275ff1f7",
   "active": true,
   "members": 1,
   "createdAt": {
-    "$date": "2025-10-04T21:28:58.871Z"
+    "$date": "2025-11-12T22:18:10.870Z"
   },
   "updatedAt": {
-    "$date": "2025-10-04T21:28:58.871Z"
-  },
-  "__v": 0
+    "$date": "2025-11-12T22:18:10.870Z"
+  }
 },
 {
   "_id": {
-    "$oid": "68e191b95905d8b7b30e71ed"
+    "$oid": "691507a2b7ab0e3a275ff203"
   },
-  "name": "Casa de Matias Soto",
-  "address": "Camino Panitao km 2.6",
-  "sectorId": "68ddb480dbd7ffab2815388b",
-  "ownerId": "68e18a9a5905d8b7b30e6eaa",
+  "name": "Casa Rosa",
+  "address": "Trapén Sur 91",
+  "sectorId": "691507a2b7ab0e3a275ff1ee",
+  "ownerId": "691507a2b7ab0e3a275ff1f8",
   "active": true,
   "members": 4,
   "createdAt": {
-    "$date": "2025-10-04T21:29:29.608Z"
+    "$date": "2025-11-12T22:18:10.870Z"
   },
   "updatedAt": {
-    "$date": "2025-10-04T21:29:29.608Z"
-  },
-  "__v": 0
+    "$date": "2025-11-12T22:18:10.870Z"
+  }
 },
 {
   "_id": {
-    "$oid": "68e191c85905d8b7b30e71fd"
+    "$oid": "691507a2b7ab0e3a275ff204"
   },
-  "name": "Casa de Alex Barrientos",
-  "address": "Panitao 233",
-  "sectorId": "68ddb480dbd7ffab2815388b",
-  "ownerId": "68e18b045905d8b7b30e6f12",
-  "active": true,
-  "members": 3,
-  "createdAt": {
-    "$date": "2025-10-04T21:29:44.871Z"
-  },
-  "updatedAt": {
-    "$date": "2025-10-04T21:29:44.871Z"
-  },
-  "__v": 0
-},
-{
-  "_id": {
-    "$oid": "68e191dd5905d8b7b30e720d"
-  },
-  "name": "Casa de Luis Olavarria",
-  "address": "Avenida Pargua 221",
-  "sectorId": "68ddb480dbd7ffab2815388b",
-  "ownerId": "68e18b285905d8b7b30e6f1a",
+  "name": "Casa Jorge",
+  "address": "Panitao Oeste 12",
+  "sectorId": "691507a2b7ab0e3a275ff1ef",
+  "ownerId": "691507a2b7ab0e3a275ff1f9",
   "active": true,
   "members": 5,
   "createdAt": {
-    "$date": "2025-10-04T21:30:05.828Z"
+    "$date": "2025-11-12T22:18:10.870Z"
   },
   "updatedAt": {
-    "$date": "2025-10-04T21:30:05.828Z"
-  },
-  "__v": 0
-},
-{
-  "_id": {
-    "$oid": "68e191f65905d8b7b30e721d"
-  },
-  "name": "Casa de Luis Yagi",
-  "address": "Camino Panitao Km 3,4",
-  "sectorId": "68ddb480dbd7ffab2815388b",
-  "ownerId": "68e18b7c5905d8b7b30e6f2c",
-  "active": true,
-  "members": 4,
-  "createdAt": {
-    "$date": "2025-10-04T21:30:30.684Z"
-  },
-  "updatedAt": {
-    "$date": "2025-10-04T21:30:30.684Z"
-  },
-  "__v": 0
-},
-{
-  "_id": {
-    "$oid": "68e192125905d8b7b30e722d"
-  },
-  "name": "Casa de Kevin Soto",
-  "address": "Panitao altura 2",
-  "sectorId": "68ddb480dbd7ffab2815388b",
-  "ownerId": "68e18f695905d8b7b30e70e0",
-  "active": true,
-  "members": 3,
-  "createdAt": {
-    "$date": "2025-10-04T21:30:58.531Z"
-  },
-  "updatedAt": {
-    "$date": "2025-10-04T21:30:58.531Z"
-  },
-  "__v": 0
+    "$date": "2025-11-12T22:18:10.870Z"
+  }
 }]

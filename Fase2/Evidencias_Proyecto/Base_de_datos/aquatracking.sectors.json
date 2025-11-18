@@ -1,18 +1,30 @@
 [{
   "_id": {
-    "$oid": "68ddb480dbd7ffab2815388a"
+    "$oid": "691507a2b7ab0e3a275ff1ee"
   },
   "name": "Trapén",
-  "aprName": "APR Trapén",
-  "region": "Los Lagos",
-  "active": true
+  "aprName": "APR Puerto Montt",
+  "region": "Región de Los Lagos",
+  "active": true,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:10.865Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:10.865Z"
+  }
 },
 {
   "_id": {
-    "$oid": "68ddb480dbd7ffab2815388b"
+    "$oid": "691507a2b7ab0e3a275ff1ef"
   },
   "name": "Panitao",
-  "aprName": "APR Panitao",
-  "region": "Los Lagos",
-  "active": true
+  "aprName": "APR Puerto Montt",
+  "region": "Región de Los Lagos",
+  "active": true,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:10.865Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:10.865Z"
+  }
 }]

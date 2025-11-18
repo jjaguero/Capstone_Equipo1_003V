@@ -1,1 +1,5004 @@
-[]
+[{
+  "_id": {
+    "$oid": "691507a3b7ab0e3a275ff2f5"
+  },
+  "homeId": "691507a2b7ab0e3a275ff1fd",
+  "type": "warning",
+  "message": "Consumo alto: 828.4L de 862L (96.1%)",
+  "triggeredAt": {
+    "$date": "2025-09-14T02:52:18.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:11.655Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:11.655Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a3b7ab0e3a275ff375"
+  },
+  "homeId": "691507a2b7ab0e3a275ff1ff",
+  "type": "warning",
+  "message": "Consumo alto: 995.5L de 1035L (96.2%)",
+  "triggeredAt": {
+    "$date": "2025-09-14T02:32:45.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:11.677Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:11.677Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a3b7ab0e3a275ff3e3"
+  },
+  "homeId": "691507a2b7ab0e3a275ff202",
+  "type": "critical",
+  "message": "Límite excedido: 176.4L de 157L (112.3%)",
+  "triggeredAt": {
+    "$date": "2025-09-14T00:15:39.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:11.693Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:11.693Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a3b7ab0e3a275ff46c"
+  },
+  "homeId": "691507a2b7ab0e3a275ff204",
+  "type": "critical",
+  "message": "Límite excedido: 882.0L de 862L (102.3%)",
+  "triggeredAt": {
+    "$date": "2025-09-14T02:51:56.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:11.713Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:11.713Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a3b7ab0e3a275ff4a3"
+  },
+  "homeId": "691507a2b7ab0e3a275ff1fb",
+  "type": "warning",
+  "message": "Consumo alto: 596.0L de 660L (90.3%)",
+  "triggeredAt": {
+    "$date": "2025-09-15T02:04:45.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:11.721Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:11.721Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a3b7ab0e3a275ff51e"
+  },
+  "homeId": "691507a2b7ab0e3a275ff1fd",
+  "type": "warning",
+  "message": "Consumo alto: 857.4L de 862L (99.5%)",
+  "triggeredAt": {
+    "$date": "2025-09-15T00:16:11.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:11.741Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:11.741Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a3b7ab0e3a275ff53b"
+  },
+  "homeId": "691507a2b7ab0e3a275ff1fe",
+  "type": "warning",
+  "message": "Consumo alto: 309.0L de 315L (98.1%)",
+  "triggeredAt": {
+    "$date": "2025-09-15T00:41:29.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:11.745Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:11.745Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a3b7ab0e3a275ff59f"
+  },
+  "homeId": "691507a2b7ab0e3a275ff1ff",
+  "type": "warning",
+  "message": "Consumo alto: 971.0L de 1035L (93.8%)",
+  "triggeredAt": {
+    "$date": "2025-09-15T00:56:09.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:11.760Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:11.760Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a3b7ab0e3a275ff5d6"
+  },
+  "homeId": "691507a2b7ab0e3a275ff200",
+  "type": "warning",
+  "message": "Consumo alto: 598.1L de 660L (90.6%)",
+  "triggeredAt": {
+    "$date": "2025-09-15T02:30:50.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:11.768Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:11.768Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a3b7ab0e3a275ff60e"
+  },
+  "homeId": "691507a2b7ab0e3a275ff202",
+  "type": "critical",
+  "message": "Límite excedido: 175.2L de 157L (111.6%)",
+  "triggeredAt": {
+    "$date": "2025-09-15T00:27:54.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:11.777Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:11.777Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a3b7ab0e3a275ff645"
+  },
+  "homeId": "691507a2b7ab0e3a275ff203",
+  "type": "warning",
+  "message": "Consumo alto: 610.2L de 660L (92.5%)",
+  "triggeredAt": {
+    "$date": "2025-09-15T02:06:31.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:11.785Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:11.785Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a3b7ab0e3a275ff698"
+  },
+  "homeId": "691507a2b7ab0e3a275ff204",
+  "type": "critical",
+  "message": "Límite excedido: 885.5L de 862L (102.7%)",
+  "triggeredAt": {
+    "$date": "2025-09-15T01:32:56.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:11.797Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:11.797Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a3b7ab0e3a275ff6e5"
+  },
+  "homeId": "691507a2b7ab0e3a275ff1fc",
+  "type": "warning",
+  "message": "Consumo alto: 457.5L de 495L (92.4%)",
+  "triggeredAt": {
+    "$date": "2025-09-16T00:13:51.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:11.809Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:11.809Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a3b7ab0e3a275ff7d8"
+  },
+  "homeId": "691507a2b7ab0e3a275ff201",
+  "type": "warning",
+  "message": "Consumo alto: 454.4L de 472L (96.3%)",
+  "triggeredAt": {
+    "$date": "2025-09-16T01:27:47.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:11.846Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:11.846Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a3b7ab0e3a275ff852"
+  },
+  "homeId": "691507a2b7ab0e3a275ff204",
+  "type": "warning",
+  "message": "Consumo alto: 777.2L de 862L (90.2%)",
+  "triggeredAt": {
+    "$date": "2025-09-16T00:11:40.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:11.865Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:11.865Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a3b7ab0e3a275ff997"
+  },
+  "homeId": "691507a2b7ab0e3a275ff202",
+  "type": "warning",
+  "message": "Consumo alto: 153.7L de 157L (97.9%)",
+  "triggeredAt": {
+    "$date": "2025-09-17T02:45:26.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:11.914Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:11.914Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a3b7ab0e3a275ffb47"
+  },
+  "homeId": "691507a2b7ab0e3a275ff202",
+  "type": "critical",
+  "message": "Límite excedido: 161.8L de 157L (103.0%)",
+  "triggeredAt": {
+    "$date": "2025-09-18T00:23:22.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:11.979Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:11.979Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a4b7ab0e3a275ffcf1"
+  },
+  "homeId": "691507a2b7ab0e3a275ff201",
+  "type": "warning",
+  "message": "Consumo alto: 431.0L de 472L (91.3%)",
+  "triggeredAt": {
+    "$date": "2025-09-19T00:38:02.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:12.044Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:12.044Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a4b7ab0e3a275ffcfe"
+  },
+  "homeId": "691507a2b7ab0e3a275ff202",
+  "type": "warning",
+  "message": "Consumo alto: 152.1L de 157L (96.9%)",
+  "triggeredAt": {
+    "$date": "2025-09-19T01:20:26.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:12.046Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:12.046Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a4b7ab0e3a275ffd6c"
+  },
+  "homeId": "691507a2b7ab0e3a275ff204",
+  "type": "warning",
+  "message": "Consumo alto: 789.0L de 862L (91.5%)",
+  "triggeredAt": {
+    "$date": "2025-09-19T02:04:24.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:12.062Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:12.062Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a4b7ab0e3a275ffe0e"
+  },
+  "homeId": "691507a2b7ab0e3a275ff1fe",
+  "type": "warning",
+  "message": "Consumo alto: 288.0L de 315L (91.4%)",
+  "triggeredAt": {
+    "$date": "2025-09-20T00:37:23.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:12.086Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:12.086Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a4b7ab0e3a275fff53"
+  },
+  "homeId": "691507a2b7ab0e3a275ff1fb",
+  "type": "warning",
+  "message": "Consumo alto: 628.1L de 660L (95.2%)",
+  "triggeredAt": {
+    "$date": "2025-09-21T01:15:02.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:12.136Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:12.136Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a4b7ab0e3a275fff7c"
+  },
+  "homeId": "691507a2b7ab0e3a275ff1fc",
+  "type": "warning",
+  "message": "Consumo alto: 446.1L de 495L (90.1%)",
+  "triggeredAt": {
+    "$date": "2025-09-21T02:01:28.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:12.142Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:12.142Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a4b7ab0e3a275fffcf"
+  },
+  "homeId": "691507a2b7ab0e3a275ff1fd",
+  "type": "warning",
+  "message": "Consumo alto: 827.1L de 862L (96.0%)",
+  "triggeredAt": {
+    "$date": "2025-09-21T02:54:56.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:12.155Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:12.155Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a4b7ab0e3a275fffec"
+  },
+  "homeId": "691507a2b7ab0e3a275ff1fe",
+  "type": "warning",
+  "message": "Consumo alto: 291.9L de 315L (92.7%)",
+  "triggeredAt": {
+    "$date": "2025-09-21T01:55:25.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:12.159Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:12.159Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a4b7ab0e3a27600050"
+  },
+  "homeId": "691507a2b7ab0e3a275ff1ff",
+  "type": "warning",
+  "message": "Consumo alto: 971.4L de 1035L (93.9%)",
+  "triggeredAt": {
+    "$date": "2025-09-21T01:13:59.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:12.174Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:12.174Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a4b7ab0e3a276000be"
+  },
+  "homeId": "691507a2b7ab0e3a275ff202",
+  "type": "critical",
+  "message": "Límite excedido: 157.9L de 157L (100.6%)",
+  "triggeredAt": {
+    "$date": "2025-09-21T02:49:33.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:12.191Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:12.191Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a4b7ab0e3a276000f5"
+  },
+  "homeId": "691507a2b7ab0e3a275ff203",
+  "type": "warning",
+  "message": "Consumo alto: 603.8L de 660L (91.5%)",
+  "triggeredAt": {
+    "$date": "2025-09-21T02:19:50.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:12.199Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:12.199Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a4b7ab0e3a27600148"
+  },
+  "homeId": "691507a2b7ab0e3a275ff204",
+  "type": "warning",
+  "message": "Consumo alto: 829.2L de 862L (96.2%)",
+  "triggeredAt": {
+    "$date": "2025-09-21T01:43:58.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:12.211Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:12.211Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a4b7ab0e3a27600180"
+  },
+  "homeId": "691507a2b7ab0e3a275ff1fb",
+  "type": "critical",
+  "message": "Límite excedido: 687.0L de 660L (104.1%)",
+  "triggeredAt": {
+    "$date": "2025-09-22T02:37:09.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:12.219Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:12.219Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a4b7ab0e3a276001aa"
+  },
+  "homeId": "691507a2b7ab0e3a275ff1fc",
+  "type": "warning",
+  "message": "Consumo alto: 483.4L de 495L (97.7%)",
+  "triggeredAt": {
+    "$date": "2025-09-22T01:38:31.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:12.225Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:12.225Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a4b7ab0e3a276001fe"
+  },
+  "homeId": "691507a2b7ab0e3a275ff1fd",
+  "type": "critical",
+  "message": "Límite excedido: 919.9L de 862L (106.7%)",
+  "triggeredAt": {
+    "$date": "2025-09-22T01:13:18.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:12.238Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:12.238Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a4b7ab0e3a2760027f"
+  },
+  "homeId": "691507a2b7ab0e3a275ff1ff",
+  "type": "critical",
+  "message": "Límite excedido: 1086.0L de 1035L (104.9%)",
+  "triggeredAt": {
+    "$date": "2025-09-22T00:13:32.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:12.257Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:12.257Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a4b7ab0e3a276002b7"
+  },
+  "homeId": "691507a2b7ab0e3a275ff200",
+  "type": "critical",
+  "message": "Límite excedido: 670.2L de 660L (101.5%)",
+  "triggeredAt": {
+    "$date": "2025-09-22T00:43:21.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:12.265Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:12.265Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a4b7ab0e3a276002e1"
+  },
+  "homeId": "691507a2b7ab0e3a275ff201",
+  "type": "critical",
+  "message": "Límite excedido: 520.7L de 472L (110.3%)",
+  "triggeredAt": {
+    "$date": "2025-09-22T00:18:15.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:12.271Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:12.271Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a4b7ab0e3a276002f1"
+  },
+  "homeId": "691507a2b7ab0e3a275ff202",
+  "type": "critical",
+  "message": "Límite excedido: 186.2L de 157L (118.6%)",
+  "triggeredAt": {
+    "$date": "2025-09-22T02:48:36.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:12.274Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:12.274Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a4b7ab0e3a27600329"
+  },
+  "homeId": "691507a2b7ab0e3a275ff203",
+  "type": "critical",
+  "message": "Límite excedido: 683.1L de 660L (103.5%)",
+  "triggeredAt": {
+    "$date": "2025-09-22T02:14:21.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:12.282Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:12.282Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a4b7ab0e3a2760037d"
+  },
+  "homeId": "691507a2b7ab0e3a275ff204",
+  "type": "critical",
+  "message": "Límite excedido: 922.5L de 862L (107.0%)",
+  "triggeredAt": {
+    "$date": "2025-09-22T01:23:30.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:12.295Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:12.295Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a4b7ab0e3a2760076a"
+  },
+  "homeId": "691507a2b7ab0e3a275ff1fd",
+  "type": "warning",
+  "message": "Consumo alto: 784.2L de 862L (91.0%)",
+  "triggeredAt": {
+    "$date": "2025-09-25T00:09:45.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:12.445Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:12.445Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a4b7ab0e3a276009d8"
+  },
+  "homeId": "691507a2b7ab0e3a275ff202",
+  "type": "warning",
+  "message": "Consumo alto: 151.4L de 157L (96.4%)",
+  "triggeredAt": {
+    "$date": "2025-09-26T02:05:01.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:12.554Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:12.554Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a4b7ab0e3a27600c2a"
+  },
+  "homeId": "691507a2b7ab0e3a275ff1fb",
+  "type": "critical",
+  "message": "Límite excedido: 709.0L de 660L (107.4%)",
+  "triggeredAt": {
+    "$date": "2025-09-28T02:15:35.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:12.646Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:12.646Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a4b7ab0e3a27600c54"
+  },
+  "homeId": "691507a2b7ab0e3a275ff1fc",
+  "type": "warning",
+  "message": "Consumo alto: 485.4L de 495L (98.1%)",
+  "triggeredAt": {
+    "$date": "2025-09-28T02:02:55.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:12.654Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:12.654Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a4b7ab0e3a27600ca8"
+  },
+  "homeId": "691507a2b7ab0e3a275ff1fd",
+  "type": "critical",
+  "message": "Límite excedido: 938.5L de 862L (108.9%)",
+  "triggeredAt": {
+    "$date": "2025-09-28T02:05:43.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:12.675Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:12.675Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a4b7ab0e3a27600cc5"
+  },
+  "homeId": "691507a2b7ab0e3a275ff1fe",
+  "type": "warning",
+  "message": "Consumo alto: 291.8L de 315L (92.6%)",
+  "triggeredAt": {
+    "$date": "2025-09-28T02:59:17.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:12.679Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:12.679Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a4b7ab0e3a27600d2a"
+  },
+  "homeId": "691507a2b7ab0e3a275ff1ff",
+  "type": "critical",
+  "message": "Límite excedido: 1088.9L de 1035L (105.2%)",
+  "triggeredAt": {
+    "$date": "2025-09-28T02:55:24.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:12.693Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:12.693Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a4b7ab0e3a27600d62"
+  },
+  "homeId": "691507a2b7ab0e3a275ff200",
+  "type": "warning",
+  "message": "Consumo alto: 659.8L de 660L (100.0%)",
+  "triggeredAt": {
+    "$date": "2025-09-28T00:01:25.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:12.703Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:12.703Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a4b7ab0e3a27600d8c"
+  },
+  "homeId": "691507a2b7ab0e3a275ff201",
+  "type": "critical",
+  "message": "Límite excedido: 511.1L de 472L (108.3%)",
+  "triggeredAt": {
+    "$date": "2025-09-28T00:33:56.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:12.711Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:12.711Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a4b7ab0e3a27600d9c"
+  },
+  "homeId": "691507a2b7ab0e3a275ff202",
+  "type": "warning",
+  "message": "Consumo alto: 153.3L de 157L (97.6%)",
+  "triggeredAt": {
+    "$date": "2025-09-28T00:32:42.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:12.713Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:12.713Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a4b7ab0e3a27600dd4"
+  },
+  "homeId": "691507a2b7ab0e3a275ff203",
+  "type": "critical",
+  "message": "Límite excedido: 673.0L de 660L (102.0%)",
+  "triggeredAt": {
+    "$date": "2025-09-28T02:21:36.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:12.720Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:12.720Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a4b7ab0e3a27600e28"
+  },
+  "homeId": "691507a2b7ab0e3a275ff204",
+  "type": "critical",
+  "message": "Límite excedido: 892.4L de 862L (103.5%)",
+  "triggeredAt": {
+    "$date": "2025-09-28T00:08:47.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:12.732Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:12.732Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a4b7ab0e3a27600e5f"
+  },
+  "homeId": "691507a2b7ab0e3a275ff1fb",
+  "type": "warning",
+  "message": "Consumo alto: 597.6L de 660L (90.5%)",
+  "triggeredAt": {
+    "$date": "2025-09-29T02:53:29.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:12.742Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:12.742Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a4b7ab0e3a27600eda"
+  },
+  "homeId": "691507a2b7ab0e3a275ff1fd",
+  "type": "critical",
+  "message": "Límite excedido: 870.8L de 862L (101.0%)",
+  "triggeredAt": {
+    "$date": "2025-09-29T01:40:09.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:12.762Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:12.762Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a4b7ab0e3a27600ef7"
+  },
+  "homeId": "691507a2b7ab0e3a275ff1fe",
+  "type": "warning",
+  "message": "Consumo alto: 307.2L de 315L (97.5%)",
+  "triggeredAt": {
+    "$date": "2025-09-29T02:23:45.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:12.765Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:12.765Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a4b7ab0e3a27600f5b"
+  },
+  "homeId": "691507a2b7ab0e3a275ff1ff",
+  "type": "warning",
+  "message": "Consumo alto: 939.5L de 1035L (90.8%)",
+  "triggeredAt": {
+    "$date": "2025-09-29T00:55:26.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:12.779Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:12.779Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a4b7ab0e3a27600f92"
+  },
+  "homeId": "691507a2b7ab0e3a275ff200",
+  "type": "warning",
+  "message": "Consumo alto: 604.6L de 660L (91.6%)",
+  "triggeredAt": {
+    "$date": "2025-09-29T00:50:55.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:12.786Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:12.786Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a4b7ab0e3a27600fbb"
+  },
+  "homeId": "691507a2b7ab0e3a275ff201",
+  "type": "warning",
+  "message": "Consumo alto: 440.0L de 472L (93.2%)",
+  "triggeredAt": {
+    "$date": "2025-09-29T01:17:51.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:12.793Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:12.793Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a4b7ab0e3a27600fcb"
+  },
+  "homeId": "691507a2b7ab0e3a275ff202",
+  "type": "critical",
+  "message": "Límite excedido: 165.0L de 157L (105.1%)",
+  "triggeredAt": {
+    "$date": "2025-09-29T02:55:02.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:12.795Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:12.795Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a4b7ab0e3a27601054"
+  },
+  "homeId": "691507a2b7ab0e3a275ff204",
+  "type": "critical",
+  "message": "Límite excedido: 862.5L de 862L (100.1%)",
+  "triggeredAt": {
+    "$date": "2025-09-29T01:43:43.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:12.816Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:12.816Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a4b7ab0e3a27601342"
+  },
+  "homeId": "691507a2b7ab0e3a275ff201",
+  "type": "warning",
+  "message": "Consumo alto: 456.2L de 472L (96.6%)",
+  "triggeredAt": {
+    "$date": "2025-10-01T01:46:48.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:12.929Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:12.929Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a4b7ab0e3a276013bc"
+  },
+  "homeId": "691507a2b7ab0e3a275ff204",
+  "type": "warning",
+  "message": "Consumo alto: 794.5L de 862L (92.2%)",
+  "triggeredAt": {
+    "$date": "2025-10-01T02:03:03.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:12.947Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:12.947Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a4b7ab0e3a27601501"
+  },
+  "homeId": "691507a2b7ab0e3a275ff202",
+  "type": "warning",
+  "message": "Consumo alto: 143.2L de 157L (91.2%)",
+  "triggeredAt": {
+    "$date": "2025-10-02T00:41:46.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:12.996Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:12.996Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a5b7ab0e3a276016b1"
+  },
+  "homeId": "691507a2b7ab0e3a275ff202",
+  "type": "warning",
+  "message": "Consumo alto: 144.8L de 157L (92.2%)",
+  "triggeredAt": {
+    "$date": "2025-10-03T00:55:07.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:13.062Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:13.062Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a5b7ab0e3a2760185b"
+  },
+  "homeId": "691507a2b7ab0e3a275ff201",
+  "type": "warning",
+  "message": "Consumo alto: 455.1L de 472L (96.4%)",
+  "triggeredAt": {
+    "$date": "2025-10-04T00:40:31.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:13.126Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:13.126Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a5b7ab0e3a276018d5"
+  },
+  "homeId": "691507a2b7ab0e3a275ff204",
+  "type": "warning",
+  "message": "Consumo alto: 786.9L de 862L (91.3%)",
+  "triggeredAt": {
+    "$date": "2025-10-04T01:13:11.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:13.144Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:13.144Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a5b7ab0e3a27601986"
+  },
+  "homeId": "691507a2b7ab0e3a275ff1fd",
+  "type": "warning",
+  "message": "Consumo alto: 842.0L de 862L (97.7%)",
+  "triggeredAt": {
+    "$date": "2025-10-05T02:52:41.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:13.170Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:13.170Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a5b7ab0e3a27601a06"
+  },
+  "homeId": "691507a2b7ab0e3a275ff1ff",
+  "type": "warning",
+  "message": "Consumo alto: 999.5L de 1035L (96.6%)",
+  "triggeredAt": {
+    "$date": "2025-10-05T02:16:44.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:13.189Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:13.189Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a5b7ab0e3a27601a65"
+  },
+  "homeId": "691507a2b7ab0e3a275ff201",
+  "type": "warning",
+  "message": "Consumo alto: 433.0L de 472L (91.7%)",
+  "triggeredAt": {
+    "$date": "2025-10-05T02:42:16.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:13.203Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:13.203Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a5b7ab0e3a27601a75"
+  },
+  "homeId": "691507a2b7ab0e3a275ff202",
+  "type": "critical",
+  "message": "Límite excedido: 159.8L de 157L (101.8%)",
+  "triggeredAt": {
+    "$date": "2025-10-05T02:07:03.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:13.206Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:13.206Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a5b7ab0e3a27601aac"
+  },
+  "homeId": "691507a2b7ab0e3a275ff203",
+  "type": "warning",
+  "message": "Consumo alto: 607.1L de 660L (92.0%)",
+  "triggeredAt": {
+    "$date": "2025-10-05T00:49:12.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:13.214Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:13.214Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a5b7ab0e3a27601aff"
+  },
+  "homeId": "691507a2b7ab0e3a275ff204",
+  "type": "warning",
+  "message": "Consumo alto: 853.6L de 862L (99.0%)",
+  "triggeredAt": {
+    "$date": "2025-10-05T01:01:57.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:13.227Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:13.227Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a5b7ab0e3a27601bb0"
+  },
+  "homeId": "691507a2b7ab0e3a275ff1fd",
+  "type": "warning",
+  "message": "Consumo alto: 835.1L de 862L (96.9%)",
+  "triggeredAt": {
+    "$date": "2025-10-06T01:16:36.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:13.253Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:13.253Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a5b7ab0e3a27601bcd"
+  },
+  "homeId": "691507a2b7ab0e3a275ff1fe",
+  "type": "warning",
+  "message": "Consumo alto: 288.6L de 315L (91.6%)",
+  "triggeredAt": {
+    "$date": "2025-10-06T01:41:05.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:13.257Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:13.257Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a5b7ab0e3a27601c31"
+  },
+  "homeId": "691507a2b7ab0e3a275ff1ff",
+  "type": "warning",
+  "message": "Consumo alto: 986.9L de 1035L (95.4%)",
+  "triggeredAt": {
+    "$date": "2025-10-06T00:24:09.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:13.271Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:13.271Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a5b7ab0e3a27601c9f"
+  },
+  "homeId": "691507a2b7ab0e3a275ff202",
+  "type": "critical",
+  "message": "Límite excedido: 165.0L de 157L (105.1%)",
+  "triggeredAt": {
+    "$date": "2025-10-06T02:46:05.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:13.288Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:13.288Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a5b7ab0e3a27601d28"
+  },
+  "homeId": "691507a2b7ab0e3a275ff204",
+  "type": "warning",
+  "message": "Consumo alto: 858.6L de 862L (99.6%)",
+  "triggeredAt": {
+    "$date": "2025-10-06T01:28:42.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:13.309Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:13.309Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a5b7ab0e3a27602090"
+  },
+  "homeId": "691507a2b7ab0e3a275ff204",
+  "type": "warning",
+  "message": "Consumo alto: 828.6L de 862L (96.1%)",
+  "triggeredAt": {
+    "$date": "2025-10-08T00:34:03.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:13.440Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:13.440Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a5b7ab0e3a276021d5"
+  },
+  "homeId": "691507a2b7ab0e3a275ff202",
+  "type": "critical",
+  "message": "Límite excedido: 159.8L de 157L (101.8%)",
+  "triggeredAt": {
+    "$date": "2025-10-09T00:26:26.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:13.488Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:13.488Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a5b7ab0e3a2760253c"
+  },
+  "homeId": "691507a2b7ab0e3a275ff202",
+  "type": "critical",
+  "message": "Límite excedido: 157.5L de 157L (100.3%)",
+  "triggeredAt": {
+    "$date": "2025-10-11T02:03:39.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:13.619Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:13.619Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a5b7ab0e3a27602658"
+  },
+  "homeId": "691507a2b7ab0e3a275ff1fd",
+  "type": "warning",
+  "message": "Consumo alto: 822.7L de 862L (95.4%)",
+  "triggeredAt": {
+    "$date": "2025-10-12T00:14:32.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:13.661Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:13.661Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a5b7ab0e3a276026d8"
+  },
+  "homeId": "691507a2b7ab0e3a275ff1ff",
+  "type": "warning",
+  "message": "Consumo alto: 1006.9L de 1035L (97.3%)",
+  "triggeredAt": {
+    "$date": "2025-10-12T00:48:03.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:13.680Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:13.680Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a5b7ab0e3a27602746"
+  },
+  "homeId": "691507a2b7ab0e3a275ff202",
+  "type": "critical",
+  "message": "Límite excedido: 172.0L de 157L (109.6%)",
+  "triggeredAt": {
+    "$date": "2025-10-12T02:58:42.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:13.696Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:13.696Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a5b7ab0e3a2760277d"
+  },
+  "homeId": "691507a2b7ab0e3a275ff203",
+  "type": "warning",
+  "message": "Consumo alto: 622.7L de 660L (94.3%)",
+  "triggeredAt": {
+    "$date": "2025-10-12T01:35:54.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:13.704Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:13.704Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a5b7ab0e3a276027d0"
+  },
+  "homeId": "691507a2b7ab0e3a275ff204",
+  "type": "critical",
+  "message": "Límite excedido: 869.1L de 862L (100.8%)",
+  "triggeredAt": {
+    "$date": "2025-10-12T00:27:30.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:13.717Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:13.717Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a5b7ab0e3a27602808"
+  },
+  "homeId": "691507a2b7ab0e3a275ff1fb",
+  "type": "critical",
+  "message": "Límite excedido: 701.2L de 660L (106.2%)",
+  "triggeredAt": {
+    "$date": "2025-10-13T00:25:30.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:13.725Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:13.725Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a5b7ab0e3a27602832"
+  },
+  "homeId": "691507a2b7ab0e3a275ff1fc",
+  "type": "warning",
+  "message": "Consumo alto: 480.0L de 495L (97.0%)",
+  "triggeredAt": {
+    "$date": "2025-10-13T01:06:17.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:13.731Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:13.731Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a5b7ab0e3a27602886"
+  },
+  "homeId": "691507a2b7ab0e3a275ff1fd",
+  "type": "critical",
+  "message": "Límite excedido: 900.1L de 862L (104.4%)",
+  "triggeredAt": {
+    "$date": "2025-10-13T02:22:27.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:13.743Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:13.743Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a5b7ab0e3a276028a3"
+  },
+  "homeId": "691507a2b7ab0e3a275ff1fe",
+  "type": "warning",
+  "message": "Consumo alto: 295.0L de 315L (93.7%)",
+  "triggeredAt": {
+    "$date": "2025-10-13T02:35:16.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:13.748Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:13.748Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a5b7ab0e3a27602908"
+  },
+  "homeId": "691507a2b7ab0e3a275ff1ff",
+  "type": "critical",
+  "message": "Límite excedido: 1083.2L de 1035L (104.7%)",
+  "triggeredAt": {
+    "$date": "2025-10-13T00:49:47.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:13.762Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:13.762Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a5b7ab0e3a27602940"
+  },
+  "homeId": "691507a2b7ab0e3a275ff200",
+  "type": "critical",
+  "message": "Límite excedido: 723.4L de 660L (109.6%)",
+  "triggeredAt": {
+    "$date": "2025-10-13T00:24:52.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:13.771Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:13.771Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a5b7ab0e3a2760296a"
+  },
+  "homeId": "691507a2b7ab0e3a275ff201",
+  "type": "critical",
+  "message": "Límite excedido: 484.2L de 472L (102.6%)",
+  "triggeredAt": {
+    "$date": "2025-10-13T00:06:27.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:13.777Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:13.777Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a5b7ab0e3a2760297a"
+  },
+  "homeId": "691507a2b7ab0e3a275ff202",
+  "type": "critical",
+  "message": "Límite excedido: 162.9L de 157L (103.8%)",
+  "triggeredAt": {
+    "$date": "2025-10-13T01:26:59.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:13.779Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:13.779Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a5b7ab0e3a276029b2"
+  },
+  "homeId": "691507a2b7ab0e3a275ff203",
+  "type": "critical",
+  "message": "Límite excedido: 684.8L de 660L (103.8%)",
+  "triggeredAt": {
+    "$date": "2025-10-13T00:18:03.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:13.788Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:13.788Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a5b7ab0e3a27602a06"
+  },
+  "homeId": "691507a2b7ab0e3a275ff204",
+  "type": "critical",
+  "message": "Límite excedido: 954.6L de 862L (110.7%)",
+  "triggeredAt": {
+    "$date": "2025-10-13T01:22:05.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:13.800Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:13.800Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a5b7ab0e3a27602df3"
+  },
+  "homeId": "691507a2b7ab0e3a275ff1fd",
+  "type": "warning",
+  "message": "Consumo alto: 854.2L de 862L (99.1%)",
+  "triggeredAt": {
+    "$date": "2025-10-16T02:21:56.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:13.949Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:13.949Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a5b7ab0e3a27602ea4"
+  },
+  "homeId": "691507a2b7ab0e3a275ff201",
+  "type": "warning",
+  "message": "Consumo alto: 454.1L de 472L (96.2%)",
+  "triggeredAt": {
+    "$date": "2025-10-16T00:21:06.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:13.976Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:13.976Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a5b7ab0e3a27602eb1"
+  },
+  "homeId": "691507a2b7ab0e3a275ff202",
+  "type": "warning",
+  "message": "Consumo alto: 151.4L de 157L (96.4%)",
+  "triggeredAt": {
+    "$date": "2025-10-16T00:32:14.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:13.978Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:13.978Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a6b7ab0e3a27603063"
+  },
+  "homeId": "691507a2b7ab0e3a275ff202",
+  "type": "critical",
+  "message": "Límite excedido: 166.6L de 157L (106.1%)",
+  "triggeredAt": {
+    "$date": "2025-10-17T02:45:19.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:14.045Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:14.045Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a6b7ab0e3a27603213"
+  },
+  "homeId": "691507a2b7ab0e3a275ff202",
+  "type": "warning",
+  "message": "Consumo alto: 148.5L de 157L (94.6%)",
+  "triggeredAt": {
+    "$date": "2025-10-18T02:46:09.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:14.109Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:14.109Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a6b7ab0e3a276032b6"
+  },
+  "homeId": "691507a2b7ab0e3a275ff1fb",
+  "type": "critical",
+  "message": "Límite excedido: 660.9L de 660L (100.1%)",
+  "triggeredAt": {
+    "$date": "2025-10-19T02:59:57.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:14.133Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:14.133Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a6b7ab0e3a276032e0"
+  },
+  "homeId": "691507a2b7ab0e3a275ff1fc",
+  "type": "critical",
+  "message": "Límite excedido: 499.7L de 495L (100.9%)",
+  "triggeredAt": {
+    "$date": "2025-10-19T02:03:43.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:14.140Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:14.140Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a6b7ab0e3a27603334"
+  },
+  "homeId": "691507a2b7ab0e3a275ff1fd",
+  "type": "critical",
+  "message": "Límite excedido: 938.7L de 862L (108.9%)",
+  "triggeredAt": {
+    "$date": "2025-10-19T01:53:10.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:14.152Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:14.152Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a6b7ab0e3a276033b5"
+  },
+  "homeId": "691507a2b7ab0e3a275ff1ff",
+  "type": "critical",
+  "message": "Límite excedido: 1074.1L de 1035L (103.8%)",
+  "triggeredAt": {
+    "$date": "2025-10-19T00:35:23.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:14.171Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:14.171Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a6b7ab0e3a276033ed"
+  },
+  "homeId": "691507a2b7ab0e3a275ff200",
+  "type": "critical",
+  "message": "Límite excedido: 691.4L de 660L (104.8%)",
+  "triggeredAt": {
+    "$date": "2025-10-19T02:20:34.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:14.179Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:14.179Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a6b7ab0e3a27603417"
+  },
+  "homeId": "691507a2b7ab0e3a275ff201",
+  "type": "critical",
+  "message": "Límite excedido: 487.4L de 472L (103.3%)",
+  "triggeredAt": {
+    "$date": "2025-10-19T01:53:06.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:14.185Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:14.185Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a6b7ab0e3a27603427"
+  },
+  "homeId": "691507a2b7ab0e3a275ff202",
+  "type": "critical",
+  "message": "Límite excedido: 183.4L de 157L (116.8%)",
+  "triggeredAt": {
+    "$date": "2025-10-19T01:15:31.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:14.188Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:14.188Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a6b7ab0e3a2760345f"
+  },
+  "homeId": "691507a2b7ab0e3a275ff203",
+  "type": "warning",
+  "message": "Consumo alto: 656.6L de 660L (99.5%)",
+  "triggeredAt": {
+    "$date": "2025-10-19T00:28:00.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:14.196Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:14.196Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a6b7ab0e3a276034b3"
+  },
+  "homeId": "691507a2b7ab0e3a275ff204",
+  "type": "critical",
+  "message": "Límite excedido: 908.1L de 862L (105.3%)",
+  "triggeredAt": {
+    "$date": "2025-10-19T01:49:50.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:14.209Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:14.209Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a6b7ab0e3a276034ea"
+  },
+  "homeId": "691507a2b7ab0e3a275ff1fb",
+  "type": "warning",
+  "message": "Consumo alto: 596.8L de 660L (90.4%)",
+  "triggeredAt": {
+    "$date": "2025-10-20T02:13:32.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:14.217Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:14.217Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a6b7ab0e3a27603565"
+  },
+  "homeId": "691507a2b7ab0e3a275ff1fd",
+  "type": "warning",
+  "message": "Consumo alto: 835.4L de 862L (96.9%)",
+  "triggeredAt": {
+    "$date": "2025-10-20T01:46:03.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:14.234Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:14.234Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a6b7ab0e3a27603582"
+  },
+  "homeId": "691507a2b7ab0e3a275ff1fe",
+  "type": "warning",
+  "message": "Consumo alto: 290.3L de 315L (92.2%)",
+  "triggeredAt": {
+    "$date": "2025-10-20T02:57:28.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:14.238Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:14.238Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a6b7ab0e3a276035e6"
+  },
+  "homeId": "691507a2b7ab0e3a275ff1ff",
+  "type": "warning",
+  "message": "Consumo alto: 972.4L de 1035L (94.0%)",
+  "triggeredAt": {
+    "$date": "2025-10-20T00:01:58.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:14.253Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:14.253Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a6b7ab0e3a27603645"
+  },
+  "homeId": "691507a2b7ab0e3a275ff201",
+  "type": "warning",
+  "message": "Consumo alto: 433.1L de 472L (91.8%)",
+  "triggeredAt": {
+    "$date": "2025-10-20T01:14:27.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:14.267Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:14.267Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a6b7ab0e3a27603655"
+  },
+  "homeId": "691507a2b7ab0e3a275ff202",
+  "type": "critical",
+  "message": "Límite excedido: 177.5L de 157L (113.1%)",
+  "triggeredAt": {
+    "$date": "2025-10-20T00:39:45.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:14.269Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:14.269Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a6b7ab0e3a2760368c"
+  },
+  "homeId": "691507a2b7ab0e3a275ff203",
+  "type": "warning",
+  "message": "Consumo alto: 628.8L de 660L (95.3%)",
+  "triggeredAt": {
+    "$date": "2025-10-20T01:58:41.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:14.278Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:14.278Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a6b7ab0e3a276036df"
+  },
+  "homeId": "691507a2b7ab0e3a275ff204",
+  "type": "warning",
+  "message": "Consumo alto: 779.8L de 862L (90.5%)",
+  "triggeredAt": {
+    "$date": "2025-10-20T00:27:26.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:14.290Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:14.290Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a6b7ab0e3a27603824"
+  },
+  "homeId": "691507a2b7ab0e3a275ff202",
+  "type": "warning",
+  "message": "Consumo alto: 142.7L de 157L (90.9%)",
+  "triggeredAt": {
+    "$date": "2025-10-21T01:41:46.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:14.334Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:14.334Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a6b7ab0e3a276038dc"
+  },
+  "homeId": "691507a2b7ab0e3a275ff1fc",
+  "type": "warning",
+  "message": "Consumo alto: 470.9L de 495L (95.1%)",
+  "triggeredAt": {
+    "$date": "2025-10-22T01:31:22.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:14.361Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:14.361Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a6b7ab0e3a2760391f"
+  },
+  "homeId": "691507a2b7ab0e3a275ff1fd",
+  "type": "warning",
+  "message": "Consumo alto: 806.3L de 862L (93.5%)",
+  "triggeredAt": {
+    "$date": "2025-10-22T01:44:29.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:14.370Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:14.370Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a6b7ab0e3a276039d0"
+  },
+  "homeId": "691507a2b7ab0e3a275ff201",
+  "type": "warning",
+  "message": "Consumo alto: 432.2L de 472L (91.6%)",
+  "triggeredAt": {
+    "$date": "2025-10-22T01:54:41.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:14.396Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:14.396Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a6b7ab0e3a276039dd"
+  },
+  "homeId": "691507a2b7ab0e3a275ff202",
+  "type": "warning",
+  "message": "Consumo alto: 147.5L de 157L (93.9%)",
+  "triggeredAt": {
+    "$date": "2025-10-22T01:47:16.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:14.398Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:14.398Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a6b7ab0e3a27603b8f"
+  },
+  "homeId": "691507a2b7ab0e3a275ff202",
+  "type": "warning",
+  "message": "Consumo alto: 144.2L de 157L (91.9%)",
+  "triggeredAt": {
+    "$date": "2025-10-23T01:39:00.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:14.462Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:14.462Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a6b7ab0e3a27603d3f"
+  },
+  "homeId": "691507a2b7ab0e3a275ff202",
+  "type": "warning",
+  "message": "Consumo alto: 148.8L de 157L (94.8%)",
+  "triggeredAt": {
+    "$date": "2025-10-24T01:16:34.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:14.526Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:14.526Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a6b7ab0e3a27603e39"
+  },
+  "homeId": "691507a2b7ab0e3a275ff1fd",
+  "type": "warning",
+  "message": "Consumo alto: 777.5L de 862L (90.2%)",
+  "triggeredAt": {
+    "$date": "2025-10-25T02:50:09.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:14.563Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:14.563Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a6b7ab0e3a27603ef6"
+  },
+  "homeId": "691507a2b7ab0e3a275ff202",
+  "type": "warning",
+  "message": "Consumo alto: 151.5L de 157L (96.5%)",
+  "triggeredAt": {
+    "$date": "2025-10-25T01:12:03.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:14.591Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:14.591Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a6b7ab0e3a27603f9a"
+  },
+  "homeId": "691507a2b7ab0e3a275ff1fb",
+  "type": "warning",
+  "message": "Consumo alto: 630.2L de 660L (95.5%)",
+  "triggeredAt": {
+    "$date": "2025-10-26T00:10:51.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:14.615Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:14.615Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a6b7ab0e3a27603fc3"
+  },
+  "homeId": "691507a2b7ab0e3a275ff1fc",
+  "type": "warning",
+  "message": "Consumo alto: 454.0L de 495L (91.7%)",
+  "triggeredAt": {
+    "$date": "2025-10-26T01:41:49.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:14.621Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:14.621Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a6b7ab0e3a27604016"
+  },
+  "homeId": "691507a2b7ab0e3a275ff1fd",
+  "type": "warning",
+  "message": "Consumo alto: 838.8L de 862L (97.3%)",
+  "triggeredAt": {
+    "$date": "2025-10-26T01:42:53.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:14.633Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:14.633Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a6b7ab0e3a27604033"
+  },
+  "homeId": "691507a2b7ab0e3a275ff1fe",
+  "type": "warning",
+  "message": "Consumo alto: 285.0L de 315L (90.5%)",
+  "triggeredAt": {
+    "$date": "2025-10-26T02:45:27.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:14.637Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:14.637Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a6b7ab0e3a27604097"
+  },
+  "homeId": "691507a2b7ab0e3a275ff1ff",
+  "type": "warning",
+  "message": "Consumo alto: 1008.8L de 1035L (97.5%)",
+  "triggeredAt": {
+    "$date": "2025-10-26T00:23:26.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:14.651Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:14.651Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a6b7ab0e3a27604105"
+  },
+  "homeId": "691507a2b7ab0e3a275ff202",
+  "type": "critical",
+  "message": "Límite excedido: 180.9L de 157L (115.3%)",
+  "triggeredAt": {
+    "$date": "2025-10-26T00:46:48.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:14.668Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:14.668Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a6b7ab0e3a2760413c"
+  },
+  "homeId": "691507a2b7ab0e3a275ff203",
+  "type": "warning",
+  "message": "Consumo alto: 613.8L de 660L (93.0%)",
+  "triggeredAt": {
+    "$date": "2025-10-26T02:25:07.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:14.676Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:14.676Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a6b7ab0e3a2760418f"
+  },
+  "homeId": "691507a2b7ab0e3a275ff204",
+  "type": "warning",
+  "message": "Consumo alto: 861.6L de 862L (99.9%)",
+  "triggeredAt": {
+    "$date": "2025-10-26T01:40:11.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:14.688Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:14.688Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a6b7ab0e3a27604240"
+  },
+  "homeId": "691507a2b7ab0e3a275ff1fd",
+  "type": "warning",
+  "message": "Consumo alto: 861.5L de 862L (99.9%)",
+  "triggeredAt": {
+    "$date": "2025-10-27T01:49:43.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:14.714Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:14.714Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a6b7ab0e3a2760425d"
+  },
+  "homeId": "691507a2b7ab0e3a275ff1fe",
+  "type": "warning",
+  "message": "Consumo alto: 295.8L de 315L (93.9%)",
+  "triggeredAt": {
+    "$date": "2025-10-27T00:24:01.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:14.718Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:14.718Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a6b7ab0e3a276042c1"
+  },
+  "homeId": "691507a2b7ab0e3a275ff1ff",
+  "type": "warning",
+  "message": "Consumo alto: 977.0L de 1035L (94.4%)",
+  "triggeredAt": {
+    "$date": "2025-10-27T01:41:22.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:14.733Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:14.733Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a6b7ab0e3a276042f8"
+  },
+  "homeId": "691507a2b7ab0e3a275ff200",
+  "type": "warning",
+  "message": "Consumo alto: 605.5L de 660L (91.7%)",
+  "triggeredAt": {
+    "$date": "2025-10-27T00:30:22.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:14.741Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:14.741Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a6b7ab0e3a27604321"
+  },
+  "homeId": "691507a2b7ab0e3a275ff201",
+  "type": "warning",
+  "message": "Consumo alto: 438.6L de 472L (92.9%)",
+  "triggeredAt": {
+    "$date": "2025-10-27T02:42:31.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:14.747Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:14.747Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a6b7ab0e3a27604331"
+  },
+  "homeId": "691507a2b7ab0e3a275ff202",
+  "type": "warning",
+  "message": "Consumo alto: 149.2L de 157L (95.1%)",
+  "triggeredAt": {
+    "$date": "2025-10-27T01:48:35.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:14.750Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:14.750Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a6b7ab0e3a27604368"
+  },
+  "homeId": "691507a2b7ab0e3a275ff203",
+  "type": "warning",
+  "message": "Consumo alto: 618.4L de 660L (93.7%)",
+  "triggeredAt": {
+    "$date": "2025-10-27T02:28:14.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:14.758Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:14.758Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a6b7ab0e3a276043bb"
+  },
+  "homeId": "691507a2b7ab0e3a275ff204",
+  "type": "warning",
+  "message": "Consumo alto: 830.8L de 862L (96.4%)",
+  "triggeredAt": {
+    "$date": "2025-10-27T00:55:10.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:14.770Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:14.770Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a6b7ab0e3a2760444a"
+  },
+  "homeId": "691507a2b7ab0e3a275ff1fd",
+  "type": "warning",
+  "message": "Consumo alto: 800.0L de 862L (92.8%)",
+  "triggeredAt": {
+    "$date": "2025-10-28T02:12:24.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:14.791Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:14.791Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a6b7ab0e3a27604533"
+  },
+  "homeId": "691507a2b7ab0e3a275ff203",
+  "type": "critical",
+  "message": "Límite excedido: 775.0L de 660L (117.4%)",
+  "triggeredAt": {
+    "$date": "2025-10-28T02:51:18.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:14.825Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:14.825Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a6b7ab0e3a27604576"
+  },
+  "homeId": "691507a2b7ab0e3a275ff204",
+  "type": "warning",
+  "message": "Consumo alto: 788.9L de 862L (91.5%)",
+  "triggeredAt": {
+    "$date": "2025-10-28T02:12:29.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:14.835Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:14.835Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a6b7ab0e3a27604921"
+  },
+  "homeId": "691507a2b7ab0e3a275ff1fc",
+  "type": "warning",
+  "message": "Consumo alto: 469.6L de 495L (94.9%)",
+  "triggeredAt": {
+    "$date": "2025-10-31T02:11:02.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:14.975Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:14.975Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a6b7ab0e3a27604964"
+  },
+  "homeId": "691507a2b7ab0e3a275ff1fd",
+  "type": "warning",
+  "message": "Consumo alto: 776.9L de 862L (90.1%)",
+  "triggeredAt": {
+    "$date": "2025-10-31T01:51:31.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:14.985Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:14.985Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a7b7ab0e3a27604a15"
+  },
+  "homeId": "691507a2b7ab0e3a275ff201",
+  "type": "warning",
+  "message": "Consumo alto: 445.4L de 472L (94.4%)",
+  "triggeredAt": {
+    "$date": "2025-10-31T00:15:32.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:15.011Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:15.011Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a7b7ab0e3a27604a22"
+  },
+  "homeId": "691507a2b7ab0e3a275ff202",
+  "type": "warning",
+  "message": "Consumo alto: 145.6L de 157L (92.8%)",
+  "triggeredAt": {
+    "$date": "2025-10-31T00:26:42.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:15.013Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:15.013Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a7b7ab0e3a27604cef"
+  },
+  "homeId": "691507a2b7ab0e3a275ff1fd",
+  "type": "critical",
+  "message": "Límite excedido: 866.2L de 862L (100.5%)",
+  "triggeredAt": {
+    "$date": "2025-11-02T00:41:30.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:15.122Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:15.122Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a7b7ab0e3a27604d6f"
+  },
+  "homeId": "691507a2b7ab0e3a275ff1ff",
+  "type": "warning",
+  "message": "Consumo alto: 992.1L de 1035L (95.9%)",
+  "triggeredAt": {
+    "$date": "2025-11-02T02:09:10.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:15.142Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:15.142Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a7b7ab0e3a27604da6"
+  },
+  "homeId": "691507a2b7ab0e3a275ff200",
+  "type": "warning",
+  "message": "Consumo alto: 605.3L de 660L (91.7%)",
+  "triggeredAt": {
+    "$date": "2025-11-02T01:43:38.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:15.150Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:15.150Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a7b7ab0e3a27604dde"
+  },
+  "homeId": "691507a2b7ab0e3a275ff202",
+  "type": "critical",
+  "message": "Límite excedido: 171.2L de 157L (109.1%)",
+  "triggeredAt": {
+    "$date": "2025-11-02T02:35:32.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:15.158Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:15.158Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a7b7ab0e3a27604e15"
+  },
+  "homeId": "691507a2b7ab0e3a275ff203",
+  "type": "warning",
+  "message": "Consumo alto: 603.5L de 660L (91.4%)",
+  "triggeredAt": {
+    "$date": "2025-11-02T00:30:17.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:15.167Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:15.167Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a7b7ab0e3a27604e68"
+  },
+  "homeId": "691507a2b7ab0e3a275ff204",
+  "type": "warning",
+  "message": "Consumo alto: 823.7L de 862L (95.6%)",
+  "triggeredAt": {
+    "$date": "2025-11-02T02:41:04.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:15.179Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:15.179Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a7b7ab0e3a27604ea0"
+  },
+  "homeId": "691507a2b7ab0e3a275ff1fb",
+  "type": "critical",
+  "message": "Límite excedido: 679.6L de 660L (103.0%)",
+  "triggeredAt": {
+    "$date": "2025-11-03T01:34:50.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:15.187Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:15.187Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a7b7ab0e3a27604eca"
+  },
+  "homeId": "691507a2b7ab0e3a275ff1fc",
+  "type": "critical",
+  "message": "Límite excedido: 498.0L de 495L (100.6%)",
+  "triggeredAt": {
+    "$date": "2025-11-03T01:56:21.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:15.194Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:15.194Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a7b7ab0e3a27604f1e"
+  },
+  "homeId": "691507a2b7ab0e3a275ff1fd",
+  "type": "critical",
+  "message": "Límite excedido: 924.7L de 862L (107.3%)",
+  "triggeredAt": {
+    "$date": "2025-11-03T01:49:34.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:15.205Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:15.205Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a7b7ab0e3a27604f3b"
+  },
+  "homeId": "691507a2b7ab0e3a275ff1fe",
+  "type": "warning",
+  "message": "Consumo alto: 290.3L de 315L (92.1%)",
+  "triggeredAt": {
+    "$date": "2025-11-03T02:28:54.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:15.209Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:15.209Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a7b7ab0e3a27604fa0"
+  },
+  "homeId": "691507a2b7ab0e3a275ff1ff",
+  "type": "critical",
+  "message": "Límite excedido: 1074.8L de 1035L (103.9%)",
+  "triggeredAt": {
+    "$date": "2025-11-03T02:09:56.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:15.225Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:15.225Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a7b7ab0e3a27604fd8"
+  },
+  "homeId": "691507a2b7ab0e3a275ff200",
+  "type": "critical",
+  "message": "Límite excedido: 687.8L de 660L (104.2%)",
+  "triggeredAt": {
+    "$date": "2025-11-03T01:45:57.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:15.233Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:15.233Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a7b7ab0e3a27605002"
+  },
+  "homeId": "691507a2b7ab0e3a275ff201",
+  "type": "warning",
+  "message": "Consumo alto: 466.9L de 472L (98.9%)",
+  "triggeredAt": {
+    "$date": "2025-11-03T00:48:33.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:15.239Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:15.239Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a7b7ab0e3a27605012"
+  },
+  "homeId": "691507a2b7ab0e3a275ff202",
+  "type": "critical",
+  "message": "Límite excedido: 171.8L de 157L (109.4%)",
+  "triggeredAt": {
+    "$date": "2025-11-03T00:49:39.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:15.241Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:15.241Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a7b7ab0e3a2760504a"
+  },
+  "homeId": "691507a2b7ab0e3a275ff203",
+  "type": "critical",
+  "message": "Límite excedido: 685.6L de 660L (103.9%)",
+  "triggeredAt": {
+    "$date": "2025-11-03T01:56:30.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:15.250Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:15.250Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a7b7ab0e3a2760509e"
+  },
+  "homeId": "691507a2b7ab0e3a275ff204",
+  "type": "critical",
+  "message": "Límite excedido: 937.5L de 862L (108.8%)",
+  "triggeredAt": {
+    "$date": "2025-11-03T01:39:23.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:15.262Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:15.262Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a7b7ab0e3a276051e3"
+  },
+  "homeId": "691507a2b7ab0e3a275ff202",
+  "type": "warning",
+  "message": "Consumo alto: 151.5L de 157L (96.5%)",
+  "triggeredAt": {
+    "$date": "2025-11-04T02:55:45.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:15.311Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:15.311Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a7b7ab0e3a27605393"
+  },
+  "homeId": "691507a2b7ab0e3a275ff202",
+  "type": "warning",
+  "message": "Consumo alto: 154.2L de 157L (98.2%)",
+  "triggeredAt": {
+    "$date": "2025-11-05T00:17:13.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:15.375Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:15.375Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a7b7ab0e3a2760553d"
+  },
+  "homeId": "691507a2b7ab0e3a275ff201",
+  "type": "warning",
+  "message": "Consumo alto: 436.6L de 472L (92.5%)",
+  "triggeredAt": {
+    "$date": "2025-11-06T00:09:42.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:15.439Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:15.439Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a7b7ab0e3a2760554a"
+  },
+  "homeId": "691507a2b7ab0e3a275ff202",
+  "type": "warning",
+  "message": "Consumo alto: 144.2L de 157L (91.8%)",
+  "triggeredAt": {
+    "$date": "2025-11-06T02:06:58.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:15.441Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:15.441Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a7b7ab0e3a2760594d"
+  },
+  "homeId": "691507a2b7ab0e3a275ff1fb",
+  "type": "warning",
+  "message": "Consumo alto: 650.4L de 660L (98.5%)",
+  "triggeredAt": {
+    "$date": "2025-11-09T01:02:08.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:15.594Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:15.594Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a7b7ab0e3a27605977"
+  },
+  "homeId": "691507a2b7ab0e3a275ff1fc",
+  "type": "warning",
+  "message": "Consumo alto: 479.8L de 495L (96.9%)",
+  "triggeredAt": {
+    "$date": "2025-11-09T02:31:02.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:15.600Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:15.600Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a7b7ab0e3a276059cb"
+  },
+  "homeId": "691507a2b7ab0e3a275ff1fd",
+  "type": "critical",
+  "message": "Límite excedido: 916.3L de 862L (106.3%)",
+  "triggeredAt": {
+    "$date": "2025-11-09T00:37:41.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:15.612Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:15.612Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a7b7ab0e3a276059e8"
+  },
+  "homeId": "691507a2b7ab0e3a275ff1fe",
+  "type": "warning",
+  "message": "Consumo alto: 287.5L de 315L (91.3%)",
+  "triggeredAt": {
+    "$date": "2025-11-09T00:51:24.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:15.617Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:15.617Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a7b7ab0e3a27605a4d"
+  },
+  "homeId": "691507a2b7ab0e3a275ff1ff",
+  "type": "critical",
+  "message": "Límite excedido: 1064.9L de 1035L (102.9%)",
+  "triggeredAt": {
+    "$date": "2025-11-09T00:39:29.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:15.631Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:15.631Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a7b7ab0e3a27605a85"
+  },
+  "homeId": "691507a2b7ab0e3a275ff200",
+  "type": "critical",
+  "message": "Límite excedido: 684.2L de 660L (103.7%)",
+  "triggeredAt": {
+    "$date": "2025-11-09T02:15:41.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:15.640Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:15.640Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a7b7ab0e3a27605aaf"
+  },
+  "homeId": "691507a2b7ab0e3a275ff201",
+  "type": "warning",
+  "message": "Consumo alto: 468.5L de 472L (99.3%)",
+  "triggeredAt": {
+    "$date": "2025-11-09T02:51:29.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:15.645Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:15.645Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a7b7ab0e3a27605abf"
+  },
+  "homeId": "691507a2b7ab0e3a275ff202",
+  "type": "critical",
+  "message": "Límite excedido: 159.8L de 157L (101.8%)",
+  "triggeredAt": {
+    "$date": "2025-11-09T01:08:57.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:15.647Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:15.647Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a7b7ab0e3a27605af7"
+  },
+  "homeId": "691507a2b7ab0e3a275ff203",
+  "type": "critical",
+  "message": "Límite excedido: 669.6L de 660L (101.4%)",
+  "triggeredAt": {
+    "$date": "2025-11-09T02:26:59.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:15.656Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:15.656Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a7b7ab0e3a27605b4b"
+  },
+  "homeId": "691507a2b7ab0e3a275ff204",
+  "type": "critical",
+  "message": "Límite excedido: 910.0L de 862L (105.6%)",
+  "triggeredAt": {
+    "$date": "2025-11-09T00:43:06.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:15.668Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:15.668Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a7b7ab0e3a27605b82"
+  },
+  "homeId": "691507a2b7ab0e3a275ff1fb",
+  "type": "warning",
+  "message": "Consumo alto: 603.9L de 660L (91.5%)",
+  "triggeredAt": {
+    "$date": "2025-11-10T00:06:12.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:15.677Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:15.677Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a7b7ab0e3a27605bfd"
+  },
+  "homeId": "691507a2b7ab0e3a275ff1fd",
+  "type": "warning",
+  "message": "Consumo alto: 812.6L de 862L (94.3%)",
+  "triggeredAt": {
+    "$date": "2025-11-10T01:16:31.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:15.695Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:15.695Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a7b7ab0e3a27605c7d"
+  },
+  "homeId": "691507a2b7ab0e3a275ff1ff",
+  "type": "warning",
+  "message": "Consumo alto: 1025.9L de 1035L (99.1%)",
+  "triggeredAt": {
+    "$date": "2025-11-10T01:21:34.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:15.714Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:15.714Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a7b7ab0e3a27605ceb"
+  },
+  "homeId": "691507a2b7ab0e3a275ff202",
+  "type": "critical",
+  "message": "Límite excedido: 168.7L de 157L (107.5%)",
+  "triggeredAt": {
+    "$date": "2025-11-10T02:00:57.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:15.731Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:15.731Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a7b7ab0e3a27605d22"
+  },
+  "homeId": "691507a2b7ab0e3a275ff203",
+  "type": "warning",
+  "message": "Consumo alto: 621.3L de 660L (94.1%)",
+  "triggeredAt": {
+    "$date": "2025-11-10T01:34:30.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:15.739Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:15.739Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a7b7ab0e3a27605d75"
+  },
+  "homeId": "691507a2b7ab0e3a275ff204",
+  "type": "critical",
+  "message": "Límite excedido: 864.9L de 862L (100.3%)",
+  "triggeredAt": {
+    "$date": "2025-11-10T02:36:58.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:15.751Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:15.751Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a7b7ab0e3a27605fb3"
+  },
+  "homeId": "691507a2b7ab0e3a275ff1fd",
+  "type": "warning",
+  "message": "Consumo alto: 790.5L de 862L (91.7%)",
+  "triggeredAt": {
+    "$date": "2025-11-12T02:15:04.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:15.837Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:15.837Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a7b7ab0e3a27606064"
+  },
+  "homeId": "691507a2b7ab0e3a275ff201",
+  "type": "warning",
+  "message": "Consumo alto: 437.0L de 472L (92.6%)",
+  "triggeredAt": {
+    "$date": "2025-11-12T00:16:11.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:15.864Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:15.864Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a7b7ab0e3a27606071"
+  },
+  "homeId": "691507a2b7ab0e3a275ff202",
+  "type": "critical",
+  "message": "Límite excedido: 165.4L de 157L (105.3%)",
+  "triggeredAt": {
+    "$date": "2025-11-12T00:40:16.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:15.866Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:15.866Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a7b7ab0e3a27606223"
+  },
+  "homeId": "691507a2b7ab0e3a275ff202",
+  "type": "warning",
+  "message": "Consumo alto: 142.9L de 157L (91.0%)",
+  "triggeredAt": {
+    "$date": "2025-11-13T02:50:14.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:15.932Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:15.932Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a7b7ab0e3a276063d3"
+  },
+  "homeId": "691507a2b7ab0e3a275ff202",
+  "type": "warning",
+  "message": "Consumo alto: 141.7L de 157L (90.3%)",
+  "triggeredAt": {
+    "$date": "2025-11-14T02:31:42.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:15.997Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:15.997Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a8b7ab0e3a2760648b"
+  },
+  "homeId": "691507a2b7ab0e3a275ff1fc",
+  "type": "warning",
+  "message": "Consumo alto: 476.9L de 495L (96.4%)",
+  "triggeredAt": {
+    "$date": "2025-11-15T00:00:15.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:16.024Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:16.024Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a8b7ab0e3a276064ce"
+  },
+  "homeId": "691507a2b7ab0e3a275ff1fd",
+  "type": "warning",
+  "message": "Consumo alto: 792.9L de 862L (92.0%)",
+  "triggeredAt": {
+    "$date": "2025-11-15T01:14:00.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:16.034Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:16.034Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a8b7ab0e3a2760657f"
+  },
+  "homeId": "691507a2b7ab0e3a275ff201",
+  "type": "critical",
+  "message": "Límite excedido: 477.4L de 472L (101.1%)",
+  "triggeredAt": {
+    "$date": "2025-11-15T01:14:29.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:16.061Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:16.061Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a8b7ab0e3a2760658c"
+  },
+  "homeId": "691507a2b7ab0e3a275ff202",
+  "type": "warning",
+  "message": "Consumo alto: 146.9L de 157L (93.5%)",
+  "triggeredAt": {
+    "$date": "2025-11-15T02:30:56.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:16.063Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:16.063Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a8b7ab0e3a276066aa"
+  },
+  "homeId": "691507a2b7ab0e3a275ff1fd",
+  "type": "warning",
+  "message": "Consumo alto: 831.6L de 862L (96.5%)",
+  "triggeredAt": {
+    "$date": "2025-11-16T01:22:42.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:16.106Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:16.106Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a8b7ab0e3a2760672a"
+  },
+  "homeId": "691507a2b7ab0e3a275ff1ff",
+  "type": "warning",
+  "message": "Consumo alto: 941.1L de 1035L (90.9%)",
+  "triggeredAt": {
+    "$date": "2025-11-16T00:21:15.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:16.125Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:16.125Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a8b7ab0e3a27606761"
+  },
+  "homeId": "691507a2b7ab0e3a275ff200",
+  "type": "warning",
+  "message": "Consumo alto: 576.0L de 630L (91.4%)",
+  "triggeredAt": {
+    "$date": "2025-11-16T02:51:18.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:16.133Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:16.133Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a8b7ab0e3a27606799"
+  },
+  "homeId": "691507a2b7ab0e3a275ff202",
+  "type": "warning",
+  "message": "Consumo alto: 151.2L de 157L (96.3%)",
+  "triggeredAt": {
+    "$date": "2025-11-16T02:14:02.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:16.142Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:16.142Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a8b7ab0e3a27606822"
+  },
+  "homeId": "691507a2b7ab0e3a275ff204",
+  "type": "warning",
+  "message": "Consumo alto: 824.9L de 862L (95.7%)",
+  "triggeredAt": {
+    "$date": "2025-11-16T02:22:16.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:16.162Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:16.162Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a8b7ab0e3a276068d3"
+  },
+  "homeId": "691507a2b7ab0e3a275ff1fd",
+  "type": "critical",
+  "message": "Límite excedido: 885.3L de 862L (102.7%)",
+  "triggeredAt": {
+    "$date": "2025-11-17T02:31:18.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:16.188Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:16.188Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a8b7ab0e3a276068f0"
+  },
+  "homeId": "691507a2b7ab0e3a275ff1fe",
+  "type": "warning",
+  "message": "Consumo alto: 311.4L de 315L (98.9%)",
+  "triggeredAt": {
+    "$date": "2025-11-17T01:36:10.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:16.193Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:16.193Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a8b7ab0e3a27606954"
+  },
+  "homeId": "691507a2b7ab0e3a275ff1ff",
+  "type": "warning",
+  "message": "Consumo alto: 1000.5L de 1035L (96.7%)",
+  "triggeredAt": {
+    "$date": "2025-11-17T01:02:06.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:16.208Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:16.208Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a8b7ab0e3a2760698b"
+  },
+  "homeId": "691507a2b7ab0e3a275ff200",
+  "type": "warning",
+  "message": "Consumo alto: 624.6L de 630L (99.1%)",
+  "triggeredAt": {
+    "$date": "2025-11-17T02:40:51.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:16.216Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:16.216Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a8b7ab0e3a276069c3"
+  },
+  "homeId": "691507a2b7ab0e3a275ff202",
+  "type": "critical",
+  "message": "Límite excedido: 192.1L de 157L (122.3%)",
+  "triggeredAt": {
+    "$date": "2025-11-17T00:13:43.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:16.225Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:16.225Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a8b7ab0e3a27606a4c"
+  },
+  "homeId": "691507a2b7ab0e3a275ff204",
+  "type": "warning",
+  "message": "Consumo alto: 842.0L de 862L (97.7%)",
+  "triggeredAt": {
+    "$date": "2025-11-17T00:18:17.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:16.245Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:16.245Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a8b7ab0e3a27606b8b"
+  },
+  "homeId": "691507a2b7ab0e3a275ff201",
+  "type": "warning",
+  "message": "Consumo alto: 433.2L de 472L (91.8%)",
+  "triggeredAt": {
+    "$date": "2025-11-18T01:36:08.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:16.293Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:16.293Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a8b7ab0e3a27606b98"
+  },
+  "homeId": "691507a2b7ab0e3a275ff202",
+  "type": "warning",
+  "message": "Consumo alto: 151.0L de 157L (96.2%)",
+  "triggeredAt": {
+    "$date": "2025-11-18T02:18:12.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:16.295Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:16.295Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a8b7ab0e3a27606ef9"
+  },
+  "homeId": "691507a2b7ab0e3a275ff202",
+  "type": "critical",
+  "message": "Límite excedido: 166.0L de 157L (105.7%)",
+  "triggeredAt": {
+    "$date": "2025-11-20T01:40:11.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:16.426Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:16.426Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a8b7ab0e3a27606fb1"
+  },
+  "homeId": "691507a2b7ab0e3a275ff1fc",
+  "type": "warning",
+  "message": "Consumo alto: 447.8L de 495L (90.5%)",
+  "triggeredAt": {
+    "$date": "2025-11-21T00:30:33.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:16.453Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:16.453Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a8b7ab0e3a276070a4"
+  },
+  "homeId": "691507a2b7ab0e3a275ff201",
+  "type": "warning",
+  "message": "Consumo alto: 442.2L de 472L (93.7%)",
+  "triggeredAt": {
+    "$date": "2025-11-21T02:29:50.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:16.489Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:16.489Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a8b7ab0e3a2760711e"
+  },
+  "homeId": "691507a2b7ab0e3a275ff204",
+  "type": "warning",
+  "message": "Consumo alto: 800.9L de 862L (92.9%)",
+  "triggeredAt": {
+    "$date": "2025-11-21T01:51:35.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:16.508Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:16.508Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a8b7ab0e3a2760737e"
+  },
+  "homeId": "691507a2b7ab0e3a275ff1fd",
+  "type": "warning",
+  "message": "Consumo alto: 790.1L de 862L (91.7%)",
+  "triggeredAt": {
+    "$date": "2025-11-23T00:51:33.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:16.600Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:16.600Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a8b7ab0e3a2760739b"
+  },
+  "homeId": "691507a2b7ab0e3a275ff1fe",
+  "type": "warning",
+  "message": "Consumo alto: 307.0L de 315L (97.5%)",
+  "triggeredAt": {
+    "$date": "2025-11-23T01:18:26.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:16.604Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:16.604Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a8b7ab0e3a276073ff"
+  },
+  "homeId": "691507a2b7ab0e3a275ff1ff",
+  "type": "warning",
+  "message": "Consumo alto: 945.1L de 1035L (91.3%)",
+  "triggeredAt": {
+    "$date": "2025-11-23T02:09:46.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:16.618Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:16.618Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a8b7ab0e3a27607436"
+  },
+  "homeId": "691507a2b7ab0e3a275ff200",
+  "type": "warning",
+  "message": "Consumo alto: 568.7L de 630L (90.3%)",
+  "triggeredAt": {
+    "$date": "2025-11-23T00:47:13.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:16.626Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:16.626Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a8b7ab0e3a2760745f"
+  },
+  "homeId": "691507a2b7ab0e3a275ff201",
+  "type": "warning",
+  "message": "Consumo alto: 440.1L de 472L (93.2%)",
+  "triggeredAt": {
+    "$date": "2025-11-23T02:20:11.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:16.632Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:16.632Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a8b7ab0e3a2760746f"
+  },
+  "homeId": "691507a2b7ab0e3a275ff202",
+  "type": "critical",
+  "message": "Límite excedido: 179.6L de 157L (114.4%)",
+  "triggeredAt": {
+    "$date": "2025-11-23T00:11:06.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:16.635Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:16.635Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a8b7ab0e3a276074f8"
+  },
+  "homeId": "691507a2b7ab0e3a275ff204",
+  "type": "warning",
+  "message": "Consumo alto: 836.6L de 862L (97.1%)",
+  "triggeredAt": {
+    "$date": "2025-11-23T01:26:38.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:16.656Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:16.656Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a8b7ab0e3a27607530"
+  },
+  "homeId": "691507a2b7ab0e3a275ff1fb",
+  "type": "warning",
+  "message": "Consumo alto: 651.6L de 660L (98.7%)",
+  "triggeredAt": {
+    "$date": "2025-11-24T01:01:56.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:16.664Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:16.664Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a8b7ab0e3a2760755a"
+  },
+  "homeId": "691507a2b7ab0e3a275ff1fc",
+  "type": "warning",
+  "message": "Consumo alto: 483.8L de 495L (97.7%)",
+  "triggeredAt": {
+    "$date": "2025-11-24T01:07:13.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:16.670Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:16.670Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a8b7ab0e3a276075ae"
+  },
+  "homeId": "691507a2b7ab0e3a275ff1fd",
+  "type": "critical",
+  "message": "Límite excedido: 939.0L de 862L (108.9%)",
+  "triggeredAt": {
+    "$date": "2025-11-24T01:15:43.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:16.683Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:16.683Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a8b7ab0e3a276075cb"
+  },
+  "homeId": "691507a2b7ab0e3a275ff1fe",
+  "type": "warning",
+  "message": "Consumo alto: 289.4L de 315L (91.9%)",
+  "triggeredAt": {
+    "$date": "2025-11-24T02:42:11.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:16.687Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:16.687Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a8b7ab0e3a27607630"
+  },
+  "homeId": "691507a2b7ab0e3a275ff1ff",
+  "type": "critical",
+  "message": "Límite excedido: 1107.2L de 1035L (107.0%)",
+  "triggeredAt": {
+    "$date": "2025-11-24T01:53:16.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:16.702Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:16.702Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a8b7ab0e3a27607668"
+  },
+  "homeId": "691507a2b7ab0e3a275ff200",
+  "type": "critical",
+  "message": "Límite excedido: 660.3L de 630L (104.8%)",
+  "triggeredAt": {
+    "$date": "2025-11-24T00:53:05.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:16.710Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:16.710Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a8b7ab0e3a27607692"
+  },
+  "homeId": "691507a2b7ab0e3a275ff201",
+  "type": "warning",
+  "message": "Consumo alto: 470.1L de 472L (99.6%)",
+  "triggeredAt": {
+    "$date": "2025-11-24T00:04:31.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:16.716Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:16.716Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a8b7ab0e3a276076a2"
+  },
+  "homeId": "691507a2b7ab0e3a275ff202",
+  "type": "warning",
+  "message": "Consumo alto: 143.3L de 157L (91.3%)",
+  "triggeredAt": {
+    "$date": "2025-11-24T00:50:15.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:16.719Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:16.719Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a8b7ab0e3a276076da"
+  },
+  "homeId": "691507a2b7ab0e3a275ff203",
+  "type": "critical",
+  "message": "Límite excedido: 701.1L de 660L (106.2%)",
+  "triggeredAt": {
+    "$date": "2025-11-24T02:09:02.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:16.727Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:16.727Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a8b7ab0e3a2760772e"
+  },
+  "homeId": "691507a2b7ab0e3a275ff204",
+  "type": "critical",
+  "message": "Límite excedido: 951.0L de 862L (110.3%)",
+  "triggeredAt": {
+    "$date": "2025-11-24T01:23:08.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:16.739Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:16.739Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a8b7ab0e3a27607873"
+  },
+  "homeId": "691507a2b7ab0e3a275ff202",
+  "type": "warning",
+  "message": "Consumo alto: 149.5L de 157L (95.2%)",
+  "triggeredAt": {
+    "$date": "2025-11-25T01:47:48.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:16.788Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:16.788Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a8b7ab0e3a27607a23"
+  },
+  "homeId": "691507a2b7ab0e3a275ff202",
+  "type": "critical",
+  "message": "Límite excedido: 164.3L de 157L (104.6%)",
+  "triggeredAt": {
+    "$date": "2025-11-26T01:17:25.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:16.853Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:16.853Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a8b7ab0e3a27607adb"
+  },
+  "homeId": "691507a2b7ab0e3a275ff1fc",
+  "type": "warning",
+  "message": "Consumo alto: 454.8L de 495L (91.9%)",
+  "triggeredAt": {
+    "$date": "2025-11-27T02:08:07.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:16.880Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:16.880Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a8b7ab0e3a27607b1e"
+  },
+  "homeId": "691507a2b7ab0e3a275ff1fd",
+  "type": "warning",
+  "message": "Consumo alto: 802.0L de 862L (93.0%)",
+  "triggeredAt": {
+    "$date": "2025-11-27T00:40:18.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:16.890Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:16.890Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a8b7ab0e3a27607bcf"
+  },
+  "homeId": "691507a2b7ab0e3a275ff201",
+  "type": "warning",
+  "message": "Consumo alto: 439.7L de 472L (93.2%)",
+  "triggeredAt": {
+    "$date": "2025-11-27T00:18:19.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:16.917Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:16.917Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a8b7ab0e3a27607bdc"
+  },
+  "homeId": "691507a2b7ab0e3a275ff202",
+  "type": "warning",
+  "message": "Consumo alto: 146.1L de 157L (93.1%)",
+  "triggeredAt": {
+    "$date": "2025-11-27T02:08:42.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:16.919Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:16.919Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a9b7ab0e3a27607f3d"
+  },
+  "homeId": "691507a2b7ab0e3a275ff202",
+  "type": "warning",
+  "message": "Consumo alto: 156.7L de 157L (99.8%)",
+  "triggeredAt": {
+    "$date": "2025-11-29T00:55:11.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:17.050Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:17.050Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a9b7ab0e3a27607fe0"
+  },
+  "homeId": "691507a2b7ab0e3a275ff1fb",
+  "type": "warning",
+  "message": "Consumo alto: 625.6L de 660L (94.8%)",
+  "triggeredAt": {
+    "$date": "2025-11-30T02:24:02.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:17.074Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:17.074Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a9b7ab0e3a2760800a"
+  },
+  "homeId": "691507a2b7ab0e3a275ff1fc",
+  "type": "warning",
+  "message": "Consumo alto: 494.8L de 495L (100.0%)",
+  "triggeredAt": {
+    "$date": "2025-11-30T01:39:04.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:17.081Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:17.081Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a9b7ab0e3a2760805e"
+  },
+  "homeId": "691507a2b7ab0e3a275ff1fd",
+  "type": "critical",
+  "message": "Límite excedido: 932.4L de 862L (108.2%)",
+  "triggeredAt": {
+    "$date": "2025-11-30T00:33:48.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:17.093Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:17.093Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a9b7ab0e3a2760807b"
+  },
+  "homeId": "691507a2b7ab0e3a275ff1fe",
+  "type": "warning",
+  "message": "Consumo alto: 285.3L de 315L (90.6%)",
+  "triggeredAt": {
+    "$date": "2025-11-30T01:49:02.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:17.097Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:17.097Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a9b7ab0e3a276080e0"
+  },
+  "homeId": "691507a2b7ab0e3a275ff1ff",
+  "type": "critical",
+  "message": "Límite excedido: 1085.1L de 1035L (104.8%)",
+  "triggeredAt": {
+    "$date": "2025-11-30T00:36:01.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:17.112Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:17.112Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a9b7ab0e3a27608118"
+  },
+  "homeId": "691507a2b7ab0e3a275ff200",
+  "type": "critical",
+  "message": "Límite excedido: 678.5L de 630L (107.7%)",
+  "triggeredAt": {
+    "$date": "2025-11-30T02:33:54.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:17.119Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:17.119Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a9b7ab0e3a27608142"
+  },
+  "homeId": "691507a2b7ab0e3a275ff201",
+  "type": "critical",
+  "message": "Límite excedido: 475.7L de 472L (100.8%)",
+  "triggeredAt": {
+    "$date": "2025-11-30T00:11:05.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:17.124Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:17.124Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a9b7ab0e3a27608152"
+  },
+  "homeId": "691507a2b7ab0e3a275ff202",
+  "type": "critical",
+  "message": "Límite excedido: 174.0L de 157L (110.9%)",
+  "triggeredAt": {
+    "$date": "2025-11-30T02:05:00.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:17.127Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:17.127Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a9b7ab0e3a2760818a"
+  },
+  "homeId": "691507a2b7ab0e3a275ff203",
+  "type": "warning",
+  "message": "Consumo alto: 657.0L de 660L (99.5%)",
+  "triggeredAt": {
+    "$date": "2025-11-30T01:20:09.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:17.135Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:17.135Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a9b7ab0e3a276081de"
+  },
+  "homeId": "691507a2b7ab0e3a275ff204",
+  "type": "critical",
+  "message": "Límite excedido: 946.6L de 862L (109.8%)",
+  "triggeredAt": {
+    "$date": "2025-11-30T02:35:52.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:17.148Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:17.148Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a9b7ab0e3a27608215"
+  },
+  "homeId": "691507a2b7ab0e3a275ff1fb",
+  "type": "warning",
+  "message": "Consumo alto: 596.1L de 660L (90.3%)",
+  "triggeredAt": {
+    "$date": "2025-12-01T01:48:44.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:17.156Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:17.156Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a9b7ab0e3a27608290"
+  },
+  "homeId": "691507a2b7ab0e3a275ff1fd",
+  "type": "warning",
+  "message": "Consumo alto: 842.3L de 862L (97.7%)",
+  "triggeredAt": {
+    "$date": "2025-12-01T02:48:39.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:17.174Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:17.174Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a9b7ab0e3a276082ad"
+  },
+  "homeId": "691507a2b7ab0e3a275ff1fe",
+  "type": "warning",
+  "message": "Consumo alto: 303.2L de 315L (96.3%)",
+  "triggeredAt": {
+    "$date": "2025-12-01T02:08:05.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:17.178Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:17.178Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a9b7ab0e3a27608311"
+  },
+  "homeId": "691507a2b7ab0e3a275ff1ff",
+  "type": "warning",
+  "message": "Consumo alto: 995.9L de 1035L (96.2%)",
+  "triggeredAt": {
+    "$date": "2025-12-01T01:15:01.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:17.193Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:17.193Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a9b7ab0e3a27608348"
+  },
+  "homeId": "691507a2b7ab0e3a275ff200",
+  "type": "warning",
+  "message": "Consumo alto: 591.7L de 630L (93.9%)",
+  "triggeredAt": {
+    "$date": "2025-12-01T01:27:20.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:17.202Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:17.202Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a9b7ab0e3a27608380"
+  },
+  "homeId": "691507a2b7ab0e3a275ff202",
+  "type": "critical",
+  "message": "Límite excedido: 166.6L de 157L (106.1%)",
+  "triggeredAt": {
+    "$date": "2025-12-01T02:13:37.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:17.210Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:17.210Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a9b7ab0e3a27608409"
+  },
+  "homeId": "691507a2b7ab0e3a275ff204",
+  "type": "warning",
+  "message": "Consumo alto: 830.9L de 862L (96.4%)",
+  "triggeredAt": {
+    "$date": "2025-12-01T01:19:42.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:17.230Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:17.230Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a9b7ab0e3a2760854e"
+  },
+  "homeId": "691507a2b7ab0e3a275ff202",
+  "type": "warning",
+  "message": "Consumo alto: 153.0L de 157L (97.4%)",
+  "triggeredAt": {
+    "$date": "2025-12-02T01:16:52.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:17.276Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:17.276Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a9b7ab0e3a27608648"
+  },
+  "homeId": "691507a2b7ab0e3a275ff1fd",
+  "type": "warning",
+  "message": "Consumo alto: 817.9L de 862L (94.9%)",
+  "triggeredAt": {
+    "$date": "2025-12-03T00:01:10.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:17.312Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:17.312Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a9b7ab0e3a276086d8"
+  },
+  "homeId": "691507a2b7ab0e3a275ff200",
+  "type": "warning",
+  "message": "Consumo alto: 590.9L de 630L (93.8%)",
+  "triggeredAt": {
+    "$date": "2025-12-03T02:15:29.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:17.334Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:17.334Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a9b7ab0e3a276086fa"
+  },
+  "homeId": "691507a2b7ab0e3a275ff201",
+  "type": "warning",
+  "message": "Consumo alto: 436.8L de 472L (92.5%)",
+  "triggeredAt": {
+    "$date": "2025-12-03T02:49:53.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:17.339Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:17.339Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a9b7ab0e3a27608707"
+  },
+  "homeId": "691507a2b7ab0e3a275ff202",
+  "type": "critical",
+  "message": "Límite excedido: 157.2L de 157L (100.1%)",
+  "triggeredAt": {
+    "$date": "2025-12-03T01:27:44.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:17.341Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:17.341Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a9b7ab0e3a27608c11"
+  },
+  "homeId": "691507a2b7ab0e3a275ff201",
+  "type": "warning",
+  "message": "Consumo alto: 444.0L de 472L (94.1%)",
+  "triggeredAt": {
+    "$date": "2025-12-06T02:47:34.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:17.534Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:17.534Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a9b7ab0e3a27608c1e"
+  },
+  "homeId": "691507a2b7ab0e3a275ff202",
+  "type": "warning",
+  "message": "Consumo alto: 144.5L de 157L (92.1%)",
+  "triggeredAt": {
+    "$date": "2025-12-06T00:55:32.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:17.536Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:17.536Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a9b7ab0e3a27608c8c"
+  },
+  "homeId": "691507a2b7ab0e3a275ff204",
+  "type": "warning",
+  "message": "Consumo alto: 776.4L de 862L (90.1%)",
+  "triggeredAt": {
+    "$date": "2025-12-06T01:56:43.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:17.552Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:17.552Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a9b7ab0e3a27608cc3"
+  },
+  "homeId": "691507a2b7ab0e3a275ff1fb",
+  "type": "warning",
+  "message": "Consumo alto: 606.5L de 660L (91.9%)",
+  "triggeredAt": {
+    "$date": "2025-12-07T02:02:33.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:17.561Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:17.561Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a9b7ab0e3a27608d3e"
+  },
+  "homeId": "691507a2b7ab0e3a275ff1fd",
+  "type": "warning",
+  "message": "Consumo alto: 814.5L de 862L (94.5%)",
+  "triggeredAt": {
+    "$date": "2025-12-07T00:26:33.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:17.579Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:17.579Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a9b7ab0e3a27608d5b"
+  },
+  "homeId": "691507a2b7ab0e3a275ff1fe",
+  "type": "warning",
+  "message": "Consumo alto: 300.6L de 315L (95.4%)",
+  "triggeredAt": {
+    "$date": "2025-12-07T01:32:43.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:17.583Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:17.583Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a9b7ab0e3a27608dbf"
+  },
+  "homeId": "691507a2b7ab0e3a275ff1ff",
+  "type": "warning",
+  "message": "Consumo alto: 971.3L de 1035L (93.8%)",
+  "triggeredAt": {
+    "$date": "2025-12-07T02:11:26.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:17.598Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:17.598Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a9b7ab0e3a27608df6"
+  },
+  "homeId": "691507a2b7ab0e3a275ff200",
+  "type": "warning",
+  "message": "Consumo alto: 587.8L de 630L (93.3%)",
+  "triggeredAt": {
+    "$date": "2025-12-07T02:33:11.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:17.607Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:17.607Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a9b7ab0e3a27608e2e"
+  },
+  "homeId": "691507a2b7ab0e3a275ff202",
+  "type": "warning",
+  "message": "Consumo alto: 154.9L de 157L (98.6%)",
+  "triggeredAt": {
+    "$date": "2025-12-07T01:34:03.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:17.614Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:17.614Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a9b7ab0e3a27608e65"
+  },
+  "homeId": "691507a2b7ab0e3a275ff203",
+  "type": "warning",
+  "message": "Consumo alto: 595.6L de 660L (90.2%)",
+  "triggeredAt": {
+    "$date": "2025-12-07T02:51:42.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:17.623Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:17.623Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a9b7ab0e3a27608eb8"
+  },
+  "homeId": "691507a2b7ab0e3a275ff204",
+  "type": "critical",
+  "message": "Límite excedido: 869.1L de 862L (100.8%)",
+  "triggeredAt": {
+    "$date": "2025-12-07T01:20:23.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:17.635Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:17.635Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a9b7ab0e3a27608f69"
+  },
+  "homeId": "691507a2b7ab0e3a275ff1fd",
+  "type": "critical",
+  "message": "Límite excedido: 895.2L de 862L (103.8%)",
+  "triggeredAt": {
+    "$date": "2025-12-08T01:54:25.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:17.661Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:17.661Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a9b7ab0e3a27608fe9"
+  },
+  "homeId": "691507a2b7ab0e3a275ff1ff",
+  "type": "warning",
+  "message": "Consumo alto: 991.8L de 1035L (95.8%)",
+  "triggeredAt": {
+    "$date": "2025-12-08T00:13:40.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:17.680Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:17.680Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a9b7ab0e3a27609020"
+  },
+  "homeId": "691507a2b7ab0e3a275ff200",
+  "type": "warning",
+  "message": "Consumo alto: 569.7L de 630L (90.4%)",
+  "triggeredAt": {
+    "$date": "2025-12-08T00:28:59.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:17.701Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:17.701Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a9b7ab0e3a27609058"
+  },
+  "homeId": "691507a2b7ab0e3a275ff202",
+  "type": "critical",
+  "message": "Límite excedido: 181.7L de 157L (115.7%)",
+  "triggeredAt": {
+    "$date": "2025-12-08T02:41:12.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:17.710Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:17.710Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a9b7ab0e3a2760908f"
+  },
+  "homeId": "691507a2b7ab0e3a275ff203",
+  "type": "warning",
+  "message": "Consumo alto: 620.5L de 660L (94.0%)",
+  "triggeredAt": {
+    "$date": "2025-12-08T00:52:27.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:17.718Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:17.718Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a9b7ab0e3a276090e2"
+  },
+  "homeId": "691507a2b7ab0e3a275ff204",
+  "type": "warning",
+  "message": "Consumo alto: 843.7L de 862L (97.9%)",
+  "triggeredAt": {
+    "$date": "2025-12-08T00:15:12.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:17.731Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:17.731Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a9b7ab0e3a2760912f"
+  },
+  "homeId": "691507a2b7ab0e3a275ff1fc",
+  "type": "warning",
+  "message": "Consumo alto: 454.2L de 495L (91.8%)",
+  "triggeredAt": {
+    "$date": "2025-12-09T01:22:58.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:17.742Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:17.742Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a9b7ab0e3a27609172"
+  },
+  "homeId": "691507a2b7ab0e3a275ff1fd",
+  "type": "warning",
+  "message": "Consumo alto: 795.9L de 862L (92.3%)",
+  "triggeredAt": {
+    "$date": "2025-12-09T00:19:37.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:17.752Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:17.752Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a9b7ab0e3a27609223"
+  },
+  "homeId": "691507a2b7ab0e3a275ff201",
+  "type": "warning",
+  "message": "Consumo alto: 428.6L de 472L (90.8%)",
+  "triggeredAt": {
+    "$date": "2025-12-09T01:09:35.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:17.779Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:17.779Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a9b7ab0e3a2760929d"
+  },
+  "homeId": "691507a2b7ab0e3a275ff204",
+  "type": "warning",
+  "message": "Consumo alto: 776.2L de 862L (90.1%)",
+  "triggeredAt": {
+    "$date": "2025-12-09T00:49:53.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:17.797Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:17.797Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a9b7ab0e3a276093e2"
+  },
+  "homeId": "691507a2b7ab0e3a275ff202",
+  "type": "warning",
+  "message": "Consumo alto: 142.8L de 157L (91.0%)",
+  "triggeredAt": {
+    "$date": "2025-12-10T02:24:39.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:17.847Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:17.847Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a9b7ab0e3a27609592"
+  },
+  "homeId": "691507a2b7ab0e3a275ff202",
+  "type": "warning",
+  "message": "Consumo alto: 144.2L de 157L (91.9%)",
+  "triggeredAt": {
+    "$date": "2025-12-11T02:53:47.000Z"
+  },
+  "resolved": false,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:17.912Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:17.912Z"
+  }
+}]

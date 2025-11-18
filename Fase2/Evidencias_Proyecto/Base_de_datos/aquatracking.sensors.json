@@ -1,1416 +1,1910 @@
 [{
   "_id": {
-    "$oid": "68e192275905d8b7b30e7265"
+    "$oid": "691507a2b7ab0e3a275ff205"
   },
-  "homeId": "68e191345905d8b7b30e719d",
-  "serialNumber": "SN-DUCHA-1759613479138-4072",
-  "category": "agua",
-  "subType": "ducha",
-  "location": "baño_principal",
+  "homeId": "691507a2b7ab0e3a275ff1fb",
+  "serialNumber": "SN-DUCHA-275ff1fb-0001",
+  "category": "flow",
+  "subType": "DUCHA",
+  "location": "Baño Principal",
+  "installedAt": {
+    "$date": "2025-09-13T00:00:00.000Z"
+  },
   "status": "active",
   "tags": [
     "litros"
   ],
-  "installedAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
+  "lastMeasurementAt": {
+    "$date": "2025-12-10T09:31:48.000Z"
   },
+  "currentFlowRate": 8.245493562231761,
+  "lastLiters": 64.04,
+  "todayTotalLiters": 7443.019999999996,
+  "flowStatus": "flowing",
   "createdAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
+    "$date": "2025-11-12T22:18:10.871Z"
   },
   "updatedAt": {
-    "$date": "2025-10-04T22:46:47.541Z"
-  },
-  "__v": 0
+    "$date": "2025-11-12T22:18:17.863Z"
+  }
 },
 {
   "_id": {
-    "$oid": "68e192315905d8b7b30e726f"
+    "$oid": "691507a2b7ab0e3a275ff206"
   },
-  "homeId": "68e191345905d8b7b30e719d",
-  "serialNumber": "SN-LAVAMANOS-1759613489089-9117",
-  "category": "agua",
-  "subType": "lavamanos",
-  "location": "baño_principal",
+  "homeId": "691507a2b7ab0e3a275ff1fb",
+  "serialNumber": "SN-LAVAMANOS-275ff1fb-0002",
+  "category": "flow",
+  "subType": "LAVAMANOS",
+  "location": "Baño Principal",
+  "installedAt": {
+    "$date": "2025-09-13T00:00:00.000Z"
+  },
   "status": "active",
   "tags": [
     "litros"
   ],
-  "installedAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
+  "lastMeasurementAt": {
+    "$date": "2025-12-10T23:21:43.000Z"
   },
+  "currentFlowRate": 6.7846153846153845,
+  "lastLiters": 2.94,
+  "todayTotalLiters": 2085.540000000001,
+  "flowStatus": "flowing",
   "createdAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
+    "$date": "2025-11-12T22:18:10.871Z"
   },
   "updatedAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
-  },
-  "__v": 0
+    "$date": "2025-11-12T22:18:17.866Z"
+  }
 },
 {
   "_id": {
-    "$oid": "68e192365905d8b7b30e7279"
+    "$oid": "691507a2b7ab0e3a275ff207"
   },
-  "homeId": "68e191345905d8b7b30e719d",
-  "serialNumber": "SN-INODORO-1759613494888-4902",
-  "category": "agua",
-  "subType": "inodoro",
-  "location": "baño_principal",
+  "homeId": "691507a2b7ab0e3a275ff1fb",
+  "serialNumber": "SN-INODORO-275ff1fb-0003",
+  "category": "flow",
+  "subType": "INODORO",
+  "location": "Baño Principal",
+  "installedAt": {
+    "$date": "2025-09-13T00:00:00.000Z"
+  },
   "status": "active",
   "tags": [
     "litros"
   ],
-  "installedAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
+  "lastMeasurementAt": {
+    "$date": "2025-12-10T22:59:34.000Z"
   },
+  "currentFlowRate": 75.89999999999999,
+  "lastLiters": 5.06,
+  "todayTotalLiters": 3758.7999999999965,
+  "flowStatus": "flowing",
   "createdAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
+    "$date": "2025-11-12T22:18:10.871Z"
   },
   "updatedAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
-  },
-  "__v": 0
+    "$date": "2025-11-12T22:18:17.869Z"
+  }
 },
 {
   "_id": {
-    "$oid": "68e1923f5905d8b7b30e7283"
+    "$oid": "691507a2b7ab0e3a275ff208"
   },
-  "homeId": "68e191345905d8b7b30e719d",
-  "serialNumber": "SN-LAVAPLATOS-1759613503224-3599",
-  "category": "agua",
-  "subType": "lavaplatos",
-  "location": "cocina",
+  "homeId": "691507a2b7ab0e3a275ff1fb",
+  "serialNumber": "SN-LLAVE_COCINA-275ff1fb-0004",
+  "category": "flow",
+  "subType": "LLAVE_COCINA",
+  "location": "Cocina",
+  "installedAt": {
+    "$date": "2025-09-13T00:00:00.000Z"
+  },
   "status": "active",
   "tags": [
     "litros"
   ],
-  "installedAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
+  "lastMeasurementAt": {
+    "$date": "2025-12-10T15:57:24.000Z"
   },
+  "currentFlowRate": 4.43321554770318,
+  "lastLiters": 20.91,
+  "todayTotalLiters": 1203.7000000000005,
+  "flowStatus": "flowing",
   "createdAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
+    "$date": "2025-11-12T22:18:10.871Z"
   },
   "updatedAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
-  },
-  "__v": 0
+    "$date": "2025-11-12T22:18:17.869Z"
+  }
 },
 {
   "_id": {
-    "$oid": "68e192465905d8b7b30e728d"
+    "$oid": "691507a2b7ab0e3a275ff209"
   },
-  "homeId": "68e191345905d8b7b30e719d",
-  "serialNumber": "SN-LAVADORA-1759613510401-4531",
-  "category": "agua",
-  "subType": "lavadora",
-  "location": "loggia",
+  "homeId": "691507a2b7ab0e3a275ff1fb",
+  "serialNumber": "SN-LAVADORA-275ff1fb-0005",
+  "category": "flow",
+  "subType": "LAVADORA",
+  "location": "Loggia",
+  "installedAt": {
+    "$date": "2025-09-13T00:00:00.000Z"
+  },
   "status": "active",
   "tags": [
     "litros"
   ],
-  "installedAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
+  "lastMeasurementAt": {
+    "$date": "2025-12-08T15:38:35.000Z"
   },
+  "currentFlowRate": 1.3057019903173748,
+  "lastLiters": 80.91,
+  "todayTotalLiters": 714.05,
+  "flowStatus": "flowing",
   "createdAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
+    "$date": "2025-11-12T22:18:10.872Z"
   },
   "updatedAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
-  },
-  "__v": 0
+    "$date": "2025-11-12T22:18:17.737Z"
+  }
 },
 {
   "_id": {
-    "$oid": "68e1924b5905d8b7b30e7297"
+    "$oid": "691507a2b7ab0e3a275ff20a"
   },
-  "homeId": "68e191345905d8b7b30e719d",
-  "serialNumber": "SN-LLAVE_JARDIN-1759613515752-7350",
-  "category": "agua",
-  "subType": "llave_jardin",
-  "location": "jardin",
+  "homeId": "691507a2b7ab0e3a275ff1fb",
+  "serialNumber": "SN-LLAVE_PATIO-275ff1fb-0006",
+  "category": "flow",
+  "subType": "LLAVE_PATIO",
+  "location": "Patio",
+  "installedAt": {
+    "$date": "2025-09-13T00:00:00.000Z"
+  },
   "status": "active",
   "tags": [
     "litros"
   ],
-  "installedAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
-  },
+  "lastMeasurementAt": null,
+  "currentFlowRate": 0,
+  "lastLiters": 0,
+  "todayTotalLiters": 0,
+  "flowStatus": "idle",
   "createdAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
+    "$date": "2025-11-12T22:18:10.872Z"
   },
   "updatedAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
-  },
-  "__v": 0
+    "$date": "2025-11-12T22:18:10.872Z"
+  }
 },
 {
   "_id": {
-    "$oid": "68e192515905d8b7b30e72a1"
+    "$oid": "691507a2b7ab0e3a275ff20b"
   },
-  "homeId": "68e1914a5905d8b7b30e71ad",
-  "serialNumber": "SN-DUCHA-1759613521357-9457",
-  "category": "agua",
-  "subType": "ducha",
-  "location": "baño_principal",
+  "homeId": "691507a2b7ab0e3a275ff1fc",
+  "serialNumber": "SN-DUCHA-275ff1fc-0007",
+  "category": "flow",
+  "subType": "DUCHA",
+  "location": "Baño Principal",
+  "installedAt": {
+    "$date": "2025-09-13T00:00:00.000Z"
+  },
   "status": "active",
   "tags": [
     "litros"
   ],
-  "installedAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
+  "lastMeasurementAt": {
+    "$date": "2025-12-10T23:56:57.000Z"
   },
+  "currentFlowRate": 7.1,
+  "lastLiters": 51.83,
+  "todayTotalLiters": 5418.659999999999,
+  "flowStatus": "flowing",
   "createdAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
+    "$date": "2025-11-12T22:18:10.872Z"
   },
   "updatedAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
-  },
-  "__v": 0
+    "$date": "2025-11-12T22:18:17.870Z"
+  }
 },
 {
   "_id": {
-    "$oid": "68e192575905d8b7b30e72ab"
+    "$oid": "691507a2b7ab0e3a275ff20c"
   },
-  "homeId": "68e1914a5905d8b7b30e71ad",
-  "serialNumber": "SN-LAVAMANOS-1759613527100-272",
-  "category": "agua",
-  "subType": "lavamanos",
-  "location": "baño_principal",
+  "homeId": "691507a2b7ab0e3a275ff1fc",
+  "serialNumber": "SN-LAVAMANOS-275ff1fc-0008",
+  "category": "flow",
+  "subType": "LAVAMANOS",
+  "location": "Baño Principal",
+  "installedAt": {
+    "$date": "2025-09-13T00:00:00.000Z"
+  },
   "status": "active",
   "tags": [
     "litros"
   ],
-  "installedAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
+  "lastMeasurementAt": {
+    "$date": "2025-12-10T10:33:02.000Z"
   },
+  "currentFlowRate": 5.625,
+  "lastLiters": 4.5,
+  "todayTotalLiters": 1570.8999999999996,
+  "flowStatus": "flowing",
   "createdAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
+    "$date": "2025-11-12T22:18:10.872Z"
   },
   "updatedAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
-  },
-  "__v": 0
+    "$date": "2025-11-12T22:18:17.871Z"
+  }
 },
 {
   "_id": {
-    "$oid": "68e1925e5905d8b7b30e72c3"
+    "$oid": "691507a2b7ab0e3a275ff20d"
   },
-  "homeId": "68e1914a5905d8b7b30e71ad",
-  "serialNumber": "SN-INODORO-1759613534657-754",
-  "category": "agua",
-  "subType": "inodoro",
-  "location": "baño_principal",
+  "homeId": "691507a2b7ab0e3a275ff1fc",
+  "serialNumber": "SN-INODORO-275ff1fc-0009",
+  "category": "flow",
+  "subType": "INODORO",
+  "location": "Baño Principal",
+  "installedAt": {
+    "$date": "2025-09-13T00:00:00.000Z"
+  },
   "status": "active",
   "tags": [
     "litros"
   ],
-  "installedAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
+  "lastMeasurementAt": {
+    "$date": "2025-12-10T09:14:46.000Z"
   },
+  "currentFlowRate": 72,
+  "lastLiters": 6,
+  "todayTotalLiters": 2829.139999999999,
+  "flowStatus": "flowing",
   "createdAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
+    "$date": "2025-11-12T22:18:10.872Z"
   },
   "updatedAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
-  },
-  "__v": 0
+    "$date": "2025-11-12T22:18:17.874Z"
+  }
 },
 {
   "_id": {
-    "$oid": "68e192695905d8b7b30e72cd"
+    "$oid": "691507a2b7ab0e3a275ff20e"
   },
-  "homeId": "68e1914a5905d8b7b30e71ad",
-  "serialNumber": "SN-LAVAMANOS-1759613545934-3857",
-  "category": "agua",
-  "subType": "lavamanos",
-  "location": "baño_secundario",
+  "homeId": "691507a2b7ab0e3a275ff1fc",
+  "serialNumber": "SN-LLAVE_COCINA-275ff1fc-0010",
+  "category": "flow",
+  "subType": "LLAVE_COCINA",
+  "location": "Cocina",
+  "installedAt": {
+    "$date": "2025-09-13T00:00:00.000Z"
+  },
   "status": "active",
   "tags": [
     "litros"
   ],
-  "installedAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
+  "lastMeasurementAt": {
+    "$date": "2025-12-10T22:38:01.000Z"
   },
+  "currentFlowRate": 4.347972972972973,
+  "lastLiters": 21.45,
+  "todayTotalLiters": 1081.2600000000002,
+  "flowStatus": "flowing",
   "createdAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
+    "$date": "2025-11-12T22:18:10.873Z"
   },
   "updatedAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
-  },
-  "__v": 0
+    "$date": "2025-11-12T22:18:17.874Z"
+  }
 },
 {
   "_id": {
-    "$oid": "68e1926d5905d8b7b30e72d7"
+    "$oid": "691507a2b7ab0e3a275ff20f"
   },
-  "homeId": "68e1914a5905d8b7b30e71ad",
-  "serialNumber": "SN-INODORO-1759613549949-6236",
-  "category": "agua",
-  "subType": "inodoro",
-  "location": "baño_secundario",
+  "homeId": "691507a2b7ab0e3a275ff1fc",
+  "serialNumber": "SN-LAVADORA-275ff1fc-0011",
+  "category": "flow",
+  "subType": "LAVADORA",
+  "location": "Loggia",
+  "installedAt": {
+    "$date": "2025-09-13T00:00:00.000Z"
+  },
   "status": "active",
   "tags": [
     "litros"
   ],
-  "installedAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
+  "lastMeasurementAt": {
+    "$date": "2025-12-08T13:42:54.000Z"
   },
+  "currentFlowRate": 1.4865079365079366,
+  "lastLiters": 93.65,
+  "todayTotalLiters": 732.6,
+  "flowStatus": "flowing",
   "createdAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
+    "$date": "2025-11-12T22:18:10.873Z"
   },
   "updatedAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
-  },
-  "__v": 0
+    "$date": "2025-11-12T22:18:17.742Z"
+  }
 },
 {
   "_id": {
-    "$oid": "68e192755905d8b7b30e72e1"
+    "$oid": "691507a2b7ab0e3a275ff210"
   },
-  "homeId": "68e1914a5905d8b7b30e71ad",
-  "serialNumber": "SN-LAVAPLATOS-1759613557128-6268",
-  "category": "agua",
-  "subType": "lavaplatos",
-  "location": "cocina",
+  "homeId": "691507a2b7ab0e3a275ff1fc",
+  "serialNumber": "SN-LLAVE_JARDIN-275ff1fc-0012",
+  "category": "flow",
+  "subType": "LLAVE_JARDIN",
+  "location": "Jardín",
+  "installedAt": {
+    "$date": "2025-09-13T00:00:00.000Z"
+  },
   "status": "active",
   "tags": [
     "litros"
   ],
-  "installedAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
-  },
+  "lastMeasurementAt": null,
+  "currentFlowRate": 0,
+  "lastLiters": 0,
+  "todayTotalLiters": 0,
+  "flowStatus": "idle",
   "createdAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
+    "$date": "2025-11-12T22:18:10.873Z"
   },
   "updatedAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
-  },
-  "__v": 0
+    "$date": "2025-11-12T22:18:10.873Z"
+  }
 },
 {
   "_id": {
-    "$oid": "68e1927c5905d8b7b30e72eb"
+    "$oid": "691507a2b7ab0e3a275ff211"
   },
-  "homeId": "68e1914a5905d8b7b30e71ad",
-  "serialNumber": "SN-LAVADORA-1759613564453-3045",
-  "category": "agua",
-  "subType": "lavadora",
-  "location": "loggia",
+  "homeId": "691507a2b7ab0e3a275ff1fd",
+  "serialNumber": "SN-DUCHA-275ff1fd-0013",
+  "category": "flow",
+  "subType": "DUCHA",
+  "location": "Baño Principal",
+  "installedAt": {
+    "$date": "2025-09-13T00:00:00.000Z"
+  },
   "status": "active",
   "tags": [
     "litros"
   ],
-  "installedAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
+  "lastMeasurementAt": {
+    "$date": "2025-12-10T09:59:54.000Z"
   },
+  "currentFlowRate": 8.752340425531916,
+  "lastLiters": 68.56,
+  "todayTotalLiters": 9312.109999999997,
+  "flowStatus": "flowing",
   "createdAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
+    "$date": "2025-11-12T22:18:10.873Z"
   },
   "updatedAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
-  },
-  "__v": 0
+    "$date": "2025-11-12T22:18:17.875Z"
+  }
 },
 {
   "_id": {
-    "$oid": "68e192895905d8b7b30e72f5"
+    "$oid": "691507a2b7ab0e3a275ff212"
   },
-  "homeId": "68e1914a5905d8b7b30e71ad",
-  "serialNumber": "SN-LLAVE_PATIO-1759613577421-7738",
-  "category": "agua",
-  "subType": "llave_patio",
-  "location": "patio",
+  "homeId": "691507a2b7ab0e3a275ff1fd",
+  "serialNumber": "SN-LAVAMANOS-275ff1fd-0014",
+  "category": "flow",
+  "subType": "LAVAMANOS",
+  "location": "Baño Principal",
+  "installedAt": {
+    "$date": "2025-09-13T00:00:00.000Z"
+  },
   "status": "active",
   "tags": [
     "litros"
   ],
-  "installedAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
+  "lastMeasurementAt": {
+    "$date": "2025-12-10T22:43:36.000Z"
   },
+  "currentFlowRate": 6.335294117647059,
+  "lastLiters": 3.59,
+  "todayTotalLiters": 2631.9900000000025,
+  "flowStatus": "flowing",
   "createdAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
+    "$date": "2025-11-12T22:18:10.873Z"
   },
   "updatedAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
-  },
-  "__v": 0
+    "$date": "2025-11-12T22:18:17.878Z"
+  }
 },
 {
   "_id": {
-    "$oid": "68e192aa5905d8b7b30e7375"
+    "$oid": "691507a2b7ab0e3a275ff213"
   },
-  "homeId": "68e1916e5905d8b7b30e71bd",
-  "serialNumber": "SN-DUCHA-1759613610938-9064",
-  "category": "agua",
-  "subType": "ducha",
-  "location": "baño_principal",
+  "homeId": "691507a2b7ab0e3a275ff1fd",
+  "serialNumber": "SN-INODORO-275ff1fd-0015",
+  "category": "flow",
+  "subType": "INODORO",
+  "location": "Baño Principal",
+  "installedAt": {
+    "$date": "2025-09-13T00:00:00.000Z"
+  },
   "status": "active",
   "tags": [
     "litros"
   ],
-  "installedAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
+  "lastMeasurementAt": {
+    "$date": "2025-12-10T16:18:40.000Z"
   },
+  "currentFlowRate": 65.3,
+  "lastLiters": 6.53,
+  "todayTotalLiters": 4738.140000000001,
+  "flowStatus": "flowing",
   "createdAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
+    "$date": "2025-11-12T22:18:10.874Z"
   },
   "updatedAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
-  },
-  "__v": 0
+    "$date": "2025-11-12T22:18:17.882Z"
+  }
 },
 {
   "_id": {
-    "$oid": "68e192b05905d8b7b30e737f"
+    "$oid": "691507a2b7ab0e3a275ff214"
   },
-  "homeId": "68e1916e5905d8b7b30e71bd",
-  "serialNumber": "SN-LAVAMANOS-1759613616640-6528",
-  "category": "agua",
-  "subType": "lavamanos",
-  "location": "baño_principal",
+  "homeId": "691507a2b7ab0e3a275ff1fd",
+  "serialNumber": "SN-DUCHA-275ff1fd-0016",
+  "category": "flow",
+  "subType": "DUCHA",
+  "location": "Baño Secundario",
+  "installedAt": {
+    "$date": "2025-09-13T00:00:00.000Z"
+  },
   "status": "active",
   "tags": [
     "litros"
   ],
-  "installedAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
+  "lastMeasurementAt": {
+    "$date": "2025-12-11T00:22:07.000Z"
   },
+  "currentFlowRate": 7.468596881959911,
+  "lastLiters": 55.89,
+  "todayTotalLiters": 1785.5000000000002,
+  "flowStatus": "flowing",
   "createdAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
+    "$date": "2025-11-12T22:18:10.874Z"
   },
   "updatedAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
-  },
-  "__v": 0
+    "$date": "2025-11-12T22:18:17.882Z"
+  }
 },
 {
   "_id": {
-    "$oid": "68e192b65905d8b7b30e7389"
+    "$oid": "691507a2b7ab0e3a275ff215"
   },
-  "homeId": "68e1916e5905d8b7b30e71bd",
-  "serialNumber": "SN-INODORO-1759613622041-6419",
-  "category": "agua",
-  "subType": "inodoro",
-  "location": "baño_principal",
+  "homeId": "691507a2b7ab0e3a275ff1fd",
+  "serialNumber": "SN-LAVAMANOS-275ff1fd-0017",
+  "category": "flow",
+  "subType": "LAVAMANOS",
+  "location": "Baño Secundario",
+  "installedAt": {
+    "$date": "2025-09-13T00:00:00.000Z"
+  },
   "status": "active",
   "tags": [
     "litros"
   ],
-  "installedAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
+  "lastMeasurementAt": {
+    "$date": "2025-12-11T00:19:09.000Z"
   },
+  "currentFlowRate": 5.584615384615384,
+  "lastLiters": 3.63,
+  "todayTotalLiters": 759.4300000000002,
+  "flowStatus": "flowing",
   "createdAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
+    "$date": "2025-11-12T22:18:10.874Z"
   },
   "updatedAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
-  },
-  "__v": 0
+    "$date": "2025-11-12T22:18:17.883Z"
+  }
 },
 {
   "_id": {
-    "$oid": "68e192bb5905d8b7b30e7393"
+    "$oid": "691507a2b7ab0e3a275ff216"
   },
-  "homeId": "68e1916e5905d8b7b30e71bd",
-  "serialNumber": "SN-LAVAPLATOS-1759613627887-2297",
-  "category": "agua",
-  "subType": "lavaplatos",
-  "location": "cocina",
+  "homeId": "691507a2b7ab0e3a275ff1fd",
+  "serialNumber": "SN-INODORO-275ff1fd-0018",
+  "category": "flow",
+  "subType": "INODORO",
+  "location": "Baño Secundario",
+  "installedAt": {
+    "$date": "2025-09-13T00:00:00.000Z"
+  },
   "status": "active",
   "tags": [
     "litros"
   ],
-  "installedAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
+  "lastMeasurementAt": {
+    "$date": "2025-12-10T09:02:24.000Z"
   },
+  "currentFlowRate": 56.91428571428571,
+  "lastLiters": 6.64,
+  "todayTotalLiters": 1082.9000000000005,
+  "flowStatus": "flowing",
   "createdAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
+    "$date": "2025-11-12T22:18:10.874Z"
   },
   "updatedAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
-  },
-  "__v": 0
+    "$date": "2025-11-12T22:18:17.884Z"
+  }
 },
 {
   "_id": {
-    "$oid": "68e192cd5905d8b7b30e739d"
+    "$oid": "691507a2b7ab0e3a275ff217"
   },
-  "homeId": "68e1918a5905d8b7b30e71cd",
-  "serialNumber": "SN-DUCHA-1759613645432-7447",
-  "category": "agua",
-  "subType": "ducha",
-  "location": "baño_principal",
+  "homeId": "691507a2b7ab0e3a275ff1fd",
+  "serialNumber": "SN-LLAVE_COCINA-275ff1fd-0019",
+  "category": "flow",
+  "subType": "LLAVE_COCINA",
+  "location": "Cocina",
+  "installedAt": {
+    "$date": "2025-09-13T00:00:00.000Z"
+  },
   "status": "active",
   "tags": [
     "litros"
   ],
-  "installedAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
+  "lastMeasurementAt": {
+    "$date": "2025-12-10T11:26:46.000Z"
   },
+  "currentFlowRate": 5.688805970149254,
+  "lastLiters": 25.41,
+  "todayTotalLiters": 1177.2299999999998,
+  "flowStatus": "flowing",
   "createdAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
+    "$date": "2025-11-12T22:18:10.874Z"
   },
   "updatedAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
-  },
-  "__v": 0
+    "$date": "2025-11-12T22:18:17.884Z"
+  }
 },
 {
   "_id": {
-    "$oid": "68e192d25905d8b7b30e73a7"
+    "$oid": "691507a2b7ab0e3a275ff218"
   },
-  "homeId": "68e1919a5905d8b7b30e71dd",
-  "serialNumber": "SN-LAVAMANOS-1759613650258-1472",
-  "category": "agua",
-  "subType": "lavamanos",
-  "location": "baño_principal",
+  "homeId": "691507a2b7ab0e3a275ff1fd",
+  "serialNumber": "SN-LAVADORA-275ff1fd-0020",
+  "category": "flow",
+  "subType": "LAVADORA",
+  "location": "Loggia",
+  "installedAt": {
+    "$date": "2025-09-13T00:00:00.000Z"
+  },
   "status": "active",
   "tags": [
     "litros"
   ],
-  "installedAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
+  "lastMeasurementAt": {
+    "$date": "2025-12-08T14:45:47.000Z"
   },
+  "currentFlowRate": 1.55810888252149,
+  "lastLiters": 90.63,
+  "todayTotalLiters": 747.11,
+  "flowStatus": "flowing",
   "createdAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
+    "$date": "2025-11-12T22:18:10.875Z"
   },
   "updatedAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
-  },
-  "__v": 0
+    "$date": "2025-11-12T22:18:17.752Z"
+  }
 },
 {
   "_id": {
-    "$oid": "68e192db5905d8b7b30e73b1"
+    "$oid": "691507a2b7ab0e3a275ff219"
   },
-  "homeId": "68e1918a5905d8b7b30e71cd",
-  "serialNumber": "SN-LAVAMANOS-1759613659609-55",
-  "category": "agua",
-  "subType": "lavamanos",
-  "location": "baño_principal",
+  "homeId": "691507a2b7ab0e3a275ff1fe",
+  "serialNumber": "SN-DUCHA-275ff1fe-0021",
+  "category": "flow",
+  "subType": "DUCHA",
+  "location": "Baño Principal",
+  "installedAt": {
+    "$date": "2025-09-13T00:00:00.000Z"
+  },
   "status": "active",
   "tags": [
     "litros"
   ],
-  "installedAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
+  "lastMeasurementAt": {
+    "$date": "2025-12-11T01:23:20.000Z"
   },
+  "currentFlowRate": 8.251339285714286,
+  "lastLiters": 61.61,
+  "todayTotalLiters": 3460.5100000000007,
+  "flowStatus": "flowing",
   "createdAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
+    "$date": "2025-11-12T22:18:10.875Z"
   },
   "updatedAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
-  },
-  "__v": 0
+    "$date": "2025-11-12T22:18:17.884Z"
+  }
 },
 {
   "_id": {
-    "$oid": "68e192e15905d8b7b30e73bb"
+    "$oid": "691507a2b7ab0e3a275ff21a"
   },
-  "homeId": "68e1918a5905d8b7b30e71cd",
-  "serialNumber": "SN-INODORO-1759613665524-7164",
-  "category": "agua",
-  "subType": "inodoro",
-  "location": "baño_principal",
+  "homeId": "691507a2b7ab0e3a275ff1fe",
+  "serialNumber": "SN-LAVAMANOS-275ff1fe-0022",
+  "category": "flow",
+  "subType": "LAVAMANOS",
+  "location": "Baño Principal",
+  "installedAt": {
+    "$date": "2025-09-13T00:00:00.000Z"
+  },
   "status": "active",
   "tags": [
     "litros"
   ],
-  "installedAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
+  "lastMeasurementAt": {
+    "$date": "2025-12-11T00:16:20.000Z"
   },
+  "currentFlowRate": 6.3,
+  "lastLiters": 4.83,
+  "todayTotalLiters": 1054.2200000000003,
+  "flowStatus": "flowing",
   "createdAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
+    "$date": "2025-11-12T22:18:10.875Z"
   },
   "updatedAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
-  },
-  "__v": 0
+    "$date": "2025-11-12T22:18:17.885Z"
+  }
 },
 {
   "_id": {
-    "$oid": "68e192f05905d8b7b30e73c5"
+    "$oid": "691507a2b7ab0e3a275ff21b"
   },
-  "homeId": "68e1918a5905d8b7b30e71cd",
-  "serialNumber": "SN-DUCHA-1759613680014-5175",
-  "category": "agua",
-  "subType": "ducha",
-  "location": "baño_secundario",
+  "homeId": "691507a2b7ab0e3a275ff1fe",
+  "serialNumber": "SN-INODORO-275ff1fe-0023",
+  "category": "flow",
+  "subType": "INODORO",
+  "location": "Baño Principal",
+  "installedAt": {
+    "$date": "2025-09-13T00:00:00.000Z"
+  },
   "status": "active",
   "tags": [
     "litros"
   ],
-  "installedAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
+  "lastMeasurementAt": {
+    "$date": "2025-12-10T15:21:18.000Z"
   },
+  "currentFlowRate": 73.32,
+  "lastLiters": 6.11,
+  "todayTotalLiters": 1888.929999999999,
+  "flowStatus": "flowing",
   "createdAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
+    "$date": "2025-11-12T22:18:10.875Z"
   },
   "updatedAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
-  },
-  "__v": 0
+    "$date": "2025-11-12T22:18:17.887Z"
+  }
 },
 {
   "_id": {
-    "$oid": "68e192f85905d8b7b30e73cf"
+    "$oid": "691507a2b7ab0e3a275ff21c"
   },
-  "homeId": "68e1918a5905d8b7b30e71cd",
-  "serialNumber": "SN-LAVAMANOS-1759613688885-6754",
-  "category": "agua",
-  "subType": "lavamanos",
-  "location": "baño_secundario",
+  "homeId": "691507a2b7ab0e3a275ff1fe",
+  "serialNumber": "SN-LLAVE_COCINA-275ff1fe-0024",
+  "category": "flow",
+  "subType": "LLAVE_COCINA",
+  "location": "Cocina",
+  "installedAt": {
+    "$date": "2025-09-13T00:00:00.000Z"
+  },
   "status": "active",
   "tags": [
     "litros"
   ],
-  "installedAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
+  "lastMeasurementAt": {
+    "$date": "2025-12-10T22:51:57.000Z"
   },
+  "currentFlowRate": 5.853543307086614,
+  "lastLiters": 12.39,
+  "todayTotalLiters": 1165.9399999999998,
+  "flowStatus": "flowing",
   "createdAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
+    "$date": "2025-11-12T22:18:10.875Z"
   },
   "updatedAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
-  },
-  "__v": 0
+    "$date": "2025-11-12T22:18:17.887Z"
+  }
 },
 {
   "_id": {
-    "$oid": "68e192fd5905d8b7b30e73d9"
+    "$oid": "691507a2b7ab0e3a275ff21d"
   },
-  "homeId": "68e1918a5905d8b7b30e71cd",
-  "serialNumber": "SN-INODORO-1759613693973-7901",
-  "category": "agua",
-  "subType": "inodoro",
-  "location": "baño_secundario",
+  "homeId": "691507a2b7ab0e3a275ff1ff",
+  "serialNumber": "SN-DUCHA-275ff1ff-0025",
+  "category": "flow",
+  "subType": "DUCHA",
+  "location": "Baño Principal",
+  "installedAt": {
+    "$date": "2025-09-13T00:00:00.000Z"
+  },
   "status": "active",
   "tags": [
     "litros"
   ],
-  "installedAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
+  "lastMeasurementAt": {
+    "$date": "2025-12-10T09:57:20.000Z"
   },
+  "currentFlowRate": 7.119137466307278,
+  "lastLiters": 44.02,
+  "todayTotalLiters": 11080.709999999997,
+  "flowStatus": "flowing",
   "createdAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
+    "$date": "2025-11-12T22:18:10.875Z"
   },
   "updatedAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
-  },
-  "__v": 0
+    "$date": "2025-11-12T22:18:17.888Z"
+  }
 },
 {
   "_id": {
-    "$oid": "68e193035905d8b7b30e73e3"
+    "$oid": "691507a2b7ab0e3a275ff21e"
   },
-  "homeId": "68e1918a5905d8b7b30e71cd",
-  "serialNumber": "SN-LAVAPLATOS-1759613699746-2576",
-  "category": "agua",
-  "subType": "lavaplatos",
-  "location": "cocina",
+  "homeId": "691507a2b7ab0e3a275ff1ff",
+  "serialNumber": "SN-LAVAMANOS-275ff1ff-0026",
+  "category": "flow",
+  "subType": "LAVAMANOS",
+  "location": "Baño Principal",
+  "installedAt": {
+    "$date": "2025-09-13T00:00:00.000Z"
+  },
   "status": "active",
   "tags": [
     "litros"
   ],
-  "installedAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
+  "lastMeasurementAt": {
+    "$date": "2025-12-10T23:52:30.000Z"
   },
+  "currentFlowRate": 6.861818181818181,
+  "lastLiters": 6.29,
+  "todayTotalLiters": 3171.050000000001,
+  "flowStatus": "flowing",
   "createdAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
+    "$date": "2025-11-12T22:18:10.875Z"
   },
   "updatedAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
-  },
-  "__v": 0
+    "$date": "2025-11-12T22:18:17.892Z"
+  }
 },
 {
   "_id": {
-    "$oid": "68e1930a5905d8b7b30e73ed"
+    "$oid": "691507a2b7ab0e3a275ff21f"
   },
-  "homeId": "68e1918a5905d8b7b30e71cd",
-  "serialNumber": "SN-LAVADORA-1759613706517-634",
-  "category": "agua",
-  "subType": "lavadora",
-  "location": "loggia",
+  "homeId": "691507a2b7ab0e3a275ff1ff",
+  "serialNumber": "SN-INODORO-275ff1ff-0027",
+  "category": "flow",
+  "subType": "INODORO",
+  "location": "Baño Principal",
+  "installedAt": {
+    "$date": "2025-09-13T00:00:00.000Z"
+  },
   "status": "active",
   "tags": [
     "litros"
   ],
-  "installedAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
+  "lastMeasurementAt": {
+    "$date": "2025-12-10T15:20:22.000Z"
   },
+  "currentFlowRate": 70.08,
+  "lastLiters": 5.84,
+  "todayTotalLiters": 5728.280000000006,
+  "flowStatus": "flowing",
   "createdAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
+    "$date": "2025-11-12T22:18:10.876Z"
   },
   "updatedAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
-  },
-  "__v": 0
+    "$date": "2025-11-12T22:18:17.896Z"
+  }
 },
 {
   "_id": {
-    "$oid": "68e193115905d8b7b30e73f7"
+    "$oid": "691507a2b7ab0e3a275ff220"
   },
-  "homeId": "68e1918a5905d8b7b30e71cd",
-  "serialNumber": "SN-LLAVE_PATIO-1759613713592-9438",
-  "category": "agua",
-  "subType": "llave_patio",
-  "location": "patio",
+  "homeId": "691507a2b7ab0e3a275ff1ff",
+  "serialNumber": "SN-DUCHA-275ff1ff-0028",
+  "category": "flow",
+  "subType": "DUCHA",
+  "location": "Baño Secundario",
+  "installedAt": {
+    "$date": "2025-09-13T00:00:00.000Z"
+  },
   "status": "active",
   "tags": [
     "litros"
   ],
-  "installedAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
+  "lastMeasurementAt": {
+    "$date": "2025-12-10T11:15:50.000Z"
   },
+  "currentFlowRate": 8.336842105263157,
+  "lastLiters": 63.36,
+  "todayTotalLiters": 1747.4200000000003,
+  "flowStatus": "flowing",
   "createdAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
+    "$date": "2025-11-12T22:18:10.876Z"
   },
   "updatedAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
-  },
-  "__v": 0
+    "$date": "2025-11-12T22:18:17.896Z"
+  }
 },
 {
   "_id": {
-    "$oid": "68e1931f5905d8b7b30e7401"
+    "$oid": "691507a2b7ab0e3a275ff221"
   },
-  "homeId": "68e1918a5905d8b7b30e71cd",
-  "serialNumber": "SN-LLAVE_JARDIN-1759613727489-7992",
-  "category": "agua",
-  "subType": "llave_jardin",
-  "location": "jardin",
+  "homeId": "691507a2b7ab0e3a275ff1ff",
+  "serialNumber": "SN-LAVAMANOS-275ff1ff-0029",
+  "category": "flow",
+  "subType": "LAVAMANOS",
+  "location": "Baño Secundario",
+  "installedAt": {
+    "$date": "2025-09-13T00:00:00.000Z"
+  },
   "status": "active",
   "tags": [
     "litros"
   ],
-  "installedAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
+  "lastMeasurementAt": {
+    "$date": "2025-12-10T16:40:10.000Z"
   },
+  "currentFlowRate": 7.050000000000001,
+  "lastLiters": 4.7,
+  "todayTotalLiters": 927.7899999999998,
+  "flowStatus": "flowing",
   "createdAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
+    "$date": "2025-11-12T22:18:10.876Z"
   },
   "updatedAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
-  },
-  "__v": 0
+    "$date": "2025-11-12T22:18:17.897Z"
+  }
 },
 {
   "_id": {
-    "$oid": "68e1932b5905d8b7b30e740b"
+    "$oid": "691507a2b7ab0e3a275ff222"
   },
-  "homeId": "68e1919a5905d8b7b30e71dd",
-  "serialNumber": "SN-DUCHA-1759613739327-2909",
-  "category": "agua",
-  "subType": "ducha",
-  "location": "baño_principal",
+  "homeId": "691507a2b7ab0e3a275ff1ff",
+  "serialNumber": "SN-INODORO-275ff1ff-0030",
+  "category": "flow",
+  "subType": "INODORO",
+  "location": "Baño Secundario",
+  "installedAt": {
+    "$date": "2025-09-13T00:00:00.000Z"
+  },
   "status": "active",
   "tags": [
     "litros"
   ],
-  "installedAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
+  "lastMeasurementAt": {
+    "$date": "2025-12-11T01:16:34.000Z"
   },
+  "currentFlowRate": 75.36,
+  "lastLiters": 6.28,
+  "todayTotalLiters": 1327.6700000000005,
+  "flowStatus": "flowing",
   "createdAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
+    "$date": "2025-11-12T22:18:10.876Z"
   },
   "updatedAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
-  },
-  "__v": 0
+    "$date": "2025-11-12T22:18:17.898Z"
+  }
 },
 {
   "_id": {
-    "$oid": "68e193315905d8b7b30e7415"
+    "$oid": "691507a2b7ab0e3a275ff223"
   },
-  "homeId": "68e1919a5905d8b7b30e71dd",
-  "serialNumber": "SN-INODORO-1759613745994-1332",
-  "category": "agua",
-  "subType": "inodoro",
-  "location": "baño_principal",
+  "homeId": "691507a2b7ab0e3a275ff1ff",
+  "serialNumber": "SN-LLAVE_COCINA-275ff1ff-0031",
+  "category": "flow",
+  "subType": "LLAVE_COCINA",
+  "location": "Cocina",
+  "installedAt": {
+    "$date": "2025-09-13T00:00:00.000Z"
+  },
   "status": "active",
   "tags": [
     "litros"
   ],
-  "installedAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
+  "lastMeasurementAt": {
+    "$date": "2025-12-10T16:47:47.000Z"
   },
+  "currentFlowRate": 5.23820224719101,
+  "lastLiters": 15.54,
+  "todayTotalLiters": 1197.7299999999998,
+  "flowStatus": "flowing",
   "createdAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
+    "$date": "2025-11-12T22:18:10.876Z"
   },
   "updatedAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
-  },
-  "__v": 0
+    "$date": "2025-11-12T22:18:17.899Z"
+  }
 },
 {
   "_id": {
-    "$oid": "68e193385905d8b7b30e741f"
+    "$oid": "691507a2b7ab0e3a275ff224"
   },
-  "homeId": "68e1919a5905d8b7b30e71dd",
-  "serialNumber": "SN-LAVAPLATOS-1759613752826-7937",
-  "category": "agua",
-  "subType": "lavaplatos",
-  "location": "cocina",
+  "homeId": "691507a2b7ab0e3a275ff1ff",
+  "serialNumber": "SN-LAVADORA-275ff1ff-0032",
+  "category": "flow",
+  "subType": "LAVADORA",
+  "location": "Loggia",
+  "installedAt": {
+    "$date": "2025-09-13T00:00:00.000Z"
+  },
   "status": "active",
   "tags": [
     "litros"
   ],
-  "installedAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
+  "lastMeasurementAt": {
+    "$date": "2025-12-08T13:59:57.000Z"
   },
+  "currentFlowRate": 1.4463629096722623,
+  "lastLiters": 90.47,
+  "todayTotalLiters": 755.24,
+  "flowStatus": "flowing",
   "createdAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
+    "$date": "2025-11-12T22:18:10.876Z"
   },
   "updatedAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
-  },
-  "__v": 0
+    "$date": "2025-11-12T22:18:17.767Z"
+  }
 },
 {
   "_id": {
-    "$oid": "68e1936d5905d8b7b30e7469"
+    "$oid": "691507a2b7ab0e3a275ff225"
   },
-  "homeId": "68e191b95905d8b7b30e71ed",
-  "serialNumber": "SN-DUCHA-1759613805654-9591",
-  "category": "agua",
-  "subType": "ducha",
-  "location": "baño_principal",
+  "homeId": "691507a2b7ab0e3a275ff1ff",
+  "serialNumber": "SN-LLAVE_PATIO-275ff1ff-0033",
+  "category": "flow",
+  "subType": "LLAVE_PATIO",
+  "location": "Patio",
+  "installedAt": {
+    "$date": "2025-09-13T00:00:00.000Z"
+  },
   "status": "active",
   "tags": [
     "litros"
   ],
-  "installedAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
-  },
+  "lastMeasurementAt": null,
+  "currentFlowRate": 0,
+  "lastLiters": 0,
+  "todayTotalLiters": 0,
+  "flowStatus": "idle",
   "createdAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
+    "$date": "2025-11-12T22:18:10.877Z"
   },
   "updatedAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
-  },
-  "__v": 0
+    "$date": "2025-11-12T22:18:10.877Z"
+  }
 },
 {
   "_id": {
-    "$oid": "68e193725905d8b7b30e7473"
+    "$oid": "691507a2b7ab0e3a275ff226"
   },
-  "homeId": "68e191b95905d8b7b30e71ed",
-  "serialNumber": "SN-LAVAMANOS-1759613810060-5835",
-  "category": "agua",
-  "subType": "lavamanos",
-  "location": "baño_principal",
-  "status": "active",
+  "homeId": "691507a2b7ab0e3a275ff1ff",
+  "serialNumber": "SN-LLAVE_JARDIN-275ff1ff-0034",
+  "category": "flow",
+  "subType": "LLAVE_JARDIN",
+  "location": "Jardín",
+  "installedAt": {
+    "$date": "2025-09-13T00:00:00.000Z"
+  },
+  "status": "inactive",
   "tags": [
     "litros"
   ],
-  "installedAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
-  },
+  "lastMeasurementAt": null,
+  "currentFlowRate": 0,
+  "lastLiters": 0,
+  "todayTotalLiters": 0,
+  "flowStatus": "idle",
   "createdAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
+    "$date": "2025-11-12T22:18:10.877Z"
   },
   "updatedAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
-  },
-  "__v": 0
+    "$date": "2025-11-12T22:18:15.973Z"
+  }
 },
 {
   "_id": {
-    "$oid": "68e193775905d8b7b30e747d"
+    "$oid": "691507a2b7ab0e3a275ff227"
   },
-  "homeId": "68e191b95905d8b7b30e71ed",
-  "serialNumber": "SN-INODORO-1759613815720-583",
-  "category": "agua",
-  "subType": "inodoro",
-  "location": "baño_principal",
+  "homeId": "691507a2b7ab0e3a275ff200",
+  "serialNumber": "SN-DUCHA-275ff200-0035",
+  "category": "flow",
+  "subType": "DUCHA",
+  "location": "Baño Principal",
+  "installedAt": {
+    "$date": "2025-09-13T00:00:00.000Z"
+  },
   "status": "active",
   "tags": [
     "litros"
   ],
-  "installedAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
+  "lastMeasurementAt": {
+    "$date": "2025-12-11T01:53:15.000Z"
   },
+  "currentFlowRate": 8.190977443609022,
+  "lastLiters": 54.47,
+  "todayTotalLiters": 7476.07,
+  "flowStatus": "flowing",
   "createdAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
+    "$date": "2025-11-12T22:18:10.877Z"
   },
   "updatedAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
-  },
-  "__v": 0
+    "$date": "2025-11-12T22:18:17.899Z"
+  }
 },
 {
   "_id": {
-    "$oid": "68e1937e5905d8b7b30e7487"
+    "$oid": "691507a2b7ab0e3a275ff228"
   },
-  "homeId": "68e191b95905d8b7b30e71ed",
-  "serialNumber": "SN-LAVAPLATOS-1759613822720-9753",
-  "category": "agua",
-  "subType": "lavaplatos",
-  "location": "cocina",
+  "homeId": "691507a2b7ab0e3a275ff200",
+  "serialNumber": "SN-LAVAMANOS-275ff200-0036",
+  "category": "flow",
+  "subType": "LAVAMANOS",
+  "location": "Baño Principal",
+  "installedAt": {
+    "$date": "2025-09-13T00:00:00.000Z"
+  },
   "status": "active",
   "tags": [
     "litros"
   ],
-  "installedAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
+  "lastMeasurementAt": {
+    "$date": "2025-12-11T01:48:38.000Z"
   },
+  "currentFlowRate": 6.645,
+  "lastLiters": 4.43,
+  "todayTotalLiters": 2100.71,
+  "flowStatus": "flowing",
   "createdAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
+    "$date": "2025-11-12T22:18:10.878Z"
   },
   "updatedAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
-  },
-  "__v": 0
+    "$date": "2025-11-12T22:18:17.902Z"
+  }
 },
 {
   "_id": {
-    "$oid": "68e193865905d8b7b30e7491"
+    "$oid": "691507a2b7ab0e3a275ff229"
   },
-  "homeId": "68e191b95905d8b7b30e71ed",
-  "serialNumber": "SN-LAVADORA-1759613830916-9853",
-  "category": "agua",
-  "subType": "lavadora",
-  "location": "loggia",
+  "homeId": "691507a2b7ab0e3a275ff200",
+  "serialNumber": "SN-INODORO-275ff200-0037",
+  "category": "flow",
+  "subType": "INODORO",
+  "location": "Baño Principal",
+  "installedAt": {
+    "$date": "2025-09-13T00:00:00.000Z"
+  },
   "status": "active",
   "tags": [
     "litros"
   ],
-  "installedAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
+  "lastMeasurementAt": {
+    "$date": "2025-12-10T10:26:02.000Z"
   },
+  "currentFlowRate": 70.92,
+  "lastLiters": 5.91,
+  "todayTotalLiters": 3787.3799999999997,
+  "flowStatus": "flowing",
   "createdAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
+    "$date": "2025-11-12T22:18:10.878Z"
   },
   "updatedAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
-  },
-  "__v": 0
+    "$date": "2025-11-12T22:18:17.905Z"
+  }
 },
 {
   "_id": {
-    "$oid": "68e193995905d8b7b30e749b"
+    "$oid": "691507a2b7ab0e3a275ff22a"
   },
-  "homeId": "68e191c85905d8b7b30e71fd",
-  "serialNumber": "SN-DUCHA-1759613849260-3503",
-  "category": "agua",
-  "subType": "ducha",
-  "location": "baño_principal",
+  "homeId": "691507a2b7ab0e3a275ff200",
+  "serialNumber": "SN-LLAVE_COCINA-275ff200-0038",
+  "category": "flow",
+  "subType": "LLAVE_COCINA",
+  "location": "Cocina",
+  "installedAt": {
+    "$date": "2025-09-13T00:00:00.000Z"
+  },
   "status": "active",
   "tags": [
     "litros"
   ],
-  "installedAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
+  "lastMeasurementAt": {
+    "$date": "2025-12-10T22:49:43.000Z"
   },
+  "currentFlowRate": 5.386861313868613,
+  "lastLiters": 12.3,
+  "todayTotalLiters": 1162.5499999999997,
+  "flowStatus": "flowing",
   "createdAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
+    "$date": "2025-11-12T22:18:10.879Z"
   },
   "updatedAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
-  },
-  "__v": 0
+    "$date": "2025-11-12T22:18:17.905Z"
+  }
 },
 {
   "_id": {
-    "$oid": "68e1939d5905d8b7b30e74a5"
+    "$oid": "691507a2b7ab0e3a275ff22b"
   },
-  "homeId": "68e191c85905d8b7b30e71fd",
-  "serialNumber": "SN-LAVAMANOS-1759613853828-5294",
-  "category": "agua",
-  "subType": "lavamanos",
-  "location": "baño_principal",
+  "homeId": "691507a2b7ab0e3a275ff200",
+  "serialNumber": "SN-LAVADORA-275ff200-0039",
+  "category": "flow",
+  "subType": "LAVADORA",
+  "location": "Loggia",
+  "installedAt": {
+    "$date": "2025-09-13T00:00:00.000Z"
+  },
   "status": "active",
   "tags": [
     "litros"
   ],
-  "installedAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
+  "lastMeasurementAt": {
+    "$date": "2025-12-08T14:04:19.000Z"
   },
+  "currentFlowRate": 1.333988533988534,
+  "lastLiters": 81.44,
+  "todayTotalLiters": 761.8800000000001,
+  "flowStatus": "flowing",
   "createdAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
+    "$date": "2025-11-12T22:18:10.879Z"
   },
   "updatedAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
-  },
-  "__v": 0
+    "$date": "2025-11-12T22:18:17.773Z"
+  }
 },
 {
   "_id": {
-    "$oid": "68e193a95905d8b7b30e74af"
+    "$oid": "691507a2b7ab0e3a275ff22c"
   },
-  "homeId": "68e191c85905d8b7b30e71fd",
-  "serialNumber": "SN-INODORO-1759613865802-2863",
-  "category": "agua",
-  "subType": "inodoro",
-  "location": "baño_principal",
-  "status": "active",
+  "homeId": "691507a2b7ab0e3a275ff200",
+  "serialNumber": "SN-LLAVE_PATIO-275ff200-0040",
+  "category": "flow",
+  "subType": "LLAVE_PATIO",
+  "location": "Patio",
+  "installedAt": {
+    "$date": "2025-09-13T00:00:00.000Z"
+  },
+  "status": "inactive",
   "tags": [
     "litros"
   ],
-  "installedAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
-  },
+  "lastMeasurementAt": null,
+  "currentFlowRate": 0,
+  "lastLiters": 0,
+  "todayTotalLiters": 0,
+  "flowStatus": "idle",
   "createdAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
+    "$date": "2025-11-12T22:18:10.879Z"
   },
   "updatedAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
-  },
-  "__v": 0
+    "$date": "2025-11-12T22:18:15.918Z"
+  }
 },
 {
   "_id": {
-    "$oid": "68e193b55905d8b7b30e74b9"
+    "$oid": "691507a2b7ab0e3a275ff22d"
   },
-  "homeId": "68e191c85905d8b7b30e71fd",
-  "serialNumber": "SN-LAVAPLATOS-1759613877614-8598",
-  "category": "agua",
-  "subType": "lavaplatos",
-  "location": "cocina",
+  "homeId": "691507a2b7ab0e3a275ff201",
+  "serialNumber": "SN-DUCHA-275ff201-0041",
+  "category": "flow",
+  "subType": "DUCHA",
+  "location": "Baño Principal",
+  "installedAt": {
+    "$date": "2025-09-13T00:00:00.000Z"
+  },
   "status": "active",
   "tags": [
     "litros"
   ],
-  "installedAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
+  "lastMeasurementAt": {
+    "$date": "2025-12-10T23:58:31.000Z"
   },
+  "currentFlowRate": 7.214831460674157,
+  "lastLiters": 53.51,
+  "todayTotalLiters": 5321.749999999999,
+  "flowStatus": "flowing",
   "createdAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
+    "$date": "2025-11-12T22:18:10.879Z"
   },
   "updatedAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
-  },
-  "__v": 0
+    "$date": "2025-11-12T22:18:17.906Z"
+  }
 },
 {
   "_id": {
-    "$oid": "68e193ba5905d8b7b30e74c3"
+    "$oid": "691507a2b7ab0e3a275ff22e"
   },
-  "homeId": "68e191c85905d8b7b30e71fd",
-  "serialNumber": "SN-LAVADORA-1759613882625-6456",
-  "category": "agua",
-  "subType": "lavadora",
-  "location": "loggia",
+  "homeId": "691507a2b7ab0e3a275ff201",
+  "serialNumber": "SN-LAVAMANOS-275ff201-0042",
+  "category": "flow",
+  "subType": "LAVAMANOS",
+  "location": "Baño Principal",
+  "installedAt": {
+    "$date": "2025-09-13T00:00:00.000Z"
+  },
   "status": "active",
   "tags": [
     "litros"
   ],
-  "installedAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
+  "lastMeasurementAt": {
+    "$date": "2025-12-10T10:58:42.000Z"
   },
+  "currentFlowRate": 7.026315789473684,
+  "lastLiters": 4.45,
+  "todayTotalLiters": 1568.4200000000014,
+  "flowStatus": "flowing",
   "createdAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
+    "$date": "2025-11-12T22:18:10.879Z"
   },
   "updatedAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
-  },
-  "__v": 0
+    "$date": "2025-11-12T22:18:17.907Z"
+  }
 },
 {
   "_id": {
-    "$oid": "68e193c35905d8b7b30e74cd"
+    "$oid": "691507a2b7ab0e3a275ff22f"
   },
-  "homeId": "68e191c85905d8b7b30e71fd",
-  "serialNumber": "SN-LAVAMANOS-1759613891215-195",
-  "category": "agua",
-  "subType": "lavamanos",
-  "location": "baño_secundario",
+  "homeId": "691507a2b7ab0e3a275ff201",
+  "serialNumber": "SN-INODORO-275ff201-0043",
+  "category": "flow",
+  "subType": "INODORO",
+  "location": "Baño Principal",
+  "installedAt": {
+    "$date": "2025-09-13T00:00:00.000Z"
+  },
   "status": "active",
   "tags": [
     "litros"
   ],
-  "installedAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
+  "lastMeasurementAt": {
+    "$date": "2025-12-11T00:03:58.000Z"
   },
+  "currentFlowRate": 68.4,
+  "lastLiters": 5.7,
+  "todayTotalLiters": 2807.259999999998,
+  "flowStatus": "flowing",
   "createdAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
+    "$date": "2025-11-12T22:18:10.880Z"
   },
   "updatedAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
-  },
-  "__v": 0
+    "$date": "2025-11-12T22:18:17.909Z"
+  }
 },
 {
   "_id": {
-    "$oid": "68e193c85905d8b7b30e74d7"
+    "$oid": "691507a2b7ab0e3a275ff230"
   },
-  "homeId": "68e191c85905d8b7b30e71fd",
-  "serialNumber": "SN-INODORO-1759613896251-982",
-  "category": "agua",
-  "subType": "inodoro",
-  "location": "baño_secundario",
+  "homeId": "691507a2b7ab0e3a275ff201",
+  "serialNumber": "SN-LLAVE_COCINA-275ff201-0044",
+  "category": "flow",
+  "subType": "LLAVE_COCINA",
+  "location": "Cocina",
+  "installedAt": {
+    "$date": "2025-09-13T00:00:00.000Z"
+  },
   "status": "active",
   "tags": [
     "litros"
   ],
-  "installedAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
+  "lastMeasurementAt": {
+    "$date": "2025-12-10T12:02:17.000Z"
   },
+  "currentFlowRate": 4.976271186440678,
+  "lastLiters": 14.68,
+  "todayTotalLiters": 1213.6599999999999,
+  "flowStatus": "flowing",
   "createdAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
+    "$date": "2025-11-12T22:18:10.880Z"
   },
   "updatedAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
-  },
-  "__v": 0
+    "$date": "2025-11-12T22:18:17.910Z"
+  }
 },
 {
   "_id": {
-    "$oid": "68e193d45905d8b7b30e74e1"
+    "$oid": "691507a2b7ab0e3a275ff231"
   },
-  "homeId": "68e191dd5905d8b7b30e720d",
-  "serialNumber": "SN-DUCHA-1759613908758-7786",
-  "category": "agua",
-  "subType": "ducha",
-  "location": "baño_principal",
+  "homeId": "691507a2b7ab0e3a275ff201",
+  "serialNumber": "SN-LAVADORA-275ff201-0045",
+  "category": "flow",
+  "subType": "LAVADORA",
+  "location": "Loggia",
+  "installedAt": {
+    "$date": "2025-09-13T00:00:00.000Z"
+  },
   "status": "active",
   "tags": [
     "litros"
   ],
-  "installedAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
+  "lastMeasurementAt": {
+    "$date": "2025-12-08T14:00:19.000Z"
   },
+  "currentFlowRate": 1.5955542021924483,
+  "lastLiters": 87.33,
+  "todayTotalLiters": 744.4600000000002,
+  "flowStatus": "flowing",
   "createdAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
+    "$date": "2025-11-12T22:18:10.880Z"
   },
   "updatedAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
-  },
-  "__v": 0
+    "$date": "2025-11-12T22:18:17.778Z"
+  }
 },
 {
   "_id": {
-    "$oid": "68e193da5905d8b7b30e74eb"
+    "$oid": "691507a2b7ab0e3a275ff232"
   },
-  "homeId": "68e191dd5905d8b7b30e720d",
-  "serialNumber": "SN-LAVAMANOS-1759613914587-8973",
-  "category": "agua",
-  "subType": "lavamanos",
-  "location": "baño_principal",
+  "homeId": "691507a2b7ab0e3a275ff202",
+  "serialNumber": "SN-DUCHA-275ff202-0046",
+  "category": "flow",
+  "subType": "DUCHA",
+  "location": "Baño Principal",
+  "installedAt": {
+    "$date": "2025-09-13T00:00:00.000Z"
+  },
   "status": "active",
   "tags": [
     "litros"
   ],
-  "installedAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
+  "lastMeasurementAt": {
+    "$date": "2025-12-11T00:30:58.000Z"
   },
+  "currentFlowRate": 8.912466843501326,
+  "lastLiters": 56,
+  "todayTotalLiters": 1739.27,
+  "flowStatus": "flowing",
   "createdAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
+    "$date": "2025-11-12T22:18:10.880Z"
   },
   "updatedAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
-  },
-  "__v": 0
+    "$date": "2025-11-12T22:18:17.910Z"
+  }
 },
 {
   "_id": {
-    "$oid": "68e193df5905d8b7b30e74f5"
+    "$oid": "691507a2b7ab0e3a275ff233"
   },
-  "homeId": "68e191dd5905d8b7b30e720d",
-  "serialNumber": "SN-INODORO-1759613919573-2699",
-  "category": "agua",
-  "subType": "inodoro",
-  "location": "baño_principal",
+  "homeId": "691507a2b7ab0e3a275ff202",
+  "serialNumber": "SN-LAVAMANOS-275ff202-0047",
+  "category": "flow",
+  "subType": "LAVAMANOS",
+  "location": "Baño Principal",
+  "installedAt": {
+    "$date": "2025-09-13T00:00:00.000Z"
+  },
   "status": "active",
   "tags": [
     "litros"
   ],
-  "installedAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
+  "lastMeasurementAt": {
+    "$date": "2025-12-10T09:57:50.000Z"
   },
+  "currentFlowRate": 5.105882352941176,
+  "lastLiters": 4.34,
+  "todayTotalLiters": 543.4500000000002,
+  "flowStatus": "flowing",
   "createdAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
+    "$date": "2025-11-12T22:18:10.880Z"
   },
   "updatedAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
-  },
-  "__v": 0
+    "$date": "2025-11-12T22:18:17.911Z"
+  }
 },
 {
   "_id": {
-    "$oid": "68e193e45905d8b7b30e74ff"
+    "$oid": "691507a2b7ab0e3a275ff234"
   },
-  "homeId": "68e191dd5905d8b7b30e720d",
-  "serialNumber": "SN-LAVAPLATOS-1759613924309-2038",
-  "category": "agua",
-  "subType": "lavaplatos",
-  "location": "cocina",
+  "homeId": "691507a2b7ab0e3a275ff202",
+  "serialNumber": "SN-INODORO-275ff202-0048",
+  "category": "flow",
+  "subType": "INODORO",
+  "location": "Baño Principal",
+  "installedAt": {
+    "$date": "2025-09-13T00:00:00.000Z"
+  },
   "status": "active",
   "tags": [
     "litros"
   ],
-  "installedAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
+  "lastMeasurementAt": {
+    "$date": "2025-12-10T15:18:34.000Z"
   },
+  "currentFlowRate": 70.8,
+  "lastLiters": 4.72,
+  "todayTotalLiters": 932.6500000000004,
+  "flowStatus": "flowing",
   "createdAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
+    "$date": "2025-11-12T22:18:10.881Z"
   },
   "updatedAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
-  },
-  "__v": 0
+    "$date": "2025-11-12T22:18:17.911Z"
+  }
 },
 {
   "_id": {
-    "$oid": "68e193f55905d8b7b30e7509"
+    "$oid": "691507a2b7ab0e3a275ff235"
   },
-  "homeId": "68e191f65905d8b7b30e721d",
-  "serialNumber": "SN-DUCHA-1759613941286-9114",
-  "category": "agua",
-  "subType": "ducha",
-  "location": "baño_principal",
+  "homeId": "691507a2b7ab0e3a275ff202",
+  "serialNumber": "SN-LLAVE_COCINA-275ff202-0049",
+  "category": "flow",
+  "subType": "LLAVE_COCINA",
+  "location": "Cocina",
+  "installedAt": {
+    "$date": "2025-09-13T00:00:00.000Z"
+  },
   "status": "active",
   "tags": [
     "litros"
   ],
-  "installedAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
+  "lastMeasurementAt": {
+    "$date": "2025-12-10T10:57:13.000Z"
   },
+  "currentFlowRate": 5.522033898305084,
+  "lastLiters": 21.72,
+  "todayTotalLiters": 1184.5299999999997,
+  "flowStatus": "flowing",
   "createdAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
+    "$date": "2025-11-12T22:18:10.881Z"
   },
   "updatedAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
-  },
-  "__v": 0
+    "$date": "2025-11-12T22:18:17.912Z"
+  }
 },
 {
   "_id": {
-    "$oid": "68e193fa5905d8b7b30e7513"
+    "$oid": "691507a2b7ab0e3a275ff236"
   },
-  "homeId": "68e191f65905d8b7b30e721d",
-  "serialNumber": "SN-LAVAMANOS-1759613946706-4132",
-  "category": "agua",
-  "subType": "lavamanos",
-  "location": "baño_principal",
+  "homeId": "691507a2b7ab0e3a275ff203",
+  "serialNumber": "SN-DUCHA-275ff203-0050",
+  "category": "flow",
+  "subType": "DUCHA",
+  "location": "Baño Principal",
+  "installedAt": {
+    "$date": "2025-09-13T00:00:00.000Z"
+  },
   "status": "active",
   "tags": [
     "litros"
   ],
-  "installedAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
+  "lastMeasurementAt": {
+    "$date": "2025-12-10T10:36:11.000Z"
   },
+  "currentFlowRate": 7.167609254498714,
+  "lastLiters": 46.47,
+  "todayTotalLiters": 7691.610000000001,
+  "flowStatus": "flowing",
   "createdAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
+    "$date": "2025-11-12T22:18:10.881Z"
   },
   "updatedAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
-  },
-  "__v": 0
+    "$date": "2025-11-12T22:18:17.913Z"
+  }
 },
 {
   "_id": {
-    "$oid": "68e193ff5905d8b7b30e751d"
+    "$oid": "691507a2b7ab0e3a275ff237"
   },
-  "homeId": "68e191f65905d8b7b30e721d",
-  "serialNumber": "SN-INODORO-1759613951803-3246",
-  "category": "agua",
-  "subType": "inodoro",
-  "location": "baño_principal",
+  "homeId": "691507a2b7ab0e3a275ff203",
+  "serialNumber": "SN-LAVAMANOS-275ff203-0051",
+  "category": "flow",
+  "subType": "LAVAMANOS",
+  "location": "Baño Principal",
+  "installedAt": {
+    "$date": "2025-09-13T00:00:00.000Z"
+  },
   "status": "active",
   "tags": [
     "litros"
   ],
-  "installedAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
+  "lastMeasurementAt": {
+    "$date": "2025-12-11T00:23:47.000Z"
   },
+  "currentFlowRate": 5.633333333333333,
+  "lastLiters": 3.38,
+  "todayTotalLiters": 2068.229999999998,
+  "flowStatus": "flowing",
   "createdAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
+    "$date": "2025-11-12T22:18:10.882Z"
   },
   "updatedAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
-  },
-  "__v": 0
+    "$date": "2025-11-12T22:18:17.915Z"
+  }
 },
 {
   "_id": {
-    "$oid": "68e194045905d8b7b30e7527"
+    "$oid": "691507a2b7ab0e3a275ff238"
   },
-  "homeId": "68e191f65905d8b7b30e721d",
-  "serialNumber": "SN-LAVAPLATOS-1759613956904-1321",
-  "category": "agua",
-  "subType": "lavaplatos",
-  "location": "cocina",
+  "homeId": "691507a2b7ab0e3a275ff203",
+  "serialNumber": "SN-INODORO-275ff203-0052",
+  "category": "flow",
+  "subType": "INODORO",
+  "location": "Baño Principal",
+  "installedAt": {
+    "$date": "2025-09-13T00:00:00.000Z"
+  },
   "status": "active",
   "tags": [
     "litros"
   ],
-  "installedAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
+  "lastMeasurementAt": {
+    "$date": "2025-12-10T15:16:43.000Z"
   },
+  "currentFlowRate": 64.92,
+  "lastLiters": 5.41,
+  "todayTotalLiters": 3816.630000000001,
+  "flowStatus": "flowing",
   "createdAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
+    "$date": "2025-11-12T22:18:10.882Z"
   },
   "updatedAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
-  },
-  "__v": 0
+    "$date": "2025-11-12T22:18:17.917Z"
+  }
 },
 {
   "_id": {
-    "$oid": "68e194095905d8b7b30e7531"
+    "$oid": "691507a2b7ab0e3a275ff239"
   },
-  "homeId": "68e191f65905d8b7b30e721d",
-  "serialNumber": "SN-LAVADORA-1759613961679-2643",
-  "category": "agua",
-  "subType": "lavadora",
-  "location": "loggia",
+  "homeId": "691507a2b7ab0e3a275ff203",
+  "serialNumber": "SN-LLAVE_COCINA-275ff203-0053",
+  "category": "flow",
+  "subType": "LLAVE_COCINA",
+  "location": "Cocina",
+  "installedAt": {
+    "$date": "2025-09-13T00:00:00.000Z"
+  },
   "status": "active",
   "tags": [
     "litros"
   ],
-  "installedAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
+  "lastMeasurementAt": {
+    "$date": "2025-12-10T22:42:24.000Z"
   },
+  "currentFlowRate": 4.209326424870466,
+  "lastLiters": 13.54,
+  "todayTotalLiters": 1156.3200000000002,
+  "flowStatus": "flowing",
   "createdAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
+    "$date": "2025-11-12T22:18:10.882Z"
   },
   "updatedAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
-  },
-  "__v": 0
+    "$date": "2025-11-12T22:18:17.917Z"
+  }
 },
 {
   "_id": {
-    "$oid": "68e1940f5905d8b7b30e753b"
+    "$oid": "691507a2b7ab0e3a275ff23a"
   },
-  "homeId": "68e191f65905d8b7b30e721d",
-  "serialNumber": "SN-LLAVE_PATIO-1759613967373-168",
-  "category": "agua",
-  "subType": "llave_patio",
-  "location": "patio",
+  "homeId": "691507a2b7ab0e3a275ff203",
+  "serialNumber": "SN-LAVADORA-275ff203-0054",
+  "category": "flow",
+  "subType": "LAVADORA",
+  "location": "Loggia",
+  "installedAt": {
+    "$date": "2025-09-13T00:00:00.000Z"
+  },
   "status": "active",
   "tags": [
     "litros"
   ],
-  "installedAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
+  "lastMeasurementAt": {
+    "$date": "2025-12-08T15:28:10.000Z"
   },
+  "currentFlowRate": 1.4663558663558665,
+  "lastLiters": 94.36,
+  "todayTotalLiters": 787.6,
+  "flowStatus": "flowing",
   "createdAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
+    "$date": "2025-11-12T22:18:10.882Z"
   },
   "updatedAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
-  },
-  "__v": 0
+    "$date": "2025-11-12T22:18:17.787Z"
+  }
 },
 {
   "_id": {
-    "$oid": "68e194135905d8b7b30e7545"
+    "$oid": "691507a2b7ab0e3a275ff23b"
   },
-  "homeId": "68e192125905d8b7b30e722d",
-  "serialNumber": "SN-DUCHA-1759613971418-3300",
-  "category": "agua",
-  "subType": "ducha",
-  "location": "baño_principal",
+  "homeId": "691507a2b7ab0e3a275ff203",
+  "serialNumber": "SN-LLAVE_JARDIN-275ff203-0055",
+  "category": "flow",
+  "subType": "LLAVE_JARDIN",
+  "location": "Jardín",
+  "installedAt": {
+    "$date": "2025-09-13T00:00:00.000Z"
+  },
   "status": "active",
   "tags": [
     "litros"
   ],
-  "installedAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
+  "lastMeasurementAt": {
+    "$date": "2025-10-27T21:34:00.000Z"
   },
+  "currentFlowRate": 12.060965794768611,
+  "lastLiters": 199.81,
+  "todayTotalLiters": 0,
+  "flowStatus": "flowing",
   "createdAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
+    "$date": "2025-11-12T22:18:10.882Z"
   },
   "updatedAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
-  },
-  "__v": 0
+    "$date": "2025-11-12T22:18:14.825Z"
+  }
 },
 {
   "_id": {
-    "$oid": "68e194185905d8b7b30e754f"
+    "$oid": "691507a2b7ab0e3a275ff23c"
   },
-  "homeId": "68e192125905d8b7b30e722d",
-  "serialNumber": "SN-LAVAMANOS-1759613976071-6834",
-  "category": "agua",
-  "subType": "lavamanos",
-  "location": "baño_principal",
+  "homeId": "691507a2b7ab0e3a275ff204",
+  "serialNumber": "SN-DUCHA-275ff204-0056",
+  "category": "flow",
+  "subType": "DUCHA",
+  "location": "Baño Principal",
+  "installedAt": {
+    "$date": "2025-09-13T00:00:00.000Z"
+  },
   "status": "active",
   "tags": [
     "litros"
   ],
-  "installedAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
+  "lastMeasurementAt": {
+    "$date": "2025-12-10T23:57:14.000Z"
   },
+  "currentFlowRate": 8.093430656934308,
+  "lastLiters": 55.44,
+  "todayTotalLiters": 9362.509999999991,
+  "flowStatus": "flowing",
   "createdAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
+    "$date": "2025-11-12T22:18:10.882Z"
   },
   "updatedAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
-  },
-  "__v": 0
+    "$date": "2025-11-12T22:18:17.918Z"
+  }
 },
 {
   "_id": {
-    "$oid": "68e1941c5905d8b7b30e7559"
+    "$oid": "691507a2b7ab0e3a275ff23d"
   },
-  "homeId": "68e192125905d8b7b30e722d",
-  "serialNumber": "SN-INODORO-1759613980099-6118",
-  "category": "agua",
-  "subType": "inodoro",
-  "location": "baño_principal",
+  "homeId": "691507a2b7ab0e3a275ff204",
+  "serialNumber": "SN-LAVAMANOS-275ff204-0057",
+  "category": "flow",
+  "subType": "LAVAMANOS",
+  "location": "Baño Principal",
+  "installedAt": {
+    "$date": "2025-09-13T00:00:00.000Z"
+  },
   "status": "active",
   "tags": [
     "litros"
   ],
-  "installedAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
+  "lastMeasurementAt": {
+    "$date": "2025-12-10T09:50:25.000Z"
   },
+  "currentFlowRate": 5.828571428571428,
+  "lastLiters": 3.4,
+  "todayTotalLiters": 2666.2400000000002,
+  "flowStatus": "flowing",
   "createdAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
+    "$date": "2025-11-12T22:18:10.882Z"
   },
   "updatedAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
-  },
-  "__v": 0
+    "$date": "2025-11-12T22:18:17.921Z"
+  }
 },
 {
   "_id": {
-    "$oid": "68e1942b5905d8b7b30e7563"
+    "$oid": "691507a2b7ab0e3a275ff23e"
   },
-  "homeId": "68e192125905d8b7b30e722d",
-  "serialNumber": "SN-LAVAPLATOS-1759613995179-654",
-  "category": "agua",
-  "subType": "lavaplatos",
-  "location": "cocina",
+  "homeId": "691507a2b7ab0e3a275ff204",
+  "serialNumber": "SN-INODORO-275ff204-0058",
+  "category": "flow",
+  "subType": "INODORO",
+  "location": "Baño Principal",
+  "installedAt": {
+    "$date": "2025-09-13T00:00:00.000Z"
+  },
   "status": "active",
   "tags": [
     "litros"
   ],
-  "installedAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
+  "lastMeasurementAt": {
+    "$date": "2025-12-10T11:08:42.000Z"
   },
+  "currentFlowRate": 64.8,
+  "lastLiters": 7.56,
+  "todayTotalLiters": 4713.629999999995,
+  "flowStatus": "flowing",
   "createdAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
+    "$date": "2025-11-12T22:18:10.882Z"
   },
   "updatedAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
-  },
-  "__v": 0
+    "$date": "2025-11-12T22:18:17.925Z"
+  }
 },
 {
   "_id": {
-    "$oid": "68e194305905d8b7b30e756d"
+    "$oid": "691507a2b7ab0e3a275ff23f"
   },
-  "homeId": "68e192125905d8b7b30e722d",
-  "serialNumber": "SN-LLAVE_PATIO-1759614000940-4468",
-  "category": "agua",
-  "subType": "llave_patio",
-  "location": "patio",
+  "homeId": "691507a2b7ab0e3a275ff204",
+  "serialNumber": "SN-DUCHA-275ff204-0059",
+  "category": "flow",
+  "subType": "DUCHA",
+  "location": "Baño Secundario",
+  "installedAt": {
+    "$date": "2025-09-13T00:00:00.000Z"
+  },
   "status": "active",
   "tags": [
     "litros"
   ],
-  "installedAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
+  "lastMeasurementAt": {
+    "$date": "2025-12-11T01:56:46.000Z"
   },
+  "currentFlowRate": 8.444919786096257,
+  "lastLiters": 52.64,
+  "todayTotalLiters": 1822.6299999999999,
+  "flowStatus": "flowing",
   "createdAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
+    "$date": "2025-11-12T22:18:10.883Z"
   },
   "updatedAt": {
-    "$date": "2025-09-14T00:00:00.000Z"
+    "$date": "2025-11-12T22:18:17.925Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a2b7ab0e3a275ff240"
   },
-  "__v": 0
+  "homeId": "691507a2b7ab0e3a275ff204",
+  "serialNumber": "SN-LAVAMANOS-275ff204-0060",
+  "category": "flow",
+  "subType": "LAVAMANOS",
+  "location": "Baño Secundario",
+  "installedAt": {
+    "$date": "2025-09-13T00:00:00.000Z"
+  },
+  "status": "active",
+  "tags": [
+    "litros"
+  ],
+  "lastMeasurementAt": {
+    "$date": "2025-12-10T10:05:54.000Z"
+  },
+  "currentFlowRate": 6.959999999999999,
+  "lastLiters": 5.22,
+  "todayTotalLiters": 799.6,
+  "flowStatus": "flowing",
+  "createdAt": {
+    "$date": "2025-11-12T22:18:10.883Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:17.926Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a2b7ab0e3a275ff241"
+  },
+  "homeId": "691507a2b7ab0e3a275ff204",
+  "serialNumber": "SN-INODORO-275ff204-0061",
+  "category": "flow",
+  "subType": "INODORO",
+  "location": "Baño Secundario",
+  "installedAt": {
+    "$date": "2025-09-13T00:00:00.000Z"
+  },
+  "status": "active",
+  "tags": [
+    "litros"
+  ],
+  "lastMeasurementAt": {
+    "$date": "2025-12-10T11:54:08.000Z"
+  },
+  "currentFlowRate": 64.6,
+  "lastLiters": 6.46,
+  "todayTotalLiters": 1112.9100000000008,
+  "flowStatus": "flowing",
+  "createdAt": {
+    "$date": "2025-11-12T22:18:10.883Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:17.927Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a2b7ab0e3a275ff242"
+  },
+  "homeId": "691507a2b7ab0e3a275ff204",
+  "serialNumber": "SN-LLAVE_COCINA-275ff204-0062",
+  "category": "flow",
+  "subType": "LLAVE_COCINA",
+  "location": "Cocina",
+  "installedAt": {
+    "$date": "2025-09-13T00:00:00.000Z"
+  },
+  "status": "active",
+  "tags": [
+    "litros"
+  ],
+  "lastMeasurementAt": {
+    "$date": "2025-12-10T16:20:21.000Z"
+  },
+  "currentFlowRate": 5.579710144927536,
+  "lastLiters": 19.25,
+  "todayTotalLiters": 1147.26,
+  "flowStatus": "flowing",
+  "createdAt": {
+    "$date": "2025-11-12T22:18:10.883Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:17.927Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a2b7ab0e3a275ff243"
+  },
+  "homeId": "691507a2b7ab0e3a275ff204",
+  "serialNumber": "SN-LAVADORA-275ff204-0063",
+  "category": "flow",
+  "subType": "LAVADORA",
+  "location": "Loggia",
+  "installedAt": {
+    "$date": "2025-09-13T00:00:00.000Z"
+  },
+  "status": "active",
+  "tags": [
+    "litros"
+  ],
+  "lastMeasurementAt": {
+    "$date": "2025-12-08T15:53:16.000Z"
+  },
+  "currentFlowRate": 1.5294904786412764,
+  "lastLiters": 99.06,
+  "todayTotalLiters": 747.0799999999999,
+  "flowStatus": "flowing",
+  "createdAt": {
+    "$date": "2025-11-12T22:18:10.883Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:17.797Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a2b7ab0e3a275ff244"
+  },
+  "homeId": "691507a2b7ab0e3a275ff204",
+  "serialNumber": "SN-LLAVE_PATIO-275ff204-0064",
+  "category": "flow",
+  "subType": "LLAVE_PATIO",
+  "location": "Patio",
+  "installedAt": {
+    "$date": "2025-09-13T00:00:00.000Z"
+  },
+  "status": "active",
+  "tags": [
+    "litros"
+  ],
+  "lastMeasurementAt": {
+    "$date": "2025-10-07T21:37:26.000Z"
+  },
+  "currentFlowRate": 10.112832929782082,
+  "lastLiters": 139.22,
+  "todayTotalLiters": 0,
+  "flowStatus": "flowing",
+  "createdAt": {
+    "$date": "2025-11-12T22:18:10.883Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:13.439Z"
+  }
 }]

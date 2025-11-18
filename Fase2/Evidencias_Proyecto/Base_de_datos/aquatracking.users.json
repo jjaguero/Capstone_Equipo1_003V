@@ -1,216 +1,231 @@
 [{
   "_id": {
-    "$oid": "68ddb480dbd7ffab2815388e"
+    "$oid": "691507a2b7ab0e3a275ff1f0"
   },
-  "rut": "12345678-9",
-  "name": "Admin Aquatracking",
-  "email": "admin@aquatracking.cl",
-  "phone": "",
+  "rut": "18765432-1",
+  "name": "Juan Aguero",
+  "email": "juan.aguero@apr.com",
+  "phone": "+56965234567",
   "password": "user123",
+  "role": "user",
+  "homeId": "691507a2b7ab0e3a275ff1fb",
+  "avatar": null,
+  "limitLitersPerDay": 599,
+  "people": 4,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:10.866Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-13T18:02:42.981Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a2b7ab0e3a275ff1f1"
+  },
+  "rut": "17654321-9",
+  "name": "Andres Silva",
+  "email": "andres.silva@apr.com",
+  "phone": "+56965123456",
+  "password": "user123",
+  "role": "user",
+  "homeId": "691507a2b7ab0e3a275ff1fc",
+  "avatar": null,
+  "limitLitersPerDay": 450,
+  "people": 3,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:10.866Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:10.868Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a2b7ab0e3a275ff1f2"
+  },
+  "rut": "19876543-2",
+  "name": "Carmen Muñoz",
+  "email": "carmen.munoz@apr.com",
+  "phone": "+56965345678",
+  "password": "user123",
+  "role": "user",
+  "homeId": "691507a2b7ab0e3a275ff1fd",
+  "avatar": null,
+  "limitLitersPerDay": 750,
+  "people": 5,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:10.866Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:10.868Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a2b7ab0e3a275ff1f3"
+  },
+  "rut": "16543210-8",
+  "name": "Roberto Vargas",
+  "email": "roberto.vargas@apr.com",
+  "phone": "+56965456789",
+  "password": "user123",
+  "role": "user",
+  "homeId": "691507a2b7ab0e3a275ff1fe",
+  "avatar": null,
+  "limitLitersPerDay": 300,
+  "people": 2,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:10.866Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:10.869Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a2b7ab0e3a275ff1f4"
+  },
+  "rut": "15432109-7",
+  "name": "Patricia Torres",
+  "email": "patricia.torres@apr.com",
+  "phone": "+56965567890",
+  "password": "user123",
+  "role": "user",
+  "homeId": "691507a2b7ab0e3a275ff1ff",
+  "avatar": null,
+  "limitLitersPerDay": 900,
+  "people": 6,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:10.866Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:10.869Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a2b7ab0e3a275ff1f5"
+  },
+  "rut": "14321098-6",
+  "name": "Luis Fernández",
+  "email": "luis.fernandez@apr.com",
+  "phone": "+56965678901",
+  "password": "user123",
+  "role": "user",
+  "homeId": "691507a2b7ab0e3a275ff200",
+  "avatar": null,
+  "limitLitersPerDay": 600,
+  "people": 4,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:10.866Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:10.869Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a2b7ab0e3a275ff1f6"
+  },
+  "rut": "13210987-5",
+  "name": "Elena Ramírez",
+  "email": "elena.ramirez@apr.com",
+  "phone": "+56965789012",
+  "password": "user123",
+  "role": "user",
+  "homeId": "691507a2b7ab0e3a275ff201",
+  "avatar": null,
+  "limitLitersPerDay": 450,
+  "people": 3,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:10.866Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:10.870Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a2b7ab0e3a275ff1f7"
+  },
+  "rut": "12109876-4",
+  "name": "Miguel Castro",
+  "email": "miguel.castro@apr.com",
+  "phone": "+56965890123",
+  "password": "user123",
+  "role": "user",
+  "homeId": "691507a2b7ab0e3a275ff202",
+  "avatar": null,
+  "limitLitersPerDay": 150,
+  "people": 1,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:10.867Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:10.870Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a2b7ab0e3a275ff1f8"
+  },
+  "rut": "11098765-3",
+  "name": "Rosa Figueroa",
+  "email": "rosa.figueroa@apr.com",
+  "phone": "+56965901234",
+  "password": "user123",
+  "role": "user",
+  "homeId": "691507a2b7ab0e3a275ff203",
+  "avatar": null,
+  "limitLitersPerDay": 600,
+  "people": 4,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:10.867Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:10.870Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a2b7ab0e3a275ff1f9"
+  },
+  "rut": "10987654-2",
+  "name": "Jorge Pinto",
+  "email": "jorge.pinto@apr.com",
+  "phone": "+56965012345",
+  "password": "user123",
+  "role": "user",
+  "homeId": "691507a2b7ab0e3a275ff204",
+  "avatar": null,
+  "limitLitersPerDay": 750,
+  "people": 5,
+  "createdAt": {
+    "$date": "2025-11-12T22:18:10.867Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-12T22:18:10.870Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691507a2b7ab0e3a275ff1fa"
+  },
+  "rut": "11111111-1",
+  "name": "Admin Sistema",
+  "email": "admin@aquatracking.com",
+  "phone": "+56965111111",
+  "password": "admin123",
   "role": "admin",
   "homeId": null,
-  "avatar": "/uploads/avatars/557514210bcc9f5f29da06f792539eee8.png",
-  "limitLitersPerDay": null,
+  "avatar": null,
+  "limitLitersPerDay": 150,
+  "people": 1,
   "createdAt": {
-    "$date": "2025-10-01T23:08:48.451Z"
+    "$date": "2025-11-12T22:18:10.867Z"
   },
   "updatedAt": {
-    "$date": "2025-10-04T20:43:36.437Z"
+    "$date": "2025-11-12T22:18:10.867Z"
   }
-},
-{
-  "_id": {
-    "$oid": "68ddb480dbd7ffab2815388f"
-  },
-  "rut": "21408175-K",
-  "name": "Juan Aguero",
-  "email": "ju.agueroc@gmail.com",
-  "phone": "+56964143903",
-  "password": "user123",
-  "role": "user",
-  "homeId": {
-    "$oid": "68ddb480dbd7ffab2815388c"
-  },
-  "avatar": "",
-  "limitLitersPerDay": 660,
-  "createdAt": {
-    "$date": "2025-10-01T23:08:48.453Z"
-  },
-  "updatedAt": {
-    "$date": "2025-10-03T02:13:28.702Z"
-  }
-},
-{
-  "_id": {
-    "$oid": "68ddb480dbd7ffab28153890"
-  },
-  "rut": "21198063-K",
-  "name": "Andrés Silva",
-  "email": "andres.silva@gmail.com",
-  "phone": "+56922222222",
-  "password": "user123",
-  "role": "user",
-  "homeId": {
-    "$oid": "68ddb480dbd7ffab2815388d"
-  },
-  "avatar": "/uploads/avatars/a2a3434bfa29f7db3ac4181ed5b42d90.jpg",
-  "limitLitersPerDay": 495,
-  "createdAt": {
-    "$date": "2025-10-01T23:08:48.454Z"
-  },
-  "updatedAt": {
-    "$date": "2025-10-02T01:11:59.120Z"
-  }
-},
-{
-  "_id": {
-    "$oid": "68df31955c896aacc64ee8ee"
-  },
-  "rut": "20625832-2",
-  "name": "Andrus Maldonado",
-  "email": "andrusmaldonado@gmail.com",
-  "phone": "+56431232322",
-  "password": "user123",
-  "role": "user",
-  "limitLitersPerDay": 825,
-  "createdAt": {
-    "$date": "2025-10-03T02:14:45.517Z"
-  },
-  "updatedAt": {
-    "$date": "2025-10-03T02:14:45.517Z"
-  },
-  "__v": 0
-},
-{
-  "_id": {
-    "$oid": "68e189ba5905d8b7b30e6e1d"
-  },
-  "rut": "21423875-0",
-  "name": "Machuca Ruiz",
-  "email": "machuca@gmail.com",
-  "phone": "+56964143903",
-  "password": "user123",
-  "role": "user",
-  "limitLitersPerDay": 150,
-  "createdAt": {
-    "$date": "2025-10-04T20:55:22.292Z"
-  },
-  "updatedAt": {
-    "$date": "2025-10-04T20:55:22.292Z"
-  },
-  "__v": 0
-},
-{
-  "_id": {
-    "$oid": "68e18a535905d8b7b30e6e26"
-  },
-  "rut": "20432123-4",
-  "name": "Cristian Mendoza",
-  "email": "cristianmendoza@gmail.com",
-  "phone": "+56932212321",
-  "password": "user123",
-  "role": "user",
-  "limitLitersPerDay": 150,
-  "createdAt": {
-    "$date": "2025-10-04T20:57:55.672Z"
-  },
-  "updatedAt": {
-    "$date": "2025-10-04T20:57:55.672Z"
-  },
-  "__v": 0
-},
-{
-  "_id": {
-    "$oid": "68e18a9a5905d8b7b30e6eaa"
-  },
-  "rut": "20342123-2",
-  "name": "Matias Soto",
-  "email": "matiasoto@gmail.com",
-  "phone": "+56943231232",
-  "password": "user123",
-  "role": "user",
-  "limitLitersPerDay": 150,
-  "createdAt": {
-    "$date": "2025-10-04T20:59:06.903Z"
-  },
-  "updatedAt": {
-    "$date": "2025-10-04T20:59:06.903Z"
-  },
-  "__v": 0
-},
-{
-  "_id": {
-    "$oid": "68e18b045905d8b7b30e6f12"
-  },
-  "rut": "21433232-K",
-  "name": "Alex Barrientos",
-  "email": "alexbarrientos@gmail.com",
-  "phone": "+56945433232",
-  "password": "user123",
-  "role": "user",
-  "limitLitersPerDay": 150,
-  "createdAt": {
-    "$date": "2025-10-04T21:00:52.347Z"
-  },
-  "updatedAt": {
-    "$date": "2025-10-04T21:00:52.347Z"
-  },
-  "__v": 0
-},
-{
-  "_id": {
-    "$oid": "68e18b285905d8b7b30e6f1a"
-  },
-  "rut": "21123222-1",
-  "name": "Luis Olavarria",
-  "email": "luisolavarria@gmail.com",
-  "phone": "+56923232322",
-  "password": "user123",
-  "role": "user",
-  "limitLitersPerDay": 150,
-  "createdAt": {
-    "$date": "2025-10-04T21:01:28.603Z"
-  },
-  "updatedAt": {
-    "$date": "2025-10-04T21:01:28.603Z"
-  },
-  "__v": 0
-},
-{
-  "_id": {
-    "$oid": "68e18b7c5905d8b7b30e6f2c"
-  },
-  "rut": "15923939-3",
-  "name": "Luis Yagi",
-  "email": "luisyagi@gmail.com",
-  "phone": "+56912231233",
-  "password": "user123",
-  "role": "user",
-  "limitLitersPerDay": 150,
-  "createdAt": {
-    "$date": "2025-10-04T21:02:52.186Z"
-  },
-  "updatedAt": {
-    "$date": "2025-10-04T21:02:52.186Z"
-  },
-  "__v": 0
-},
-{
-  "_id": {
-    "$oid": "68e18f695905d8b7b30e70e0"
-  },
-  "rut": "2032323-2",
-  "name": "Kevin Soto",
-  "email": "kevinsoto@gmail.com",
-  "phone": "+56934343431",
-  "password": "user123",
-  "role": "user",
-  "limitLitersPerDay": 150,
-  "createdAt": {
-    "$date": "2025-10-04T21:19:37.135Z"
-  },
-  "updatedAt": {
-    "$date": "2025-10-04T21:19:37.135Z"
-  },
-  "__v": 0
 }]
