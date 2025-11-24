@@ -1,13 +1,30 @@
 import { Injectable, OnModuleInit } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
-import { Telegraf, Markup } from 'telegraf';
+import { InjectModel } from '@nestjs/mongoose';
+import { Model } from 'mongoose';
+import { Telegraf, Markup, Context } from 'telegraf';
+import { GoogleGenerativeAI } from '@google/generative-ai';
+import { TelegramUser, TelegramUserDocument } from '../../schemas/telegram-user.schema';
+import { User, UserDocument } from '../../schemas/user.schema';
+import { DailyConsumption, DailyConsumptionDocument } from '../../schemas/daily-consumption.schema';
+import { Sensor, SensorDocument } from '../../schemas/sensor.schema';
+import { Alert, AlertDocument } from '../../schemas/alert.schema';
 
 @Injectable()
 export class ChatbotService implements OnModuleInit {
   private bot: Telegraf;
   private frontendUrl: string;
+  private genAI: GoogleGenerativeAI;
+  private model: any;
 
-  constructor(private readonly configService: ConfigService) {}
+  constructor(
+    private readonly configService: ConfigService,
+    @InjectModel(TelegramUser.name) private telegramUserModel: Model<TelegramUserDocument>,
+    @InjectModel(User.name) private userModel: Model<UserDocument>,
+    @InjectModel(DailyConsumption.name) private dailyConsumptionModel: Model<DailyConsumptionDocument>,
+    @InjectModel(Sensor.name) private sensorModel: Model<SensorDocument>,
+    @InjectModel(Alert.name) private alertModel: Model<AlertDocument>,
+  ) { }
 
   onModuleInit() {
     const botToken = this.configService.get<string>('TELEGRAM_BOT_TOKEN');
@@ -16,150 +33,344 @@ export class ChatbotService implements OnModuleInit {
       return;
     }
 
+    // ⭐ Inicializar Gemini AI con el modelo correcto
+    const geminiApiKey = this.configService.get<string>('GEMINI_API_KEY');
+    if (geminiApiKey) {
+      this.genAI = new GoogleGenerativeAI(geminiApiKey);
+      // ✅ MODELO CORRECTO: gemini-1.5-flash-8b (modelo gratuito actual)
+      this.model = this.genAI.getGenerativeModel({ model: 'gemini-1.5-flash-8b' });
+      console.log('✅ Agente de IA Gemini inicializado con modelo gemini-1.5-flash-8b');
+    } else {
+      console.warn('⚠️ GEMINI_API_KEY no configurado. El bot funcionará sin IA.');
+    }
+
     this.bot = new Telegraf(botToken);
 
-    // URL del frontend para construir enlaces (fallback a localhost)
+    // URL del frontend
     this.frontendUrl =
-      this.configService.get<string>('FRONTEND_URL') || 'http://localhost:5174';
+      this.configService.get<string>('FRONTEND_URL') || 'http://localhost:5173';
 
-    // Comando /start con menú de acciones más frecuentes
-    this.bot.start((ctx) => {
-      ctx.reply(
-        '¡Bienvenido al chatbot de AquaTracking! Selecciona una opción o escribe tu pregunta:',
-        Markup.inlineKeyboard([
-          [
-            Markup.button.url(
-              '📊 Dashboard',
-              `${this.frontendUrl}/user/dashboard`,
-            ),
-            Markup.button.url(
-              '⏱️ Tiempo Real',
-              `${this.frontendUrl}/user/realtime`,
-            ),
-          ],
-          [
-            Markup.button.url(
-              '🔔 Alertas',
-              `${this.frontendUrl}/user/alerts`,
-            ),
-            Markup.button.url(
-              '💧 Consumo',
-              `${this.frontendUrl}/user/consumption`,
-            ),
-          ],
-          [
-            Markup.button.url(
-              '🛠️ Soporte',
-              `${this.frontendUrl}/user/support`,
-            ),
-            Markup.button.url(
-              '👤 Perfil',
-              `${this.frontendUrl}/settings`,
-            ),
-          ],
-          [Markup.button.callback('❓ FAQ', 'faq')],
-        ]),
-      );
+    // Comando /start
+    this.bot.start(async (ctx) => {
+      const telegramId = ctx.from.id.toString();
+      const linkedUser = await this.telegramUserModel.findOne({ telegramId });
+
+      if (linkedUser) {
+        const user = await this.userModel.findOne({ rut: linkedUser.rut });
+        await ctx.reply(
+          `¡Hola de nuevo, ${user?.name || 'usuario'}! 👋\n\nYa estás vinculado. Puedo ayudarte con:\n• Tu consumo de agua\n• Estado de tus sensores\n• Alertas activas\n• Consejos personalizados\n\nO usa el menú rápido:`,
+          Markup.inlineKeyboard([
+            [
+              Markup.button.callback('📊 Mi Consumo', 'my_consumption'),
+              Markup.button.callback('🔌 Mis Sensores', 'my_sensors'),
+            ],
+            [
+              Markup.button.callback('🔔 Mis Alertas', 'my_alerts'),
+              Markup.button.callback('📈 Estadísticas', 'my_stats'),
+            ],
+            [
+              Markup.button.callback('🔗 Accesos Rápidos', 'quick_links'),
+            ],
+          ]),
+        );
+      } else {
+        await ctx.reply(
+          '¡Bienvenido a AquaTracking! 💧\n\nPara brindarte información personalizada sobre tu consumo de agua, necesito vincularte.\n\n📝 Por favor, ingresa tu RUT (formato: 12345678-9 o 12345678-K):',
+        );
+      }
+    });
+
+    // Comando /desvincular
+    this.bot.command('desvincular', async (ctx) => {
+      const telegramId = ctx.from.id.toString();
+      const result = await this.telegramUserModel.deleteOne({ telegramId });
+
+      if (result.deletedCount > 0) {
+        await ctx.reply('✅ Te has desvinculado correctamente. Usa /start para vincularte de nuevo.');
+      } else {
+        await ctx.reply('⚠️ No estabas vinculado.');
+      }
     });
 
     // Comando /help
-    this.bot.help((ctx) => {
-      ctx.reply(
-        'Puedo ayudarte con: consumo, sensores, alertas y soporte. Usa /faq para preguntas frecuentes.',
+    this.bot.help(async (ctx) => {
+      await ctx.reply(
+        '🤖 *Asistente de AquaTracking*\n\nPuedes preguntarme:\n\n💧 *Sobre tu consumo*\n• "¿Cuál es mi consumo de hoy?"\n• "¿Cuánto gasté esta semana?"\n• "¿Estoy excediendo mi límite?"\n\n🔌 *Sobre tus sensores*\n• "¿Cuántos sensores tengo?"\n• "¿Están funcionando mis sensores?"\n• "Estado de mis sensores"\n\n🔔 *Sobre alertas*\n• "¿Tengo alertas activas?"\n• "Muéstrame mis alertas"\n\n💡 *Consejos*\n• "¿Cómo puedo ahorrar agua?"\n• "Dame recomendaciones"\n\n📱 *Comandos*\n• /start - Iniciar o ver menú\n• /desvincular - Desvincular cuenta\n• /help - Ver esta ayuda',
+        { parse_mode: 'Markdown' }
       );
     });
 
-    // Acción para mostrar FAQs desde botón
-    this.bot.action('faq', async (ctx) => {
-      await this.sendFAQ(ctx);
+    // Handlers para botones callback
+    this.bot.action('my_consumption', async (ctx) => {
+      await ctx.answerCbQuery();
+      await this.handleMyConsumption(ctx);
     });
 
-    // Comando /faq directo
-    this.bot.command('faq', async (ctx) => {
-      await this.sendFAQ(ctx);
+    this.bot.action('my_sensors', async (ctx) => {
+      await ctx.answerCbQuery();
+      await this.handleMySensors(ctx);
     });
 
-    // Intents por palabras clave
-    this.registerKeywordIntents();
+    this.bot.action('my_alerts', async (ctx) => {
+      await ctx.answerCbQuery();
+      await this.handleMyAlerts(ctx);
+    });
+
+    this.bot.action('my_stats', async (ctx) => {
+      await ctx.answerCbQuery();
+      await this.handleMyStats(ctx);
+    });
+
+    this.bot.action('quick_links', async (ctx) => {
+      await ctx.answerCbQuery();
+      await ctx.reply(
+        `🔗 *Accesos Rápidos*\n\n📊 Dashboard: ${this.frontendUrl}/user/dashboard\n⏱️ Tiempo Real: ${this.frontendUrl}/user/realtime\n💧 Consumo: ${this.frontendUrl}/user/consumption\n🔔 Alertas: ${this.frontendUrl}/user/alerts\n🔌 Sensores: ${this.frontendUrl}/user/sensors\n🛠️ Soporte: ${this.frontendUrl}/user/support\n👤 Perfil: ${this.frontendUrl}/settings`,
+        { parse_mode: 'Markdown' }
+      );
+    });
+
+    // Manejo de mensajes de texto
+    this.bot.on('text', async (ctx) => {
+      const telegramId = ctx.from.id.toString();
+      const userMessage = ctx.message.text;
+      const linkedUser = await this.telegramUserModel.findOne({ telegramId });
+
+      // Si no está vinculado, intentar vincular por RUT
+      if (!linkedUser) {
+        await this.handleRutLinking(ctx, userMessage, telegramId);
+        return;
+      }
+
+      // Si está vinculado, procesar la pregunta con IA
+      await ctx.sendChatAction('typing');
+      const user = await this.userModel.findOne({ rut: linkedUser.rut });
+      if (!user) {
+        await ctx.reply('⚠️ Error: No se encontró tu usuario. Usa /desvincular y vuelve a vincularte.');
+        return;
+      }
+      const aiResponse = await this.askAIWithUserData(userMessage, user as UserDocument);
+      await ctx.reply(aiResponse, { parse_mode: 'Markdown' });
+    });
 
     this.bot.launch();
-
-    console.log('Bot de Telegram iniciado con FAQs y sugerencias.');
+    console.log('🤖 Bot de Telegram iniciado con vinculación por RUT.');
   }
 
-  private async sendFAQ(ctx: any) {
-    const faqs = [
-      {
-        q: '¿Cómo veo mi consumo de agua?',
-        a: `Puedes ver tu historial y análisis en "💧 Consumo": ${this.frontendUrl}/user/consumption`,
-      },
-      {
-        q: '¿Dónde veo datos en tiempo real?',
-        a: `Revisa "⏱️ Tiempo Real": ${this.frontendUrl}/user/realtime`,
-      },
-      {
-        q: 'Tengo problemas con un sensor',
-        a: `Abre un ticket en "🛠️ Soporte": ${this.frontendUrl}/user/support. Si hay alertas críticas, aparecerán en ${this.frontendUrl}/user/alerts`,
-      },
-      {
-        q: '¿Cómo actualizo mis datos de perfil?',
-        a: `Puedes editar tu perfil aquí: ${this.frontendUrl}/settings`,
-      },
-      {
-        q: '¿Qué significa una alerta crítica?',
-        a: 'Una alerta crítica indica consumo anómalo, posible fuga o sensor inactivo prolongado. Revisa Alertas y, si persiste, crea un ticket en Soporte.',
-      },
-    ];
+  private async handleRutLinking(ctx: Context, rut: string, telegramId: string) {
+    // Validar formato básico de RUT y normalizar (K mayúscula)
+    const rutRegex = /^\d{7,8}-[\dkK]$/;
+    const normalizedRut = rut.trim().toUpperCase();
+    if (!rutRegex.test(normalizedRut)) {
+      await ctx.reply('❌ Formato de RUT inválido. Por favor usa el formato: 12345678-9 o 12345678-K');
+      return;
+    }
 
-    let text = 'Preguntas Frecuentes:\n\n';
-    faqs.forEach((item, idx) => {
-      text += `${idx + 1}. ${item.q}\n${item.a}\n\n`;
+    // Buscar usuario por RUT (normalizado)
+    const user = await this.userModel.findOne({ rut: normalizedRut });
+    if (!user) {
+      await ctx.reply('❌ No encontré un usuario con ese RUT. Verifica que esté registrado en AquaTracking.');
+      return;
+    }
+
+    // Crear vinculación
+    await this.telegramUserModel.create({
+      telegramId,
+      rut: normalizedRut,
+      firstName: ctx.from?.first_name || '',
+      lastName: ctx.from?.last_name || '',
+      username: ctx.from?.username || '',
     });
 
-    await ctx.reply(text);
+    await ctx.reply(
+      `✅ ¡Vinculación exitosa!\n\nHola ${user.name}, ahora puedes preguntarme sobre:\n• Tu consumo de agua\n• Estado de tus sensores\n• Alertas activas\n• Y mucho más\n\n💡 Prueba preguntándome: "¿Cuál es mi consumo de hoy?"`,
+      Markup.inlineKeyboard([
+        [
+          Markup.button.callback('📊 Mi Consumo', 'my_consumption'),
+          Markup.button.callback('🔌 Mis Sensores', 'my_sensors'),
+        ],
+        [
+          Markup.button.callback('🔔 Mis Alertas', 'my_alerts'),
+        ],
+      ]),
+    );
   }
 
-  private registerKeywordIntents() {
-    // Consumo / gasto
-    this.bot.hears(/consumo|gasto|litros|historial/i, (ctx) => {
-      ctx.reply(
-        `Tu consumo y análisis está en "💧 Consumo": ${this.frontendUrl}/user/consumption`,
-      );
+  private async handleMyConsumption(ctx: any) {
+    const telegramId = ctx.from.id.toString();
+    const linkedUser = await this.telegramUserModel.findOne({ telegramId });
+    if (!linkedUser) return;
+
+    const user = await this.userModel.findOne({ rut: linkedUser.rut });
+    if (!user || !user.homeId) {
+      await ctx.reply('⚠️ No tienes un hogar asignado.');
+      return;
+    }
+
+    // Obtener consumo de hoy
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+
+    const todayConsumption = await this.dailyConsumptionModel.findOne({
+      homeId: user.homeId,
+      date: { $gte: today },
     });
 
-    // Sensores / conexión / estado
-    this.bot.hears(/sensor|sensores|conexión|estado/i, (ctx) => {
-      ctx.reply(
-        `Información de tus sensores: ${this.frontendUrl}/user/sensors. Si un sensor no aparece o marca inactivo, abre Soporte: ${this.frontendUrl}/user/support`,
-      );
+    const consumed = todayConsumption?.totalLiters || 0;
+    const limit = user.limitLitersPerDay;
+    const percentage = ((consumed / limit) * 100).toFixed(1);
+    const status = consumed > limit ? '🔴 Excedido' : consumed > limit * 0.8 ? '🟡 Cerca del límite' : '🟢 Normal';
+
+    await ctx.reply(
+      `💧 *Tu Consumo de Hoy*\n\n📊 Consumo actual: *${consumed}L*\n🎯 Límite diario: *${limit}L*\n📈 Uso: *${percentage}%*\n\nEstado: ${status}\n\nVer más detalles: ${this.frontendUrl}/user/consumption`,
+      { parse_mode: 'Markdown' }
+    );
+  }
+
+  private async handleMySensors(ctx: any) {
+    const telegramId = ctx.from.id.toString();
+    const linkedUser = await this.telegramUserModel.findOne({ telegramId });
+    if (!linkedUser) return;
+
+    const user = await this.userModel.findOne({ rut: linkedUser.rut });
+    if (!user || !user.homeId) {
+      await ctx.reply('⚠️ No tienes un hogar asignado.');
+      return;
+    }
+
+    const sensors = await this.sensorModel.find({ homeId: user.homeId });
+
+    if (sensors.length === 0) {
+      await ctx.reply('⚠️ No tienes sensores registrados.');
+      return;
+    }
+
+    let message = `🔌 *Tus Sensores* (${sensors.length})\n\n`;
+    sensors.forEach((sensor, idx) => {
+      const statusIcon = sensor.status === 'active' ? '🟢' : '🔴';
+      const sensorName = (sensor as any).name || sensor.serialNumber;
+      message += `${idx + 1}. ${statusIcon} *${sensorName}*\n   Ubicación: ${sensor.location}\n   Estado: ${sensor.status}\n\n`;
     });
 
-    // Soporte / ayuda / ticket
-    this.bot.hears(/soporte|ayuda|ticket|problema/i, (ctx) => {
-      ctx.reply(
-        `Cuéntanos el problema en "🛠️ Soporte": ${this.frontendUrl}/user/support. Un técnico te ayudará apenas se asigne el ticket.`,
-      );
+    message += `Ver más: ${this.frontendUrl}/user/sensors`;
+
+    await ctx.reply(message, { parse_mode: 'Markdown' });
+  }
+
+  private async handleMyAlerts(ctx: any) {
+    const telegramId = ctx.from.id.toString();
+    const linkedUser = await this.telegramUserModel.findOne({ telegramId });
+    if (!linkedUser) return;
+
+    const user = await this.userModel.findOne({ rut: linkedUser.rut });
+    if (!user || !user.homeId) {
+      await ctx.reply('⚠️ No tienes un hogar asignado.');
+      return;
+    }
+
+    const alerts = await this.alertModel
+      .find({ homeId: user.homeId, status: 'active' })
+      .sort({ triggeredAt: -1 })
+      .limit(5);
+
+    if (alerts.length === 0) {
+      await ctx.reply('✅ No tienes alertas activas.');
+      return;
+    }
+
+    let message = `🔔 *Alertas Activas* (${alerts.length})\n\n`;
+    alerts.forEach((alert, idx) => {
+      const severity = (alert as any).severity || 'info';
+      const severityIcon = severity === 'critical' ? '🔴' : severity === 'warning' ? '🟡' : '🔵';
+      message += `${idx + 1}. ${severityIcon} *${alert.type}*\n   ${alert.message}\n\n`;
     });
 
-    // Alertas / notificaciones
-    this.bot.hears(/alerta|crítica|notificación/i, (ctx) => {
-      ctx.reply(
-        `Revisa tus alertas: ${this.frontendUrl}/user/alerts. Si ves consumo anómalo, verifica llaves y fugas, y abre un ticket si persiste.`,
-      );
+    message += `Ver todas: ${this.frontendUrl}/user/alerts`;
+
+    await ctx.reply(message, { parse_mode: 'Markdown' });
+  }
+
+  private async handleMyStats(ctx: any) {
+    const telegramId = ctx.from.id.toString();
+    const linkedUser = await this.telegramUserModel.findOne({ telegramId });
+    if (!linkedUser) return;
+
+    const user = await this.userModel.findOne({ rut: linkedUser.rut });
+    if (!user || !user.homeId) {
+      await ctx.reply('⚠️ No tienes un hogar asignado.');
+      return;
+    }
+
+    // Obtener estadísticas de los últimos 7 días
+    const sevenDaysAgo = new Date();
+    sevenDaysAgo.setDate(sevenDaysAgo.getDate() - 7);
+
+    const weekConsumption = await this.dailyConsumptionModel.find({
+      homeId: user.homeId,
+      date: { $gte: sevenDaysAgo },
     });
 
-    // Perfil / datos
-    this.bot.hears(/perfil|datos|email|rut/i, (ctx) => {
-      ctx.reply(
-        `Actualiza tu perfil aquí: ${this.frontendUrl}/settings. Mantener tus datos al día mejora el soporte.`,
-      );
-    });
+    const totalWeek = weekConsumption.reduce((sum, day) => sum + day.totalLiters, 0);
+    const avgPerDay = (totalWeek / 7).toFixed(1);
+    const avgPerPerson = (totalWeek / 7 / user.people).toFixed(1);
 
-    // Fallback: cualquier texto no reconocido
-    this.bot.on('text', (ctx) => {
-      ctx.reply(
-        'No estoy seguro de entender. Prueba /faq o dime "consumo", "sensores", "alertas" o "soporte".',
-      );
-    });
+    await ctx.reply(
+      `📈 *Tus Estadísticas (7 días)*\n\n💧 Total: *${totalWeek}L*\n📊 Promedio/día: *${avgPerDay}L*\n👤 Promedio/persona/día: *${avgPerPerson}L*\n👥 Personas en hogar: *${user.people}*\n\nVer dashboard completo: ${this.frontendUrl}/user/dashboard`,
+      { parse_mode: 'Markdown' }
+    );
+  }
+
+  private async askAIWithUserData(question: string, user: UserDocument): Promise<string> {
+    if (!this.model) {
+      return '⚠️ El agente de IA no está disponible en este momento.';
+    }
+
+    try {
+      // Obtener datos del usuario para contexto
+      let userContext = '';
+
+      if (user && user.homeId) {
+        const today = new Date();
+        today.setHours(0, 0, 0, 0);
+
+        const todayConsumption = await this.dailyConsumptionModel.findOne({
+          homeId: user.homeId,
+          date: { $gte: today },
+        });
+
+        const sensors = await this.sensorModel.find({ homeId: user.homeId });
+        const alerts = await this.alertModel.find({ homeId: user.homeId, status: 'active' });
+
+        userContext = `
+DATOS DEL USUARIO:
+- Nombre: ${user.name}
+- Personas en hogar: ${user.people}
+- Límite diario: ${user.limitLitersPerDay}L
+- Consumo hoy: ${todayConsumption?.totalLiters || 0}L
+- Sensores activos: ${sensors.filter(s => s.status === 'active').length}/${sensors.length}
+- Alertas activas: ${alerts.length}
+`;
+      }
+
+      const prompt = `Eres un asistente técnico de AquaTracking, un sistema de monitoreo de consumo de agua.
+
+${userContext}
+
+INSTRUCCIONES:
+1. Responde de forma técnica pero amigable
+2. Usa los datos del usuario cuando sea relevante
+3. Si la pregunta es sobre consumo/sensores/alertas, usa los datos proporcionados
+4. Máximo 5-6 líneas de respuesta
+5. Usa formato Markdown para negritas (*texto*)
+6. Incluye números y métricas específicas cuando sea posible
+
+Pregunta del usuario: ${question}`;
+
+      const result = await this.model.generateContent(prompt);
+      const response = await result.response;
+      return response.text();
+    } catch (error) {
+      console.error('Error al consultar a Gemini:', error);
+      return '❌ Lo siento, tuve un problema al procesar tu pregunta. Intenta de nuevo.';
+    }
   }
 }
