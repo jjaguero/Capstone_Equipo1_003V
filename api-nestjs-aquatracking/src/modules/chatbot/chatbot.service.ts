@@ -3,7 +3,7 @@ import { ConfigService } from '@nestjs/config';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
 import { Telegraf, Markup, Context } from 'telegraf';
-import { GoogleGenerativeAI } from '@google/generative-ai';
+import OpenAI from 'openai';
 import { TelegramUser, TelegramUserDocument } from '../../schemas/telegram-user.schema';
 import { User, UserDocument } from '../../schemas/user.schema';
 import { DailyConsumption, DailyConsumptionDocument } from '../../schemas/daily-consumption.schema';
@@ -14,8 +14,7 @@ import { Alert, AlertDocument } from '../../schemas/alert.schema';
 export class ChatbotService implements OnModuleInit {
   private bot: Telegraf;
   private frontendUrl: string;
-  private genAI: GoogleGenerativeAI;
-  private model: any;
+  private openai: OpenAI;
 
   constructor(
     private readonly configService: ConfigService,
@@ -33,15 +32,16 @@ export class ChatbotService implements OnModuleInit {
       return;
     }
 
-    // ⭐ Inicializar Gemini AI con el modelo correcto
-    const geminiApiKey = this.configService.get<string>('GEMINI_API_KEY');
-    if (geminiApiKey) {
-      this.genAI = new GoogleGenerativeAI(geminiApiKey);
-      // ✅ MODELO CORRECTO: gemini-1.5-flash-8b (modelo gratuito actual)
-      this.model = this.genAI.getGenerativeModel({ model: 'gemini-1.5-flash-8b' });
-      console.log('✅ Agente de IA Gemini inicializado con modelo gemini-1.5-flash-8b');
+    // ⭐ Inicializar Groq AI usando OpenAI SDK
+    const groqApiKey = this.configService.get<string>('GROQ_API_KEY');
+    if (groqApiKey) {
+      this.openai = new OpenAI({
+        apiKey: groqApiKey,
+        baseURL: 'https://api.groq.com/openai/v1',
+      });
+      console.log('✅ Agente de IA Groq inicializado con modelo llama-3.3-70b-versatile');
     } else {
-      console.warn('⚠️ GEMINI_API_KEY no configurado. El bot funcionará sin IA.');
+      console.warn('⚠️ GROQ_API_KEY no configurado. El bot funcionará sin IA.');
     }
 
     this.bot = new Telegraf(botToken);
@@ -320,7 +320,7 @@ export class ChatbotService implements OnModuleInit {
   }
 
   private async askAIWithUserData(question: string, user: UserDocument): Promise<string> {
-    if (!this.model) {
+    if (!this.openai) {
       return '⚠️ El agente de IA no está disponible en este momento.';
     }
 
@@ -351,25 +351,63 @@ DATOS DEL USUARIO:
 `;
       }
 
-      const prompt = `Eres un asistente técnico de AquaTracking, un sistema de monitoreo de consumo de agua.
+      const systemPrompt = `Eres Andrés, un asistente amigable y conversacional de AquaTracking, un sistema de monitoreo de consumo de agua.
 
 ${userContext}
 
-INSTRUCCIONES:
-1. Responde de forma técnica pero amigable
-2. Usa los datos del usuario cuando sea relevante
-3. Si la pregunta es sobre consumo/sensores/alertas, usa los datos proporcionados
-4. Máximo 5-6 líneas de respuesta
-5. Usa formato Markdown para negritas (*texto*)
-6. Incluye números y métricas específicas cuando sea posible
+🚫 LÍMITES ESTRICTOS - SOLO PUEDES HABLAR DE:
+- Consumo de agua del usuario
+- Sensores de agua
+- Alertas de consumo
+- Estadísticas de uso de agua
+- Consejos para ahorrar agua
+- Configuración de AquaTracking
+- Vinculación/desvinculación de cuenta
 
-Pregunta del usuario: ${question}`;
+❌ NO PUEDES RESPONDER SOBRE:
+- Series, películas, entretenimiento
+- Recetas de cocina
+- Noticias, deportes, política
+- Consejos generales no relacionados con agua
+- Cualquier tema fuera de AquaTracking
 
-      const result = await this.model.generateContent(prompt);
-      const response = await result.response;
-      return response.text();
+PERSONALIDAD Y ESTILO:
+- Habla de forma natural y cercana, como un amigo que ayuda
+- Varía tus respuestas, NO repitas las mismas frases
+- Sé conciso pero informativo (máximo 3-4 líneas)
+- Usa emojis ocasionalmente para dar calidez 💧🌊✨
+- Adapta tu tono a la pregunta: casual para charla, técnico para datos
+
+REGLAS DE RESPUESTA:
+1. Si el consumo es 0L, NO lo menciones a menos que te pregunten específicamente
+2. Enfócate en lo que el usuario pregunta, no repitas todos los datos cada vez
+3. Usa los datos solo cuando sean RELEVANTES a la pregunta
+4. Si te preguntan algo FUERA DE CONTEXTO, responde amablemente que solo puedes ayudar con temas de agua
+5. Varía tus saludos y despedidas
+6. Usa formato Markdown solo para destacar números importantes (*texto*)
+
+EJEMPLOS DE RESPUESTAS FUERA DE CONTEXTO:
+❌ Pregunta: "¿Qué serie está en tendencia en HBO Max?"
+✅ Respuesta: "¡Uy! 😅 Solo estoy configurado para ayudarte con el monitoreo de agua. ¿Quieres saber algo sobre tu consumo o sensores?"
+
+❌ Pregunta: "¿Cómo hago un pudding de chocolate?"
+✅ Respuesta: "Jaja, me encantaría ayudarte, pero solo sé de agua 💧 ¿Necesitas revisar tu consumo o algún sensor?"
+
+RECUERDA: Si la pregunta NO es sobre agua/AquaTracking, rechaza educadamente y redirige a temas de agua.`;
+
+      const completion = await this.openai.chat.completions.create({
+        model: 'llama-3.3-70b-versatile',
+        messages: [
+          { role: 'system', content: systemPrompt },
+          { role: 'user', content: question },
+        ],
+        temperature: 0.7,
+        max_tokens: 300,
+      });
+
+      return completion.choices[0]?.message?.content || '❌ No pude generar una respuesta.';
     } catch (error) {
-      console.error('Error al consultar a Gemini:', error);
+      console.error('Error al consultar a Groq:', error);
       return '❌ Lo siento, tuve un problema al procesar tu pregunta. Intenta de nuevo.';
     }
   }
