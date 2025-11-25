@@ -12,14 +12,14 @@ export class MeasurementsService {
     @InjectModel(Measurement.name) private measurementModel: Model<MeasurementDocument>,
     @InjectModel(Sensor.name) private sensorModel: Model<SensorDocument>,
     @Inject(forwardRef(() => RealtimeGateway)) private realtimeGateway: RealtimeGateway,
-  ) {}
+  ) { }
 
   async create(createMeasurementDto: CreateMeasurementDto): Promise<Measurement> {
     const createdMeasurement = new this.measurementModel(createMeasurementDto);
     const measurement = await createdMeasurement.save();
 
-    const flowRate = createMeasurementDto.durationSec > 0 
-      ? (createMeasurementDto.liters / createMeasurementDto.durationSec) * 60 
+    const flowRate = createMeasurementDto.durationSec > 0
+      ? (createMeasurementDto.liters / createMeasurementDto.durationSec) * 60
       : 0;
 
     const today = new Date();
@@ -40,10 +40,8 @@ export class MeasurementsService {
   }
 
   async findAll(limit?: number): Promise<Measurement[]> {
-    const now = new Date();
-    
     const query = this.measurementModel
-      .find({ startTime: { $lte: now } })
+      .find({})
       .sort({ startTime: -1 });
     if (limit) {
       query.limit(limit);
@@ -60,13 +58,8 @@ export class MeasurementsService {
   }
 
   async findByHome(homeId: string, limit?: number): Promise<Measurement[]> {
-    const now = new Date();
-    
     const query = this.measurementModel
-      .find({ 
-        homeId,
-        startTime: { $lte: now }
-      })
+      .find({ homeId })
       .sort({ startTime: -1 });
     if (limit) {
       query.limit(limit);
@@ -75,13 +68,8 @@ export class MeasurementsService {
   }
 
   async findBySensor(sensorId: string, limit?: number): Promise<Measurement[]> {
-    const now = new Date();
-    
     const query = this.measurementModel
-      .find({ 
-        sensorId,
-        startTime: { $lte: now }
-      })
+      .find({ sensorId })
       .sort({ startTime: -1 });
     if (limit) {
       query.limit(limit);
@@ -109,7 +97,7 @@ export class MeasurementsService {
     const updatedMeasurement = await this.measurementModel
       .findByIdAndUpdate(id, updateMeasurementDto, { new: true })
       .exec();
-    
+
     if (!updatedMeasurement) {
       throw new NotFoundException(`Medición con ID ${id} no encontrada`);
     }
@@ -139,12 +127,13 @@ export class MeasurementsService {
     const today = new Date();
     today.setHours(0, 0, 0, 0);
     const now = new Date();
+    const nowWithBuffer = new Date(now.getTime() + 60000); // 1 min buffer
 
     return await this.measurementModel.aggregate([
       {
         $match: {
           sensorId,
-          startTime: { $gte: today, $lte: now },
+          startTime: { $gte: today, $lte: nowWithBuffer },
         },
       },
       {
@@ -176,12 +165,13 @@ export class MeasurementsService {
     const today = new Date();
     today.setHours(0, 0, 0, 0);
     const now = new Date();
+    const nowWithBuffer = new Date(now.getTime() + 60000); // 1 min buffer
 
     const result = await this.measurementModel.aggregate([
       {
         $match: {
           sensorId,
-          startTime: { $gte: today, $lte: now },
+          startTime: { $gte: today, $lte: nowWithBuffer },
         },
       },
       {
@@ -200,13 +190,8 @@ export class MeasurementsService {
   }
 
   async getRecentMeasurements(sensorId: string, limit: number = 10): Promise<Measurement[]> {
-    const now = new Date();
-    
     return await this.measurementModel
-      .find({ 
-        sensorId,
-        startTime: { $lte: now }
-      })
+      .find({ sensorId })
       .sort({ startTime: -1 })
       .limit(limit)
       .exec();
@@ -214,7 +199,8 @@ export class MeasurementsService {
 
   async getLast7DaysConsumption(sensorId: string): Promise<any[]> {
     const now = new Date();
-    
+    const nowWithBuffer = new Date(now.getTime() + 60000); // 1 min buffer
+
     const sevenDaysAgo = new Date(now);
     sevenDaysAgo.setDate(sevenDaysAgo.getDate() - 7);
     sevenDaysAgo.setHours(0, 0, 0, 0);
@@ -223,7 +209,7 @@ export class MeasurementsService {
       {
         $match: {
           sensorId,
-          startTime: { $gte: sevenDaysAgo, $lte: now },
+          startTime: { $gte: sevenDaysAgo, $lte: nowWithBuffer },
         },
       },
       {

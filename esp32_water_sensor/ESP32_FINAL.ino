@@ -133,13 +133,13 @@ bool sendMeasurement(long pulses, unsigned long startTime, unsigned long endTime
     time_t startEpoch = now - (durationMs / 1000);
     struct tm* startTimeInfo = localtime(&startEpoch);
     
-    // Formato ISO 8601: YYYY-MM-DDTHH:MM:SSZ
-    strftime(startTimeStr, sizeof(startTimeStr), "%Y-%m-%dT%H:%M:%SZ", startTimeInfo);
-    strftime(endTimeStr, sizeof(endTimeStr), "%Y-%m-%dT%H:%M:%SZ", &timeinfo);
+    // Formato ISO 8601 con timezone explícito: YYYY-MM-DDTHH:MM:SS-03:00
+    strftime(startTimeStr, sizeof(startTimeStr), "%Y-%m-%dT%H:%M:%S-03:00", startTimeInfo);
+    strftime(endTimeStr, sizeof(endTimeStr), "%Y-%m-%dT%H:%M:%S-03:00", &timeinfo);
   } else {
     // Fallback si no hay hora sincronizada
-    sprintf(startTimeStr, "2025-11-24T00:00:00Z");
-    sprintf(endTimeStr, "2025-11-24T00:00:00Z");
+    sprintf(startTimeStr, "2025-11-24T00:00:00-03:00");
+    sprintf(endTimeStr, "2025-11-24T00:00:00-03:00");
   }
   
   StaticJsonDocument<300> doc;
