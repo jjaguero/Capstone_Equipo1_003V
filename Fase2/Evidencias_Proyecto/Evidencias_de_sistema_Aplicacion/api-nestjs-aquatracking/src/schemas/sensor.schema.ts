@@ -11,6 +11,9 @@ export class Sensor {
   @Prop({ required: true, unique: true })
   serialNumber: string;
 
+  @Prop()
+  name?: string;
+
   @Prop({ required: true, default: 'flow' })
   category: string;
 

@@ -14,6 +14,12 @@ export class Alert {
   @Prop({ required: true })
   message: string;
 
+  @Prop({ default: 'info', enum: ['info', 'warning', 'critical'] })
+  severity: string;
+
+  @Prop({ default: 'active', enum: ['active', 'resolved'] })
+  status: string;
+
   @Prop({ required: true, default: Date.now })
   triggeredAt: Date;
 

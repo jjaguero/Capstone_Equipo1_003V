@@ -4,6 +4,7 @@ import { MeasurementsService } from './measurements.service';
 import { MeasurementsController } from './measurements.controller';
 import { Measurement, MeasurementSchema } from '../../schemas/measurement.schema';
 import { Sensor, SensorSchema } from '../../schemas/sensor.schema';
+import { DailyConsumption, DailyConsumptionSchema } from '../../schemas/daily-consumption.schema';
 import { RealtimeModule } from '../realtime/realtime.module';
 
 @Module({
@@ -11,6 +12,7 @@ import { RealtimeModule } from '../realtime/realtime.module';
     MongooseModule.forFeature([
       { name: Measurement.name, schema: MeasurementSchema },
       { name: Sensor.name, schema: SensorSchema },
+      { name: DailyConsumption.name, schema: DailyConsumptionSchema },
     ]),
     forwardRef(() => RealtimeModule),
   ],
@@ -18,4 +20,4 @@ import { RealtimeModule } from '../realtime/realtime.module';
   providers: [MeasurementsService],
   exports: [MeasurementsService],
 })
-export class MeasurementsModule {}
+export class MeasurementsModule { }
