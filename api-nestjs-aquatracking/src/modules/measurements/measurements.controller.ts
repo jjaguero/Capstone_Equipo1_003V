@@ -15,7 +15,7 @@ import { CreateMeasurementDto, UpdateMeasurementDto } from './dto';
 
 @Controller('measurements')
 export class MeasurementsController {
-  constructor(private readonly measurementsService: MeasurementsService) {}
+  constructor(private readonly measurementsService: MeasurementsService) { }
 
   @Post()
   @HttpCode(HttpStatus.CREATED)
@@ -33,7 +33,7 @@ export class MeasurementsController {
     @Query('sort') sort?: string,
   ) {
     const limitNum = limit ? parseInt(limit, 10) : undefined;
-    
+
     // Si hay fechas, usar filtro por rango
     if (homeId && startDate && endDate) {
       return this.measurementsService.findByDateRange(
@@ -43,7 +43,7 @@ export class MeasurementsController {
         sort,
       );
     }
-    
+
     if (homeId) {
       return this.measurementsService.findByHome(homeId, limitNum);
     }
@@ -114,5 +114,15 @@ export class MeasurementsController {
   @HttpCode(HttpStatus.NO_CONTENT)
   remove(@Param('id') id: string) {
     return this.measurementsService.remove(id);
+  }
+
+  /**
+   * Endpoint temporal para agregar todas las mediciones existentes a DailyConsumption
+   * Llamar con: POST http://localhost:3000/api/measurements/aggregate-all
+   */
+  @Post('aggregate-all')
+  @HttpCode(HttpStatus.OK)
+  aggregateAll() {
+    return this.measurementsService.aggregateAllMeasurements();
   }
 }

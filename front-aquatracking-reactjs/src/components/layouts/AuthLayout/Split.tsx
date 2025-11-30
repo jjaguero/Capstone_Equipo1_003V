@@ -17,12 +17,11 @@ const Split = ({ children, content, ...rest }: SplitProps) => {
                     />
                     <div className="text-center max-w-[550px]">
                         <h1 className="text-neutral">
-                            The easiest way to build your admin app
+                            Monitorea tu consumo de agua de forma inteligente
                         </h1>
                         <p className="text-neutral opacity-80 mx-auto mt-8 font-semibold">
-                            Experience seamless project management with Ecme.
-                            Simplify your workflow, and achieve your goals
-                            efficiently with our powerful and intuitive tools.
+                            Controla y optimiza el uso del agua en tu hogar con AquaTracking.
+                            Visualiza tu consumo en tiempo real y recibe alertas personalizadas.
                         </p>
                     </div>
                 </div>
@@ -32,8 +31,8 @@ const Split = ({ children, content, ...rest }: SplitProps) => {
                     <div className="mb-8">{content}</div>
                     {children
                         ? cloneElement(children as React.ReactElement, {
-                              ...rest,
-                          })
+                            ...rest,
+                        })
                         : null}
                 </div>
             </div>

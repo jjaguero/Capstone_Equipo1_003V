@@ -7,6 +7,7 @@ import { User, UserSchema } from '../../schemas/user.schema';
 import { DailyConsumption, DailyConsumptionSchema } from '../../schemas/daily-consumption.schema';
 import { Sensor, SensorSchema } from '../../schemas/sensor.schema';
 import { Alert, AlertSchema } from '../../schemas/alert.schema';
+import { Home, HomeSchema } from '../../schemas/home.schema';
 
 @Module({
   imports: [
@@ -16,6 +17,7 @@ import { Alert, AlertSchema } from '../../schemas/alert.schema';
       { name: DailyConsumption.name, schema: DailyConsumptionSchema },
       { name: Sensor.name, schema: SensorSchema },
       { name: Alert.name, schema: AlertSchema },
+      { name: Home.name, schema: HomeSchema },
     ]),
   ],
   controllers: [ChatbotController],

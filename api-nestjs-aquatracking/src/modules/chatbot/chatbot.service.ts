@@ -2,13 +2,15 @@ import { Injectable, OnModuleInit } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
-import { Telegraf, Markup, Context } from 'telegraf';
+import { Telegraf, Markup, Context, Input } from 'telegraf';
 import OpenAI from 'openai';
 import { TelegramUser, TelegramUserDocument } from '../../schemas/telegram-user.schema';
 import { User, UserDocument } from '../../schemas/user.schema';
 import { DailyConsumption, DailyConsumptionDocument } from '../../schemas/daily-consumption.schema';
 import { Sensor, SensorDocument } from '../../schemas/sensor.schema';
 import { Alert, AlertDocument } from '../../schemas/alert.schema';
+import { Home, HomeDocument } from '../../schemas/home.schema';
+import { generateConsumptionPDF } from '../../utils/pdf-generator.util';
 
 @Injectable()
 export class ChatbotService implements OnModuleInit {
@@ -23,6 +25,7 @@ export class ChatbotService implements OnModuleInit {
     @InjectModel(DailyConsumption.name) private dailyConsumptionModel: Model<DailyConsumptionDocument>,
     @InjectModel(Sensor.name) private sensorModel: Model<SensorDocument>,
     @InjectModel(Alert.name) private alertModel: Model<AlertDocument>,
+    @InjectModel(Home.name) private homeModel: Model<HomeDocument>,
   ) { }
 
   onModuleInit() {
@@ -148,8 +151,31 @@ export class ChatbotService implements OnModuleInit {
         await ctx.reply('⚠️ Error: No se encontró tu usuario. Usa /desvincular y vuelve a vincularte.');
         return;
       }
-      const aiResponse = await this.askAIWithUserData(userMessage, user as UserDocument);
-      await ctx.reply(aiResponse, { parse_mode: 'Markdown' });
+      const aiResponse = await this.askAIWithUserData(userMessage, user as UserDocument, ctx);
+      if (aiResponse) {
+        // Escapar solo caracteres problemáticos pero mantener formato intencional
+        // Escapar: _ - ( ) . ! = + { } [ ] \ | > #
+        // NO escapar: * (usado para negritas por la IA)
+        const escapedResponse = aiResponse
+          .replace(/\\/g, '\\\\')  // Escapar backslashes primero
+          .replace(/_/g, '\\_')     // Escapar guiones bajos
+          .replace(/-/g, '\\-')     // Escapar guiones
+          .replace(/\(/g, '\\(')    // Escapar paréntesis
+          .replace(/\)/g, '\\)')
+          .replace(/\./g, '\\.')    // Escapar puntos
+          .replace(/!/g, '\\!')     // Escapar exclamaciones
+          .replace(/=/g, '\\=')     // Escapar igual
+          .replace(/\+/g, '\\+')    // Escapar más
+          .replace(/{/g, '\\{')     // Escapar llaves
+          .replace(/}/g, '\\}')
+          .replace(/\[/g, '\\[')    // Escapar corchetes
+          .replace(/]/g, '\\]')
+          .replace(/\|/g, '\\|')    // Escapar pipe
+          .replace(/>/g, '\\>')     // Escapar mayor que
+          .replace(/#/g, '\\#');    // Escapar hashtag
+
+        await ctx.reply(escapedResponse, { parse_mode: 'MarkdownV2' });
+      }
     });
 
     this.bot.launch();
@@ -319,7 +345,7 @@ export class ChatbotService implements OnModuleInit {
     );
   }
 
-  private async askAIWithUserData(question: string, user: UserDocument): Promise<string> {
+  private async askAIWithUserData(question: string, user: UserDocument, ctx?: any): Promise<string> {
     if (!this.openai) {
       return '⚠️ El agente de IA no está disponible en este momento.';
     }
@@ -329,23 +355,164 @@ export class ChatbotService implements OnModuleInit {
       let userContext = '';
 
       if (user && user.homeId) {
-        const today = new Date();
-        today.setHours(0, 0, 0, 0);
+        // Obtener fecha de hoy en UTC (medianoche)
+        const now = new Date();
+        const today = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate(), 0, 0, 0, 0));
 
+        // Consumo de hoy
         const todayConsumption = await this.dailyConsumptionModel.findOne({
           homeId: user.homeId,
-          date: { $gte: today },
+          date: today,
         });
+
+        // Consumo de esta semana (últimos 7 días)
+        const sevenDaysAgo = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate() - 7, 0, 0, 0, 0));
+        const weekConsumption = await this.dailyConsumptionModel.aggregate([
+          {
+            $match: {
+              homeId: user.homeId,
+              date: { $gte: sevenDaysAgo, $lte: today }
+            }
+          },
+          {
+            $group: {
+              _id: null,
+              totalLiters: { $sum: '$totalLiters' },
+              days: { $sum: 1 }
+            }
+          }
+        ]);
+
+        // Consumo de este mes
+        const monthStart = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), 1, 0, 0, 0, 0));
+        const monthConsumption = await this.dailyConsumptionModel.aggregate([
+          {
+            $match: {
+              homeId: user.homeId,
+              date: { $gte: monthStart, $lte: today }
+            }
+          },
+          {
+            $group: {
+              _id: null,
+              totalLiters: { $sum: '$totalLiters' },
+              days: { $sum: 1 }
+            }
+          }
+        ]);
 
         const sensors = await this.sensorModel.find({ homeId: user.homeId });
         const alerts = await this.alertModel.find({ homeId: user.homeId, status: 'active' });
+
+        const weekTotal = weekConsumption[0]?.totalLiters || 0;
+        const weekDays = weekConsumption[0]?.days || 0;
+        const monthTotal = monthConsumption[0]?.totalLiters || 0;
+        const monthDays = monthConsumption[0]?.days || 0;
+
+        const monthNames = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
+        const currentMonth = monthNames[now.getUTCMonth()];
+
+        // Obtener consumo diario de los últimos 30 días
+        const thirtyDaysAgo = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate() - 30, 0, 0, 0, 0));
+        const dailyRecords = await this.dailyConsumptionModel.find({
+          homeId: user.homeId,
+          date: { $gte: thirtyDaysAgo, $lte: today }
+        }).sort({ date: -1 }).limit(30).lean();
+
+        const dailyData = dailyRecords.map(r => {
+          const date = new Date(r.date);
+          const dateStr = `${date.getUTCDate()}/${date.getUTCMonth() + 1}`;
+          return `  • ${dateStr}: ${r.totalLiters.toFixed(2)}L`;
+        }).join('\n');
+
+        // Obtener consumo histórico COMPLETO (todos los meses disponibles)
+        const historicalConsumption = await this.dailyConsumptionModel.aggregate([
+          {
+            $match: {
+              homeId: user.homeId
+            }
+          },
+          {
+            $group: {
+              _id: {
+                year: { $year: '$date' },
+                month: { $month: '$date' }
+              },
+              totalLiters: { $sum: '$totalLiters' },
+              days: { $sum: 1 }
+            }
+          },
+          {
+            $sort: { '_id.year': -1, '_id.month': -1 }
+          }
+        ]);
+
+        const historicalData = historicalConsumption.map(m => {
+          const monthName = monthNames[m._id.month - 1];
+          const avgDaily = m.days > 0 ? (m.totalLiters / m.days).toFixed(1) : 0;
+          return `  • ${monthName} ${m._id.year}: ${m.totalLiters.toFixed(2)}L total (${avgDaily}L/día promedio, ${m.days} días con datos)`;
+        }).join('\n');
+
+        // Calcular total histórico
+        const totalHistorical = historicalConsumption.reduce((sum, m) => sum + m.totalLiters, 0);
+        const totalDays = historicalConsumption.reduce((sum, m) => sum + m.days, 0);
+        const avgDailyOverall = totalDays > 0 ? (totalHistorical / totalDays).toFixed(2) : 0;
+
+        // Obtener primer y último registro
+        const firstRecord = await this.dailyConsumptionModel.findOne({ homeId: user.homeId }).sort({ date: 1 }).lean();
+        const lastRecord = await this.dailyConsumptionModel.findOne({ homeId: user.homeId }).sort({ date: -1 }).lean();
+
+        const firstDate = firstRecord ? new Date(firstRecord.date).toLocaleDateString('es-CL', { year: 'numeric', month: 'long', day: 'numeric' }) : 'No disponible';
+        const lastDate = lastRecord ? new Date(lastRecord.date).toLocaleDateString('es-CL', { year: 'numeric', month: 'long', day: 'numeric' }) : 'No disponible';
+
+        // Calcular consumo por sensor para el mes actual
+        const sensorConsumptionMap = new Map();
+        const monthConsumptionRecords = await this.dailyConsumptionModel.find({
+          homeId: user.homeId,
+          date: { $gte: monthStart, $lte: today }
+        }).lean();
+
+        monthConsumptionRecords.forEach(record => {
+          record.bySensor.forEach((s: any) => {
+            const current = sensorConsumptionMap.get(s.sensorId) || 0;
+            sensorConsumptionMap.set(s.sensorId, current + s.liters);
+          });
+        });
+
+        const sensorDetails = sensors.map(sensor => {
+          const sensorId = (sensor._id as any).toString();
+          const consumption = sensorConsumptionMap.get(sensorId) || 0;
+          return `  • ${sensor.name || sensor.serialNumber} (${sensor.location}): ${consumption.toFixed(2)}L este mes`;
+        }).join('\n');
 
         userContext = `
 DATOS DEL USUARIO:
 - Nombre: ${user.name}
 - Personas en hogar: ${user.people}
 - Límite diario: ${user.limitLitersPerDay}L
-- Consumo hoy: ${todayConsumption?.totalLiters || 0}L
+
+CONSUMO ACTUAL:
+- Hoy: ${todayConsumption?.totalLiters ? todayConsumption.totalLiters.toFixed(2) : '0.00'}L
+- Esta semana (últimos 7 días): ${weekTotal.toFixed(2)}L en ${weekDays} días
+- Este mes (${currentMonth}): ${monthTotal.toFixed(2)}L en ${monthDays} días
+
+SENSORES Y UBICACIONES (consumo del mes actual):
+${sensorDetails || '  • No hay sensores registrados'}
+
+CONSUMO DIARIO (últimos 30 días):
+${dailyData || '  • No hay datos disponibles'}
+
+CONSUMO POR MES (histórico completo):
+${historicalData || '  • No hay datos históricos disponibles'}
+
+ESTADÍSTICAS GENERALES:
+- Total histórico: ${totalHistorical.toFixed(2)}L
+- Promedio diario general: ${avgDailyOverall}L/día
+- Total de días con datos: ${totalDays}
+- Primer registro: ${firstDate}
+- Último registro: ${lastDate}
+
+SISTEMA:
 - Sensores activos: ${sensors.filter(s => s.status === 'active').length}/${sensors.length}
 - Alertas activas: ${alerts.length}
 `;
@@ -363,6 +530,7 @@ ${userContext}
 - Consejos para ahorrar agua
 - Configuración de AquaTracking
 - Vinculación/desvinculación de cuenta
+- Generación de reportes PDF
 
 ❌ NO PUEDES RESPONDER SOBRE:
 - Series, películas, entretenimiento
@@ -371,7 +539,26 @@ ${userContext}
 - Consejos generales no relacionados con agua
 - Cualquier tema fuera de AquaTracking
 
-PERSONALIDAD Y ESTILO:
+📄 DETECCIÓN DE SOLICITUDES DE PDF:
+Si el usuario solicita un PDF, reporte o informe, debes responder EXACTAMENTE en este formato JSON (sin texto adicional):
+{
+  "type": "pdf_request",
+  "startDate": "YYYY-MM-DD",
+  "endDate": "YYYY-MM-DD",
+  "description": "descripción breve del rango"
+}
+
+Interpretación de rangos de fechas (hoy es ${new Date().toLocaleDateString('es-CL')}):
+- "PDF del mes actual" o "PDF de este mes" → startDate: primer día del mes actual, endDate: último día del mes actual
+- "PDF de los últimos 3 meses" → startDate: hace 3 meses desde hoy, endDate: hoy
+- "PDF de septiembre" → startDate: 2025-09-01, endDate: 2025-09-30
+- "PDF de septiembre a noviembre" → startDate: 2025-09-01, endDate: 2025-11-30
+- "PDF de la última semana" → startDate: hace 7 días, endDate: hoy
+- "PDF del mes pasado" → startDate: primer día del mes pasado, endDate: último día del mes pasado
+
+IMPORTANTE: Si detectas una solicitud de PDF, SOLO responde con el JSON, sin texto adicional antes ni después.
+
+PERSONALIDAD Y ESTILO (solo para respuestas normales, NO para PDFs):
 - Habla de forma natural y cercana, como un amigo que ayuda
 - Varía tus respuestas, NO repitas las mismas frases
 - Sé conciso pero informativo (máximo 3-4 líneas)
@@ -385,6 +572,13 @@ REGLAS DE RESPUESTA:
 4. Si te preguntan algo FUERA DE CONTEXTO, responde amablemente que solo puedes ayudar con temas de agua
 5. Varía tus saludos y despedidas
 6. Usa formato Markdown solo para destacar números importantes (*texto*)
+
+INTERPRETACIÓN DE FECHAS:
+- Hoy es ${new Date().toLocaleDateString('es-CL')} (${new Date().getUTCDate()}/${new Date().getUTCMonth() + 1})
+- "Ayer" = día anterior a hoy (${new Date(Date.UTC(new Date().getUTCFullYear(), new Date().getUTCMonth(), new Date().getUTCDate() - 1)).getUTCDate()}/${new Date(Date.UTC(new Date().getUTCFullYear(), new Date().getUTCMonth(), new Date().getUTCDate() - 1)).getUTCMonth() + 1})
+- "Anteayer" = hace 2 días (${new Date(Date.UTC(new Date().getUTCFullYear(), new Date().getUTCMonth(), new Date().getUTCDate() - 2)).getUTCDate()}/${new Date(Date.UTC(new Date().getUTCFullYear(), new Date().getUTCMonth(), new Date().getUTCDate() - 2)).getUTCMonth() + 1})
+- Cuando te pregunten por "ayer", "anteayer" o un día específico, busca en la lista "CONSUMO DIARIO (últimos 30 días)" la fecha correspondiente
+- Si no encuentras datos para ese día específico en la lista, di que no hay datos para ese día
 
 EJEMPLOS DE RESPUESTAS FUERA DE CONTEXTO:
 ❌ Pregunta: "¿Qué serie está en tendencia en HBO Max?"
@@ -402,13 +596,104 @@ RECUERDA: Si la pregunta NO es sobre agua/AquaTracking, rechaza educadamente y r
           { role: 'user', content: question },
         ],
         temperature: 0.7,
-        max_tokens: 300,
+        max_tokens: 500,
       });
 
-      return completion.choices[0]?.message?.content || '❌ No pude generar una respuesta.';
+      const aiResponse = completion.choices[0]?.message?.content || '❌ No pude generar una respuesta.';
+
+      // Detectar si es una solicitud de PDF
+      try {
+        const jsonMatch = aiResponse.match(/\{[\s\S]*"type":\s*"pdf_request"[\s\S]*\}/);
+        if (jsonMatch && ctx) {
+          const pdfRequest = JSON.parse(jsonMatch[0]);
+          await this.generateAndSendPDF(ctx, user, pdfRequest.startDate, pdfRequest.endDate, pdfRequest.description);
+          return ''; // No enviar respuesta de texto, solo el PDF
+        }
+      } catch (e) {
+        // No es JSON válido, continuar normalmente
+        console.log('No se detectó solicitud de PDF válida');
+      }
+
+      return aiResponse;
     } catch (error) {
       console.error('Error al consultar a Groq:', error);
       return '❌ Lo siento, tuve un problema al procesar tu pregunta. Intenta de nuevo.';
+    }
+  }
+
+  /**
+   * Genera y envía un PDF de consumo con rango de fechas personalizado
+   */
+  private async generateAndSendPDF(
+    ctx: any,
+    user: UserDocument,
+    startDateStr: string,
+    endDateStr: string,
+    description: string
+  ): Promise<void> {
+    try {
+      await ctx.reply(`📄 Generando PDF de ${description}...`);
+
+      // Convertir strings a fechas UTC
+      const startDate = new Date(startDateStr + 'T00:00:00.000Z');
+      const endDate = new Date(endDateStr + 'T23:59:59.999Z');
+
+      // Obtener datos de consumo del rango
+      const consumptionData = await this.dailyConsumptionModel.find({
+        homeId: user.homeId,
+        date: { $gte: startDate, $lte: endDate }
+      }).sort({ date: 1 }).lean();
+
+      if (consumptionData.length === 0) {
+        await ctx.reply('⚠️ No hay datos de consumo para el rango solicitado.');
+        return;
+      }
+
+      // Obtener información del hogar
+      const home = await this.homeModel.findById(user.homeId).lean();
+
+      // Obtener sensores
+      const sensors = await this.sensorModel.find({ homeId: user.homeId }).lean();
+
+      // Calcular totales
+      const totalConsumption = consumptionData.reduce((sum, day) => sum + day.totalLiters, 0);
+      const avgDaily = totalConsumption / consumptionData.length;
+
+      // Agrupar por sensor
+      const sensorConsumption = new Map();
+      consumptionData.forEach(day => {
+        day.bySensor.forEach((s: any) => {
+          const current = sensorConsumption.get(s.sensorId) || 0;
+          sensorConsumption.set(s.sensorId, current + s.liters);
+        });
+      });
+
+      // Generar PDF
+      const pdfBuffer = await generateConsumptionPDF({
+        userName: user.name,
+        homeAddress: home?.address || 'No especificada',
+        period: description,
+        startDate: startDate,
+        endDate: endDate,
+        totalConsumption: totalConsumption,
+        averageDaily: avgDaily,
+        dailyConsumption: consumptionData.map(d => ({
+          date: d.date,
+          totalLiters: d.totalLiters,
+          bySensor: d.bySensor
+        })),
+        sensors: sensors
+      });
+
+      // Enviar PDF por Telegram
+      await ctx.replyWithDocument(
+        Input.fromBuffer(pdfBuffer, `consumo_${startDateStr}_${endDateStr}.pdf`),
+        { caption: `📊 Reporte de Consumo: ${description}\n\n📅 Período: ${startDate.toLocaleDateString('es-CL')} - ${endDate.toLocaleDateString('es-CL')}\n💧 Total: ${totalConsumption.toFixed(2)}L\n📈 Promedio diario: ${avgDaily.toFixed(2)}L` }
+      );
+
+    } catch (error) {
+      console.error('Error generando PDF:', error);
+      await ctx.reply('❌ Error al generar el PDF. Por favor intenta de nuevo.');
     }
   }
 }
