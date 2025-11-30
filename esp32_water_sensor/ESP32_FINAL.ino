@@ -15,13 +15,13 @@
 
 // ==================== CONFIGURACIÓN ====================
 // WiFi
-const char* WIFI_SSID = "MARISOL-5G";           // ⚠️ CAMBIAR si es necesario
-const char* WIFI_PASSWORD = "marisol123";       // ⚠️ CAMBIAR
+const char* WIFI_SSID = "NISHI";           // ⚠️ CAMBIAR si es necesario
+const char* WIFI_PASSWORD = "123456789";       // ⚠️ CAMBIAR
 
 // Backend API
-const char* API_URL = "http://192.168.1.100:3000/api/measurements";  // ⚠️ CAMBIAR IP
-const char* SENSOR_ID = "68e192895905d8b7b30e72f5";    // Sensor: llave_patio
-const char* HOME_ID = "68e1914a5905d8b7b30e71ad";      // Tu homeId
+const char* API_URL = "http://172.20.10.2:3000/api/measurements";  // ⚠️ CAMBIAR IP
+const char* SENSOR_ID = "691507a2b7ab0e3a275ff20a";    // Sensor: llave_patio
+const char* HOME_ID = "691507a2b7ab0e3a275ff1fb";      // Tu homeId
 
 // Sensor YF-S201
 const int SENSOR_PIN = 10;                        // GPIO 10 (cable AZUL)
